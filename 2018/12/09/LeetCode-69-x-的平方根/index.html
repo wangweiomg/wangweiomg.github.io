@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>LeetCode 69. x 的平方根 | 飞刀问情</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">LeetCode 69. x 的平方根</h1><a id="logo" href="/.">飞刀问情</a><p class="description">李寻欢的兵器谱</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">LeetCode 69. x 的平方根</h1><div class="post-meta">Dec 9, 2018</div><div class="post-content"><h3 id="69-x-的平方根"><a href="#69-x-的平方根" class="headerlink" title="69. x 的平方根"></a><a href="https://leetcode-cn.com/problems/sqrtx/description/" target="_blank" rel="noopener">69. x 的平方根</a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p> 实现 int sqrt(int x) 函数。</p>
+<p> 计算并返回 x 的平方根，其中 x 是非负整数。</p>
+<p> 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
+<p> 示例 1:</p>
+<p> 输入: 4<br> 输出: 2<br> 示例 2:</p>
+<p> 输入: 8<br> 输出: 2<br> 说明: 8 的平方根是 2.82842…,<br>      由于返回类型是整数，小数部分将被舍去。</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p> 这个是求开方的结果，很容易想到按顺序i找，如果存在 i 就去找 <figure class="highlight plain"><figcaption><span><</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p> public int mySqrt(int x) {<br>         if (x &lt;= 0) {<br>             return 0;<br>         }</p>
+<pre><code>    for (int i = 0; i &lt; x; i++) {
+        boolean flag = i*i &lt;= x &amp;&amp; (i + 1) * (i + 1) &gt; x;
+        if (flag) {
+            return i;
+        }
+    }
+
+    return 0;
+
+}
+</code></pre> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">然后提交后就失败了，因为存在 int 越界的情况，如果 i*i 大于 int最大值，那么就得不到正确的答案了，于是就把 int转为long型来处理：</span><br></pre></td></tr></table></figure>
+<p> boolean flag = (long) i <em> (long) i &lt;= x &amp;&amp; (long) (i + 1) </em> (long) (i + 1) &gt; x;<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">结果通过。</span><br><span class="line"></span><br><span class="line">### 优化</span><br><span class="line">首先找出解决问题的方法，然后再考虑优化解决方法。我们发现，按顺序i +1 一个个试是比较低效的，应该优化下查找方法，使用二分查找， 而且最大值显然不可能是x, 连 x/2+1 都超不过，  所以我们可以在 0 和 x/2+1     间进行二分查找， 修改成如下方法：</span><br></pre></td></tr></table></figure></p>
+<p> public static int mySqrt(int x) {</p>
+<pre><code>    if (x &lt;= 0) {
+        return 0;
+    }
+    int max = x / 2 + 1;
+    int min = 0;
+    while (min &lt;= max) {
+        int mid = min + (max - min) / 2;
+        long rs = (long) mid * (long) mid;
+        if (rs == x) {
+            return mid;
+        }
+
+        if (rs &lt; x) {
+            min = mid + 1;
+        } else {
+            max = mid - 1;
+        }
+    }
+
+    return max;
+
+}
+</code></pre><p> <code>`</code></p>
+</div><div class="tags"><a href="/tags/LeetCode/">LeetCode</a></div><div class="post-nav"><a class="pre" href="/2018/12/09/LeetCode-70-爬楼梯/">LeetCode 70. 爬楼梯</a><a class="next" href="/2018/12/09/LeetCode-67-二进制求和/">LeetCode 67. 二进制求和</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://yoursite.com"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/编程语言/" style="font-size: 15px;">编程语言</a> <a href="/tags/LeetCode/" style="font-size: 15px;">LeetCode</a> <a href="/tags/技术理念/" style="font-size: 15px;">技术理念</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-83-删除排序链表中的重复元素/">LeetCode 83. 删除排序链表中的重复元素</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-746-使用最小花费爬楼梯/">LeetCode 746. 使用最小花费爬楼梯</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-70-爬楼梯/">LeetCode 70. 爬楼梯</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-69-x-的平方根/">LeetCode 69. x 的平方根</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-67-二进制求和/">LeetCode 67. 二进制求和</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-66-加一/">LeetCode 66. 加一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-35-搜索插入位置/">LeetCode 35. 搜索插入位置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-28-实现strStr/">LeetCode 28. 实现strStr()</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/LeetCode-27-移除元素/">LeetCode 27. 移除元素</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/LeetCode-26-删除排序数组中的重复项/">LeetCode 26. 删除排序数组中的重复项</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">飞刀问情.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
