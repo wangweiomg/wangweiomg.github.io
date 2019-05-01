@@ -228,6 +228,23 @@
         
         
           
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
 
     
@@ -383,14 +400,23 @@
       
         
           
-            <p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/description/" target="_blank" rel="noopener">21. 合并两个有序链表</a></p>
-<p> 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
-<p> 示例：</p>
-<p> 输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4<br> 输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p> 两个ListNode ， 根据l1 、 l2 的val，小的给拼的ListNode.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public ListNode mergeTwoLists(ListNode l1, ListNode l2) &#123;</span><br><span class="line"></span><br><span class="line">        ListNode head = null, tail = null;</span><br><span class="line"></span><br><span class="line">        while (l1 != null &amp;&amp; l2 != null) &#123;</span><br><span class="line"></span><br><span class="line">            ListNode node = null;</span><br><span class="line">            if (l1.val &lt; l2.val) &#123;</span><br><span class="line">                node = l1;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                node = l2;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (head == null) &#123;</span><br><span class="line"></span><br><span class="line">                head = tail = node;</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line"></span><br><span class="line">                tail.next = node;</span><br><span class="line">                tail = tail.next;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode rest = l1 == null ? l2 : l1;</span><br><span class="line"></span><br><span class="line">        if (rest != null) &#123;</span><br><span class="line">            if (head != null &amp;&amp; tail != null) &#123;</span><br><span class="line">                tail.next = rest;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                head = rest;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	return head;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              21. 合并两个有序链表
+ 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ 示例：
+ 输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4 输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+分析 两个ListNode ， 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/08/LeetCode-21-合并两个有序链表/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -531,14 +557,23 @@
       
         
           
-            <p><a href="https://leetcode-cn.com/problems/valid-parentheses/description/" target="_blank" rel="noopener">20. 有效的括号</a></p>
-<p> 给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p>
-<p> 有效字符串需满足：</p>
-<p> 左括号必须用相同类型的右括号闭合。<br> 左括号必须以正确的顺序闭合。<br> 注意空字符串可被认为是有效字符串。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p> 如果是程序代码中，很容易想到， 该字符是成对出现，排成一行后，就是偶数个， 对称的，可以用这个特性来比较。但是还有一种情况，是这样的： “()[]{}”                                                             ，这样的组合也是正确的，这时候就要有不同的判断逻辑，可以将事情分为这两类，参考答案后发现作者巧妙的使用栈这个数据结构，左边的负号入栈，右边的符号就出栈对比，完美的解决这个问题。以下是代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public boolean isValid(String s) &#123;</span><br><span class="line"></span><br><span class="line">        if (s == null || s.length() == 0) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        Stack&lt;Character&gt; stack = new Stack&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        char[] chars = s.toCharArray();</span><br><span class="line">        for (char ch : chars) &#123;</span><br><span class="line">            if (ch == &apos;(&apos; || ch == &apos;[&apos; || ch == &apos;&#123;&apos;) &#123;</span><br><span class="line">                stack.push(ch);</span><br><span class="line">            &#125; else if (ch == &apos;)&apos; || ch == &apos;]&apos; || ch == &apos;&#125;&apos;) &#123;</span><br><span class="line">                if (stack.isEmpty()) &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">                char top = stack.peek();</span><br><span class="line">                if ((top == &apos;(&apos; &amp;&amp; ch == &apos;)&apos;) || (top == &apos;[&apos; &amp;&amp; ch == &apos;]&apos;) || (top == &apos;&#123;&apos; &amp;&amp; ch == &apos;&#125;&apos;)) &#123;</span><br><span class="line">                    stack.pop();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">             </span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">        return stack.isEmpty();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              20. 有效的括号
+ 给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。
+ 有效字符串需满足：
+ 左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串。
+思考 如果是程序代码中，很容易想到， 该字符是成对出现，
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/08/LeetCode-20-有效的括号/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -679,17 +714,24 @@
       
         
           
-            <p> <a href="https://leetcode-cn.com/problems/longest-common-prefix/description/" target="_blank" rel="noopener">14. 最长公共前缀</a></p>
-<p> 编写一个函数来查找字符串数组中的最长公共前缀。</p>
-<p> 如果不存在公共前缀，返回空字符串 “”。</p>
-<p> 示例 1:</p>
-<p> 输入: [“flower”,”flow”,”flight”]<br> 输出: “fl”<br> 示例 2:</p>
-<p> 输入: [“dog”,”racecar”,”car”]<br> 输出: “”<br> 解释: 输入不存在公共前缀。<br> 说明:</p>
-<p> 所有输入只包含小写字母 a-z 。</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p> 定义一个指针， 从第一个开始，遍历所有字符串是否相等，遇到不相等的就停止，取得指针经过的一段字符串。</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> public String longestCommonPrefix(String[] strs) &#123;</span><br><span class="line">         if (strs.length == 0) &#123;</span><br><span class="line">             return &quot;&quot;;</span><br><span class="line">         &#125;</span><br><span class="line">         if (strs.length == 1) &#123;</span><br><span class="line">             return strs[0];</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         int point = -1;</span><br><span class="line"></span><br><span class="line">         loop:</span><br><span class="line">for (int i = 0; i &lt; strs[0].length(); i++) &#123;</span><br><span class="line">             boolean flag = true;</span><br><span class="line">             for (int j = 0; j &lt; strs.length; j++) &#123;</span><br><span class="line"></span><br><span class="line">                 if (point + 1 &gt; strs[j].length() - 1) &#123;</span><br><span class="line">                     break loop;</span><br><span class="line">                 &#125;</span><br><span class="line"></span><br><span class="line">                 char c = strs[0].charAt(point + 1);</span><br><span class="line"></span><br><span class="line">                 flag = c == strs[j].charAt(point + 1);</span><br><span class="line">                 if (!flag) &#123;</span><br><span class="line">                     break loop;</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line">             point++;</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">         return strs[0].substring(0, point + 1);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+               14. 最长公共前缀
+ 编写一个函数来查找字符串数组中的最长公共前缀。
+ 如果不存在公共前缀，返回空字符串 “”。
+ 示例 1:
+ 输入: [“flower”,”flow”,”flight”] 输出: “fl” 示例 2:
+ 输入: [“dog”,”racecar”,”car”] 输出: “” 解
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/08/LeetCode-14-最长公共前缀/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -842,12 +884,20 @@
       
         
           
-            <h3 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9. 回文数"></a><a href="https://leetcode-cn.com/problems/palindrome-number/description/" target="_blank" rel="noopener">9. 回文数</a></h3><p> 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
-<h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p> 负数比如 -121， 从左到右是 -121, 从右到左是 121-， 所以不是回文数。<br> 这道题算法和<a href="https://leetcode-cn.com/problems/reverse-integer/description/" target="_blank" rel="noopener">7.反转整数</a> 类似，反转整数是取得每一位倒置输出，而这个是取得每一位倒置后和原值进行比较。</p>
-<p> 代码如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public boolean isPalindrome(int x) &#123;</span><br><span class="line"></span><br><span class="line">        if (x &lt; 0) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        int y = 0;</span><br><span class="line">        int z = x;</span><br><span class="line">        while(x != 0) &#123;</span><br><span class="line"></span><br><span class="line">            y = x % 10 + y * 10;</span><br><span class="line"></span><br><span class="line">            x /= 10;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return z == y;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              9. 回文数 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+分析： 负数比如 -121， 从左到右是 -121, 从右到左是 121-， 所以不是回文数。 这道题算法和7.反转整数 类似，反转整数是取得每一位倒置输出，而这个是取得每一位倒置后和原值进行比较
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/07/LeetCode-9-回文数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1000,13 +1050,21 @@
       
         
           
-            <h3 id="leecode-7-翻转整数"><a href="#leecode-7-翻转整数" class="headerlink" title="leecode 7. 翻转整数"></a>leecode <a href="https://leetcode-cn.com/problems/reverse-integer/description/" target="_blank" rel="noopener">7. 翻转整数</a></h3><p> 给定一个 32 位有符号整数，将整数中的数字进行反转。</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p> 这道题把数字翻转，思路是使用模运算和直接除以10运算获得每一位数字，然后要考虑越界问题，比较笨的方式是转为字符数组，然后倒序排列后转为int，本人不才，使用了第二种。代码如下:</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public int reverse(int x) &#123;</span><br><span class="line"></span><br><span class="line">        if (x == Integer.MIN_VALUE) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        boolean positive = x &lt; 0;</span><br><span class="line"></span><br><span class="line">        if (positive) &#123;</span><br><span class="line">            x = -x;</span><br><span class="line">        &#125;</span><br><span class="line">        String n = String.valueOf(x);</span><br><span class="line"></span><br><span class="line">        char[] chars = n.toCharArray();</span><br><span class="line"></span><br><span class="line">        StringBuilder sb = new StringBuilder();</span><br><span class="line">        for (int len = chars.length, i = len - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">            sb.append(chars[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        String result = sb.toString();</span><br><span class="line">try &#123;</span><br><span class="line">            if (positive) &#123;</span><br><span class="line"></span><br><span class="line">                return -Integer.parseInt(result);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return Integer.parseInt(result);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; catch (NumberFormatException e) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p> 当然，高效的代码就是模运算取每一位，然后循环乘以10，代码如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public int reverse(int x) &#123;</span><br><span class="line"></span><br><span class="line">        int y = 0;</span><br><span class="line"></span><br><span class="line">        while (x != 0) &#123;</span><br><span class="line"></span><br><span class="line">            if (y &gt; Integer.MAX_VALUE / 10 || y &lt; Integer.MIN_VALUE / 10) &#123;</span><br><span class="line">                return 0;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            y = y * 10 + x % 10;</span><br><span class="line"></span><br><span class="line">            x = x / 10;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return y;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              leecode 7. 翻转整数 给定一个 32 位有符号整数，将整数中的数字进行反转。
+分析 这道题把数字翻转，思路是使用模运算和直接除以10运算获得每一位数字，然后要考虑越界问题，比较笨的方式是转为字符数组，然后倒序排列后转为int，本人不才，使用了第二种。代码如下:
+ public int re
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/07/LeetCode-7-翻转整数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1159,15 +1217,23 @@
       
         
           
-            <p><a href="https://leetcode-cn.com/problems/single-number/description/" target="_blank" rel="noopener">136. 只出现一次的数字</a></p>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p> 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
-<p> 说明：</p>
-<p> 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int singleNumber(int[] nums) &#123;</span><br><span class="line">        int index = 0;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; nums.length; i++) &#123;</span><br><span class="line">            index = index ^ nums[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return index;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> ###分析：<br> 此题目主要考察位运算， 其中 异或 ^ 操作符与相同的数字异或为0， 0与任何数异或是它本身的特性。<br> 如果没有考虑到这一点，实现方法就是嵌套遍历出所有重复的，然后找出不重复的那个，这种方式很差。代码如下，</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">private static int singleNumber(int[] a) &#123;</span><br><span class="line"></span><br><span class="line">         List&lt;Integer&gt; list = Lists.newArrayListWithCapacity(a.length);</span><br><span class="line"></span><br><span class="line">         int x = 0;</span><br><span class="line">         for (int i = 0; i &lt; a.length - 1; i++) &#123;</span><br><span class="line">             for (int j = i + 1; j &lt; a.length; j++) &#123;</span><br><span class="line"></span><br><span class="line">                 if (a[i] == a[j]) &#123;</span><br><span class="line"></span><br><span class="line">                     list.add(i);</span><br><span class="line">                     list.add(j);</span><br><span class="line">                     break;</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line"></span><br><span class="line">         &#125;</span><br><span class="line">         for (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">             if (list.contains(i)) &#123;</span><br><span class="line">                 continue;</span><br><span class="line">             &#125;</span><br><span class="line">             x = a[i];</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         return x;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              136. 只出现一次的数字
+题目： 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+ 说明：
+ 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+ class Solution &#123;    public int sing
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/07/LeetCode-136-只出现一次的数字/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1320,24 +1386,22 @@
       
         
           
-            <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。</p>
-<p>示例 1:</p>
-<p>输入: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5<br>输出: 1-&gt;2-&gt;5<br>示例 2:</p>
-<p>输入: 1-&gt;1-&gt;1-&gt;2-&gt;3<br>输出: 2-&gt;3</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>此题和 <a href="https://leetcode-cn.com/problems/remove-      duplicates-from-sorted-list/description/" target="_blank" rel="noopener">83. 删除排序链表中的重复元素</a>  相似，属于在这道题的基础上增加了一个难度，不仅是重复的变成不重复的，还要把重复过的元素都删掉。</p>
-<p>初始的想法是，首先把遇到的和next相等的元素，把next 删掉，把当前的标记，第二次把标记过的删除，但是这样存在问题，</p>
-<ol>
-<li>标记的方式，如果设置当前元素的值为某一个数，如果元素中存在这个，就造成不准确； </li>
-<li>如果存在连续重复的，标记了一个就无法删除掉全部的重复数据。 所以这种方法是不可行的，</li>
-</ol>
-<p>还有一个方法，是双向循环链表结构，这样的话可以让前驱直接指向后继的后继，就一次删除了当前的和当前的后继， 但是存在连续重复的问题，需要把重复元素保存起来。</p>
-<p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">public static ListNode deleteDuplicates(ListNode head) &#123;</span><br><span class="line"></span><br><span class="line">        // 1. 记录重复值， 2.删除重复值， 3.从第二个开始</span><br><span class="line">        ListNode node = head;</span><br><span class="line">        ListNode prev = new ListNode(head.val - 1);</span><br><span class="line">        ListNode first = prev;</span><br><span class="line">        int duplicate = prev.val;</span><br><span class="line">        prev.next = node;</span><br><span class="line"></span><br><span class="line">        while (node != null &amp;&amp; node.next != null) &#123;</span><br><span class="line"></span><br><span class="line">            // 如果当前和重复的相等，就把当前删掉</span><br><span class="line">            if (node.val == duplicate) &#123;</span><br><span class="line"></span><br><span class="line">                prev.next = node.next;</span><br><span class="line"></span><br><span class="line">                node = node.next;</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                // 当前不重复，就判断和下一个重复</span><br><span class="line">                if (node.val == node.next.val) &#123;</span><br><span class="line">                    duplicate = node.val;</span><br><span class="line">                    // 向前推进两个</span><br><span class="line">                    prev.next = node.next.next;</span><br><span class="line">                    node = node.next.next;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    // 不重复</span><br><span class="line"></span><br><span class="line">                    prev = node;</span><br><span class="line">                    node = node.next;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return first.next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>这个看似正确，但是如果head.val = Integer.MIN_VALUE d  的话，程序会报错的，所以不是正确答案。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>参考了答案后，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public static ListNode deleteDuplicates(ListNode head) &#123;</span><br><span class="line"></span><br><span class="line">        ListNode tail = new ListNode(0);</span><br><span class="line">        tail.next = head;</span><br><span class="line"></span><br><span class="line">        head = tail;</span><br><span class="line">        boolean flag = false;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        for (ListNode node = head.next; node != null &amp;&amp; node.next != null; node = node.next) &#123;</span><br><span class="line"></span><br><span class="line">            if (!flag &amp;&amp; node.val == node.next.val) &#123;</span><br><span class="line"></span><br><span class="line">                flag = true;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            if (flag &amp;&amp; node.val != node.next.val) &#123;</span><br><span class="line">                flag = false;</span><br><span class="line">                tail.next = node.next;</span><br><span class="line"></span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (!flag) &#123;</span><br><span class="line">                tail = node;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (flag) &#123;</span><br><span class="line">            tail.next = null;</span><br><span class="line">        &#125;</span><br><span class="line">        return head.next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              题目给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
+示例 1:
+输入: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5输出: 1-&gt;2-&gt;5示例 2:
+输入: 1-&gt;1-&gt;1-&gt;2-&gt;3输出: 2
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/07/LeetCode-82-删除排序链表中的重复元素-II/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1490,23 +1554,21 @@
       
         
           
-            <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。</p>
-<p>说明:</p>
-<p>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。<br>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。<br>示例:</p>
-<p>输入:</p>
-<ul>
-<li>nums1 = [1,2,3,0,0,0], m = 3</li>
-<li>nums2 = [2,5,6],       n = 3</li>
-</ul>
-<p>输出: [1,2,2,3,5,6]</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>首先想出解决方案，再优化解决方案。</p>
-<p>这个问题可以先合并数组，再对数组排序，于是就有了如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public static void merge(int[] nums1, int m, int[] nums2, int n) &#123;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        for (int i = m, j = 0; i &lt; m + n; i++, j++) &#123;</span><br><span class="line">            nums1[i] = nums2[j];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; m + n; i++) &#123;</span><br><span class="line">            for (int j = i + 1; j &lt; m + n; j++) &#123;</span><br><span class="line">                if (nums1[i] &gt; nums1[j]) &#123;</span><br><span class="line">                    int tmp = nums1[i];</span><br><span class="line">                    nums1[i] = nums1[j];</span><br><span class="line">                    nums1[j] = tmp;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种解法虽说能解决问题，但是肯定存在更好的解法，主要是没有利用上数组的有序特性。考虑另一种解法，遍历两个数组，从前往后，小的放前面，大的放后面，感觉也不太好，因为牵涉到数组整体后移的情况。</p>
-<p>看了答案之后豁然开朗， 要点是从后往前填数据，因为从后往前填数据，数据的位置已经是确定的了，不会再移动，所以代码如下</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static void merge3(int[] nums1, int m, int[] nums2, int n) &#123;</span><br><span class="line"></span><br><span class="line">        int ia = m - 1;</span><br><span class="line">        int ib = n - 1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        for (int i =  m + n - 1; i &gt;= 0 ; i--) &#123;</span><br><span class="line"></span><br><span class="line">            if (ia &gt;= 0 &amp;&amp; ib &lt; 0) &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (ia &lt; 0 &amp;&amp; ib &gt;= 0) &#123;</span><br><span class="line"></span><br><span class="line">                nums1[i] = nums2[ib--];</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (nums1[ia] &gt; nums2[ib]) &#123;</span><br><span class="line">                nums1[i] = nums1[ia--];</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                nums1[i] = nums2[ib--];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              题目给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+说明:
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n。你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/07/Leetcode-88-合并两个有序数组/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1647,23 +1709,24 @@
       
         
           
-            <h3 id="习惯的日常"><a href="#习惯的日常" class="headerlink" title="习惯的日常"></a>习惯的日常</h3><p>由于经常做内部系统，所以只讨论在开发内部系统的范围。</p>
-<p>经典的MVC架构，经典的Spring、MyBatis 组合，开发内部系统已经是成熟的套路了，不需要思考：</p>
-<ul>
-<li>Controller 接收用户请求</li>
-<li>Service 接口处理用户逻辑</li>
-<li>Service 实现真正处理逻辑，用各种Dao来操作数据库。</li>
-<li>MyBatis 生成各种xml，或者根据需要特别写SQL</li>
-</ul>
-<p>然而，这个过程使用久了，觉得就应该是这么写的，但是为什么非要这么写呢？</p>
-<h3 id="接口的本意和实际使用"><a href="#接口的本意和实际使用" class="headerlink" title="接口的本意和实际使用"></a>接口的本意和实际使用</h3><p>软件工程，有很多思想确实很好，面向接口编程，接口和实现分离，开闭原则，高内聚，低耦合，我们使用接口，就是方便扩展、更换接口实现更方便，这样的话接口不需要变动，对客户端来说是无影响的。我承认在duboo这类框架里这么做是有必要的，但是对于开发内部系统， 我们面对最多的就是业务处理，Controller接收用户请求，然后在对应的Service里处理，如果我们因为业务变动或bug等，我们要么直接写一个方法，或者在原来方法上进行调整，当然如果使用了设计模式，有些确实需要接口，但是对于很多业务处理，不需要搞复杂的模式，既然接口在这里用处并不如期望的那样，那么为何不去掉，直接注入Service实现？</p>
-<h3 id="在Controller里做逻辑处理"><a href="#在Controller里做逻辑处理" class="headerlink" title="在Controller里做逻辑处理"></a>在Controller里做逻辑处理</h3><p>更有甚者，在Controller 里做各种逻辑处理，直接使用dao操作数据，理由是写Servcie层没必要。刚开始听到这种说法觉得挺震惊，后来想想确实，只是简单的逻辑，没有事务处理，不需要更多的扩展性，直接在Controller处理又有何不可呢？ 虽然Controller也可以事务处理，虽然没那么优雅，但是却是最简洁高效的。</p>
-<p>如果程序中有更多的复用，还是写Service比较好，另外和事务操作分开管理，更优雅，这里依然可以舍弃Service接口。</p>
-<h3 id="更进一步思考"><a href="#更进一步思考" class="headerlink" title="更进一步思考"></a>更进一步思考</h3><p>我们知道，json已经成为了事实上的前后端交互的数据标准，后台做的事是，就是接收json,转为bean, 存数据库，取数据就是把数据封装为bean,在转为json返回前台，既然要这么转，为何后台不直接使用json 来做数据处理，省去了来回转，岂不是更好？</p>
-<p>基于这样的思想，有人开发了一个框架，叫 Latke , 参考这篇文章看介绍 <a href="https://hacpai.com/article/1403847528022" target="_blank" rel="noopener"> 为什么又要造一个叫 Latke 的轮子</a>.</p>
-<p>一句流行的话说，既要埋头搬砖，也要抬头看路，多思考下自己的业务场景和应对手段，也是很有益处的。</p>
+            <p>
+              习惯的日常由于经常做内部系统，所以只讨论在开发内部系统的范围。
+经典的MVC架构，经典的Spring、MyBatis 组合，开发内部系统已经是成熟的套路了，不需要思考：
 
+Controller 接收用户请求
+Service 接口处理用户逻辑
+Service 实现真正处理逻辑，用各种Dao来操作数据库
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/06/Java的接口-实现模式真有必要吗/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1804,29 +1867,20 @@
       
         
           
-            <p>在我们的生活很早的时候，我们就学到 ‘不’这个词是消极的。但是在我们生活中学会说不以便专注于重要的事是非常积极的，尤其是当你做为一个程序员不得不和你的客户和队长日常讨论让你开发一个功能时候。</p>
-<p>作为一个软件开发者，我们面对不仅语法和逻辑挑战，还要客户交流。（crucial 关键的） 这是关键的因为有时，你的客户将会让你加一些需要花费大量时间开发但是对最终产品应用目标没有价值的功能。</p>
-<p>如果你面对和以上提到的类似的场景，你有两个选择。</p>
-<ol>
-<li>开发功能</li>
-<li>说不</li>
-</ol>
-<p>为什么你需要说不？那不是我的客户想要的吗？这不是他的软件吗？</p>
-<p>当然是的。但是这也要花费时间和金钱去完成的。</p>
-<p>你的客户投资资源在你确定不会增加产品价值的事情上，甚至知道这一点，但是你还要去做。</p>
-<p>所以，你多么该管理一下像这样的场景？我们将会说不，但是解释为什么。</p>
-<p>作为一个在Pernix的软件学徒，我们不得不在6周内开发应用。这些应用叫做 MVP (最低可用产品)。就像名字表达的那样，这类应用意味着做的最小但是对最终产品有巨大价值的功能。</p>
-<p>6周是非常短的一段时间，我们必须敏捷必须专注于什么是重要的事情上。有时客户想要一些将花费大量时间的功能但是并不会在周期结束时候增加实际价值。</p>
-<p>这就是我们必须识别什么是我们应用的目的，然后在这样的功能上努力。</p>
-<p>我之前做的一个项目中，一个客户让我们开发一个聊天机器人功能，如果我们同意开发将会占用整个6周。主要功能是开发一个用社交网络实现一个CRM系统。</p>
-<p>所以我们表上就要两个选项。开发聊天机器人或CRM。</p>
-<p>幸运的是，客户同意了我们意见，决定将来再实现聊天机器人，先努力开发CRM。</p>
-<p>如果我们同意开发聊天机器人，情况会变得非常困难。我们不能开发完成聊天机器人也不能完成CRM。</p>
-<p>最后，我们设法开发了CRM，客户对最终结果很满意。我们学到了要聚焦于开发两个主要功能又快又好的完成。</p>
-<p>这个方法可能听起来熟悉的如果你把 Scrum（敏捷工具） 作为你的开发方法论。在Scrum 你需要设置短阶段任务并完成它。如果你指出你的任务将会比你认为的花费更多时间或者意识到你在开发一个完全不同的功能，常常在脑中思考，什么是任务？目标是什么。</p>
-<p>简短来说，确定你的工程里什么是重要的，学会对那些需要花费大量时间开发但对最终产品不会增加价值的事说不。</p>
-
+            <p>
+              在我们的生活很早的时候，我们就学到 ‘不’这个词是消极的。但是在我们生活中学会说不以便专注于重要的事是非常积极的，尤其是当你做为一个程序员不得不和你的客户和队长日常讨论让你开发一个功能时候。
+作为一个软件开发者，我们面对不仅语法和逻辑挑战，还要客户交流。（crucial 关键的） 这是关键的因为有时
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/06/一个好的开发者应该说不/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>

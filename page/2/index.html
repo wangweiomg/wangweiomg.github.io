@@ -228,6 +228,23 @@
         
         
           
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
 
     
@@ -383,24 +400,35 @@
       
         
           
-            <h3 id="第21周ARTS"><a href="#第21周ARTS" class="headerlink" title="第21周ARTS"></a>第21周ARTS</h3><p>算法类</p>
-<blockquote>
-<p> <a href="https://github.com/wangweiomg/arts/blob/master/week21/algorithm.md" target="_blank" rel="noopener">141. 环形链表</a></p>
-</blockquote>
-<p>阅读:</p>
-<blockquote>
-<p> <a href="https://github.com/wangweiomg/arts/blob/master/week21/review.md" target="_blank" rel="noopener">Linux进程那些事（2）</a></p>
-</blockquote>
-<p>分享:</p>
-<blockquote>
-<p><a href="https://github.com/wangweiomg/arts/blob/master/week21/share.md" target="_blank" rel="noopener">一个.java 文本文件是如何运行起来的</a></p>
-</blockquote>
-<p>Tip:</p>
-<blockquote>
-<p><a href="https://github.com/wangweiomg/arts/blob/master/week21/tip.md" target="_blank" rel="noopener">关于字符串类型和数值类型排序的bug</a></p>
-</blockquote>
+            <p>
+              第21周ARTS算法类
 
+ 141. 环形链表
+
+阅读:
+
+ Linux进程那些事（2）
+
+分享:
+
+一个.java 文本文件是如何运行起来的
+
+Tip:
+
+关于字符串类型和数值类型排序的bug
+
+
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/17/21th-arts/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -537,8 +565,19 @@
       
         
           
-            
+            <p>
+              
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/17/21th-arts-md/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -679,39 +718,23 @@
       
         
           
-            <h3 id="142-环形链表-II"><a href="#142-环形链表-II" class="headerlink" title="142. 环形链表 II"></a><a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/" target="_blank" rel="noopener">142. 环形链表 II</a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
-<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
-<p>说明：不允许修改给定的链表。</p>
-<p>示例 1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：tail connects to node index 1</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt=""></p>
-<p>示例 2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], pos = 0</span><br><span class="line">输出：tail connects to node index 0</span><br><span class="line">解释：链表中有一个环，其尾部连接到第一个节点</span><br></pre></td></tr></table></figure>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt=""></p>
-<p>示例 3：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1], pos = -1</span><br><span class="line">输出：no cycle</span><br><span class="line">解释：链表中没有环。</span><br></pre></td></tr></table></figure>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt=""></p>
-<p>进阶：</p>
-<p>你是否可以不用额外空间解决此题？</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>这道题是<a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank" rel="noopener">141.环形链表</a>的进阶版，141只要判断是否存在环，这个要求找出进环位置。</p>
-<p>首先考虑还是使用HashSet Key的唯一性来做判断，只要第一次存在重复的元素，就说明这个元素为进环位置，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public ListNode detectCycle2(ListNode head) &#123;</span><br><span class="line">        if (head == null || head.next == null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Set&lt;ListNode&gt; set = new HashSet&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        while (head != null) &#123;</span><br><span class="line">            boolean flag = set.add(head);</span><br><span class="line">            if (!flag) &#123;</span><br><span class="line">                return head;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            head = head.next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return null;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>我们需要考虑不增加额外空间来实现这个功能。也参照141环形链表的双指针方案。<br>思考这样一个链表：</p>
-<p><img src="https://img-blog.csdn.net/20151009091556303" alt=""></p>
-<p>我们假设这个链表 起点、环入口、第一次相遇点 分别是 X, Y, Z, 之间的距离分别是a,b,c</p>
-<p>那么，在 Z 点第一次相遇，此时 </p>
-<ul>
-<li>慢指针走的距离为 a+b, </li>
-<li>快指针走的距离为  a+b+c+b ,</li>
-</ul>
-<p>由于快指针速度是慢指针的2倍，也就是说快指针走过的距离为慢指针的距离的2倍，于是就存在以下等式：</p>
-<p>2* (a+b) = a+b+c+b </p>
-<p>也就是<br>2a + 2b = a+c + 2b,</p>
-<p>也就是<br><strong>a == c</strong></p>
-<p>也就是，两个指针第一次相遇点到环入口的距离 和 起点到入口的距离相等，那么我们就可以利用这个特点来写代码。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public ListNode detectCycle(ListNode head) &#123;</span><br><span class="line"></span><br><span class="line">        if (head == null || head.next == null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode fast = head;</span><br><span class="line">        ListNode slow = head;</span><br><span class="line"></span><br><span class="line">        do &#123;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125; while (fast != null &amp;&amp; fast.next  != null &amp;&amp; fast != slow);</span><br><span class="line"></span><br><span class="line">        if (fast != slow) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode p1 = head;</span><br><span class="line">        ListNode p2 = slow;</span><br><span class="line"></span><br><span class="line">        while (p1 != p2) &#123;</span><br><span class="line">            p1 = p1.next;</span><br><span class="line">            p2 = p2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return p1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              142. 环形链表 II题目给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+说明：不允许修改给定的链表。
+示例 1：
+输入
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/25/LeetCode-142-环形链表-II/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -852,28 +875,22 @@
       
         
           
-            <h3 id="141-环形链表"><a href="#141-环形链表" class="headerlink" title="141. 环形链表"></a><a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank" rel="noopener">141. 环形链表</a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个链表，判断链表中是否有环。</p>
-<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
-<p>示例 1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt=""></p>
-<p>示例 2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], pos = 0</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第一个节点。</span><br></pre></td></tr></table></figure>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt=""></p>
-<p>示例 3：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1], pos = -1</span><br><span class="line">输出：false</span><br><span class="line">解释：链表中没有环。</span><br></pre></td></tr></table></figure>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt=""></p>
-<p>进阶：</p>
-<p>你能用 O(1)（即，常量）内存解决此问题吗？</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>这道题是要判断链表中有没有存在环。是否存在环，特点是有两个指针都指向同一个元素，就根据这个特点来判断，于是用最暴力的手段，把节点存到集合里，每取一个就去和集合中的比较，如果相同就代表存在环，于是代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static boolean hasCycle(ListNode head) &#123;</span><br><span class="line"></span><br><span class="line">        if (head == null || head.next == null) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        List&lt;ListNode&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        while (head != null) &#123;</span><br><span class="line">            if (list.contains(head)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">            list.add(head);</span><br><span class="line">            head = head.next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>或者考虑用Set集合来接收，判断是否添加成功来确定是否有环</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;ListNode&gt; set = new HashSet&lt;&gt;();</span><br><span class="line">      while (head != null) &#123;</span><br><span class="line">          boolean flag = set.add(head);</span><br><span class="line">          if (!flag) &#123;</span><br><span class="line">              return true;</span><br><span class="line">          &#125;</span><br><span class="line">          head = head.next;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      return false;</span><br></pre></td></tr></table></figure>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>如果不引入集合，即空间复杂度为O(1),那么该如何解决呢？</p>
-<p>如果有环，那么一定会引起指针循环，根据这个特点，可以设计个快慢指针(双指针思想)，一个跳两步，一个跳一步，只要存在循环，那么一定会追上，如果不存在环，那么一定追不上。于是解答代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean hasCycle(ListNode head) &#123;</span><br><span class="line">        if (head == null || head.next == null) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode fast = head;</span><br><span class="line">        ListNode slow = head;</span><br><span class="line"></span><br><span class="line">        do &#123;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">            slow = slow.next;</span><br><span class="line"></span><br><span class="line">        &#125; while (fast != null &amp;&amp; fast.next != null &amp;&amp; fast != slow);</span><br><span class="line"></span><br><span class="line">        return fast == slow ? true : false;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              141. 环形链表题目给定一个链表，判断链表中是否有环。
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+示例 1：
+输入：head = [3,2,0,-4], pos = 1输出：true解释：链表中
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/21/LeetCode-141-环形链表/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1014,12 +1031,20 @@
       
         
           
-            <h3 id="这是第20周的ARTS"><a href="#这是第20周的ARTS" class="headerlink" title="这是第20周的ARTS"></a>这是第20周的ARTS</h3><p>算法类是 121 买卖股票的最佳时机  链接： <a href="https://github.com/wangweiomg/arts/blob/master/week20/algorithm.md" target="_blank" rel="noopener">https://github.com/wangweiomg/arts/blob/master/week20/algorithm.md</a></p>
-<p>由于本周Share题目是Linux 进程， 链接为： <a href="https://github.com/wangweiomg/arts/blob/master/week20/share.md" target="_blank" rel="noopener">https://github.com/wangweiomg/arts/blob/master/week20/share.md</a></p>
-<p>所以Review 直接从这英文资料里取词了： 链接 <a href="https://github.com/wangweiomg/arts/blob/master/week20/review.md" target="_blank" rel="noopener">https://github.com/wangweiomg/arts/blob/master/week20/review.md</a></p>
-<p>tip为 maven 构建时被系统kill掉的问题： <a href="https://github.com/wangweiomg/arts/blob/master/week20/tip.md" target="_blank" rel="noopener">https://github.com/wangweiomg/arts/blob/master/week20/tip.md</a></p>
-
+            <p>
+              这是第20周的ARTS算法类是 121 买卖股票的最佳时机  链接： https://github.com/wangweiomg/arts/blob/master/week20/algorithm.md
+由于本周Share题目是Linux 进程， 链接为： https://github.com/wa
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/21/20th-arts/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1160,14 +1185,19 @@
       
         
           
-            <p>投资需要加强（非常重要）的3点能力：<br>1：hold的住现金的能力。<br>2：不乱投资。<br>3：识人头。<br>以上3点是相辅相成的，今天说说第1点：<br>群主见过太多太多hold不住现金的人了，具体表现在：一有钱就想赶快花掉（乱投资），或者一有钱就开始不由自主的大头大脚，或开始吹牛霍胖，甚至赌博吸毒。这些都是非常不成熟的表现。<br>现金是非常非常珍贵的资源，和子弹一样，打出去容易，找回来难。<br>时间对于投资行为来说过的很慢的，慢到所有的投资其实都有足够充分的时间去权衡，思考利弊。<br>所有的男人都应该每天花起码2小时去好好思考自己的投资行为的利弊。赚钱是男人的本能，但是赚不赚的到钱就是2说了。</p>
-<h3 id="说说投资需要加强的3点能力里的第2点：不乱投资。"><a href="#说说投资需要加强的3点能力里的第2点：不乱投资。" class="headerlink" title="说说投资需要加强的3点能力里的第2点：不乱投资。"></a>说说投资需要加强的3点能力里的第2点：不乱投资。</h3><p>投资的最基础心法是：谋定而后动。<br>       很多人嘴上的投资其实不是投资，那叫跟风。拿群主相对擅长的啃房来说：周围99%以上的人在群主看来是：盲从+傻啃。具体表现在：人云亦云，没有自己的分析见解，容易被他人洗脑。（这里多说1句：洗脑其实也没关系，关键要找对洗脑的人）<br>       人首先要正确的自我认识和评判：别人的经验适合不合适自己，财力物力能力上的差别是不是能弥补或者优化改进，自己哪方面比较缺失或者说不足，别人值得去学习的优点和别人的缺点自己如何避免…这些都应该是投资前充分考虑的方面。<br>       每个人生来的经济基础不一样是客观存在的前提，也就是起跑线不一样。起跑线不行的TX要做的最重要的事情，就是正确的评估自己和制定切实可行的计划，而不是盲目的发老急去showhand，那种赢了嫩模，输了干活的思路千万要不得。</p>
-<h3 id="投资需要加强的3点能力里的第3点：识人头。"><a href="#投资需要加强的3点能力里的第3点：识人头。" class="headerlink" title="投资需要加强的3点能力里的第3点：识人头。"></a>投资需要加强的3点能力里的第3点：识人头。</h3><p> 识人头也是最最重要的一点，每个人能力不一样，认识的朋友也不一样，有些人可以当良师益友，有些人自控能力都很不足。</p>
-<p>朋友也是分类的（人心坏的不在讨论范围内）：<br>1：能力一般+想法不少<br>2：能力一搬+谨慎<br>3：能力强+想法不少+操之过急<br>4：能力强+步步为营<br>5：能力强+步步为营+精明<br>6：能力强+步步为营+大智若愚</p>
-<p>以上6类人数字越大越难遇到，遇到了就应该紧紧抓住（结交）。<br>尤其是第4级开始的、能够步步为营做事的人，群主狐友狗友里：总数不超过20个（手指头+脚趾头数的过来）。</p>
-<p>胡言乱语，看官自己体会</p>
-
+            <p>
+              投资需要加强（非常重要）的3点能力：1：hold的住现金的能力。2：不乱投资。3：识人头。以上3点是相辅相成的，今天说说第1点：群主见过太多太多hold不住现金的人了，具体表现在：一有钱就想赶快花掉（乱投资），或者一有钱就开始不由自主的大头大脚，或开始吹牛霍胖，甚至赌博吸毒。这些都是非常不成熟的表现
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/18/投资需要加强的3点能力/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1320,15 +1350,20 @@
       
         
           
-            <h3 id="自由市场带来价格趋同于价值"><a href="#自由市场带来价格趋同于价值" class="headerlink" title="自由市场带来价格趋同于价值"></a>自由市场带来价格趋同于价值</h3><p>在一个自然自由竞争机制充分发挥作用的经济体系中，产品的市场价格必然会与自然价格相一致，每一种要素的市场价格也会和它们的自然价格相一致。</p>
-<p>因为只要有一种行业、产品出现超额利润，就会有其他资本、资源跟进，进而拉低整体利润率，直至趋同于社会平均利润率。最简单的例子就是卖煎饼。王大娘街边卖煎饼月入3万，那么立马会引来李大娘、张大娘、赵大娘，他们充分竞争，最终每人摊薄利润，可能每人月入5千甚至3千2千，然后有人退出竞争，达到一种平衡状态，也就拉到了社会平均利润率。</p>
-<h3 id="管制带来价格脱离价值"><a href="#管制带来价格脱离价值" class="headerlink" title="管制带来价格脱离价值"></a>管制带来价格脱离价值</h3><p>很明显我们生活的市场并不是一个完全自由的市场，既然不是自由市场就必然会引起市场价格偏离于自然价格。因为管制限制了供给的自由流动，要么供过于求引起价格下跌，要么供不应求造成价格上涨。拿管制最严重的地产市场来说再明了不过。比如重庆特殊的地票制度保证市场土地供需基本平衡，北京等地的供地政策明显偏向于收紧，这就造成了重庆房价的长期低迷和北京等城市的长期上涨。</p>
-<h3 id="完全自由市场不会完全到来，只能无限的接近"><a href="#完全自由市场不会完全到来，只能无限的接近" class="headerlink" title="完全自由市场不会完全到来，只能无限的接近"></a>完全自由市场不会完全到来，只能无限的接近</h3><p>因为存在管制，所以不会出现完全自由的市场经济体。那么就会影响到供求关系，进而影响到商品的市场价格。管制造成了某些商品价格偏离自然价格很远，这就存在了套利空间。当然这些套利空间有的向民众开放，有的不开放，开放的部分需要人们去发现。找到这部分，参与其中，在被大众涌入拉低到平均利润之前推出，就能获得超额利润。</p>
-<h3 id="以本守之，以末致财"><a href="#以本守之，以末致财" class="headerlink" title="以本守之，以末致财"></a>以本守之，以末致财</h3><p>所以，要想获得财富，第一要有本钱，第二要去发现套利空间。正常工作赚取普通回报就是本，这是行动的基础，然后发现机会迅速做大，这是末。平时蛰伏，寻找泡沫，在泡沫起来之前提前潜入建仓，在泡沫泛滥破裂之前逃走，这是最理想的模型。对照生活中具体的场景，相信你会很有体会。</p>
-<hr>
-<p><img src="https://pic.rmb.bdstatic.com/25199f45f3af42dd4a749c82467316cd.jpeg@wm_2,t_55m+5a625Y+3L+a1quWtkOeahOaKgOacr+epuumXtA==,fc_ffffff,ff_U2ltSGVp,sz_28,x_18,y_18" alt=""></p>
-
+            <p>
+              自由市场带来价格趋同于价值在一个自然自由竞争机制充分发挥作用的经济体系中，产品的市场价格必然会与自然价格相一致，每一种要素的市场价格也会和它们的自然价格相一致。
+因为只要有一种行业、产品出现超额利润，就会有其他资本、资源跟进，进而拉低整体利润率，直至趋同于社会平均利润率。最简单的例子就是卖煎饼。王大
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/17/自由经济与利润率/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1469,19 +1504,23 @@
       
         
           
-            <h3 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121. 买卖股票的最佳时机"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/description/" target="_blank" rel="noopener">121. 买卖股票的最佳时机</a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
-<p>如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。</p>
-<p>注意你不能在买入股票前卖出股票。</p>
-<p>示例 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: [7,1,5,3,6,4]</span><br><span class="line">输出: 5</span><br><span class="line">解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。</span><br><span class="line">     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。</span><br></pre></td></tr></table></figure>
-<p>示例 2:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [7,6,4,3,1]</span><br><span class="line">输出: 0</span><br><span class="line">解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</span><br></pre></td></tr></table></figure>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>先解决，再优化。笨方法，先跑起来再说。<br>类似冒泡排序，对每个元素进行比较，找出最大差额。代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxProfit(int[] prices) &#123;</span><br><span class="line">        if (prices == null || prices.length &lt; 2) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        int len = prices.length;</span><br><span class="line"></span><br><span class="line">        int max = prices[len - 1] - prices[0];</span><br><span class="line">        for (int i = 0; i &lt; len - 1; i++) &#123;</span><br><span class="line">            for (int j = i + 1; j &lt; len; j++) &#123;</span><br><span class="line"></span><br><span class="line">                if (prices[j] - prices[i] &gt; max) &#123;</span><br><span class="line">                    max = prices[j] - prices[i];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return max &lt; 0 ? 0 : max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>看了答案后，发现其实可以一次循环就能做到的，让左游标在值不符合时候，往右移动代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public int maxProfit(int[] prices) &#123;</span><br><span class="line">        int low = 0, high = 0, max = 0, tmp = 0;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; prices.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">            high = i;</span><br><span class="line">            tmp = prices[high] - prices[low];</span><br><span class="line">            if (tmp &lt;= 0) &#123;</span><br><span class="line">                low = i;</span><br><span class="line">            &#125;</span><br><span class="line">            if (tmp &gt; max) &#123;</span><br><span class="line">                max = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return max;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              121. 买卖股票的最佳时机题目给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。
+注意你不能在买入股票前卖出股票。
+示例 1:
+输入: [7,1,5,3,6,4]输出: 5解释: 在第 2
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/14/LeetCode-121-买卖股票的最佳时机/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1622,22 +1661,23 @@
       
         
           
-            <h3 id="4-寻找两个有序数组的中位数"><a href="#4-寻找两个有序数组的中位数" class="headerlink" title="4.寻找两个有序数组的中位数"></a><a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/description/" target="_blank" rel="noopener">4.寻找两个有序数组的中位数</a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。</p>
-<p>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。</p>
-<p>你可以假设 nums1 和 nums2 不会同时为空。</p>
-<p>示例 1:</p>
-<p>nums1 = [1, 3]<br>nums2 = [2]</p>
-<p>则中位数是 2.0</p>
-<p>示例 2:</p>
-<p>nums1 = [1, 2]<br>nums2 = [3, 4]</p>
-<p>则中位数是 (2 + 3)/2 = 2.5</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>由于和 <a href="https://leetcode-cn.com/problems/merge-sorted-array/description/" target="_blank" rel="noopener">88. 合并两个有序数组</a> 有相似之处，可以直接借鉴下解法。</p>
-<p>可以认为是合并有序数组，找中位数，那么可以倒着把两个数组放入新数组，不用全放，到中位数哪里就可以了，于是代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public double findMedianSortedArrays(int[] nums1, int[] nums2) &#123;</span><br><span class="line">        int m = nums1.length;</span><br><span class="line">        int n = nums2.length;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        int len = (m + n) / 2;</span><br><span class="line"></span><br><span class="line">        int[] ints = new int[len + 1];</span><br><span class="line">        int ia = m - 1;</span><br><span class="line">        int ib = n - 1;</span><br><span class="line"></span><br><span class="line">        for (int i = len; i &gt;= 0; i--) &#123;</span><br><span class="line"></span><br><span class="line">            if (ia &gt;= 0 &amp;&amp; ib &lt; 0) &#123;</span><br><span class="line">                ints[i] = nums1[ia--];</span><br><span class="line">                continue;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (ia &lt; 0 &amp;&amp; ib &gt;= 0) &#123;</span><br><span class="line">                ints[i] = nums2[ib--];</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (ia &gt;= 0 &amp;&amp; ib &gt;= 0) &#123;</span><br><span class="line">                if (nums1[ia] &gt; nums2[ib]) &#123;</span><br><span class="line">                    ints[i] = nums1[ia--];</span><br><span class="line"></span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    ints[i] = nums2[ib--];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        double res = 0;</span><br><span class="line">        if ((m + n) % 2 == 0) &#123;</span><br><span class="line">            res = (ints[0] + ints[1]) * 1.0 /2;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            res = ints[0];</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是，<strong>要求算法的时间复杂度为 O(log(m + n))</strong>， 所以这种写法是不行的。 看了答案后，觉得这种道题还是挺有难度的，使用了复合的二分查找法，具体思路就是从寻找到 在 num1 和num2中都是中位数的元素，那么合并后也是中位数，具体代码如下：</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">public static double findMedianSortedArrays3(int[] nums1, int[] nums2) &#123;</span><br><span class="line">        int m = nums1.length;</span><br><span class="line">        int n = nums2.length;</span><br><span class="line">        if (m == 0 &amp;&amp; n == 0) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (m == 0) &#123;</span><br><span class="line">            return n % 2 == 1 ? nums2[n / 2] : (nums2[n / 2 - 1] + nums2[n / 2]) / 2.0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (n == 0) &#123;</span><br><span class="line">            return m % 2 == 1 ? nums1[m / 2] : (nums1[m / 2 - 1] + nums1[m / 2]) / 2.0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (m &gt; n) &#123;</span><br><span class="line">            return findMedianSortedArrayHelper(nums1, nums2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return findMedianSortedArrayHelper(nums2, nums1);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static double findMedianSortedArrayHelper(int[] nums1, int[] nums2) &#123;</span><br><span class="line">        int m = nums1.length;</span><br><span class="line">        int n = nums2.length;</span><br><span class="line">        int low1 = 0;</span><br><span class="line">        int high1 = m - 1;</span><br><span class="line">        int low2 = 0;</span><br><span class="line">        int high2 = n - 1;</span><br><span class="line"></span><br><span class="line">        int mid = low1 + (high1 - low1) / 2;</span><br><span class="line">        int pos = binarySearch(nums2, nums1[mid]);</span><br><span class="line">        int num = mid + pos;</span><br><span class="line">        // 如果 nums1[mid] 在 num2 中，</span><br><span class="line">        if (num == (m + n) / 2) &#123;</span><br><span class="line">            if ((m + n) % 2 == 1) &#123;</span><br><span class="line">                return nums1[mid];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            int next = 0;</span><br><span class="line">            if ((mid &gt; 0 &amp;&amp; pos &gt; 0)) &#123;</span><br><span class="line">                next = nums1[mid - 1] &gt; nums2[pos - 1] ? nums1[mid - 1] : nums2[pos - 1];</span><br><span class="line">            &#125; else if (pos &gt; 0) &#123;</span><br><span class="line">                next = nums2[pos - 1];</span><br><span class="line">            &#125; else if (mid &gt; 0) &#123;</span><br><span class="line">                next = nums1[mid - 1];</span><br><span class="line">            &#125;</span><br><span class="line">            return (nums1[mid] + next) / 2.0;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (num &lt; (m + n) / 2) &#123;</span><br><span class="line">            low1 = mid + 1;</span><br><span class="line">            low2 = pos;</span><br><span class="line">            if (high1 - low1 &gt; high2 - low2) &#123;</span><br><span class="line">                return findMedianSortedArrayHelper(nums1, nums2);</span><br><span class="line">            &#125;</span><br><span class="line">            return findMedianSortedArrayHelper(nums2, nums1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (num &gt; (m + n) / 2) &#123;</span><br><span class="line">            high1 = mid - 1;</span><br><span class="line">            high2 = pos - 1;</span><br><span class="line">            if (high1 - low1 &gt; high2 - low2) &#123;</span><br><span class="line">                return findMedianSortedArrayHelper(nums1, nums2);</span><br><span class="line">            &#125;</span><br><span class="line">            return findMedianSortedArrayHelper(nums2, nums1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              4.寻找两个有序数组的中位数题目给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+nums1 = [1, 3]nums2 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/11/LeetCode-4-寻找两个有序数组的中位数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1778,30 +1818,25 @@
       
         
           
-            <h3 id="你只是需要休息一下"><a href="#你只是需要休息一下" class="headerlink" title="你只是需要休息一下"></a>你只是需要休息一下</h3><p>或许当你累了，烦了，头脑一团糟，可以尝试放松下。</p>
-<p>既要埋头搬砖，也要抬头看路。</p>
-<p>思考、前行，互为表里，勇者与莽夫之间的分界线是头脑。</p>
-<p><img src="https://wx2.sinaimg.cn/mw690/006cZ2iWgy1fqmyat6d2xj30u00yktor.jpg" alt=""></p>
-<h3 id="不识时务与一往无前"><a href="#不识时务与一往无前" class="headerlink" title="不识时务与一往无前"></a>不识时务与一往无前</h3><p>哪种选择都是对的。</p>
-<p>或跃在渊，无咎。</p>
-<p>起落本是常态，罪己罪他都没有找到核心，顺境时不要夸大自己的能力，逆境时不要否认自己的能力，它就存在那里，情绪波动改变不了它的价值。</p>
-<p><img src="https://wx2.sinaimg.cn/mw690/006cZ2iWgy1fqmyastgvkj30rs0rs7jw.jpg" alt=""></p>
-<h3 id="人生的职业都是投资。"><a href="#人生的职业都是投资。" class="headerlink" title="人生的职业都是投资。"></a>人生的职业都是投资。</h3><p>可能最开始是没有选择或无意识的选择，你的投资都会开始。</p>
-<p>在正确的时间，正确的地点，出现在正确的地方上，这是恒久追求。</p>
-<p>要有眼光，去发现真正的价值。要摒弃刻舟求剑的想法和做法，这只会让你南辕北辙。价格是价值的一种外部表现，然而价格并不总是等于价值。相信价格早晚回归到价值附近是你跟随泡沫起舞的原则。</p>
-<p>以正合以奇胜。发展中不忘稳健，稳健中不忘发展。</p>
-<p><img src="https://wx3.sinaimg.cn/mw690/006cZ2iWgy1fqmyat0d1dj30u00za18h.jpg" alt=""></p>
-<h3 id="开放的心态"><a href="#开放的心态" class="headerlink" title="开放的心态"></a>开放的心态</h3><p>不断的用小的成本去试错可能大收益的事。</p>
-<p>在泡沫起来之前提前潜伏，泡沫疯狂时候撤离。最多的时间用第一句去寻找泡沫。</p>
-<p>好事不是经常有的，坏事却容易扎堆出现，很多人就这样因为屋漏偏逢连夜雨，悄无声息了，其实这是个自然的筛选机制，因为做成的都是小部分，符合真实世界规律。所以有人总结了这个阶段能起来的叫逆商高。</p>
-<p>与概率做斗争是个其乐无穷的事。因为确定大部分人会被提前甩下车或主动下车，但是不确定你是属于哪一个阵营。</p>
-<p>你和大众保持一致，那么你的收益就是平均大众的。你做的和大众不一样，要么你错了，要么大众错了。</p>
-<p>不是要你跑的比第一名快，而是不断超过你身边的人你就赢了。</p>
-<p>所以用结果来倒推原因，确实具备某些特质的人群更容易取得成就，然而，这也只是概率问题。</p>
-<p>多读书、多看报，少吃零食，多睡觉。</p>
-<p><img src="https://wx4.sinaimg.cn/mw690/006cZ2iWgy1fqmyatp182j30rs0yq7hz.jpg" alt=""></p>
+            <p>
+              你只是需要休息一下或许当你累了，烦了，头脑一团糟，可以尝试放松下。
+既要埋头搬砖，也要抬头看路。
+思考、前行，互为表里，勇者与莽夫之间的分界线是头脑。
 
+不识时务与一往无前哪种选择都是对的。
+或跃在渊，无咎。
+起落本是常态，罪己罪他都没有找到核心，顺境时不要夸大自己的能力，逆境时不要否认自己的能力，
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/09/beauty1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
