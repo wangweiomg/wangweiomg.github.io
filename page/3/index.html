@@ -297,6 +297,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/LeetCode-83-删除排序链表中的重复元素/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="寻找股神">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="飞刀问情">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/12/09/LeetCode-83-删除排序链表中的重复元素/" class="post-title-link" itemprop="url">LeetCode 83. 删除排序链表中的重复元素</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-09 00:26:09 / 修改时间：00:27:32" itemprop="dateCreated datePublished" datetime="2018-12-09T00:26:09+08:00">2018-12-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="83-删除排序链表中的重复元素"><a href="#83-删除排序链表中的重复元素" class="headerlink" title="83. 删除排序链表中的重复元素"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/description/" target="_blank" rel="noopener">83. 删除排序链表中的重复元素</a></h3><p> 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。</p>
+<p> 示例 1:</p>
+<p> 输入: 1-&gt;1-&gt;2<br> 输出: 1-&gt;2<br> 示例 2:</p>
+<p> 输入: 1-&gt;1-&gt;2-&gt;3-&gt;3<br> 输出: 1-&gt;2-&gt;3</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p> 这个就是数据结构的链表结构，相当于对删除链表上的某一个元素，把这个待删除的元素的前驱的后继指向该元素的后继，就行了。</p>
+<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><p> 我第一想到方法是笨方法，首先建立一个新链表，第一个元素是 head.val, 遍历链表，如果比head.val 大就把这个元素拼接到新链表上， 返回新链表的head。代码如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">if (head == null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode node = new ListNode(head.val);</span><br><span class="line">        ListNode x = node;</span><br><span class="line"></span><br><span class="line">        while (head.next != null) &#123;</span><br><span class="line"></span><br><span class="line">            head = head.next;</span><br><span class="line">            if (head.val &gt; x.val) &#123;</span><br><span class="line">                x.next = new ListNode(head.val);</span><br><span class="line">                x = x.next;</span><br><span class="line">            &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">        return node;</span><br></pre></td></tr></table></figure>
+<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><p> 然后就意识到不用新建链表就可以，于是写出了简化版：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public ListNode deleteDuplicates(ListNode head) &#123;</span><br><span class="line">        if (head == null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode flag = head;</span><br><span class="line"></span><br><span class="line">        while (head.next != null) &#123;</span><br><span class="line"></span><br><span class="line">            int left = head.val;</span><br><span class="line">            int right = head.next.val;</span><br><span class="line"></span><br><span class="line">            if (right == left) &#123;</span><br><span class="line"></span><br><span class="line">                // 删除2</span><br><span class="line">                if (head.next.next == null) &#123;</span><br><span class="line">                    head.next = null;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    head.next = head.next.next;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                // 往前推进，</span><br><span class="line">                head = head.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return flag;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码3"><a href="#代码3" class="headerlink" title="代码3"></a>代码3</h3><p> 看了答案后，是在2 的基础上进一步简化：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public ListNode deleteDuplicates(ListNode head) &#123;</span><br><span class="line">        ListNode flag = head;</span><br><span class="line"></span><br><span class="line">        while (head != null &amp;&amp; head.next != null) &#123;</span><br><span class="line"></span><br><span class="line">            if (head.val == head.next.val) &#123;</span><br><span class="line">                // 删除2</span><br><span class="line">                head.next = head.next.next;</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                // 往前推进，</span><br><span class="line">                head = head.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return flag;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/LeetCode-746-使用最小花费爬楼梯/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1726,154 +1879,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/08/LeetCode-21-合并两个有序链表/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="寻找股神">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="飞刀问情">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/08/LeetCode-21-合并两个有序链表/" class="post-title-link" itemprop="url">LeetCode 21. 合并两个有序链表</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-08 19:05:36 / 修改时间：19:06:49" itemprop="dateCreated datePublished" datetime="2018-12-08T19:05:36+08:00">2018-12-08</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/description/" target="_blank" rel="noopener">21. 合并两个有序链表</a></p>
-<p> 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
-<p> 示例：</p>
-<p> 输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4<br> 输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p> 两个ListNode ， 根据l1 、 l2 的val，小的给拼的ListNode.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public ListNode mergeTwoLists(ListNode l1, ListNode l2) &#123;</span><br><span class="line"></span><br><span class="line">        ListNode head = null, tail = null;</span><br><span class="line"></span><br><span class="line">        while (l1 != null &amp;&amp; l2 != null) &#123;</span><br><span class="line"></span><br><span class="line">            ListNode node = null;</span><br><span class="line">            if (l1.val &lt; l2.val) &#123;</span><br><span class="line">                node = l1;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                node = l2;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (head == null) &#123;</span><br><span class="line"></span><br><span class="line">                head = tail = node;</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line"></span><br><span class="line">                tail.next = node;</span><br><span class="line">                tail = tail.next;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode rest = l1 == null ? l2 : l1;</span><br><span class="line"></span><br><span class="line">        if (rest != null) &#123;</span><br><span class="line">            if (head != null &amp;&amp; tail != null) &#123;</span><br><span class="line">                tail.next = rest;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                head = rest;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	return head;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1920,7 +1925,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1947,7 +1952,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
