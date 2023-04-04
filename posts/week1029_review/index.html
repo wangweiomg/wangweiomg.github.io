@@ -1,11 +1,634 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content><meta name=description content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
-Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size."><meta name=keywords content=",arts"><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://ifaa.top/posts/week1029_review/><title>Week1029_review :: Hello Friend — A coder's Homepage</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=/main.2a064c455b0ecbd6b1481b3bf9df2441e95838691022f40a5338c2cb1244f075.css integrity="sha256-KgZMRVsOy9axSBs7+d8kQelYOGkQIvQKUzjCyxJE8HU="><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color><link rel="shortcut icon" href=/favicon.ico><meta name=msapplication-TileColor content><meta itemprop=name content="Week1029_review"><meta itemprop=description content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
-Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size."><meta itemprop=datePublished content="2023-03-31T15:45:43+00:00"><meta itemprop=dateModified content="2023-03-31T15:45:43+00:00"><meta itemprop=wordCount content="3109"><meta itemprop=image content="https://ifaa.top"><meta itemprop=keywords content="arts,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://ifaa.top"><meta name=twitter:title content="Week1029_review"><meta name=twitter:description content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
-Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size."><meta property="og:title" content="Week1029_review"><meta property="og:description" content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
-Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size."><meta property="og:type" content="article"><meta property="og:url" content="https://ifaa.top/posts/week1029_review/"><meta property="og:image" content="https://ifaa.top"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-31T15:45:43+00:00"><meta property="article:modified_time" content="2023-03-31T15:45:43+00:00"><meta property="og:site_name" content="Hello Friend "><meta property="article:published_time" content="2023-03-31 15:45:43 +0000 UTC"></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo><span class=logo__mark>></span>
-<span class=logo__text>hello world...</span>
-<span class=logo__cursor></span></div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/about>About</a></li><li><a href=/posts>Blog</a></li><li><a href=/categorys>Category</a></li><li><a href=/series>Series</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>15 minutes</p></div><article><h1 class=post-title><a href=https://ifaa.top/posts/week1029_review/>Week1029_review</a></h1><div class=post-content><h1 id=arts---review-补2019123>ARTS - Review 补2019.1.23</h1><h1 id=15-mysql80服务状态变量和可选性的增加过时或删除httpsdevmysqlcomdocrefman80enadded-deprecated-removedhtml><a href=https://dev.mysql.com/doc/refman/8.0/en/added-deprecated-removed.html>1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除</a></h1><ul><li>rotated v. 回转</li><li>activate vt. 激活</li></ul><h3 id=options-and-variables-introduced-in-mysql-80>Options and Variables Introduced in MySQL 8.0</h3><p>he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series.
-以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。</p><ul><li>Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles.</li><li>缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。</li><li>Audit_log_current_size: Audit log file current size. Added in MySQL 8.0.11.The value increases when an event is written to the log and is reset to 0 when the log is rotated.</li><li>审批日志文件当前的大小。MySQL8.0.11添加的。当一个写入日志事件发生值会增加，当日志回转会重置为0</li><li></li><li>Audit_log_event_max_drop_size: Size of largest dropped audited event. Added in MySQL 8.0.11.The size of the largest dropped event in performance logging mode</li><li>审批时间最大删除大小。MySQL8.0.11添加。在日志记录性能模式下的最大删除大小。</li><li>Audit_log_events: Number of handled audited events. Added in MySQL 8.0.11. The number of events handled by the audit log plugin, whether or not they were written to the log based on filtering policy (see Section 6.4.5.5, “Audit Log Logging Configuration”).</li><li>处理审批时间的数量。MySQL8.0.11添加。通过审批日志插件处理时间数量，不论是否写入日志，基于过滤机制。</li><li>Audit_log_events_filtered: Number of filtered audited events. Added in MySQL 8.0.11.The number of events handled by the audit log plugin that were filtered (not written to the log) based on filtering policy</li><li>过滤审批文时间数量。MySQL8.0.11添加。审批日志插件处理的过滤时间的数量。</li><li>Audit_log_events_lost: Number of dropped audited events. Added in MySQL 8.0.11.</li><li>丢掉的审批事件数量。</li><li>Audit_log_events_written: Number of written audited events. Added in MySQL 8.0.11.</li><li>写入的审批时间数量。</li><li>Audit_log_total_size: Combined size of written audited events. Added in MySQL 8.0.11.</li><li>写入的审批时间数量汇总。</li><li>Audit_log_write_waits: Number of write-delayed audited events. Added in MySQL 8.0.11.</li><li>延迟写入的审批事件数量。</li><li>Caching_sha2_password_rsa_public_key: caching_sha2_password authentication plugin RSA public key value. Added in MySQL 8.0.4.</li><li>加密插件RAS 公钥值。</li><li>Com_alter_resource_group: Count of ALTER RESOURCE GROUP statements. Added in MySQL 8.0.3.</li><li>ALTER RESOURCE GROUP 语句数量。</li><li>Com_alter_user_default_role: Count of ALTER USER &mldr; DEFAULT ROLE statements. Added in MySQL 8.0.0.</li><li>ALTER USER .. DEFAULT ROLE 语句数量。</li><li>Com_create_resource_group: Count of CREATE RESOURCE GROUP statements. Added in MySQL 8.0.3.</li><li>CREATE RESOURCE GROUP 语句数量。</li><li>Com_create_role: Count of CREATE ROLE statements. Added in MySQL 8.0.0.</li><li>CREATE ROLE 语句数量。</li><li>Com_drop_resource_group: Count of DROP RESOURCE GROUP statements. Added in MySQL 8.0.3.</li><li>DROP RESOURCE GROUP 语句数量。</li><li>Com_drop_role: Count of DROP ROLE statements. Added in MySQL 8.0.0.</li><li>DROP ROLE 语句的数量。</li><li>Com_grant_roles: Count of GRANT ROLE statements. Added in MySQL 8.0.0.</li><li>GRANT ROLE 语句的数量。</li><li>Com_install_component: Count of INSTALL COMPONENT statements. Added in MySQL 8.0.0.</li><li>INSTALL COMPONENT 语句数量。</li><li>Com_revoke_roles: Count of REVOKE ROLES statements. Added in MySQL 8.0.0.</li><li>REVOKE ROLE是语句数量。</li><li>Com_set_resource_group: Count of SET RESOURCE GROUP statements. Added in MySQL 8.0.3.</li><li>SET RESOURCE GROUP 语句数量。</li><li>Com_set_role: Count of SET ROLE statements. Added in MySQL 8.0.0.</li><li>Com_uninstall_component: Count of UINSTALL COMPONENT statements. Added in MySQL 8.0.0.</li><li>Connection_control_delay_generated: How many times the server delayed a connection request. Added in MySQL 8.0.1.</li><li>一次连接服务器延迟的次数。</li><li>Current_tls_ca: Current value of ssl_ca system variable. Added in MySQL 8.0.16.</li><li>ssl_ca 系统变量当前值</li><li>Current_tls_capath: Current value of ssl_capath system variable. Added in MySQL 8.0.16.</li><li>系统变量 ssl_capath 当前值。</li><li>Current_tls_cert: Current value of ssl_cert system variable. Added in MySQL 8.0.16.</li><li>系统变量 ssl_cert 当前值。</li><li>Current_tls_cipher: Current value of ssl_cipher system variable. Added in MySQL 8.0.16.</li><li>Current_tls_ciphersuites: Current value of tsl_ciphersuites system variable. Added in MySQL 8.0.16.</li><li>Current_tls_crl: Current value of ssl_crl system variable. Added in MySQL 8.0.16.</li><li>Current_tls_crlpath: Current value of ssl_crlpath system variable. Added in MySQL 8.0.16.</li><li>Current_tls_key: Current value of ssl_key system variable. Added in MySQL 8.0.16.</li><li>Current_tls_version: Current value of tls_version system variable. Added in MySQL 8.0.16.</li><li>Firewall_access_denied: Number of statements rejected by MySQL Enterprise Firewall. Added in MySQL 8.0.11.</li><li>MySQL企业防火墙拒绝的语句数量</li><li>Firewall_access_granted: Number of statements accepted by MySQL Enterprise Firewall. Added in MySQL 8.0.11.</li><li>MySQL企业级防火墙被通过的语句数量。</li><li>Firewall_cached_entries: Number of statements recorded by MySQL Enterprise Firewall. Added in MySQL 8.0.11.</li><li>MySQL企业防火墙记录的语句数量。</li><li>Secondary_engine_execution_count: For future use. Added in MySQL 8.0.13.</li><li>未来使用。</li><li>activate_all_roles_on_login: Whether to activate all user roles at connect time. Added in MySQL 8.0.2.</li><li>连接时激活所有用户角色。</li><li>admin_address: IP address to bind to for connections on administrative interface. Added in MySQL 8.0.14.</li><li>管理接口上的连接要绑定到的Ip地址。</li><li>admin_port: TCP/IP number to use for connections on administrative interface. Added in MySQL 8.0.14.</li><li>管理接口的连接使用TCP/IP的数量。</li><li>audit-log: Whether to activate the audit log plugin. Added in MySQL 8.0.11.</li><li>是否激活审批日志插件。</li><li>audit_log_buffer_size: The size of the audit log buffer. Added in MySQL 8.0.11.</li><li>审批日志缓冲大小。</li><li>audit_log_compression: Audit log file compression method. Added in MySQL 8.0.11.</li><li>审批日志文件压缩方法。</li><li>audit_log_connection_policy: Audit logging policy for connection-related events. Added in MySQL 8.0.11.</li><li>审批日志连接事件策略。</li><li>audit_log_current_session: Whether to audit current session. Added in MySQL 8.0.11.</li><li>是否审批当前会话。</li><li>audit_log_encryption: Audit log file encryption method. Added in MySQL 8.0.11. 审批日志文件加密方法</li><li>audit_log_exclude_accounts: Accounts not to audit. Added in MySQL 8.0.11.</li><li>不审批的账户。</li><li>audit_log_file: The name of the audit log file. Added in MySQL 8.0.11.</li><li>审批文件名称。</li><li>audit_log_filter_id: ID of current audit log filter. Added in MySQL 8.0.11.</li><li>当前审批日志过利器ID。</li><li>audit_log_flush: Close and reopen the audit log file. Added in MySQL 8.0.11.</li><li>关闭和重新打开审批日志文件。</li><li>audit_log_format: The audit log file format. Added in MySQL 8.0.11.</li><li>审批文件日志格式。</li><li>audit_log_include_accounts: Accounts to audit. Added in MySQL 8.0.11.</li><li>审批账户。</li><li>audit_log_policy: Audit logging policy. Added in MySQL 8.0.11.</li><li>audit_log_read_buffer_size: Audit log file read buffer size. Added in MySQL 8.0.11.</li><li>audit_log_rotate_on_size: Close and reopen the audit log file at a certain size. Added in MySQL 8.0.11.</li><li>audit_log_statement_policy: Audit logging policy for statement-related events. Added in MySQL 8.0.11.</li><li>audit_log_strategy: The audit logging strategy. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_auth_method_name: Authentication method name. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_bind_base_dn: LDAP server base distinguished name. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_bind_root_dn: LDAP server root distinguished name. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_bind_root_pwd: LDAP server root bind password. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_ca_path: LDAP server certificate authority file name. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_group_search_attr: LDAP server group search attribute. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_group_search_filter: LDAP custom group search filter. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_init_pool_size: LDAP server initial connection pool size. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_log_status: LDAP server log level. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_max_pool_size: LDAP server maximum connection pool size. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_server_host: LDAP server host name or IP address. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_server_port: LDAP server port number. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_tls: Whether to use encrypted connections to LDAP server. Added in MySQL 8.0.11.</li><li>authentication_ldap_sasl_user_search_attr: LDAP server user search attribute. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_auth_method_name: Authentication method name. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_bind_base_dn: LDAP server base distinguished name. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_bind_root_dn: LDAP server root distinguished name. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_bind_root_pwd: LDAP server root bind password. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_ca_path: LDAP server certificate authority file name. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_group_search_attr: LDAP server group search attribute. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_group_search_filter: LDAP custom group search filter. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_init_pool_size: LDAP server initial connection pool size. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_log_status: LDAP server log level. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_max_pool_size: LDAP server maximum connection pool size. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_server_host: LDAP server host name or IP address. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_server_port: LDAP server port number. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_tls: Whether to use encrypted connections to LDAP server. Added in MySQL 8.0.11.</li><li>authentication_ldap_simple_user_search_attr: LDAP server user search attribute. Added in MySQL 8.0.11.</li><li>authentication_windows_log_level: Windows authentication plugin logging level. Added in MySQL 8.0.11.</li><li>authentication_windows_use_principal_name: Whether to use Windows authentication plugin principal name. Added in MySQL 8.0.11.</li><li>binlog_encryption: Enable encryption for binary log files and relay log files on this server. Added in MySQL 8.0.14.</li><li>binlog_expire_logs_seconds: Purge binary logs after this many seconds. Added in MySQL 8.0.1.</li><li>binlog_rotate_encryption_master_key_at_startup: Rotate the binary log master key at server startup. Added in MySQL 8.0.14.</li><li>binlog_row_event_max_size: Binary log max event size. Added in MySQL 8.0.14.</li><li>binlog_row_metadata: Configures the amount of table related metadata binary logged when using row-based logging.. Added in MySQL 8.0.1.</li><li>binlog_row_value_options: Enables binary logging of partial JSON updates for row-based replication.. Added in MySQL 8.0.3.</li><li>binlog_transaction_dependency_history_size: Number of row hashes kept for looking up transaction that last updated some row.. Added in MySQL 8.0.1.</li><li>binlog_transaction_dependency_tracking: Source of dependency information (commit timestamps or transaction write sets) from which to assess which transactions can be executed in parallel by slave&rsquo;s multithreaded applier.. Added in MySQL 8.0.1.</li><li>caching_sha2_password_auto_generate_rsa_keys: Whether to autogenerate RSA key-pair files. Added in MySQL 8.0.4.</li><li>caching_sha2_password_private_key_path: SHA2 authentication plugin private key path name. Added in MySQL 8.0.3.</li><li>caching_sha2_password_public_key_path: SHA2 authentication plugin public key path name. Added in MySQL 8.0.3.</li><li>connection_control_failed_connections_threshold: Consecutive failed connection attempts before delays occur. Added in MySQL 8.0.1.</li><li>connection_control_max_connection_delay: Maximum delay (milliseconds) for server response to failed connection attempts. Added in MySQL 8.0.1.</li><li>connection_control_min_connection_delay: Minimum delay (milliseconds) for server response to failed connection attempts. Added in MySQL 8.0.1.</li><li>create_admin_listener_thread: Whether to use dedicated listening thread for connections on administrative interface. Added in MySQL 8.0.14.</li><li>cte_max_recursion_depth: Common table expression maximum recursion depth. Added in MySQL 8.0.3.</li><li>ddl-rewriter: Whether to activate the ddl_rewriter plugin. Added in MySQL 8.0.16.</li><li>default_collation_for_utf8mb4: Default collation for utf8mb4 character set. Added in MySQL 8.0.11.</li><li>default_table_encryption: The default schema and tablespace encryption setting. Added in MySQL 8.0.16.</li><li>dragnet.Status: Result of most recent assignment to dragnet.log_error_filter_rules. Added in MySQL 8.0.12.</li><li>dragnet.log_error_filter_rules: Filter rules for error logging. Added in MySQL 8.0.4.</li><li>early-plugin-load: Specify plugins to load before loading mandatory built-in plugins and before storage engine initialization. Added in MySQL 8.0.0.</li><li>group_replication_autorejoin_tries: Number of tries that a member makes to automatically rejoin the group. Added in MySQL 8.0.16.</li><li>group_replication_communication_debug_options: The level of debugging messages for Group Replication components.. Added in MySQL 8.0.3.</li><li>group_replication_communication_max_message_size: Maximum message size for Group Replication communications, larger messages are fragmented. Added in MySQL 8.0.16.</li><li>group_replication_consistency: The type of transaction consistency guarantee which the group provides. Added in MySQL 8.0.14.</li><li>group_replication_exit_state_action: How the instance behaves when it leaves the group involuntarily. Added in MySQL 8.0.12.</li><li>group_replication_flow_control_hold_percent: Defines what percentage of the group quota remains unused. Added in MySQL 8.0.2.</li><li>group_replication_flow_control_max_commit_quota: Defines the maximum flow control quota of the group. Added in MySQL 8.0.2.</li><li>group_replication_flow_control_member_quota_percent: Defines the percentage of the quota that a member should assume is available for itself when calculating the quotas. Added in MySQL 8.0.2.</li><li>group_replication_flow_control_min_quota: Controls the lowest flow control quota that can be assigned to a member. Added in MySQL 8.0.2.</li><li>group_replication_flow_control_min_recovery_quota: Controls the lowest quota that can be assigned to a member because of another recovering member in the group. Added in MySQL 8.0.2.</li><li>group_replication_flow_control_period: Defines how many seconds to wait between flow control iterations. Added in MySQL 8.0.2.</li><li>group_replication_flow_control_release_percent: Defines how the group quota should be released when flow control no longer needs to throttle the writer members. Added in MySQL 8.0.2.</li><li>group_replication_member_expel_timeout: The time between a suspected failure of a group member and it being expelled from the group, causing a group membership reconfiguration.. Added in MySQL 8.0.13.</li><li>group_replication_member_weight: Chance of this member being elected as primary. Added in MySQL 8.0.2.</li><li>group_replication_message_cache_size: Maximum memory for the message cache in the group communication engine (XCom). Added in MySQL 8.0.16.</li><li>group_replication_recovery_get_public_key: Whether to accept preference about fetching public key from master. Added in MySQL 8.0.4.</li><li>group_replication_recovery_public_key_path: To accept public key information. Added in MySQL 8.0.4.</li><li>group_replication_unreachable_majority_timeout: How long to wait for network partitions that result in a minority to leave the group. Added in MySQL 8.0.2.</li><li>histogram_generation_max_mem_size: Maximum memory for creating histogram statistics. Added in MySQL 8.0.2.</li><li>immediate_server_version: The MySQL Server release number of the server that is the immediate master in a replication topology. Added in MySQL 8.0.14.</li><li>information_schema_stats_expiry: Expiration setting for cached table statistics. Added in MySQL 8.0.3.</li><li>innodb_buffer_pool_debug: Permits multiple buffer pool instances when the buffer pool is less than 1GB in size. Added in MySQL 8.0.0.</li><li>innodb_buffer_pool_in_core_file: Controls writing of buffer pool pages to core files. Added in MySQL 8.0.14.</li><li>innodb_checkpoint_disabled: Disables checkpoints so that a deliberate server exit always initiates recovery. Added in MySQL 8.0.2.</li><li>innodb_ddl_log_crash_reset_debug: A debug option that resets DDL log crash injection counters. Added in MySQL 8.0.3.</li><li>innodb_deadlock_detect: Enables or disables deadlock detection. Added in MySQL 8.0.0.</li><li>innodb_dedicated_server: Enables automatic configuration of buffer pool size, log file size, and flush method. Added in MySQL 8.0.3.</li><li>innodb_directories: Defines directories to scan at startup for tablespace data files. Added in MySQL 8.0.4.</li><li>innodb_fsync_threshold: Controls how often InnoDB calls fsync when creating a new file. Added in MySQL 8.0.13.</li><li>innodb_log_checkpoint_fuzzy_now: A debug option that forces InnoDB to write a fuzzy checkpoint. Added in MySQL 8.0.13.</li><li>innodb_log_spin_cpu_abs_lwm: Minimum amount of CPU usage below which user threads no longer spin while waiting for flushed redo. Added in MySQL 8.0.11.</li><li>innodb_log_spin_cpu_pct_hwm: Maximum amount of CPU usage above which user threads no longer spin while waiting for flushed redo. Added in MySQL 8.0.11.</li><li>innodb_log_wait_for_flush_spin_hwm: The maximum average log flush time beyond which user threads no longer spin while waiting for flushed redo. Added in MySQL 8.0.11.</li><li>innodb_parallel_read_threads: Defines the number of threads for parallel index reads. Added in MySQL 8.0.14.</li><li>innodb_print_ddl_logs: Whether or not to print DDL logs to the error log. Added in MySQL 8.0.3.</li><li>innodb_redo_log_encrypt: Controls encryption of redo log data for encrypted tablespaces. Added in MySQL 8.0.1.</li><li>innodb_scan_directories: Defines directories to scan for tablespace files during InnoDB recovery. Added in MySQL 8.0.2.</li><li>innodb_spin_wait_pause_multiplier: Defines a multiplier value used to determine the number of PAUSE instructions in spin-wait loops.. Added in MySQL 8.0.16.</li><li>innodb_stats_include_delete_marked: Include delete-marked records when calculating persistent InnoDB statistics. Added in MySQL 8.0.1.</li><li>innodb_temp_tablespaces_dir: Session temporary tablespaces path. Added in MySQL 8.0.13.</li><li>innodb_tmpdir: The directory location for the temporary table files created during online ALTER TABLE operations. Added in MySQL 8.0.0.</li><li>innodb_undo_log_encrypt: Controls encryption of undo log data for encrypted tablespaces. Added in MySQL 8.0.1.</li><li>internal_tmp_mem_storage_engine: Defines the storage to use for internal in-memory temporary tables. Added in MySQL 8.0.2.</li><li>keyring-migration-destination: Key migration destination keyring plugin. Added in MySQL 8.0.4.</li><li>keyring-migration-host: Host name for connecting to running server for key migration. Added in MySQL 8.0.4.</li><li>keyring-migration-password: Password for connecting to running server for key migration. Added in MySQL 8.0.4.</li><li>keyring-migration-port: TCP/IP port number for connecting to running server for key migration. Added in MySQL 8.0.4.</li><li>keyring-migration-socket: Unix socket file or Windows named pipe for connecting to running server for key migration. Added in MySQL 8.0.4.</li><li>keyring-migration-source: Key migration source keyring plugin. Added in MySQL 8.0.4.</li><li>keyring-migration-user: User name for connecting to running server for key migration. Added in MySQL 8.0.4.</li><li>keyring_aws_cmk_id: AWS keyring plugin customer master key ID value. Added in MySQL 8.0.11.</li><li>keyring_aws_conf_file: AWS keyring plugin configuration file location. Added in MySQL 8.0.11.</li><li>keyring_aws_data_file: AWS keyring plugin storage file location. Added in MySQL 8.0.11.</li><li>keyring_aws_region: AWS keyring plugin region. Added in MySQL 8.0.11.</li><li>keyring_encrypted_file_data: keyring_encrypted_file plugin data file. Added in MySQL 8.0.11.</li><li>keyring_encrypted_file_password: keyring_encrypted_file plugin password. Added in MySQL 8.0.11.</li><li>keyring_okv_conf_dir: Oracle Key Vault keyring plugin configuration directory. Added in MySQL 8.0.11.</li><li>keyring_operations: Whether keyring operations are enabled. Added in MySQL 8.0.4.</li><li>log_error_filter_rules: Filter rules for error logging. Added in MySQL 8.0.2.</li><li>log_error_services: Components to use for error logging. Added in MySQL 8.0.2.</li><li>log_error_suppression_list: Warning/information error log messages to suppress. Added in MySQL 8.0.13.</li><li>log_slow_extra: Whether to write extra information to the slow query log file. Added in MySQL 8.0.14.</li><li>mandatory_roles: Automatically granted roles for all users. Added in MySQL 8.0.2.</li><li>mysql_firewall_mode: Whether MySQL Enterprise Firewall is operational. Added in MySQL 8.0.11.</li><li>mysql_firewall_trace: Whether to enable firewall trace. Added in MySQL 8.0.11.</li><li>mysqlx: Whether X Plugin is initialized. Added in MySQL 8.0.11.</li><li>mysqlx_interactive_timeout: Number of seconds to wait for interactive clients to timeout. Added in MySQL 8.0.4.</li><li>mysqlx_read_timeout: Number of seconds to wait for blocking read operations to complete. Added in MySQL 8.0.4.</li><li>mysqlx_wait_timeout: Number of seconds to wait for activity on a connection. Added in MySQL 8.0.4.</li><li>mysqlx_write_timeout: Number of seconds to wait for blocking write operations to complete. Added in MySQL 8.0.4.</li><li>named_pipe_full_access_group: Name of Windows group granted full access to the named pipe. Added in MySQL 8.0.14.</li><li>no-dd-upgrade: Prevent automatic upgrade of data dictionary tables at startup. Added in MySQL 8.0.4.</li><li>no-monitor: Do not fork monitor process required for RESTART. Added in MySQL 8.0.12.</li><li>original_commit_timestamp: The time when a transaction was committed on the original master. Added in MySQL 8.0.1.</li><li>original_server_version: The MySQL Server release number of the server where a transaction was originally committed. Added in MySQL 8.0.14.</li><li>partial_revokes: Whether partial revocation is enabled. Added in MySQL 8.0.16.</li><li>password_history: Number of password changes required before password reuse. Added in MySQL 8.0.3.</li><li>password_require_current: Whether password changes require current password verification. Added in MySQL 8.0.13.</li><li>password_reuse_interval: Number of days elapsed required before password reuse. Added in MySQL 8.0.3.</li><li>performance_schema_max_digest_sample_age: The query resample age in seconds. Added in MySQL 8.0.3.</li><li>persist_only_admin_x509_subject: SSL certificate X.509 Subject that enables persisting persist-restricted system variables. Added in MySQL 8.0.14.</li><li>persisted_globals_load: Whether to load persisted configuration settings. Added in MySQL 8.0.0.</li><li>print_identified_with_as_hex: For SHOW CREATE USER, print hash values containing unprintable characters in hex. Added in MySQL 8.0.17.</li><li>regexp_stack_limit: Regular expression match stack size limit. Added in MySQL 8.0.4.</li><li>regexp_time_limit: Regular expression match timeout. Added in MySQL 8.0.4.</li><li>resultset_metadata: Whether the server returns result set metadata. Added in MySQL 8.0.3.</li><li>rpl_read_size: Set the minimum amount of data in bytes that is read from the binary log files and relay log files. Added in MySQL 8.0.11.</li><li>secondary_engine_cost_threshold: For future use. Added in MySQL 8.0.16.</li><li>show_create_table_verbosity: Whether to display ROW_FORMAT in SHOW CREATE TABLE even if it has the default value. Added in MySQL 8.0.11.</li><li>sql_require_primary_key: Whether tables must have a primary key. Added in MySQL 8.0.13.</li><li>ssl_fips_mode: Whether to enable FIPS mode on server side. Added in MySQL 8.0.11.</li><li>syseventlog.facility: Facility for syslog messages. Added in MySQL 8.0.13.</li><li>syseventlog.include_pid: Whether to include server PID in syslog messages. Added in MySQL 8.0.13.</li><li>syseventlog.tag: Tag for server identifier in syslog messages. Added in MySQL 8.0.13.</li><li>table_encryption_privilege_check: Enables the TABLE_ENCRYPTION_ADMIN privilege check. Added in MySQL 8.0.16.</li><li>temptable_max_ram: Defines the maximum amount of memory that can occupied by the TempTable storage engine before data is stored on disk. Added in MySQL 8.0.2.</li><li>temptable_use_mmap: Defines whether the TempTable storage engine allocates memory-mapped files when the temptable_max_ram threshold is reached.. Added in MySQL 8.0.16.</li><li>thread_pool_algorithm: The thread pool algorithm. Added in MySQL 8.0.11.</li><li>thread_pool_high_priority_connection: Whether the current session is high priority. Added in MySQL 8.0.11.</li><li>thread_pool_max_unused_threads: The maximum permitted number of unused threads. Added in MySQL 8.0.11.</li><li>thread_pool_prio_kickup_timer: How long before a statement is moved to high-priority execution. Added in MySQL 8.0.11.</li><li>thread_pool_size: Number of thread groups in the thread pool. Added in MySQL 8.0.11.</li><li>thread_pool_stall_limit: How long before a statement is defined as stalled. Added in MySQL 8.0.11.</li><li>tls_ciphersuites: TLSv1.3 ciphersuites permitted for encrypted connections. Added in MySQL 8.0.16.</li><li>upgrade: Control automatic upgrade at startup. Added in MySQL 8.0.16.</li><li>use_secondary_engine: For future use. Added in MySQL 8.0.13.</li><li>validate-config: Validate server configuration. Added in MySQL 8.0.16.</li><li>validate_password.check_user_name: Whether to check passwords against user name. Added in MySQL 8.0.4.</li><li>validate_password.dictionary_file: validate_password dictionary file. Added in MySQL 8.0.4.</li><li>validate_password.dictionary_file_last_parsed: When the dictionary file was last parsed. Added in MySQL 8.0.4.</li><li>validate_password.dictionary_file_words_count: Number of words in dictionary file. Added in MySQL 8.0.4.</li><li>validate_password.length: validate_password required password length. Added in MySQL 8.0.4.</li><li>validate_password.mixed_case_count: validate_password required number of uppercase/lowercase characters. Added in MySQL 8.0.4.</li><li>validate_password.number_count: validate_password required number of digit characters. Added in MySQL 8.0.4.</li><li>validate_password.policy: validate_password password policy. Added in MySQL 8.0.4.</li><li>validate_password.special_char_count: validate_password required number of special characters. Added in MySQL 8.0.4.</li><li>version_compile_zlib: Version of compiled-in zlib library. Added in MySQL 8.0.11.</li><li>windowing_use_high_precision: Whether to compute window functions to high precision. Added in MySQL 8.0.2.</li></ul></div></article><hr><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://ifaa.top/tags/arts/>arts</a></span></p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>3109 Words</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2023-03-31 15:45</p></div><hr><div class=sharing-buttons><a class=resp-sharing-button__link href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_blank rel=noopener aria-label title="Share on facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_blank rel=noopener aria-label title="Share on twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://www.tumblr.com/widgets/share/tool?posttype=link&title=Week1029_review&caption=Week1029_review&canonicalUrl=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_blank rel=noopener aria-label title="Share on tumblr"><div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093.0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941.0 9.999.0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg></div></div></a><a class=resp-sharing-button__link href="mailto:?subject=Week1029_review&body=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_self rel=noopener aria-label title="Share via email"><div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div></div></a><a class=resp-sharing-button__link href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&media=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f;description=Week1029_review" target=_blank rel=noopener aria-label title="Share on pinterest"><div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M12.017.0C5.396.0.029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024.0 1.518.769 1.518 1.688.0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128.0 3.768-2.245 3.768-5.487.0-2.861-2.063-4.869-5.008-4.869-3.41.0-5.409 2.562-5.409 5.199.0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646.0-3.776 2.748-7.252 7.92-7.252 4.158.0 7.392 2.967 7.392 6.923.0 4.135-2.607 7.462-6.233 7.462-1.214.0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607.0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017.0z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&title=Week1029_review&summary=Week1029_review&source=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_blank rel=noopener aria-label title="Share on linkedin"><div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div></div></a><a class=resp-sharing-button__link href="https://reddit.com/submit/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&resubmit=true&title=Week1029_review" target=_blank rel=noopener aria-label title="Share on reddit"><div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm5.01 4.744c.688.0 1.25.561 1.25 1.249a1.25 1.25.0 01-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968.0 1.754.786 1.754 1.754.0.716-.435 1.333-1.01 1.614a3.111 3.111.0 01.042.52c0 2.694-3.13 4.87-7.004 4.87s-7.004-2.176-7.004-4.87c0-.183.015-.366.043-.534A1.748 1.748.0 014.028 12c0-.968.786-1.754 1.754-1.754.463.0.898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342.0 01.14-.197.35.35.0 01.238-.042l2.906.617a1.214 1.214.0 011.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687.0 1.248-.561 1.248-1.249S9.937 12 9.249 12zm5.5.0c-.687.0-1.248.561-1.248 1.25.0.687.561 1.248 1.249 1.248S16 13.937 16 13.249c0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327.0 00-.231.094.33.33.0 000 .463c.842.842 2.484.913 2.961.913s2.105-.056 2.961-.913a.361.361.0 00.029-.463.33.33.0 00-.464.0c-.547.533-1.684.73-2.512.73-.828.0-1.979-.196-2.512-.73a.326.326.0 00-.232-.095z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f;title=Week1029_review" target=_blank rel=noopener aria-label title="Share on xing"><div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M18.188.0c-.517.0-.741.325-.927.66.0.0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211.0.375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016.0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894.0 21.686.0h-3.498zM3.648 4.74c-.211.0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016.0.021L1.86 16.051c-.099.188-.093.381.0.529.085.142.239.234.45.234h3.461c.518.0.766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg></div></div></a><a class=resp-sharing-button__link href="whatsapp://send?text=Week1029_review%20https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_blank rel=noopener aria-label title="Share on whatsapp"><div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198.0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479.0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87.0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86.0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64.0 5.122 1.03 6.988 2.898a9.825 9.825.0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815.0 0012.05.0C5.495.0.16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882.0 005.683 1.448h.005c6.554.0 11.89-5.335 11.893-11.893a11.821 11.821.0 00-3.48-8.413z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&t=Week1029_review" target=_blank rel=noopener aria-label title="Share on hacker news"><div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://telegram.me/share/url?text=Week1029_review&url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target=_blank rel=noopener aria-label title="Share on telegram"><div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div></div></a></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://ifaa.top/posts/week1029_algorithm/><span class=button__icon>←</span>
-<span class=button__text>Week1029_algorithm</span></a></span>
-<span class="button next"><a href=https://ifaa.top/posts/week1029_share/><span class=button__text>Week1029_share</span>
-<span class=button__icon>→</span></a></span></div></div></main></div><footer class=footer></footer></div><script type=text/javascript src=/bundle.min.c90b8161416b87c69a8e02683b54ddd6edb90aea699648bf655e6cbc45b419b8e465d196e715772463dba35a6faf5decb2eb247480d38680484d54645b434570.js integrity="sha512-yQuBYUFrh8aajgJoO1Td1u25Cupplki/ZV5svEW0GbjkZdGW5xV3JGPbo1pvr13ssuskdIDThoBITVRkW0NFcA=="></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
+Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size." />
+<meta name="keywords" content=", arts" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://ifaa.top/posts/week1029_review/" />
+
+
+    <title>
+        
+            Week1029_review :: Hello Friend   — A coder&#39;s Homepage
+        
+    </title>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link rel="stylesheet" href="/main.2a064c455b0ecbd6b1481b3bf9df2441e95838691022f40a5338c2cb1244f075.css" integrity="sha256-KgZMRVsOy9axSBs7&#43;d8kQelYOGkQIvQKUzjCyxJE8HU=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Week1029_review">
+<meta itemprop="description" content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
+Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size."><meta itemprop="datePublished" content="2023-03-31T15:45:43+00:00" />
+<meta itemprop="dateModified" content="2023-03-31T15:45:43+00:00" />
+<meta itemprop="wordCount" content="3109"><meta itemprop="image" content="https://ifaa.top"/>
+<meta itemprop="keywords" content="arts," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ifaa.top"/>
+
+<meta name="twitter:title" content="Week1029_review"/>
+<meta name="twitter:description" content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
+Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size."/>
+
+
+
+    <meta property="og:title" content="Week1029_review" />
+<meta property="og:description" content="ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
+Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ifaa.top/posts/week1029_review/" /><meta property="og:image" content="https://ifaa.top"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-31T15:45:43+00:00" />
+<meta property="article:modified_time" content="2023-03-31T15:45:43+00:00" /><meta property="og:site_name" content="Hello Friend " />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2023-03-31 15:45:43 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                hello world...</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about">About</a></li><li><a href="/posts">Blog</a></li><li><a href="/categorys">Category</a></li><li><a href="/series">Series</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        15 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://ifaa.top/posts/week1029_review/">Week1029_review</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <h1 id="arts---review-补2019123">ARTS - Review 补2019.1.23</h1>
+<h1 id="15-mysql80服务状态变量和可选性的增加过时或删除httpsdevmysqlcomdocrefman80enadded-deprecated-removedhtml"><a href="https://dev.mysql.com/doc/refman/8.0/en/added-deprecated-removed.html">1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除</a></h1>
+<ul>
+<li>rotated v. 回转</li>
+<li>activate vt. 激活</li>
+</ul>
+<h3 id="options-and-variables-introduced-in-mysql-80">Options and Variables Introduced in MySQL 8.0</h3>
+<p>he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series.
+以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。</p>
+<ul>
+<li>Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles.</li>
+<li>缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。</li>
+<li>Audit_log_current_size: Audit log file current size. Added in MySQL 8.0.11.The value increases when an event is written to the log and is reset to 0 when the log is rotated.</li>
+<li>审批日志文件当前的大小。MySQL8.0.11添加的。当一个写入日志事件发生值会增加，当日志回转会重置为0</li>
+<li></li>
+<li>Audit_log_event_max_drop_size: Size of largest dropped audited event. Added in MySQL 8.0.11.The size of the largest dropped event in performance logging mode</li>
+<li>审批时间最大删除大小。MySQL8.0.11添加。在日志记录性能模式下的最大删除大小。</li>
+<li>Audit_log_events: Number of handled audited events. Added in MySQL 8.0.11. The number of events handled by the audit log plugin, whether or not they were written to the log based on filtering policy (see Section 6.4.5.5, “Audit Log Logging Configuration”).</li>
+<li>处理审批时间的数量。MySQL8.0.11添加。通过审批日志插件处理时间数量，不论是否写入日志，基于过滤机制。</li>
+<li>Audit_log_events_filtered: Number of filtered audited events. Added in MySQL 8.0.11.The number of events handled by the audit log plugin that were filtered (not written to the log) based on filtering policy</li>
+<li>过滤审批文时间数量。MySQL8.0.11添加。审批日志插件处理的过滤时间的数量。</li>
+<li>Audit_log_events_lost: Number of dropped audited events. Added in MySQL 8.0.11.</li>
+<li>丢掉的审批事件数量。</li>
+<li>Audit_log_events_written: Number of written audited events. Added in MySQL 8.0.11.</li>
+<li>写入的审批时间数量。</li>
+<li>Audit_log_total_size: Combined size of written audited events. Added in MySQL 8.0.11.</li>
+<li>写入的审批时间数量汇总。</li>
+<li>Audit_log_write_waits: Number of write-delayed audited events. Added in MySQL 8.0.11.</li>
+<li>延迟写入的审批事件数量。</li>
+<li>Caching_sha2_password_rsa_public_key: caching_sha2_password authentication plugin RSA public key value. Added in MySQL 8.0.4.</li>
+<li>加密插件RAS 公钥值。</li>
+<li>Com_alter_resource_group: Count of ALTER RESOURCE GROUP statements. Added in MySQL 8.0.3.</li>
+<li>ALTER RESOURCE GROUP 语句数量。</li>
+<li>Com_alter_user_default_role: Count of ALTER USER &hellip; DEFAULT ROLE statements. Added in MySQL 8.0.0.</li>
+<li>ALTER USER .. DEFAULT ROLE 语句数量。</li>
+<li>Com_create_resource_group: Count of CREATE RESOURCE GROUP statements. Added in MySQL 8.0.3.</li>
+<li>CREATE RESOURCE GROUP 语句数量。</li>
+<li>Com_create_role: Count of CREATE ROLE statements. Added in MySQL 8.0.0.</li>
+<li>CREATE ROLE 语句数量。</li>
+<li>Com_drop_resource_group: Count of DROP RESOURCE GROUP statements. Added in MySQL 8.0.3.</li>
+<li>DROP RESOURCE GROUP 语句数量。</li>
+<li>Com_drop_role: Count of DROP ROLE statements. Added in MySQL 8.0.0.</li>
+<li>DROP ROLE 语句的数量。</li>
+<li>Com_grant_roles: Count of GRANT ROLE statements. Added in MySQL 8.0.0.</li>
+<li>GRANT ROLE 语句的数量。</li>
+<li>Com_install_component: Count of INSTALL COMPONENT statements. Added in MySQL 8.0.0.</li>
+<li>INSTALL COMPONENT 语句数量。</li>
+<li>Com_revoke_roles: Count of REVOKE ROLES statements. Added in MySQL 8.0.0.</li>
+<li>REVOKE ROLE是语句数量。</li>
+<li>Com_set_resource_group: Count of SET RESOURCE GROUP statements. Added in MySQL 8.0.3.</li>
+<li>SET RESOURCE GROUP 语句数量。</li>
+<li>Com_set_role: Count of SET ROLE statements. Added in MySQL 8.0.0.</li>
+<li>Com_uninstall_component: Count of UINSTALL COMPONENT statements. Added in MySQL 8.0.0.</li>
+<li>Connection_control_delay_generated: How many times the server delayed a connection request. Added in MySQL 8.0.1.</li>
+<li>一次连接服务器延迟的次数。</li>
+<li>Current_tls_ca: Current value of ssl_ca system variable. Added in MySQL 8.0.16.</li>
+<li>ssl_ca 系统变量当前值</li>
+<li>Current_tls_capath: Current value of ssl_capath system variable. Added in MySQL 8.0.16.</li>
+<li>系统变量 ssl_capath 当前值。</li>
+<li>Current_tls_cert: Current value of ssl_cert system variable. Added in MySQL 8.0.16.</li>
+<li>系统变量 ssl_cert 当前值。</li>
+<li>Current_tls_cipher: Current value of ssl_cipher system variable. Added in MySQL 8.0.16.</li>
+<li>Current_tls_ciphersuites: Current value of tsl_ciphersuites system variable. Added in MySQL 8.0.16.</li>
+<li>Current_tls_crl: Current value of ssl_crl system variable. Added in MySQL 8.0.16.</li>
+<li>Current_tls_crlpath: Current value of ssl_crlpath system variable. Added in MySQL 8.0.16.</li>
+<li>Current_tls_key: Current value of ssl_key system variable. Added in MySQL 8.0.16.</li>
+<li>Current_tls_version: Current value of tls_version system variable. Added in MySQL 8.0.16.</li>
+<li>Firewall_access_denied: Number of statements rejected by MySQL Enterprise Firewall. Added in MySQL 8.0.11.</li>
+<li>MySQL企业防火墙拒绝的语句数量</li>
+<li>Firewall_access_granted: Number of statements accepted by MySQL Enterprise Firewall. Added in MySQL 8.0.11.</li>
+<li>MySQL企业级防火墙被通过的语句数量。</li>
+<li>Firewall_cached_entries: Number of statements recorded by MySQL Enterprise Firewall. Added in MySQL 8.0.11.</li>
+<li>MySQL企业防火墙记录的语句数量。</li>
+<li>Secondary_engine_execution_count: For future use. Added in MySQL 8.0.13.</li>
+<li>未来使用。</li>
+<li>activate_all_roles_on_login: Whether to activate all user roles at connect time. Added in MySQL 8.0.2.</li>
+<li>连接时激活所有用户角色。</li>
+<li>admin_address: IP address to bind to for connections on administrative interface. Added in MySQL 8.0.14.</li>
+<li>管理接口上的连接要绑定到的Ip地址。</li>
+<li>admin_port: TCP/IP number to use for connections on administrative interface. Added in MySQL 8.0.14.</li>
+<li>管理接口的连接使用TCP/IP的数量。</li>
+<li>audit-log: Whether to activate the audit log plugin. Added in MySQL 8.0.11.</li>
+<li>是否激活审批日志插件。</li>
+<li>audit_log_buffer_size: The size of the audit log buffer. Added in MySQL 8.0.11.</li>
+<li>审批日志缓冲大小。</li>
+<li>audit_log_compression: Audit log file compression method. Added in MySQL 8.0.11.</li>
+<li>审批日志文件压缩方法。</li>
+<li>audit_log_connection_policy: Audit logging policy for connection-related events. Added in MySQL 8.0.11.</li>
+<li>审批日志连接事件策略。</li>
+<li>audit_log_current_session: Whether to audit current session. Added in MySQL 8.0.11.</li>
+<li>是否审批当前会话。</li>
+<li>audit_log_encryption: Audit log file encryption method. Added in MySQL 8.0.11. 审批日志文件加密方法</li>
+<li>audit_log_exclude_accounts: Accounts not to audit. Added in MySQL 8.0.11.</li>
+<li>不审批的账户。</li>
+<li>audit_log_file: The name of the audit log file. Added in MySQL 8.0.11.</li>
+<li>审批文件名称。</li>
+<li>audit_log_filter_id: ID of current audit log filter. Added in MySQL 8.0.11.</li>
+<li>当前审批日志过利器ID。</li>
+<li>audit_log_flush: Close and reopen the audit log file. Added in MySQL 8.0.11.</li>
+<li>关闭和重新打开审批日志文件。</li>
+<li>audit_log_format: The audit log file format. Added in MySQL 8.0.11.</li>
+<li>审批文件日志格式。</li>
+<li>audit_log_include_accounts: Accounts to audit. Added in MySQL 8.0.11.</li>
+<li>审批账户。</li>
+<li>audit_log_policy: Audit logging policy. Added in MySQL 8.0.11.</li>
+<li>audit_log_read_buffer_size: Audit log file read buffer size. Added in MySQL 8.0.11.</li>
+<li>audit_log_rotate_on_size: Close and reopen the audit log file at a certain size. Added in MySQL 8.0.11.</li>
+<li>audit_log_statement_policy: Audit logging policy for statement-related events. Added in MySQL 8.0.11.</li>
+<li>audit_log_strategy: The audit logging strategy. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_auth_method_name: Authentication method name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_bind_base_dn: LDAP server base distinguished name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_bind_root_dn: LDAP server root distinguished name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_bind_root_pwd: LDAP server root bind password. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_ca_path: LDAP server certificate authority file name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_group_search_attr: LDAP server group search attribute. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_group_search_filter: LDAP custom group search filter. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_init_pool_size: LDAP server initial connection pool size. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_log_status: LDAP server log level. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_max_pool_size: LDAP server maximum connection pool size. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_server_host: LDAP server host name or IP address. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_server_port: LDAP server port number. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_tls: Whether to use encrypted connections to LDAP server. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_sasl_user_search_attr: LDAP server user search attribute. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_auth_method_name: Authentication method name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_bind_base_dn: LDAP server base distinguished name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_bind_root_dn: LDAP server root distinguished name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_bind_root_pwd: LDAP server root bind password. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_ca_path: LDAP server certificate authority file name. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_group_search_attr: LDAP server group search attribute. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_group_search_filter: LDAP custom group search filter. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_init_pool_size: LDAP server initial connection pool size. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_log_status: LDAP server log level. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_max_pool_size: LDAP server maximum connection pool size. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_server_host: LDAP server host name or IP address. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_server_port: LDAP server port number. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_tls: Whether to use encrypted connections to LDAP server. Added in MySQL 8.0.11.</li>
+<li>authentication_ldap_simple_user_search_attr: LDAP server user search attribute. Added in MySQL 8.0.11.</li>
+<li>authentication_windows_log_level: Windows authentication plugin logging level. Added in MySQL 8.0.11.</li>
+<li>authentication_windows_use_principal_name: Whether to use Windows authentication plugin principal name. Added in MySQL 8.0.11.</li>
+<li>binlog_encryption: Enable encryption for binary log files and relay log files on this server. Added in MySQL 8.0.14.</li>
+<li>binlog_expire_logs_seconds: Purge binary logs after this many seconds. Added in MySQL 8.0.1.</li>
+<li>binlog_rotate_encryption_master_key_at_startup: Rotate the binary log master key at server startup. Added in MySQL 8.0.14.</li>
+<li>binlog_row_event_max_size: Binary log max event size. Added in MySQL 8.0.14.</li>
+<li>binlog_row_metadata: Configures the amount of table related metadata binary logged when using row-based logging.. Added in MySQL 8.0.1.</li>
+<li>binlog_row_value_options: Enables binary logging of partial JSON updates for row-based replication.. Added in MySQL 8.0.3.</li>
+<li>binlog_transaction_dependency_history_size: Number of row hashes kept for looking up transaction that last updated some row.. Added in MySQL 8.0.1.</li>
+<li>binlog_transaction_dependency_tracking: Source of dependency information (commit timestamps or transaction write sets) from which to assess which transactions can be executed in parallel by slave&rsquo;s multithreaded applier.. Added in MySQL 8.0.1.</li>
+<li>caching_sha2_password_auto_generate_rsa_keys: Whether to autogenerate RSA key-pair files. Added in MySQL 8.0.4.</li>
+<li>caching_sha2_password_private_key_path: SHA2 authentication plugin private key path name. Added in MySQL 8.0.3.</li>
+<li>caching_sha2_password_public_key_path: SHA2 authentication plugin public key path name. Added in MySQL 8.0.3.</li>
+<li>connection_control_failed_connections_threshold: Consecutive failed connection attempts before delays occur. Added in MySQL 8.0.1.</li>
+<li>connection_control_max_connection_delay: Maximum delay (milliseconds) for server response to failed connection attempts. Added in MySQL 8.0.1.</li>
+<li>connection_control_min_connection_delay: Minimum delay (milliseconds) for server response to failed connection attempts. Added in MySQL 8.0.1.</li>
+<li>create_admin_listener_thread: Whether to use dedicated listening thread for connections on administrative interface. Added in MySQL 8.0.14.</li>
+<li>cte_max_recursion_depth: Common table expression maximum recursion depth. Added in MySQL 8.0.3.</li>
+<li>ddl-rewriter: Whether to activate the ddl_rewriter plugin. Added in MySQL 8.0.16.</li>
+<li>default_collation_for_utf8mb4: Default collation for utf8mb4 character set. Added in MySQL 8.0.11.</li>
+<li>default_table_encryption: The default schema and tablespace encryption setting. Added in MySQL 8.0.16.</li>
+<li>dragnet.Status: Result of most recent assignment to dragnet.log_error_filter_rules. Added in MySQL 8.0.12.</li>
+<li>dragnet.log_error_filter_rules: Filter rules for error logging. Added in MySQL 8.0.4.</li>
+<li>early-plugin-load: Specify plugins to load before loading mandatory built-in plugins and before storage engine initialization. Added in MySQL 8.0.0.</li>
+<li>group_replication_autorejoin_tries: Number of tries that a member makes to automatically rejoin the group. Added in MySQL 8.0.16.</li>
+<li>group_replication_communication_debug_options: The level of debugging messages for Group Replication components.. Added in MySQL 8.0.3.</li>
+<li>group_replication_communication_max_message_size: Maximum message size for Group Replication communications, larger messages are fragmented. Added in MySQL 8.0.16.</li>
+<li>group_replication_consistency: The type of transaction consistency guarantee which the group provides. Added in MySQL 8.0.14.</li>
+<li>group_replication_exit_state_action: How the instance behaves when it leaves the group involuntarily. Added in MySQL 8.0.12.</li>
+<li>group_replication_flow_control_hold_percent: Defines what percentage of the group quota remains unused. Added in MySQL 8.0.2.</li>
+<li>group_replication_flow_control_max_commit_quota: Defines the maximum flow control quota of the group. Added in MySQL 8.0.2.</li>
+<li>group_replication_flow_control_member_quota_percent: Defines the percentage of the quota that a member should assume is available for itself when calculating the quotas. Added in MySQL 8.0.2.</li>
+<li>group_replication_flow_control_min_quota: Controls the lowest flow control quota that can be assigned to a member. Added in MySQL 8.0.2.</li>
+<li>group_replication_flow_control_min_recovery_quota: Controls the lowest quota that can be assigned to a member because of another recovering member in the group. Added in MySQL 8.0.2.</li>
+<li>group_replication_flow_control_period: Defines how many seconds to wait between flow control iterations. Added in MySQL 8.0.2.</li>
+<li>group_replication_flow_control_release_percent: Defines how the group quota should be released when flow control no longer needs to throttle the writer members. Added in MySQL 8.0.2.</li>
+<li>group_replication_member_expel_timeout: The time between a suspected failure of a group member and it being expelled from the group, causing a group membership reconfiguration.. Added in MySQL 8.0.13.</li>
+<li>group_replication_member_weight: Chance of this member being elected as primary. Added in MySQL 8.0.2.</li>
+<li>group_replication_message_cache_size: Maximum memory for the message cache in the group communication engine (XCom). Added in MySQL 8.0.16.</li>
+<li>group_replication_recovery_get_public_key: Whether to accept preference about fetching public key from master. Added in MySQL 8.0.4.</li>
+<li>group_replication_recovery_public_key_path: To accept public key information. Added in MySQL 8.0.4.</li>
+<li>group_replication_unreachable_majority_timeout: How long to wait for network partitions that result in a minority to leave the group. Added in MySQL 8.0.2.</li>
+<li>histogram_generation_max_mem_size: Maximum memory for creating histogram statistics. Added in MySQL 8.0.2.</li>
+<li>immediate_server_version: The MySQL Server release number of the server that is the immediate master in a replication topology. Added in MySQL 8.0.14.</li>
+<li>information_schema_stats_expiry: Expiration setting for cached table statistics. Added in MySQL 8.0.3.</li>
+<li>innodb_buffer_pool_debug: Permits multiple buffer pool instances when the buffer pool is less than 1GB in size. Added in MySQL 8.0.0.</li>
+<li>innodb_buffer_pool_in_core_file: Controls writing of buffer pool pages to core files. Added in MySQL 8.0.14.</li>
+<li>innodb_checkpoint_disabled: Disables checkpoints so that a deliberate server exit always initiates recovery. Added in MySQL 8.0.2.</li>
+<li>innodb_ddl_log_crash_reset_debug: A debug option that resets DDL log crash injection counters. Added in MySQL 8.0.3.</li>
+<li>innodb_deadlock_detect: Enables or disables deadlock detection. Added in MySQL 8.0.0.</li>
+<li>innodb_dedicated_server: Enables automatic configuration of buffer pool size, log file size, and flush method. Added in MySQL 8.0.3.</li>
+<li>innodb_directories: Defines directories to scan at startup for tablespace data files. Added in MySQL 8.0.4.</li>
+<li>innodb_fsync_threshold: Controls how often InnoDB calls fsync when creating a new file. Added in MySQL 8.0.13.</li>
+<li>innodb_log_checkpoint_fuzzy_now: A debug option that forces InnoDB to write a fuzzy checkpoint. Added in MySQL 8.0.13.</li>
+<li>innodb_log_spin_cpu_abs_lwm: Minimum amount of CPU usage below which user threads no longer spin while waiting for flushed redo. Added in MySQL 8.0.11.</li>
+<li>innodb_log_spin_cpu_pct_hwm: Maximum amount of CPU usage above which user threads no longer spin while waiting for flushed redo. Added in MySQL 8.0.11.</li>
+<li>innodb_log_wait_for_flush_spin_hwm: The maximum average log flush time beyond which user threads no longer spin while waiting for flushed redo. Added in MySQL 8.0.11.</li>
+<li>innodb_parallel_read_threads: Defines the number of threads for parallel index reads. Added in MySQL 8.0.14.</li>
+<li>innodb_print_ddl_logs: Whether or not to print DDL logs to the error log. Added in MySQL 8.0.3.</li>
+<li>innodb_redo_log_encrypt: Controls encryption of redo log data for encrypted tablespaces. Added in MySQL 8.0.1.</li>
+<li>innodb_scan_directories: Defines directories to scan for tablespace files during InnoDB recovery. Added in MySQL 8.0.2.</li>
+<li>innodb_spin_wait_pause_multiplier: Defines a multiplier value used to determine the number of PAUSE instructions in spin-wait loops.. Added in MySQL 8.0.16.</li>
+<li>innodb_stats_include_delete_marked: Include delete-marked records when calculating persistent InnoDB statistics. Added in MySQL 8.0.1.</li>
+<li>innodb_temp_tablespaces_dir: Session temporary tablespaces path. Added in MySQL 8.0.13.</li>
+<li>innodb_tmpdir: The directory location for the temporary table files created during online ALTER TABLE operations. Added in MySQL 8.0.0.</li>
+<li>innodb_undo_log_encrypt: Controls encryption of undo log data for encrypted tablespaces. Added in MySQL 8.0.1.</li>
+<li>internal_tmp_mem_storage_engine: Defines the storage to use for internal in-memory temporary tables. Added in MySQL 8.0.2.</li>
+<li>keyring-migration-destination: Key migration destination keyring plugin. Added in MySQL 8.0.4.</li>
+<li>keyring-migration-host: Host name for connecting to running server for key migration. Added in MySQL 8.0.4.</li>
+<li>keyring-migration-password: Password for connecting to running server for key migration. Added in MySQL 8.0.4.</li>
+<li>keyring-migration-port: TCP/IP port number for connecting to running server for key migration. Added in MySQL 8.0.4.</li>
+<li>keyring-migration-socket: Unix socket file or Windows named pipe for connecting to running server for key migration. Added in MySQL 8.0.4.</li>
+<li>keyring-migration-source: Key migration source keyring plugin. Added in MySQL 8.0.4.</li>
+<li>keyring-migration-user: User name for connecting to running server for key migration. Added in MySQL 8.0.4.</li>
+<li>keyring_aws_cmk_id: AWS keyring plugin customer master key ID value. Added in MySQL 8.0.11.</li>
+<li>keyring_aws_conf_file: AWS keyring plugin configuration file location. Added in MySQL 8.0.11.</li>
+<li>keyring_aws_data_file: AWS keyring plugin storage file location. Added in MySQL 8.0.11.</li>
+<li>keyring_aws_region: AWS keyring plugin region. Added in MySQL 8.0.11.</li>
+<li>keyring_encrypted_file_data: keyring_encrypted_file plugin data file. Added in MySQL 8.0.11.</li>
+<li>keyring_encrypted_file_password: keyring_encrypted_file plugin password. Added in MySQL 8.0.11.</li>
+<li>keyring_okv_conf_dir: Oracle Key Vault keyring plugin configuration directory. Added in MySQL 8.0.11.</li>
+<li>keyring_operations: Whether keyring operations are enabled. Added in MySQL 8.0.4.</li>
+<li>log_error_filter_rules: Filter rules for error logging. Added in MySQL 8.0.2.</li>
+<li>log_error_services: Components to use for error logging. Added in MySQL 8.0.2.</li>
+<li>log_error_suppression_list: Warning/information error log messages to suppress. Added in MySQL 8.0.13.</li>
+<li>log_slow_extra: Whether to write extra information to the slow query log file. Added in MySQL 8.0.14.</li>
+<li>mandatory_roles: Automatically granted roles for all users. Added in MySQL 8.0.2.</li>
+<li>mysql_firewall_mode: Whether MySQL Enterprise Firewall is operational. Added in MySQL 8.0.11.</li>
+<li>mysql_firewall_trace: Whether to enable firewall trace. Added in MySQL 8.0.11.</li>
+<li>mysqlx: Whether X Plugin is initialized. Added in MySQL 8.0.11.</li>
+<li>mysqlx_interactive_timeout: Number of seconds to wait for interactive clients to timeout. Added in MySQL 8.0.4.</li>
+<li>mysqlx_read_timeout: Number of seconds to wait for blocking read operations to complete. Added in MySQL 8.0.4.</li>
+<li>mysqlx_wait_timeout: Number of seconds to wait for activity on a connection. Added in MySQL 8.0.4.</li>
+<li>mysqlx_write_timeout: Number of seconds to wait for blocking write operations to complete. Added in MySQL 8.0.4.</li>
+<li>named_pipe_full_access_group: Name of Windows group granted full access to the named pipe. Added in MySQL 8.0.14.</li>
+<li>no-dd-upgrade: Prevent automatic upgrade of data dictionary tables at startup. Added in MySQL 8.0.4.</li>
+<li>no-monitor: Do not fork monitor process required for RESTART. Added in MySQL 8.0.12.</li>
+<li>original_commit_timestamp: The time when a transaction was committed on the original master. Added in MySQL 8.0.1.</li>
+<li>original_server_version: The MySQL Server release number of the server where a transaction was originally committed. Added in MySQL 8.0.14.</li>
+<li>partial_revokes: Whether partial revocation is enabled. Added in MySQL 8.0.16.</li>
+<li>password_history: Number of password changes required before password reuse. Added in MySQL 8.0.3.</li>
+<li>password_require_current: Whether password changes require current password verification. Added in MySQL 8.0.13.</li>
+<li>password_reuse_interval: Number of days elapsed required before password reuse. Added in MySQL 8.0.3.</li>
+<li>performance_schema_max_digest_sample_age: The query resample age in seconds. Added in MySQL 8.0.3.</li>
+<li>persist_only_admin_x509_subject: SSL certificate X.509 Subject that enables persisting persist-restricted system variables. Added in MySQL 8.0.14.</li>
+<li>persisted_globals_load: Whether to load persisted configuration settings. Added in MySQL 8.0.0.</li>
+<li>print_identified_with_as_hex: For SHOW CREATE USER, print hash values containing unprintable characters in hex. Added in MySQL 8.0.17.</li>
+<li>regexp_stack_limit: Regular expression match stack size limit. Added in MySQL 8.0.4.</li>
+<li>regexp_time_limit: Regular expression match timeout. Added in MySQL 8.0.4.</li>
+<li>resultset_metadata: Whether the server returns result set metadata. Added in MySQL 8.0.3.</li>
+<li>rpl_read_size: Set the minimum amount of data in bytes that is read from the binary log files and relay log files. Added in MySQL 8.0.11.</li>
+<li>secondary_engine_cost_threshold: For future use. Added in MySQL 8.0.16.</li>
+<li>show_create_table_verbosity: Whether to display ROW_FORMAT in SHOW CREATE TABLE even if it has the default value. Added in MySQL 8.0.11.</li>
+<li>sql_require_primary_key: Whether tables must have a primary key. Added in MySQL 8.0.13.</li>
+<li>ssl_fips_mode: Whether to enable FIPS mode on server side. Added in MySQL 8.0.11.</li>
+<li>syseventlog.facility: Facility for syslog messages. Added in MySQL 8.0.13.</li>
+<li>syseventlog.include_pid: Whether to include server PID in syslog messages. Added in MySQL 8.0.13.</li>
+<li>syseventlog.tag: Tag for server identifier in syslog messages. Added in MySQL 8.0.13.</li>
+<li>table_encryption_privilege_check: Enables the TABLE_ENCRYPTION_ADMIN privilege check. Added in MySQL 8.0.16.</li>
+<li>temptable_max_ram: Defines the maximum amount of memory that can occupied by the TempTable storage engine before data is stored on disk. Added in MySQL 8.0.2.</li>
+<li>temptable_use_mmap: Defines whether the TempTable storage engine allocates memory-mapped files when the temptable_max_ram threshold is reached.. Added in MySQL 8.0.16.</li>
+<li>thread_pool_algorithm: The thread pool algorithm. Added in MySQL 8.0.11.</li>
+<li>thread_pool_high_priority_connection: Whether the current session is high priority. Added in MySQL 8.0.11.</li>
+<li>thread_pool_max_unused_threads: The maximum permitted number of unused threads. Added in MySQL 8.0.11.</li>
+<li>thread_pool_prio_kickup_timer: How long before a statement is moved to high-priority execution. Added in MySQL 8.0.11.</li>
+<li>thread_pool_size: Number of thread groups in the thread pool. Added in MySQL 8.0.11.</li>
+<li>thread_pool_stall_limit: How long before a statement is defined as stalled. Added in MySQL 8.0.11.</li>
+<li>tls_ciphersuites: TLSv1.3 ciphersuites permitted for encrypted connections. Added in MySQL 8.0.16.</li>
+<li>upgrade: Control automatic upgrade at startup. Added in MySQL 8.0.16.</li>
+<li>use_secondary_engine: For future use. Added in MySQL 8.0.13.</li>
+<li>validate-config: Validate server configuration. Added in MySQL 8.0.16.</li>
+<li>validate_password.check_user_name: Whether to check passwords against user name. Added in MySQL 8.0.4.</li>
+<li>validate_password.dictionary_file: validate_password dictionary file. Added in MySQL 8.0.4.</li>
+<li>validate_password.dictionary_file_last_parsed: When the dictionary file was last parsed. Added in MySQL 8.0.4.</li>
+<li>validate_password.dictionary_file_words_count: Number of words in dictionary file. Added in MySQL 8.0.4.</li>
+<li>validate_password.length: validate_password required password length. Added in MySQL 8.0.4.</li>
+<li>validate_password.mixed_case_count: validate_password required number of uppercase/lowercase characters. Added in MySQL 8.0.4.</li>
+<li>validate_password.number_count: validate_password required number of digit characters. Added in MySQL 8.0.4.</li>
+<li>validate_password.policy: validate_password password policy. Added in MySQL 8.0.4.</li>
+<li>validate_password.special_char_count: validate_password required number of special characters. Added in MySQL 8.0.4.</li>
+<li>version_compile_zlib: Version of compiled-in zlib library. Added in MySQL 8.0.11.</li>
+<li>windowing_use_high_precision: Whether to compute window functions to high precision. Added in MySQL 8.0.2.</li>
+</ul>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://ifaa.top/tags/arts/">arts</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        3109 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2023-03-31 15:45
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Week1029_review&amp;caption=Week1029_review&amp;canonicalUrl=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Week1029_review&amp;body=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&amp;media=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f;description=Week1029_review" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&amp;title=Week1029_review&amp;summary=Week1029_review&amp;source=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&amp;resubmit=true&amp;title=Week1029_review" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f;title=Week1029_review" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Week1029_review%20https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f&amp;t=Week1029_review" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Week1029_review&amp;url=https%3a%2f%2fifaa.top%2fposts%2fweek1029_review%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        
+        <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+        </div>
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://ifaa.top/posts/week1029_algorithm/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Week1029_algorithm</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://ifaa.top/posts/week1029_share/">
+                    <span class="button__text">Week1029_share</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.c90b8161416b87c69a8e02683b54ddd6edb90aea699648bf655e6cbc45b419b8e465d196e715772463dba35a6faf5decb2eb247480d38680484d54645b434570.js" integrity="sha512-yQuBYUFrh8aajgJoO1Td1u25Cupplki/ZV5svEW0GbjkZdGW5xV3JGPbo1pvr13ssuskdIDThoBITVRkW0NFcA=="></script>
+
+
+
+    </body>
+</html>

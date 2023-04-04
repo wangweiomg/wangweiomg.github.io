@@ -1,4 +1,11 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content><meta name=description content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
 Web.xml
 -Start-contextInitialzed(ServletContextEvent event)
 ​	ContextLoaderListener
@@ -18,7 +25,41 @@ Web.xml
 ​	1.4 void
 web.xml Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener
 &amp;lt;listener&amp;gt; &amp;lt;listener-class&amp;gt;org.springframework.web.context.ContextLoaderListener&amp;lt;/listener-class&amp;gt; &amp;lt;/listener&amp;gt; ContextLoaderListener 进入这个类
-public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web."><meta name=keywords content=",arts"><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://ifaa.top/posts/week1034_share/><title>Week1034_share :: Hello Friend — A coder's Homepage</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=/main.2a064c455b0ecbd6b1481b3bf9df2441e95838691022f40a5338c2cb1244f075.css integrity="sha256-KgZMRVsOy9axSBs7+d8kQelYOGkQIvQKUzjCyxJE8HU="><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color><link rel="shortcut icon" href=/favicon.ico><meta name=msapplication-TileColor content><meta itemprop=name content="Week1034_share"><meta itemprop=description content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
+public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web." />
+<meta name="keywords" content=", arts" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://ifaa.top/posts/week1034_share/" />
+
+
+    <title>
+        
+            Week1034_share :: Hello Friend   — A coder&#39;s Homepage
+        
+    </title>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link rel="stylesheet" href="/main.2a064c455b0ecbd6b1481b3bf9df2441e95838691022f40a5338c2cb1244f075.css" integrity="sha256-KgZMRVsOy9axSBs7&#43;d8kQelYOGkQIvQKUzjCyxJE8HU=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Week1034_share">
+<meta itemprop="description" content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
 Web.xml
 -Start-contextInitialzed(ServletContextEvent event)
 ​	ContextLoaderListener
@@ -37,8 +78,16 @@ Web.xml
 ​	1.3.4 void
 ​	1.4 void
 web.xml Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener
-<listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> </listener> ContextLoaderListener 进入这个类
-public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web."><meta itemprop=datePublished content="2023-03-31T15:45:45+00:00"><meta itemprop=dateModified content="2023-03-31T15:45:45+00:00"><meta itemprop=wordCount content="1317"><meta itemprop=image content="https://ifaa.top"><meta itemprop=keywords content="arts,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://ifaa.top"><meta name=twitter:title content="Week1034_share"><meta name=twitter:description content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
+&lt;listener&gt; &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt; &lt;/listener&gt; ContextLoaderListener 进入这个类
+public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web."><meta itemprop="datePublished" content="2023-03-31T15:45:45+00:00" />
+<meta itemprop="dateModified" content="2023-03-31T15:45:45+00:00" />
+<meta itemprop="wordCount" content="1317"><meta itemprop="image" content="https://ifaa.top"/>
+<meta itemprop="keywords" content="arts," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ifaa.top"/>
+
+<meta name="twitter:title" content="Week1034_share"/>
+<meta name="twitter:description" content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
 Web.xml
 -Start-contextInitialzed(ServletContextEvent event)
 ​	ContextLoaderListener
@@ -57,8 +106,13 @@ Web.xml
 ​	1.3.4 void
 ​	1.4 void
 web.xml Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener
-<listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> </listener> ContextLoaderListener 进入这个类
-public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web."><meta property="og:title" content="Week1034_share"><meta property="og:description" content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
+&lt;listener&gt; &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt; &lt;/listener&gt; ContextLoaderListener 进入这个类
+public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web."/>
+
+
+
+    <meta property="og:title" content="Week1034_share" />
+<meta property="og:description" content="ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
 Web.xml
 -Start-contextInitialzed(ServletContextEvent event)
 ​	ContextLoaderListener
@@ -77,369 +131,694 @@ Web.xml
 ​	1.3.4 void
 ​	1.4 void
 web.xml Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener
-<listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> </listener> ContextLoaderListener 进入这个类
-public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web."><meta property="og:type" content="article"><meta property="og:url" content="https://ifaa.top/posts/week1034_share/"><meta property="og:image" content="https://ifaa.top"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-31T15:45:45+00:00"><meta property="article:modified_time" content="2023-03-31T15:45:45+00:00"><meta property="og:site_name" content="Hello Friend "><meta property="article:published_time" content="2023-03-31 15:45:45 +0000 UTC"></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo><span class=logo__mark>></span>
-<span class=logo__text>hello world...</span>
-<span class=logo__cursor></span></div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/about>About</a></li><li><a href=/posts>Blog</a></li><li><a href=/categorys>Category</a></li><li><a href=/series>Series</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 minutes</p></div><article><h1 class=post-title><a href=https://ifaa.top/posts/week1034_share/>Week1034_share</a></h1><div class=post-content><h2 id=arts---share-补2019227>ARTS - Share 补2019.2.27</h2><h2 id=spring容器启动过程>Spring容器启动过程</h2><p><img src=https://images2018.cnblogs.com/blog/592104/201808/592104-20180824155830858-1586865600.png alt></p><p>根据这个图了解spring的启动过程:</p><p>Web.xml</p><p>-Start-contextInitialzed(ServletContextEvent event)</p><p>​ ContextLoaderListener</p><p>​ -1. initWebApplicationContext(event.getServletContext)</p><p>​ ContextLoader</p><p>​ -1.1 createWebApplicationContext(servletContext)</p><p>​ -1.1.1 determineContextClass(sc) 获取web应用上下文类的class</p><p>​ -1.1.1.1 BeanUtils.instantiateClass(contextClass)工具实例化bean</p><p>​ -1.1.1.2 T</p><p>​ 1.1.2 ClasscontextClass</p><p>​ 1.2 WebApplicationContext context</p><p>​ 1.3 configureAndRefreshWebApplicationContext(cwac, servletContext)</p><p>​ 1.3.1 customizeContext(sc, wac) 查找所有配置的ApplicationContext初始化容器</p><p>​ 1.3.2 void</p><p>​ 1.3.3 -wac.refresh()</p><p>​ 1.3.4 void</p><p>​ 1.4 void</p><h4 id=webxml>web.xml</h4><p>Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#f92672>&lt;listener&gt;</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>&lt;listener-class&gt;</span>org.springframework.web.context.ContextLoaderListener<span style=color:#f92672>&lt;/listener-class&gt;</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>&lt;/listener&gt;</span>
-</span></span></code></pre></div><h4 id=contextloaderlistener>ContextLoaderListener</h4><p>进入这个类</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ContextLoaderListener</span> <span style=color:#66d9ef>extends</span> ContextLoader <span style=color:#66d9ef>implements</span> ServletContextListener<span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 	 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *  在web.xml里声明ContextLoaderListener时候一个无参构造是必须的。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 创建的应用上下文将会注册到ServletContext里， 在属性名为WebApplicationContext 的ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#a6e22e>ContextLoaderListener</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>	<span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 使用给定的应用context来创建一个新的ContextLoaderListener.这个构造方法在基于实例的Servet3.0+环境中使用javax.servlet.ServletContext#addListener注册listener  也是可以的。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 如果以下情况context可能没被ConfigurableApplicationContext 重新刷新:
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * a. 该context实现了ConfigurableWebApplicationContext接口
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * b. 没有被推荐方法重新刷新
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 之后会发生以下情况：
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 1.如果给定的context 没有被分配一个ConfigurableApplicationContext#setId的 id，将会分配一个
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 2.ServletContext和ServletConfig 对象将会委托给应用上下文
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 3.customizeContext将会被调用
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 4.任意的ApplicationContextInitializer通过contextInitializerClasses定义的init-param参数将会被应用 
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 5.ConfigurableApplicationContext#refresh 将会被调用
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 如果context上下文已经被重新刷新或者没有实现ConfigurableWebApplicationContext，以上都不会发生。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 用户根据自己需要明确定义。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 看 org.springframework.web.WebApplicationInitializer} 使用例子.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 无论何种情况，给定的context都会被注册到ServletContext 的属性WebApplicationContext#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE之下，spring应用上下文将在调用contextDestroyed 方法后关闭。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#a6e22e>ContextLoaderListener</span><span style=color:#f92672>(</span>WebApplicationContext context<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>super</span><span style=color:#f92672>(</span>context<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>	<span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 初始化根web应用上下文
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#a6e22e>@Override</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>contextInitialized</span><span style=color:#f92672>(</span>ServletContextEvent event<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		initWebApplicationContext<span style=color:#f92672>(</span>event<span style=color:#f92672>.</span><span style=color:#a6e22e>getServletContext</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>	<span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 关闭根web应用上下文
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#a6e22e>@Override</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>contextDestroyed</span><span style=color:#f92672>(</span>ServletContextEvent event<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		closeWebApplicationContext<span style=color:#f92672>(</span>event<span style=color:#f92672>.</span><span style=color:#a6e22e>getServletContext</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>		ContextCleanupListener<span style=color:#f92672>.</span><span style=color:#a6e22e>cleanupAttributes</span><span style=color:#f92672>(</span>event<span style=color:#f92672>.</span><span style=color:#a6e22e>getServletContext</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
-</span></span></code></pre></div><h4 id=1initwebapplicationcontexteventgetservletcontext>1.initWebApplicationContext(event.getServletContext)</h4><p>初始化WebApplicationContext。我们继续看看这里的初始化方法，它调用了父类ContextLoader的initWebApplicationContext方法，</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 初始化给定的servlet上下文 ，或者根据CONTEXT_CLASS_PARAM 上下文类和 CONFIG_LOCATION_PARAM上下文配置的context-params来创建一个新的。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> WebApplicationContext <span style=color:#a6e22e>initWebApplicationContext</span><span style=color:#f92672>(</span>ServletContext servletContext<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>getAttribute</span><span style=color:#f92672>(</span>WebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style=color:#f92672>)</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>      <span style=color:#75715e>// 如果已经存在这个属性，说明已经创建过根上下文了，抛异常
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> IllegalStateException<span style=color:#f92672>(</span>
-</span></span><span style=display:flex><span>					<span style=color:#e6db74>&#34;Cannot initialize context because there is already a root application context present - &#34;</span> <span style=color:#f92672>+</span>
-</span></span><span style=display:flex><span>					<span style=color:#e6db74>&#34;check whether you have multiple ContextLoader* definitions in your web.xml!&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		Log logger <span style=color:#f92672>=</span> LogFactory<span style=color:#f92672>.</span><span style=color:#a6e22e>getLog</span><span style=color:#f92672>(</span>ContextLoader<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>log</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Initializing Spring root WebApplicationContext&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>logger<span style=color:#f92672>.</span><span style=color:#a6e22e>isInfoEnabled</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			logger<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Root WebApplicationContext: initialization started&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>long</span> startTime <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>      <span style=color:#75715e>// 储存context到本地实例变量，保证ServletContext关闭时候也存在
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span> <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span> <span style=color:#f92672>=</span> createWebApplicationContext<span style=color:#f92672>(</span>servletContext<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>      <span style=color:#75715e>// 如果context实现了ConfigurableWebApplicationContext 
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span> <span style=color:#66d9ef>instanceof</span> ConfigurableWebApplicationContext<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				ConfigurableWebApplicationContext cwac <span style=color:#f92672>=</span> <span style=color:#f92672>(</span>ConfigurableWebApplicationContext<span style=color:#f92672>)</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span><span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>cwac<span style=color:#f92672>.</span><span style=color:#a6e22e>isActive</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>          <span style=color:#75715e>// 如果context没被刷新，就去配置父context, context id 等
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					<span style=color:#75715e>// The context has not yet been refreshed -&gt; provide services such as
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					<span style=color:#75715e>// setting the parent context, setting the application context id, etc
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>cwac<span style=color:#f92672>.</span><span style=color:#a6e22e>getParent</span><span style=color:#f92672>()</span> <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>						<span style=color:#75715e>// The context instance was injected without an explicit parent -&gt;
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>						<span style=color:#75715e>// determine parent for root web application context, if any.
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>						ApplicationContext parent <span style=color:#f92672>=</span> loadParentContext<span style=color:#f92672>(</span>servletContext<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>						cwac<span style=color:#f92672>.</span><span style=color:#a6e22e>setParent</span><span style=color:#f92672>(</span>parent<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>					<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>          <span style=color:#75715e>// 配置并刷新context
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					configureAndRefreshWebApplicationContext<span style=color:#f92672>(</span>cwac<span style=color:#f92672>,</span> servletContext<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>				<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>setAttribute</span><span style=color:#f92672>(</span>WebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style=color:#f92672>,</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>			ClassLoader ccl <span style=color:#f92672>=</span> Thread<span style=color:#f92672>.</span><span style=color:#a6e22e>currentThread</span><span style=color:#f92672>().</span><span style=color:#a6e22e>getContextClassLoader</span><span style=color:#f92672>();</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>ccl <span style=color:#f92672>==</span> ContextLoader<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>.</span><span style=color:#a6e22e>getClassLoader</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				currentContext <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span><span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>ccl <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				currentContextPerThread<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span>ccl<span style=color:#f92672>,</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>logger<span style=color:#f92672>.</span><span style=color:#a6e22e>isDebugEnabled</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				logger<span style=color:#f92672>.</span><span style=color:#a6e22e>debug</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Published root WebApplicationContext as ServletContext attribute with name [&#34;</span> <span style=color:#f92672>+</span>
-</span></span><span style=display:flex><span>						WebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;]&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>logger<span style=color:#f92672>.</span><span style=color:#a6e22e>isInfoEnabled</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>long</span> elapsedTime <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>()</span> <span style=color:#f92672>-</span> startTime<span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>				logger<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Root WebApplicationContext: initialization completed in &#34;</span> <span style=color:#f92672>+</span> elapsedTime <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; ms&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span><span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>RuntimeException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			logger<span style=color:#f92672>.</span><span style=color:#a6e22e>error</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Context initialization failed&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>setAttribute</span><span style=color:#f92672>(</span>WebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> ex<span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>Error err<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			logger<span style=color:#f92672>.</span><span style=color:#a6e22e>error</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Context initialization failed&#34;</span><span style=color:#f92672>,</span> err<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>setAttribute</span><span style=color:#f92672>(</span>WebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style=color:#f92672>,</span> err<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> err<span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span></code></pre></div><h4 id=11-createwebapplicationcontextservletcontext>1.1 createWebApplicationContext(servletContext)</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 为loader 初始化根WebApplicationContext,不是默认的context class 就是一个明确自定义的context class 
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 这个实现期望自定义context实现ConfigurableWebApplicationContext接口
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 可以在自类被覆盖
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 另外，customizeContext调用刷新context， 允许子类自定义修改context.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param sc 当前context
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @return the root WebApplicationContext
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see ConfigurableWebApplicationContext
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>protected</span> WebApplicationContext <span style=color:#a6e22e>createWebApplicationContext</span><span style=color:#f92672>(</span>ServletContext sc<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		Class<span style=color:#f92672>&lt;?&gt;</span> contextClass <span style=color:#f92672>=</span> determineContextClass<span style=color:#f92672>(</span>sc<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>ConfigurableWebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>.</span><span style=color:#a6e22e>isAssignableFrom</span><span style=color:#f92672>(</span>contextClass<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ApplicationContextException<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Custom context class [&#34;</span> <span style=color:#f92672>+</span> contextClass<span style=color:#f92672>.</span><span style=color:#a6e22e>getName</span><span style=color:#f92672>()</span> <span style=color:#f92672>+</span>
-</span></span><span style=display:flex><span>					<span style=color:#e6db74>&#34;] is not of type [&#34;</span> <span style=color:#f92672>+</span> ConfigurableWebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>.</span><span style=color:#a6e22e>getName</span><span style=color:#f92672>()</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;]&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#f92672>(</span>ConfigurableWebApplicationContext<span style=color:#f92672>)</span> BeanUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>instantiateClass</span><span style=color:#f92672>(</span>contextClass<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span></code></pre></div><h4 id=111-determinecontextclasssc-获取web应用上下文类的class>1.1.1 determineContextClass(sc) 获取web应用上下文类的class</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 返回WebApplicationContext实现的class来使用，不是默认XmlWebApplicationContext就是明确自定义的context 类。
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param servletContext 当前 servlet context
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @return the WebApplicationContext implementation class to use
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see #CONTEXT_CLASS_PARAM
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see org.springframework.web.context.support.XmlWebApplicationContext
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>protected</span> Class<span style=color:#f92672>&lt;?&gt;</span> determineContextClass<span style=color:#f92672>(</span>ServletContext servletContext<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		String contextClassName <span style=color:#f92672>=</span> servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>getInitParameter</span><span style=color:#f92672>(</span>CONTEXT_CLASS_PARAM<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>contextClassName <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>return</span> ClassUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>forName</span><span style=color:#f92672>(</span>contextClassName<span style=color:#f92672>,</span> ClassUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>getDefaultClassLoader</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>ClassNotFoundException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ApplicationContextException<span style=color:#f92672>(</span>
-</span></span><span style=display:flex><span>						<span style=color:#e6db74>&#34;Failed to load custom context class [&#34;</span> <span style=color:#f92672>+</span> contextClassName <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;]&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			contextClassName <span style=color:#f92672>=</span> defaultStrategies<span style=color:#f92672>.</span><span style=color:#a6e22e>getProperty</span><span style=color:#f92672>(</span>WebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>.</span><span style=color:#a6e22e>getName</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>return</span> ClassUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>forName</span><span style=color:#f92672>(</span>contextClassName<span style=color:#f92672>,</span> ContextLoader<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>.</span><span style=color:#a6e22e>getClassLoader</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>ClassNotFoundException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ApplicationContextException<span style=color:#f92672>(</span>
-</span></span><span style=display:flex><span>						<span style=color:#e6db74>&#34;Failed to load default context class [&#34;</span> <span style=color:#f92672>+</span> contextClassName <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;]&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span></code></pre></div><h4 id=1111-beanutilsinstantiateclasscontextclass工具实例化bean>1.1.1.1 BeanUtils.instantiateClass(contextClass)工具实例化bean</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// createWebApplicationContext方法里determineContextClass 返回加载的Class, 之后实例化这些class
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>return</span> <span style=color:#f92672>(</span>ConfigurableWebApplicationContext<span style=color:#f92672>)</span> BeanUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>instantiateClass</span><span style=color:#f92672>(</span>contextClass<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 使用无参构造初始化class
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 注意如果方法非public ，会尝试设置为可操作的
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * &lt;p&gt;Note that this method tries to set the constructor accessible
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * if given a non-accessible (that is, non-public) constructor.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param clazz class to instantiate
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @return the new instance
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @throws BeanInstantiationException if the bean cannot be instantiated
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see Constructor#newInstance
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> T <span style=color:#a6e22e>instantiateClass</span><span style=color:#f92672>(</span>Class<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> clazz<span style=color:#f92672>)</span> <span style=color:#66d9ef>throws</span> BeanInstantiationException <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		Assert<span style=color:#f92672>.</span><span style=color:#a6e22e>notNull</span><span style=color:#f92672>(</span>clazz<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Class must not be null&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>clazz<span style=color:#f92672>.</span><span style=color:#a6e22e>isInterface</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> BeanInstantiationException<span style=color:#f92672>(</span>clazz<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Specified class is an interface&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> instantiateClass<span style=color:#f92672>(</span>clazz<span style=color:#f92672>.</span><span style=color:#a6e22e>getDeclaredConstructor</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>NoSuchMethodException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> BeanInstantiationException<span style=color:#f92672>(</span>clazz<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;No default constructor found&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * 使用给定的构造器实例化class
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * &lt;p&gt;Note that this method tries to set the constructor accessible if given a
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * non-accessible (that is, non-public) constructor.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param ctor the constructor to instantiate
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param args the constructor arguments to apply
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @return the new instance
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @throws BeanInstantiationException if the bean cannot be instantiated
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see Constructor#newInstance
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> T <span style=color:#a6e22e>instantiateClass</span><span style=color:#f92672>(</span>Constructor<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> ctor<span style=color:#f92672>,</span> Object<span style=color:#f92672>...</span> args<span style=color:#f92672>)</span> <span style=color:#66d9ef>throws</span> BeanInstantiationException <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		Assert<span style=color:#f92672>.</span><span style=color:#a6e22e>notNull</span><span style=color:#f92672>(</span>ctor<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Constructor must not be null&#34;</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>try</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			ReflectionUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>makeAccessible</span><span style=color:#f92672>(</span>ctor<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> ctor<span style=color:#f92672>.</span><span style=color:#a6e22e>newInstance</span><span style=color:#f92672>(</span>args<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>InstantiationException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> BeanInstantiationException<span style=color:#f92672>(</span>ctor<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Is it an abstract class?&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>IllegalAccessException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> BeanInstantiationException<span style=color:#f92672>(</span>ctor<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Is the constructor accessible?&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>IllegalArgumentException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> BeanInstantiationException<span style=color:#f92672>(</span>ctor<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Illegal arguments for constructor&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>catch</span> <span style=color:#f92672>(</span>InvocationTargetException ex<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> BeanInstantiationException<span style=color:#f92672>(</span>ctor<span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;Constructor threw exception&#34;</span><span style=color:#f92672>,</span> ex<span style=color:#f92672>.</span><span style=color:#a6e22e>getTargetException</span><span style=color:#f92672>());</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// 实例化完成，强转为ConfigurableWebApplicationContext 类型返回
-</span></span></span></code></pre></div><h4 id=13-configureandrefreshwebapplicationcontextcwac-servletcontext>1.3 configureAndRefreshWebApplicationContext(cwac, servletContext)</h4><p>之后就进入了ConfigurableWebApplicationContext逻辑了</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 如果当前context是实现了可配置的WebApplicationContet, 就去刷新一下
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span> <span style=color:#66d9ef>instanceof</span> ConfigurableWebApplicationContext<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				ConfigurableWebApplicationContext cwac <span style=color:#f92672>=</span> <span style=color:#f92672>(</span>ConfigurableWebApplicationContext<span style=color:#f92672>)</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>context</span><span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>  			<span style=color:#75715e>// 没被刷新(设置父context, 设置context id等)，
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>				<span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>cwac<span style=color:#f92672>.</span><span style=color:#a6e22e>isActive</span><span style=color:#f92672>())</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>					<span style=color:#75715e>// The context has not yet been refreshed -&gt; provide services such as
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					<span style=color:#75715e>// setting the parent context, setting the application context id, etc
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>cwac<span style=color:#f92672>.</span><span style=color:#a6e22e>getParent</span><span style=color:#f92672>()</span> <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>						<span style=color:#75715e>// The context instance was injected without an explicit parent -&gt;
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>						<span style=color:#75715e>// determine parent for root web application context, if any.
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>						ApplicationContext parent <span style=color:#f92672>=</span> loadParentContext<span style=color:#f92672>(</span>servletContext<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>						cwac<span style=color:#f92672>.</span><span style=color:#a6e22e>setParent</span><span style=color:#f92672>(</span>parent<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>					<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>          <span style=color:#75715e>// 之后刷新context
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>					configureAndRefreshWebApplicationContext<span style=color:#f92672>(</span>cwac<span style=color:#f92672>,</span> servletContext<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>				<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>configureAndRefreshWebApplicationContext</span><span style=color:#f92672>(</span>ConfigurableWebApplicationContext wac<span style=color:#f92672>,</span> ServletContext sc<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>ObjectUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>identityToString</span><span style=color:#f92672>(</span>wac<span style=color:#f92672>).</span><span style=color:#a6e22e>equals</span><span style=color:#f92672>(</span>wac<span style=color:#f92672>.</span><span style=color:#a6e22e>getId</span><span style=color:#f92672>()))</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#75715e>// The application context id is still set to its original default value
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#75715e>// -&gt; assign a more useful id based on available information
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#75715e>// context id 设置为原始默认值
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			String idParam <span style=color:#f92672>=</span> sc<span style=color:#f92672>.</span><span style=color:#a6e22e>getInitParameter</span><span style=color:#f92672>(</span>CONTEXT_ID_PARAM<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>idParam <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				wac<span style=color:#f92672>.</span><span style=color:#a6e22e>setId</span><span style=color:#f92672>(</span>idParam<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#75715e>// Generate default id...
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// 生成默认ID
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>				wac<span style=color:#f92672>.</span><span style=color:#a6e22e>setId</span><span style=color:#f92672>(</span>ConfigurableWebApplicationContext<span style=color:#f92672>.</span><span style=color:#a6e22e>APPLICATION_CONTEXT_ID_PREFIX</span> <span style=color:#f92672>+</span>
-</span></span><span style=display:flex><span>						ObjectUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>getDisplayString</span><span style=color:#f92672>(</span>sc<span style=color:#f92672>.</span><span style=color:#a6e22e>getContextPath</span><span style=color:#f92672>()));</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		wac<span style=color:#f92672>.</span><span style=color:#a6e22e>setServletContext</span><span style=color:#f92672>(</span>sc<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		String configLocationParam <span style=color:#f92672>=</span> sc<span style=color:#f92672>.</span><span style=color:#a6e22e>getInitParameter</span><span style=color:#f92672>(</span>CONFIG_LOCATION_PARAM<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>configLocationParam <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			wac<span style=color:#f92672>.</span><span style=color:#a6e22e>setConfigLocation</span><span style=color:#f92672>(</span>configLocationParam<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// The wac environment&#39;s #initPropertySources will be called in any case when the context
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#75715e>// is refreshed; do it eagerly here to ensure servlet property sources are in place for
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#75715e>// use in any post-processing or initialization that occurs below prior to #refresh
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		ConfigurableEnvironment env <span style=color:#f92672>=</span> wac<span style=color:#f92672>.</span><span style=color:#a6e22e>getEnvironment</span><span style=color:#f92672>();</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>env <span style=color:#66d9ef>instanceof</span> ConfigurableWebEnvironment<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>((</span>ConfigurableWebEnvironment<span style=color:#f92672>)</span> env<span style=color:#f92672>).</span><span style=color:#a6e22e>initPropertySources</span><span style=color:#f92672>(</span>sc<span style=color:#f92672>,</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e>// 处置自定义的Context
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		customizeContext<span style=color:#f92672>(</span>sc<span style=color:#f92672>,</span> wac<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		wac<span style=color:#f92672>.</span><span style=color:#a6e22e>refresh</span><span style=color:#f92672>();</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span></code></pre></div><h4 id=131-customizecontextsc-wac-查找所有配置的applicationcontext初始化容器>1.3.1 customizeContext(sc, wac) 查找所有配置的ApplicationContext初始化容器</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * context refresh 之前、config location应用之后，设置自定义参数
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 *
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * &lt;p&gt;The default implementation {@linkplain #determineContextInitializerClasses(ServletContext)
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * determines} what (if any) context initializer classes have been specified through
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * {@linkplain #CONTEXT_INITIALIZER_CLASSES_PARAM context init parameters} and
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * {@linkplain ApplicationContextInitializer#initialize invokes each} with the
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * given web application context.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * &lt;p&gt;Any {@code ApplicationContextInitializers} implementing
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * {@link org.springframework.core.Ordered Ordered} or marked with @{@link
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * org.springframework.core.annotation.Order Order} will be sorted appropriately.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param sc the current servlet context
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param wac the newly created application context
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see #CONTEXT_INITIALIZER_CLASSES_PARAM
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see ApplicationContextInitializer#initialize(ConfigurableApplicationContext)
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>customizeContext</span><span style=color:#f92672>(</span>ServletContext sc<span style=color:#f92672>,</span> ConfigurableWebApplicationContext wac<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// 要初始化的类
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		List<span style=color:#f92672>&lt;</span>Class<span style=color:#f92672>&lt;</span>ApplicationContextInitializer<span style=color:#f92672>&lt;</span>ConfigurableApplicationContext<span style=color:#f92672>&gt;&gt;&gt;</span> initializerClasses <span style=color:#f92672>=</span>
-</span></span><span style=display:flex><span>				determineContextInitializerClasses<span style=color:#f92672>(</span>sc<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span>Class<span style=color:#f92672>&lt;</span>ApplicationContextInitializer<span style=color:#f92672>&lt;</span>ConfigurableApplicationContext<span style=color:#f92672>&gt;&gt;</span> initializerClass <span style=color:#f92672>:</span> initializerClasses<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			Class<span style=color:#f92672>&lt;?&gt;</span> initializerContextClass <span style=color:#f92672>=</span>
-</span></span><span style=display:flex><span>					GenericTypeResolver<span style=color:#f92672>.</span><span style=color:#a6e22e>resolveTypeArgument</span><span style=color:#f92672>(</span>initializerClass<span style=color:#f92672>,</span> ApplicationContextInitializer<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>initializerContextClass <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>!</span>initializerContextClass<span style=color:#f92672>.</span><span style=color:#a6e22e>isInstance</span><span style=color:#f92672>(</span>wac<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ApplicationContextException<span style=color:#f92672>(</span>String<span style=color:#f92672>.</span><span style=color:#a6e22e>format</span><span style=color:#f92672>(</span>
-</span></span><span style=display:flex><span>						<span style=color:#e6db74>&#34;Could not apply context initializer [%s] since its generic parameter [%s] &#34;</span> <span style=color:#f92672>+</span>
-</span></span><span style=display:flex><span>						<span style=color:#e6db74>&#34;is not assignable from the type of application context used by this &#34;</span> <span style=color:#f92672>+</span>
-</span></span><span style=display:flex><span>						<span style=color:#e6db74>&#34;context loader: [%s]&#34;</span><span style=color:#f92672>,</span> initializerClass<span style=color:#f92672>.</span><span style=color:#a6e22e>getName</span><span style=color:#f92672>(),</span> initializerContextClass<span style=color:#f92672>.</span><span style=color:#a6e22e>getName</span><span style=color:#f92672>(),</span>
-</span></span><span style=display:flex><span>						wac<span style=color:#f92672>.</span><span style=color:#a6e22e>getClass</span><span style=color:#f92672>().</span><span style=color:#a6e22e>getName</span><span style=color:#f92672>()));</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>contextInitializers</span><span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>BeanUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>instantiateClass</span><span style=color:#f92672>(</span>initializerClass<span style=color:#f92672>));</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		AnnotationAwareOrderComparator<span style=color:#f92672>.</span><span style=color:#a6e22e>sort</span><span style=color:#f92672>(</span><span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>contextInitializers</span><span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span>ApplicationContextInitializer<span style=color:#f92672>&lt;</span>ConfigurableApplicationContext<span style=color:#f92672>&gt;</span> initializer <span style=color:#f92672>:</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>contextInitializers</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			initializer<span style=color:#f92672>.</span><span style=color:#a6e22e>initialize</span><span style=color:#f92672>(</span>wac<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/**
-</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 返回使用CONTEXT_INITIALIZER_CLASSES_PARAM指定的实现class
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * Return the {@link ApplicationContextInitializer} implementation classes to use
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * if any have been specified by {@link #CONTEXT_INITIALIZER_CLASSES_PARAM}.
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @param servletContext current servlet context
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 * @see #CONTEXT_INITIALIZER_CLASSES_PARAM
-</span></span></span><span style=display:flex><span><span style=color:#75715e>	 */</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>protected</span> List<span style=color:#f92672>&lt;</span>Class<span style=color:#f92672>&lt;</span>ApplicationContextInitializer<span style=color:#f92672>&lt;</span>ConfigurableApplicationContext<span style=color:#f92672>&gt;&gt;&gt;</span>
-</span></span><span style=display:flex><span>			<span style=color:#a6e22e>determineContextInitializerClasses</span><span style=color:#f92672>(</span>ServletContext servletContext<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// 创建集合储存所有的全局参数定义，和自定的
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		List<span style=color:#f92672>&lt;</span>Class<span style=color:#f92672>&lt;</span>ApplicationContextInitializer<span style=color:#f92672>&lt;</span>ConfigurableApplicationContext<span style=color:#f92672>&gt;&gt;&gt;</span> classes <span style=color:#f92672>=</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Class<span style=color:#f92672>&lt;</span>ApplicationContextInitializer<span style=color:#f92672>&lt;</span>ConfigurableApplicationContext<span style=color:#f92672>&gt;&gt;&gt;();</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		String globalClassNames <span style=color:#f92672>=</span> servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>getInitParameter</span><span style=color:#f92672>(</span>GLOBAL_INITIALIZER_CLASSES_PARAM<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>globalClassNames <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span>String className <span style=color:#f92672>:</span> StringUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>tokenizeToStringArray</span><span style=color:#f92672>(</span>globalClassNames<span style=color:#f92672>,</span> INIT_PARAM_DELIMITERS<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				classes<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>loadInitializerClass<span style=color:#f92672>(</span>className<span style=color:#f92672>));</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		String localClassNames <span style=color:#f92672>=</span> servletContext<span style=color:#f92672>.</span><span style=color:#a6e22e>getInitParameter</span><span style=color:#f92672>(</span>CONTEXT_INITIALIZER_CLASSES_PARAM<span style=color:#f92672>);</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>localClassNames <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span>String className <span style=color:#f92672>:</span> StringUtils<span style=color:#f92672>.</span><span style=color:#a6e22e>tokenizeToStringArray</span><span style=color:#f92672>(</span>localClassNames<span style=color:#f92672>,</span> INIT_PARAM_DELIMITERS<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>				classes<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>loadInitializerClass<span style=color:#f92672>(</span>className<span style=color:#f92672>));</span>
-</span></span><span style=display:flex><span>			<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>		<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> classes<span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
-</span></span></code></pre></div><p>这之后，刷新context : wac.refresh();</p><p>刷新完context， 所有调用结束，返回。</p></div></article><hr><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://ifaa.top/tags/arts/>arts</a></span></p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>1317 Words</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2023-03-31 15:45</p></div><hr><div class=sharing-buttons><a class=resp-sharing-button__link href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_blank rel=noopener aria-label title="Share on facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_blank rel=noopener aria-label title="Share on twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://www.tumblr.com/widgets/share/tool?posttype=link&title=Week1034_share&caption=Week1034_share&canonicalUrl=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_blank rel=noopener aria-label title="Share on tumblr"><div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093.0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941.0 9.999.0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg></div></div></a><a class=resp-sharing-button__link href="mailto:?subject=Week1034_share&body=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_self rel=noopener aria-label title="Share via email"><div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div></div></a><a class=resp-sharing-button__link href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&media=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f;description=Week1034_share" target=_blank rel=noopener aria-label title="Share on pinterest"><div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M12.017.0C5.396.0.029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024.0 1.518.769 1.518 1.688.0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128.0 3.768-2.245 3.768-5.487.0-2.861-2.063-4.869-5.008-4.869-3.41.0-5.409 2.562-5.409 5.199.0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646.0-3.776 2.748-7.252 7.92-7.252 4.158.0 7.392 2.967 7.392 6.923.0 4.135-2.607 7.462-6.233 7.462-1.214.0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607.0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017.0z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&title=Week1034_share&summary=Week1034_share&source=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_blank rel=noopener aria-label title="Share on linkedin"><div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div></div></a><a class=resp-sharing-button__link href="https://reddit.com/submit/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&resubmit=true&title=Week1034_share" target=_blank rel=noopener aria-label title="Share on reddit"><div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm5.01 4.744c.688.0 1.25.561 1.25 1.249a1.25 1.25.0 01-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968.0 1.754.786 1.754 1.754.0.716-.435 1.333-1.01 1.614a3.111 3.111.0 01.042.52c0 2.694-3.13 4.87-7.004 4.87s-7.004-2.176-7.004-4.87c0-.183.015-.366.043-.534A1.748 1.748.0 014.028 12c0-.968.786-1.754 1.754-1.754.463.0.898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342.0 01.14-.197.35.35.0 01.238-.042l2.906.617a1.214 1.214.0 011.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687.0 1.248-.561 1.248-1.249S9.937 12 9.249 12zm5.5.0c-.687.0-1.248.561-1.248 1.25.0.687.561 1.248 1.249 1.248S16 13.937 16 13.249c0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327.0 00-.231.094.33.33.0 000 .463c.842.842 2.484.913 2.961.913s2.105-.056 2.961-.913a.361.361.0 00.029-.463.33.33.0 00-.464.0c-.547.533-1.684.73-2.512.73-.828.0-1.979-.196-2.512-.73a.326.326.0 00-.232-.095z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f;title=Week1034_share" target=_blank rel=noopener aria-label title="Share on xing"><div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M18.188.0c-.517.0-.741.325-.927.66.0.0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211.0.375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016.0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894.0 21.686.0h-3.498zM3.648 4.74c-.211.0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016.0.021L1.86 16.051c-.099.188-.093.381.0.529.085.142.239.234.45.234h3.461c.518.0.766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg></div></div></a><a class=resp-sharing-button__link href="whatsapp://send?text=Week1034_share%20https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_blank rel=noopener aria-label title="Share on whatsapp"><div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198.0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479.0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87.0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86.0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64.0 5.122 1.03 6.988 2.898a9.825 9.825.0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815.0 0012.05.0C5.495.0.16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882.0 005.683 1.448h.005c6.554.0 11.89-5.335 11.893-11.893a11.821 11.821.0 00-3.48-8.413z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&t=Week1034_share" target=_blank rel=noopener aria-label title="Share on hacker news"><div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg></div></div></a><a class=resp-sharing-button__link href="https://telegram.me/share/url?text=Week1034_share&url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target=_blank rel=noopener aria-label title="Share on telegram"><div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div></div></a></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://ifaa.top/posts/week1034_review/><span class=button__icon>←</span>
-<span class=button__text>Week1034_review</span></a></span>
-<span class="button next"><a href=https://ifaa.top/posts/week1034_tip/><span class=button__text>Week1034_tip</span>
-<span class=button__icon>→</span></a></span></div></div></main></div><footer class=footer></footer></div><script type=text/javascript src=/bundle.min.c90b8161416b87c69a8e02683b54ddd6edb90aea699648bf655e6cbc45b419b8e465d196e715772463dba35a6faf5decb2eb247480d38680484d54645b434570.js integrity="sha512-yQuBYUFrh8aajgJoO1Td1u25Cupplki/ZV5svEW0GbjkZdGW5xV3JGPbo1pvr13ssuskdIDThoBITVRkW0NFcA=="></script></body></html>
+&lt;listener&gt; &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt; &lt;/listener&gt; ContextLoaderListener 进入这个类
+public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ifaa.top/posts/week1034_share/" /><meta property="og:image" content="https://ifaa.top"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-31T15:45:45+00:00" />
+<meta property="article:modified_time" content="2023-03-31T15:45:45+00:00" /><meta property="og:site_name" content="Hello Friend " />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2023-03-31 15:45:45 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                hello world...</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about">About</a></li><li><a href="/posts">Blog</a></li><li><a href="/categorys">Category</a></li><li><a href="/series">Series</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        7 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://ifaa.top/posts/week1034_share/">Week1034_share</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <h2 id="arts---share-补2019227">ARTS - Share 补2019.2.27</h2>
+<h2 id="spring容器启动过程">Spring容器启动过程</h2>
+<p><img src="https://images2018.cnblogs.com/blog/592104/201808/592104-20180824155830858-1586865600.png" alt=""></p>
+<p>根据这个图了解spring的启动过程:</p>
+<p>Web.xml</p>
+<p>-Start-contextInitialzed(ServletContextEvent event)</p>
+<p>​	ContextLoaderListener</p>
+<p>​	-1. initWebApplicationContext(event.getServletContext)</p>
+<p>​		ContextLoader</p>
+<p>​			-1.1 createWebApplicationContext(servletContext)</p>
+<p>​			-1.1.1 determineContextClass(sc) 获取web应用上下文类的class</p>
+<p>​			-1.1.1.1 BeanUtils.instantiateClass(contextClass)工具实例化bean</p>
+<p>​			-1.1.1.2 T</p>
+<p>​			1.1.2 Class<!-- raw HTML omitted -->contextClass</p>
+<p>​			1.2 WebApplicationContext context</p>
+<p>​			1.3 configureAndRefreshWebApplicationContext(cwac, servletContext)</p>
+<p>​			1.3.1 customizeContext(sc, wac) 查找所有配置的ApplicationContext初始化容器</p>
+<p>​			1.3.2 void</p>
+<p>​			1.3.3 -wac.refresh()</p>
+<p>​			1.3.4 void</p>
+<p>​			1.4 void</p>
+<h4 id="webxml">web.xml</h4>
+<p>Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;listener&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;listener-class&gt;</span>org.springframework.web.context.ContextLoaderListener<span style="color:#f92672">&lt;/listener-class&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;/listener&gt;</span>
+</span></span></code></pre></div><h4 id="contextloaderlistener">ContextLoaderListener</h4>
+<p>进入这个类</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ContextLoaderListener</span> <span style="color:#66d9ef">extends</span> ContextLoader <span style="color:#66d9ef">implements</span> ServletContextListener<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 	 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *  在web.xml里声明ContextLoaderListener时候一个无参构造是必须的。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 创建的应用上下文将会注册到ServletContext里， 在属性名为WebApplicationContext 的ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ContextLoaderListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 使用给定的应用context来创建一个新的ContextLoaderListener.这个构造方法在基于实例的Servet3.0+环境中使用javax.servlet.ServletContext#addListener注册listener  也是可以的。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 如果以下情况context可能没被ConfigurableApplicationContext 重新刷新:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * a. 该context实现了ConfigurableWebApplicationContext接口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * b. 没有被推荐方法重新刷新
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 之后会发生以下情况：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 1.如果给定的context 没有被分配一个ConfigurableApplicationContext#setId的 id，将会分配一个
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 2.ServletContext和ServletConfig 对象将会委托给应用上下文
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 3.customizeContext将会被调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 4.任意的ApplicationContextInitializer通过contextInitializerClasses定义的init-param参数将会被应用 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 5.ConfigurableApplicationContext#refresh 将会被调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 如果context上下文已经被重新刷新或者没有实现ConfigurableWebApplicationContext，以上都不会发生。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 用户根据自己需要明确定义。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 看 org.springframework.web.WebApplicationInitializer} 使用例子.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 无论何种情况，给定的context都会被注册到ServletContext 的属性WebApplicationContext#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE之下，spring应用上下文将在调用contextDestroyed 方法后关闭。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ContextLoaderListener</span><span style="color:#f92672">(</span>WebApplicationContext context<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>context<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 初始化根web应用上下文
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextInitialized</span><span style="color:#f92672">(</span>ServletContextEvent event<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		initWebApplicationContext<span style="color:#f92672">(</span>event<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 关闭根web应用上下文
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextDestroyed</span><span style="color:#f92672">(</span>ServletContextEvent event<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		closeWebApplicationContext<span style="color:#f92672">(</span>event<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>		ContextCleanupListener<span style="color:#f92672">.</span><span style="color:#a6e22e">cleanupAttributes</span><span style="color:#f92672">(</span>event<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h4 id="1initwebapplicationcontexteventgetservletcontext">1.initWebApplicationContext(event.getServletContext)</h4>
+<p>初始化WebApplicationContext。我们继续看看这里的初始化方法，它调用了父类ContextLoader的initWebApplicationContext方法，</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 初始化给定的servlet上下文 ，或者根据CONTEXT_CLASS_PARAM 上下文类和 CONFIG_LOCATION_PARAM上下文配置的context-params来创建一个新的。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> WebApplicationContext <span style="color:#a6e22e">initWebApplicationContext</span><span style="color:#f92672">(</span>ServletContext servletContext<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span>WebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// 如果已经存在这个属性，说明已经创建过根上下文了，抛异常
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#e6db74">&#34;Cannot initialize context because there is already a root application context present - &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#e6db74">&#34;check whether you have multiple ContextLoader* definitions in your web.xml!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		Log logger <span style="color:#f92672">=</span> LogFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">getLog</span><span style="color:#f92672">(</span>ContextLoader<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Initializing Spring root WebApplicationContext&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>logger<span style="color:#f92672">.</span><span style="color:#a6e22e">isInfoEnabled</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Root WebApplicationContext: initialization started&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">long</span> startTime <span style="color:#f92672">=</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// 储存context到本地实例变量，保证ServletContext关闭时候也存在
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> createWebApplicationContext<span style="color:#f92672">(</span>servletContext<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// 如果context实现了ConfigurableWebApplicationContext 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span> <span style="color:#66d9ef">instanceof</span> ConfigurableWebApplicationContext<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				ConfigurableWebApplicationContext cwac <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ConfigurableWebApplicationContext<span style="color:#f92672">)</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>cwac<span style="color:#f92672">.</span><span style="color:#a6e22e">isActive</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// 如果context没被刷新，就去配置父context, context id 等
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					<span style="color:#75715e">// The context has not yet been refreshed -&gt; provide services such as
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					<span style="color:#75715e">// setting the parent context, setting the application context id, etc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cwac<span style="color:#f92672">.</span><span style="color:#a6e22e">getParent</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#75715e">// The context instance was injected without an explicit parent -&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>						<span style="color:#75715e">// determine parent for root web application context, if any.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>						ApplicationContext parent <span style="color:#f92672">=</span> loadParentContext<span style="color:#f92672">(</span>servletContext<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>						cwac<span style="color:#f92672">.</span><span style="color:#a6e22e">setParent</span><span style="color:#f92672">(</span>parent<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// 配置并刷新context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					configureAndRefreshWebApplicationContext<span style="color:#f92672">(</span>cwac<span style="color:#f92672">,</span> servletContext<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span>WebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			ClassLoader ccl <span style="color:#f92672">=</span> Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">currentThread</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getContextClassLoader</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ccl <span style="color:#f92672">==</span> ContextLoader<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClassLoader</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				currentContext <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ccl <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				currentContextPerThread<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>ccl<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>logger<span style="color:#f92672">.</span><span style="color:#a6e22e">isDebugEnabled</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				logger<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Published root WebApplicationContext as ServletContext attribute with name [&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>						WebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>logger<span style="color:#f92672">.</span><span style="color:#a6e22e">isInfoEnabled</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">long</span> elapsedTime <span style="color:#f92672">=</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> startTime<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>				logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Root WebApplicationContext: initialization completed in &#34;</span> <span style="color:#f92672">+</span> elapsedTime <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; ms&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>RuntimeException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Context initialization failed&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span>WebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> ex<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Error err<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Context initialization failed&#34;</span><span style="color:#f92672">,</span> err<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span>WebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</span><span style="color:#f92672">,</span> err<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> err<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h4 id="11-createwebapplicationcontextservletcontext">1.1 createWebApplicationContext(servletContext)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 为loader 初始化根WebApplicationContext,不是默认的context class 就是一个明确自定义的context class 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 这个实现期望自定义context实现ConfigurableWebApplicationContext接口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 可以在自类被覆盖
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 另外，customizeContext调用刷新context， 允许子类自定义修改context.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param sc 当前context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @return the root WebApplicationContext
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see ConfigurableWebApplicationContext
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">protected</span> WebApplicationContext <span style="color:#a6e22e">createWebApplicationContext</span><span style="color:#f92672">(</span>ServletContext sc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		Class<span style="color:#f92672">&lt;?&gt;</span> contextClass <span style="color:#f92672">=</span> determineContextClass<span style="color:#f92672">(</span>sc<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>ConfigurableWebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isAssignableFrom</span><span style="color:#f92672">(</span>contextClass<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ApplicationContextException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Custom context class [&#34;</span> <span style="color:#f92672">+</span> contextClass<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#e6db74">&#34;] is not of type [&#34;</span> <span style="color:#f92672">+</span> ConfigurableWebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>ConfigurableWebApplicationContext<span style="color:#f92672">)</span> BeanUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">instantiateClass</span><span style="color:#f92672">(</span>contextClass<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h4 id="111-determinecontextclasssc-获取web应用上下文类的class">1.1.1 determineContextClass(sc) 获取web应用上下文类的class</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 返回WebApplicationContext实现的class来使用，不是默认XmlWebApplicationContext就是明确自定义的context 类。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param servletContext 当前 servlet context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @return the WebApplicationContext implementation class to use
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see #CONTEXT_CLASS_PARAM
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see org.springframework.web.context.support.XmlWebApplicationContext
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">protected</span> Class<span style="color:#f92672">&lt;?&gt;</span> determineContextClass<span style="color:#f92672">(</span>ServletContext servletContext<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		String contextClassName <span style="color:#f92672">=</span> servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getInitParameter</span><span style="color:#f92672">(</span>CONTEXT_CLASS_PARAM<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>contextClassName <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> ClassUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span>contextClassName<span style="color:#f92672">,</span> ClassUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultClassLoader</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ClassNotFoundException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ApplicationContextException<span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#e6db74">&#34;Failed to load custom context class [&#34;</span> <span style="color:#f92672">+</span> contextClassName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			contextClassName <span style="color:#f92672">=</span> defaultStrategies<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span>WebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> ClassUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span>contextClassName<span style="color:#f92672">,</span> ContextLoader<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClassLoader</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ClassNotFoundException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ApplicationContextException<span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#e6db74">&#34;Failed to load default context class [&#34;</span> <span style="color:#f92672">+</span> contextClassName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h4 id="1111-beanutilsinstantiateclasscontextclass工具实例化bean">1.1.1.1 BeanUtils.instantiateClass(contextClass)工具实例化bean</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// createWebApplicationContext方法里determineContextClass 返回加载的Class, 之后实例化这些class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>ConfigurableWebApplicationContext<span style="color:#f92672">)</span> BeanUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">instantiateClass</span><span style="color:#f92672">(</span>contextClass<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 使用无参构造初始化class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 注意如果方法非public ，会尝试设置为可操作的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * &lt;p&gt;Note that this method tries to set the constructor accessible
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * if given a non-accessible (that is, non-public) constructor.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param clazz class to instantiate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @return the new instance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @throws BeanInstantiationException if the bean cannot be instantiated
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see Constructor#newInstance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">instantiateClass</span><span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> clazz<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> BeanInstantiationException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		Assert<span style="color:#f92672">.</span><span style="color:#a6e22e">notNull</span><span style="color:#f92672">(</span>clazz<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Class must not be null&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">isInterface</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> BeanInstantiationException<span style="color:#f92672">(</span>clazz<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Specified class is an interface&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> instantiateClass<span style="color:#f92672">(</span>clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">getDeclaredConstructor</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>NoSuchMethodException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> BeanInstantiationException<span style="color:#f92672">(</span>clazz<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;No default constructor found&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * 使用给定的构造器实例化class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * &lt;p&gt;Note that this method tries to set the constructor accessible if given a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * non-accessible (that is, non-public) constructor.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param ctor the constructor to instantiate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param args the constructor arguments to apply
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @return the new instance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @throws BeanInstantiationException if the bean cannot be instantiated
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see Constructor#newInstance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">instantiateClass</span><span style="color:#f92672">(</span>Constructor<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> ctor<span style="color:#f92672">,</span> Object<span style="color:#f92672">...</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> BeanInstantiationException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		Assert<span style="color:#f92672">.</span><span style="color:#a6e22e">notNull</span><span style="color:#f92672">(</span>ctor<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Constructor must not be null&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			ReflectionUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">makeAccessible</span><span style="color:#f92672">(</span>ctor<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> ctor<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">(</span>args<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InstantiationException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> BeanInstantiationException<span style="color:#f92672">(</span>ctor<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Is it an abstract class?&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalAccessException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> BeanInstantiationException<span style="color:#f92672">(</span>ctor<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Is the constructor accessible?&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalArgumentException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> BeanInstantiationException<span style="color:#f92672">(</span>ctor<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Illegal arguments for constructor&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InvocationTargetException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> BeanInstantiationException<span style="color:#f92672">(</span>ctor<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Constructor threw exception&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">.</span><span style="color:#a6e22e">getTargetException</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 实例化完成，强转为ConfigurableWebApplicationContext 类型返回
+</span></span></span></code></pre></div><h4 id="13-configureandrefreshwebapplicationcontextcwac-servletcontext">1.3 configureAndRefreshWebApplicationContext(cwac, servletContext)</h4>
+<p>之后就进入了ConfigurableWebApplicationContext逻辑了</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// 如果当前context是实现了可配置的WebApplicationContet, 就去刷新一下
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span> <span style="color:#66d9ef">instanceof</span> ConfigurableWebApplicationContext<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				ConfigurableWebApplicationContext cwac <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ConfigurableWebApplicationContext<span style="color:#f92672">)</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">context</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  			<span style="color:#75715e">// 没被刷新(设置父context, 设置context id等)，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>cwac<span style="color:#f92672">.</span><span style="color:#a6e22e">isActive</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#75715e">// The context has not yet been refreshed -&gt; provide services such as
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					<span style="color:#75715e">// setting the parent context, setting the application context id, etc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cwac<span style="color:#f92672">.</span><span style="color:#a6e22e">getParent</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#75715e">// The context instance was injected without an explicit parent -&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>						<span style="color:#75715e">// determine parent for root web application context, if any.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>						ApplicationContext parent <span style="color:#f92672">=</span> loadParentContext<span style="color:#f92672">(</span>servletContext<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>						cwac<span style="color:#f92672">.</span><span style="color:#a6e22e">setParent</span><span style="color:#f92672">(</span>parent<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// 之后刷新context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					configureAndRefreshWebApplicationContext<span style="color:#f92672">(</span>cwac<span style="color:#f92672">,</span> servletContext<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configureAndRefreshWebApplicationContext</span><span style="color:#f92672">(</span>ConfigurableWebApplicationContext wac<span style="color:#f92672">,</span> ServletContext sc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ObjectUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">identityToString</span><span style="color:#f92672">(</span>wac<span style="color:#f92672">).</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>wac<span style="color:#f92672">.</span><span style="color:#a6e22e">getId</span><span style="color:#f92672">()))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// The application context id is still set to its original default value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// -&gt; assign a more useful id based on available information
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">// context id 设置为原始默认值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			String idParam <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span><span style="color:#a6e22e">getInitParameter</span><span style="color:#f92672">(</span>CONTEXT_ID_PARAM<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>idParam <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				wac<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>idParam<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#75715e">// Generate default id...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 生成默认ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>				wac<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>ConfigurableWebApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">APPLICATION_CONTEXT_ID_PREFIX</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>						ObjectUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getDisplayString</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">.</span><span style="color:#a6e22e">getContextPath</span><span style="color:#f92672">()));</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		wac<span style="color:#f92672">.</span><span style="color:#a6e22e">setServletContext</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		String configLocationParam <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span><span style="color:#a6e22e">getInitParameter</span><span style="color:#f92672">(</span>CONFIG_LOCATION_PARAM<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>configLocationParam <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			wac<span style="color:#f92672">.</span><span style="color:#a6e22e">setConfigLocation</span><span style="color:#f92672">(</span>configLocationParam<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// The wac environment&#39;s #initPropertySources will be called in any case when the context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// is refreshed; do it eagerly here to ensure servlet property sources are in place for
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// use in any post-processing or initialization that occurs below prior to #refresh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ConfigurableEnvironment env <span style="color:#f92672">=</span> wac<span style="color:#f92672">.</span><span style="color:#a6e22e">getEnvironment</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>env <span style="color:#66d9ef">instanceof</span> ConfigurableWebEnvironment<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">((</span>ConfigurableWebEnvironment<span style="color:#f92672">)</span> env<span style="color:#f92672">).</span><span style="color:#a6e22e">initPropertySources</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 处置自定义的Context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		customizeContext<span style="color:#f92672">(</span>sc<span style="color:#f92672">,</span> wac<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		wac<span style="color:#f92672">.</span><span style="color:#a6e22e">refresh</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h4 id="131-customizecontextsc-wac-查找所有配置的applicationcontext初始化容器">1.3.1 customizeContext(sc, wac) 查找所有配置的ApplicationContext初始化容器</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * context refresh 之前、config location应用之后，设置自定义参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * &lt;p&gt;The default implementation {@linkplain #determineContextInitializerClasses(ServletContext)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * determines} what (if any) context initializer classes have been specified through
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * {@linkplain #CONTEXT_INITIALIZER_CLASSES_PARAM context init parameters} and
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * {@linkplain ApplicationContextInitializer#initialize invokes each} with the
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * given web application context.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * &lt;p&gt;Any {@code ApplicationContextInitializers} implementing
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * {@link org.springframework.core.Ordered Ordered} or marked with @{@link
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * org.springframework.core.annotation.Order Order} will be sorted appropriately.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param sc the current servlet context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param wac the newly created application context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see #CONTEXT_INITIALIZER_CLASSES_PARAM
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see ApplicationContextInitializer#initialize(ConfigurableApplicationContext)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">customizeContext</span><span style="color:#f92672">(</span>ServletContext sc<span style="color:#f92672">,</span> ConfigurableWebApplicationContext wac<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 要初始化的类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		List<span style="color:#f92672">&lt;</span>Class<span style="color:#f92672">&lt;</span>ApplicationContextInitializer<span style="color:#f92672">&lt;</span>ConfigurableApplicationContext<span style="color:#f92672">&gt;&gt;&gt;</span> initializerClasses <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>				determineContextInitializerClasses<span style="color:#f92672">(</span>sc<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;</span>ApplicationContextInitializer<span style="color:#f92672">&lt;</span>ConfigurableApplicationContext<span style="color:#f92672">&gt;&gt;</span> initializerClass <span style="color:#f92672">:</span> initializerClasses<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			Class<span style="color:#f92672">&lt;?&gt;</span> initializerContextClass <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>					GenericTypeResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">resolveTypeArgument</span><span style="color:#f92672">(</span>initializerClass<span style="color:#f92672">,</span> ApplicationContextInitializer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>initializerContextClass <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>initializerContextClass<span style="color:#f92672">.</span><span style="color:#a6e22e">isInstance</span><span style="color:#f92672">(</span>wac<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ApplicationContextException<span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#e6db74">&#34;Could not apply context initializer [%s] since its generic parameter [%s] &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#e6db74">&#34;is not assignable from the type of application context used by this &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>						<span style="color:#e6db74">&#34;context loader: [%s]&#34;</span><span style="color:#f92672">,</span> initializerClass<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(),</span> initializerContextClass<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(),</span>
+</span></span><span style="display:flex;"><span>						wac<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()));</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">contextInitializers</span><span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>BeanUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">instantiateClass</span><span style="color:#f92672">(</span>initializerClass<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		AnnotationAwareOrderComparator<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">contextInitializers</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>ApplicationContextInitializer<span style="color:#f92672">&lt;</span>ConfigurableApplicationContext<span style="color:#f92672">&gt;</span> initializer <span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">contextInitializers</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			initializer<span style="color:#f92672">.</span><span style="color:#a6e22e">initialize</span><span style="color:#f92672">(</span>wac<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 返回使用CONTEXT_INITIALIZER_CLASSES_PARAM指定的实现class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * Return the {@link ApplicationContextInitializer} implementation classes to use
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * if any have been specified by {@link #CONTEXT_INITIALIZER_CLASSES_PARAM}.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @param servletContext current servlet context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * @see #CONTEXT_INITIALIZER_CLASSES_PARAM
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">protected</span> List<span style="color:#f92672">&lt;</span>Class<span style="color:#f92672">&lt;</span>ApplicationContextInitializer<span style="color:#f92672">&lt;</span>ConfigurableApplicationContext<span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">determineContextInitializerClasses</span><span style="color:#f92672">(</span>ServletContext servletContext<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 创建集合储存所有的全局参数定义，和自定的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		List<span style="color:#f92672">&lt;</span>Class<span style="color:#f92672">&lt;</span>ApplicationContextInitializer<span style="color:#f92672">&lt;</span>ConfigurableApplicationContext<span style="color:#f92672">&gt;&gt;&gt;</span> classes <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Class<span style="color:#f92672">&lt;</span>ApplicationContextInitializer<span style="color:#f92672">&lt;</span>ConfigurableApplicationContext<span style="color:#f92672">&gt;&gt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		String globalClassNames <span style="color:#f92672">=</span> servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getInitParameter</span><span style="color:#f92672">(</span>GLOBAL_INITIALIZER_CLASSES_PARAM<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>globalClassNames <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String className <span style="color:#f92672">:</span> StringUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">tokenizeToStringArray</span><span style="color:#f92672">(</span>globalClassNames<span style="color:#f92672">,</span> INIT_PARAM_DELIMITERS<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				classes<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>loadInitializerClass<span style="color:#f92672">(</span>className<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		String localClassNames <span style="color:#f92672">=</span> servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getInitParameter</span><span style="color:#f92672">(</span>CONTEXT_INITIALIZER_CLASSES_PARAM<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>localClassNames <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String className <span style="color:#f92672">:</span> StringUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">tokenizeToStringArray</span><span style="color:#f92672">(</span>localClassNames<span style="color:#f92672">,</span> INIT_PARAM_DELIMITERS<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				classes<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>loadInitializerClass<span style="color:#f92672">(</span>className<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> classes<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>这之后，刷新context :  wac.refresh();</p>
+<p>刷新完context， 所有调用结束，返回。</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://ifaa.top/tags/arts/">arts</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1317 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2023-03-31 15:45
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Week1034_share&amp;caption=Week1034_share&amp;canonicalUrl=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Week1034_share&amp;body=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&amp;media=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f;description=Week1034_share" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&amp;title=Week1034_share&amp;summary=Week1034_share&amp;source=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&amp;resubmit=true&amp;title=Week1034_share" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f;title=Week1034_share" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Week1034_share%20https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f&amp;t=Week1034_share" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Week1034_share&amp;url=https%3a%2f%2fifaa.top%2fposts%2fweek1034_share%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        
+        <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+        </div>
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://ifaa.top/posts/week1034_review/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Week1034_review</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://ifaa.top/posts/week1034_tip/">
+                    <span class="button__text">Week1034_tip</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.c90b8161416b87c69a8e02683b54ddd6edb90aea699648bf655e6cbc45b419b8e465d196e715772463dba35a6faf5decb2eb247480d38680484d54645b434570.js" integrity="sha512-yQuBYUFrh8aajgJoO1Td1u25Cupplki/ZV5svEW0GbjkZdGW5xV3JGPbo1pvr13ssuskdIDThoBITVRkW0NFcA=="></script>
+
+
+
+    </body>
+</html>
