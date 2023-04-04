@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>每周学习 on Hello Friend</title><link>https://ifaa.top/categorys/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0/</link><description>Recent content in 每周学习 on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Fri, 31 Mar 2023 15:45:50 +0000</lastBuildDate><atom:link href="https://ifaa.top/categorys/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml"/><item><title>Week1043_review</title><link>https://ifaa.top/posts/week1043_review/</link><pubDate>Fri, 31 Mar 2023 15:45:50 +0000</pubDate><guid>https://ifaa.top/posts/week1043_review/</guid><description>ARTS - Review - How To Be Successful How To Be Successful I’ve observed thousands of founders and thought a lot about what it takes to make a huge amount of money or to create something important. Usually, people start off wanting the former and end up wanting the latter.
+Here are 13 thoughts about how to achieve such outlier success. Everything here is easier to do once you’ve already reached a baseline degree of success (through privilege or effort) and want to put in the work to turn that into outlier success.</description></item><item><title>Week1043_share</title><link>https://ifaa.top/posts/week1043_share/</link><pubDate>Fri, 31 Mar 2023 15:45:50 +0000</pubDate><guid>https://ifaa.top/posts/week1043_share/</guid><description>ARTS - Share 使用AI绘图 参考的这篇文章: 低成本体验生成 AI 小姐姐照片
+stable diffusion
+等待安装 但是报错了：
+提示 Read timed out . 就是下载pytorch 不成功，只能换个vpn节点再试试了。
+这次安装pytorch成功，但是又报错了其他：
+在安装gfpgan 时候报错了，又是timed out 只能换换节点再试试.
+经过切换好几个节点，终于运行成功：
+根据提示，浏览器访问: http://127.0.0.1:7860 ,终于启动：
+安装model 根据提示，下载https://civitai.com/models/6424/chilloutmix ， 放到 models/Stable-diffusion/
+安装扩展：https://github.com/civitai/sd_civitai_extension
+生成美女 参数调优 根据已存在的来复制参数， 比如
+我们最终生成的：</description></item><item><title>Week1043_tip</title><link>https://ifaa.top/posts/week1043_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:50 +0000</pubDate><guid>https://ifaa.top/posts/week1043_tip/</guid><description>ARTS - Tip - 一次mybatis 与 java8 LocalDateTime的问题 问题描述 之前使用Java model ,mybatis 来操作mysql数据库， 对于mysql datetime类型一直使用的是 java.util.Date ， java8 提供了java.time.LocalDateTime 新的日期解决方案， 所以就引入了项目，然后在批量更新中用到，出现了无法更新的问题。
+具体报错: SQL语法错误
+环境与版本 mybatis: 3.5.1 mysql: 5.7 mysql driver: 8.0.26 mybatis xml写法是： &amp;lt;update id=&amp;#34;batchUpdate&amp;#34; parameterType=&amp;#34;xxx&amp;#34;&amp;gt; &amp;lt;foreach collection=&amp;#34;list&amp;#34; item=&amp;#34;item&amp;#34; index=&amp;#34;index&amp;#34; separator=&amp;#34;;&amp;#34;&amp;gt; UPDATE t_table SET complete_date = #{item.completeDate} &amp;lt;/set&amp;gt; WHERE id = #{item.id} &amp;lt;/foreach&amp;gt; &amp;lt;/update&amp;gt; 解决过程 首先是自认为 mybatis 解析 LocalDateTime出现了问题，所以搜索关键字是 &amp;quot; mybatis update localdatetime &amp;quot; ， 在 Java 8 LocalDate mapping with mybatis 的回答说是要 增加 mybatis-typehandlers-jsr310 来处理 typeHandler 的问题， 但是在</description></item><item><title>Week1041_review</title><link>https://ifaa.top/posts/week1041_review/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1041_review/</guid><description>ARTS - Review - Don’t Just Set Goals. Build Systems 不要只设置目标。要建立系统。
+The Secret To Happiness And Achieving More 通往幸福和成就更多的秘诀。| 幸福和获得更多的秘密
+It’s that time of year again.
+The cycle never gets old.
+Let me guess… You’re probably reflecting on what a treacherous year it’s been.
+The trials and tribulations you’ve had to overcome.
+Yet you are highly convinced next year will be different…
+It won’t.
+又一年来了。
+循环永不老。
+让我猜猜，你可能在回想今年是多么危险的一年。
+你必须克服的困难和磨难。
+然而你深信明年会有不同。
+他不会&amp;hellip;</description></item><item><title>Week1041_share</title><link>https://ifaa.top/posts/week1041_share/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1041_share/</guid><description>ARTS - Share 设计模式是什么？ 是软件设计中常见问题的的典型解决方案。他们就像能根据需求进行调整的预制蓝图，可用于解决代码中反复出现的设计问题。
+设计模式与方法或库的使用方法不同，模式并不是一段特定的代码， 而是解决特定问题的一般性概念。可以根据模式来实现符合自己程序实际所需的解决方案。
+人们常混淆模式和算法，因为两者概念都是已知问题的典型解决方案。但算法总是明确定义达成特定目标所需的一系列步骤，而模式是对解决方案的更高层次描述。同一模式在两个不同程序中的实现代码可能会不一样。
+算法更像是菜谱：提供达成目标的明确步骤。而模式更像是蓝图：你可以看到最终的结果和模式的功能，但是需要自己确定实现步骤。
+模式包含哪些内容？ 大部分模式都有正规的描述方式，以便在不同情况下使用。模式的描述通常会包括以下部分：
+意图部分简单描述问题和解决方案 动机部分进一步解释问题并说明模式会如何提供解决方案。 结构部分展示模式的每个部分和他们之间的关系 在不同语言中的实现提供流行编程语言的代码，让读者更好的理解模式背后的思想。 如何学模式 设计模式是针对软件设计中常见问题的工具箱，工具就是各种经过实践验证的解决方案。模式能指导你如何使用面向对象的设计原则来解决各种问题 设计模式定义了一种让你和团队成员能够更高效沟通的通用语言。 模式的分类 所有模式可以根据其意图或目的来分类：
+创建型模式 提供创建对象的机制，增加已有代码的灵活性和可复用性 结构性模式 介绍如何讲对象和类组装成较大的结构，并同事保持结构的灵活和高效 行为模式 负责对象间高效沟通和职责委派 模式目录 创建型模式 工厂方法 Factory Method 抽象工厂 Abstract Factory 生成器 Builder 原型 Prototype 单例 Singleton 结构型模式 Adapter 适配器 Bridge 桥接 组合 Composite Decorator 装饰 Facade 外观 Flyweight 享元模式 Proxy 代理 行为模式 Chain of Responsibility 责任链 Command 命令 Iterator 迭代器 Mediator 中介者 Memento 备忘录 Observer 观察者 State 状态 Strategy 策略 Template Method 模板方法 Visitor 访问者</description></item><item><title>Week1041_snack</title><link>https://ifaa.top/posts/week1041_snack/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1041_snack/</guid><description>流批一体大数据架构 流批一体指的是流处理和批处理。
+根据数据产生时间，划分为历史数据和实时数据，
+根据数据明细粒度分为流水数据和切片数据；
+根据数据处理方式按窗口大小分为流式处理与批式处理；
+根据处理时延分为实时处理与离线处理。
+流批一体包含两方面：
+计算一体：同一套计算逻辑同时应用流处理和批处理，最终结果一致 存储一体：流处理与批处理过程中全程数据存储在同一介质 流批一体数仓 经典Lambda架构 Lambda 架构同时支持流计算与离线批处理，该架构有两条数据通道：
+一条是实时的，使用消息系统结合实时流处理系统实现指标的实时计算，如采用Kafka存储 &amp;amp; Flink 计算
+另一条非实时的，数据定时同步到仓库，批处理计算数仓分层数据模型。
+存在缺点：
+同一数据两份存储。一份用于实时流计算，一份用于离线批处理，耗资源、难保一致性 同一计算逻辑两套代码。指标计算，Lambda需要流处理、批处理各实现一次 需要集成多种组件支持不同类型应用。比如集成ES支持即席查询，postgresql支持复杂统计分析，导致架构和技术栈复杂 随着Flink引擎日趋完善，尤其在2020年发布Flink-1.12.0之后，逐渐出现了能切实解决上述问题的流批一体架构（Lambda plus，图1下半部分），采用该架构的数仓可称流批一体式数仓，即把Lambda架构的两条数据通道合并为一条，数据统一存储到一种介质中，且同一数据只需要存储一遍。流批一体式数仓主要体现在两方面：
+数据积累（存储与处理）过程是流式的 数据积累后，支持批处理方式即席查询、统计分析等传统数仓支持的OLAP操作 从实现上看，Lambda plus架构利用Flink流表的相互转化实现了同一计算逻辑只需一套代码即可在流处理与批处理两种模式下得到一致结果。通用使用Flink cdc\状态计算等特性实现了历史数据+增量流水的连续处理。比如系统启动时利用Flink CDC 装载历史数据，再通过监听binlog将数据变动流水接入Flink; 或者利用Flink state&amp;amp;checkpoint特性从指定checkpoint恢复，以便在流水上接续计算，这样即可实现基于历史数据增量计算的目的。
+总结 目前基于Flink的流批一体架构主要还是体现在计算引擎上的一体化，即流处理与批处理共同一套开发范式，一套代码，而存储的一体化上推出的Table store,虽然已经可以小规模使用，但是功能仍需健全 具有分布式计算、窗口计算、状态计算、流批一体计算等特性的Flink正逐渐成为实时流计算应用的主要引擎 流批一体式数仓是未来大数据架构发展趋势之一</description></item><item><title>Week1042_algorithm</title><link>https://ifaa.top/posts/week1042_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1042_algorithm/</guid><description>ARTS - Algorithm - 119. 杨辉三角 II 杨辉三角 II 给定一个非负索引 rowIndex，返回「杨辉三角」的第 rowIndex 行。
+在「杨辉三角」中，每个数是它左上方和右上方的数的和。
+分析 根据上一题，返回前n层的杨辉三角，我们已经有逻辑了，所以直接使用就能用，代码如下：
+class Solution { public List&amp;lt;Integer&amp;gt; getRow(int rowIndex) { return getList(rowIndex + 1).get(rowIndex); } /** * 返回前n行杨辉三角 * @param n */ public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; getList(int n) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; n; i++) { List&amp;lt;Integer&amp;gt; layer = new ArrayList&amp;lt;&amp;gt;(); for (int j = 0; j &amp;lt; i + 1; j++) { if (j == 0 || j == i) { layer.</description></item><item><title>Week1042_learn</title><link>https://ifaa.top/posts/week1042_learn/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1042_learn/</guid><description>AC自动机 AC 就是一种多模式字符串匹配算法。多模式匹配算法就是在一个主串中查找多个模式串。
+原理 AC自动机算法是构造一个Trie数，然后再添加额外的失配指针。这些额外的失配指针在查找字符串失败的时候进行回退(例如在Trie树中查找单词bef失败后，但是在Trie树中存在bea这个单词，失配指针会指向前缀be), 转向某些前缀分支，免于重复匹配前缀，提高算法效率.
+假设现有模式字符串集合： {abd, abdk, abchijn, chnit, ijabdf, ijaij} 构建AC自动机。</description></item><item><title>Week1042_review</title><link>https://ifaa.top/posts/week1042_review/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1042_review/</guid><description>ARTS - Review Python StringIO and BytesIO Compared With Open()
+Python使用open方法的字符流和字节流比较
+StringIO and BytesIO are methods that manipulate string and bytes data in memory. StringIO is used for string data and BytesIO is used for binary data. This classes create file like object that operate on string data. The StringIO and BytesIO classes are most useful in scenarios where you need to mimic a normal file. 字符IO和字节IO是在内存中操纵字符字节数据的方法 字符IO用在字符数据，字节IO用作二进制数据 此类创建对字符串数据进行操作的类似于文件的对象。 StringIO 和 BytesIO 类在需要模拟普通文件的场景中最为有用。</description></item><item><title>Week1042_share</title><link>https://ifaa.top/posts/week1042_share/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1042_share/</guid><description>ARTS - Share 使用docker部署python web工程 步骤 创建一个flask app，并运行 编写Dockerfile, 制作 docker image 运行container 创建一个flask app 首先根据官网安装python依赖的Flask。
+之后参考官网：Quickstart
+新建文件夹 first_py_docker 在文件夹 first_py_docker下新建 src目录 在src目录下新建requirements.txt，并写入 flask==2.2.2 在src目录下新建main.py文件 在 main.py里输入flask官网示例: from flask import Flask app = Flask(__name__) @app.route(&amp;#34;/&amp;#34;) def hello_world(): return &amp;#34;&amp;lt;h1&amp;gt;hello world!&amp;lt;/h1&amp;gt;&amp;#34; 运行flask 浏览器访问：
+成功！
+编写Dockerfile, 制作 docker image 根据docker官网Dockerfile文档 来制作Dockerfile
+在first-py_docker 目录下新建文件 Dockefile , 根据文档编写如下：
+FROM python:3.8-slim-buster WORKDIR /src COPY src/requirements.txt requirements.txt RUN pip install --no-cache-dir -r requirements.txt COPY . . CMD [ &amp;#34;python&amp;#34;, &amp;#34;-m&amp;#34;, &amp;#34;flask&amp;#34;, &amp;#34;--app=src/main&amp;#34;, &amp;#34;run&amp;#34;] 接下来根据Dockerfile制作 docker image</description></item><item><title>Week1042_tip</title><link>https://ifaa.top/posts/week1042_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1042_tip/</guid><description>ARTS - Tip - LLM 大型语言模型 (LLM) ChatGPT 是否带来了NLP乃至AI领域的研究范式转换？如果是，那会带来怎样的影响？ LLM从海量数据中学到了什么知识？LLM又是如何存取这些知识的？ 随着LLM规模逐步增大，会带来什么影响？ 什么是In Context Learning? 为什么它是一项很神秘的技术？它和Instruct 又是什么关系？ LLM具备推理能力吗？思维CoT 又是怎么做的？ NLP研究范式的转换 范式转换1.0：从深度学习到两阶段预训练模型 时间范围，大致在深度学习引入NLP领域(2013年左右)， 到GPT 3.0 出现之前(2020年5月左右)。
+在Bert 和 GPT模型出现之前，NLP领域流行的技术是深度学习模型，而NLP领域的深度学习，主要依托一下几项关键技术：
+以大量的改进LSTM模型及少量的改进CNN模型作为典型的特征抽取器 以Sequence to Sequence (或叫 encoder-decoder亦可) + Attention 作为各种具体任务典型的总体技术框架 在这些核心技术加持下，NLP领域深度学习的主要研究目标，如果归纳一下，是如何有效增加模型层深或模型参数容量。就是说，怎么才能王encoder和decoder里不断叠加更深的LSTM或CNN层，来达成增加层深和模型容量的目标。 这种努力，尽管确实不断增加了模型层深，但是从解决具体任务的效果角度看，总体而言不算很成功，或者说和非深度学习方法相比，带来的优势不算大。
+深度学习之所以不够成功，我认为主要原因来自于两个方面：
+一方面是某个具体任务有限的训练数据总量。
+​ 随着模型容量的增加，需要靠更大量的训练数据来支撑，否则及时你把深度做起来，任务效果也做不上去。而在预训练模型出现之前，很明显这是NLP研究领域一个严重问题；
+另一个方面是LSTM/CNN特征抽取器，表达能力不够强。
+​ 计算给你再多的数据也没用，因为你不能有效的吸收数据里蕴含的知识。
+主要应该是这两个原因，阻碍了深度学习在NLP领域的成功突围。
+Bert/GPT 这两个预训练模型的出现，无论在学术研究角度看，还是工业应用角度看，都代表了NLP领域的一个技术飞跃，并带来了两个领域研究范式的转换。这种范式转换带来的影响，体现在两个方面：
+首先，是部分NLP研究子领域的衰退乃至逐步消亡；
+其次，NLP不同子领域的技术方法和技术框架日趋统一，在Bert出现后一年左右，技术栈基本收敛到两种技术模式中。
+影响一：中间任务的消亡
+NLP 是一个宏观研究领域的统称，有各种子领域与子方向，如果从任务的性质角度，可以把任务分成两大类，一类叫中间任务，依赖叫最终任务。
+典型中间任务包括：中文分词、词性标注、NER、句法分析、指代消解、语义Parser等，这类任务一般不解决应用中的实际需求，大多数是作为哪些解决实际需求任务的中间阶段或者辅助阶段存在的。最终任务包括文本分类、文本相似性计算、机器翻译、文本摘要等。这类任务特点是每个子领域都解决某个实际需求，任务结果基本能直接呈现用户。
+按理说，中间任务不该出现，这是NLP技术发展水平不够高的一种体现。从Bert/GPT出现后，其实就没必要做中间任务了，因为通过大量的预训练，Bert/GPT 已经把这些中间任务作为语言学特征，吸收到了Transformer的参数里，此时我们完全可以端到端直接解决那些最终任务，而无需对这种中间过程专门建模。
+影响二：不同研究方向技术路线的统一
+如果对最终任务进一步分类，大致分为两大不同类型的任务：自然语言理解类任务和自然语言生成类任务。如果排除掉中间任务的话，典型的自然语言理解类任务包括文本分类、句子关系判断、情感倾向判断等，这种任务本质上都是分类任务，就是说输入一个句子，或者两个句子，模型参考所有输入内容，最后给出属于哪个类别的判断。生成类也包含很多NLP研究子方向，如聊天机器人、机器翻译、问答系统等。生成类任务的特点是给定输入文本，对应的模型要生成一串输出文本。
+自从Bert/GPT模型诞生后，出现了明显的技术统一趋向。首先NLP不同子领域，特征抽取器都逐渐从LSTM/CNN统一到Transformer上。Transfomer不仅同意了NLP诸多领域，也逐渐替换图像处理各种任务中被广泛使用的CNN等其他模型的进程之中，类似的，多模态模型目前也基本采用了Transformer模型。
+其次，大多数NLP子领域的研发模式切换到了两阶段模式：模型预训练阶段+应用微调(Fine-tuning)或者应用Zero/Few Shot Prompt模式。更准确说，NLP各种任务其实收敛到了两个而不同的预训练模型框架里：对于自然语言理解类任务，其技术体系统一到了以GPT2.0为代表的自回归语言模型+Zero/Few Shot Prompt模式。
+范式转换2.0：从预训练模型走向通用人工智能（AGI，Artificial General Intelligence） 这个范式转换所涵盖的时间范围，大致在GPT3.0出现之后(2020年6月左右)，知道目前为止，我们应该处于这个范式转换过程中。
+ChatGPT 是出发这次范型转换的关键节点，但是在InstructGPT出现之前，其实LLM处于这次范式转换前的一个过渡期。</description></item><item><title>Week1043_Algorithm</title><link>https://ifaa.top/posts/week1043_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:49 +0000</pubDate><guid>https://ifaa.top/posts/week1043_algorithm/</guid><description>ARTS - Algorithm - 191. 位1的个数 - 力扣（Leetcode） 题目 位1的个数 编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 &amp;lsquo;1&amp;rsquo; 的个数（也被称为汉明重量）。
+提示：
+请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。 在 Java 中，编译器使用二进制补码记法来表示有符号整数。因此，在上面的 示例 3 中，输入表示有符号整数 -3。 分析 按位与， 每一位与1进行按位与， 是1就计数器加一，由于int 是32位整数， 就直接迭代32次。
+代码：
+public class Solution { // you need to treat n as an unsigned value public int hammingWeight(int n) { int count = 0; for (int i = 0; i &amp;lt; 32; i++) { if ((n &amp;amp; 1) == 1) { count++; } n = n &amp;gt;&amp;gt; 1; } return count; } } 看官方题解后， 发现其实可以不用修改输入 n 的值，改造我们的代码，其实引入 1 来做位移就够了</description></item><item><title>Week1039_review</title><link>https://ifaa.top/posts/week1039_review/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1039_review/</guid><description>Review 理解JVM架构 Understanding JVM architecture and how Java really works under the hood is an important learning for every Java developer in order to effectively make use of the Java ecosystem. This blog post series will provide you with a solid foundation on JVM internals and technologies around the Java ecosystem.
+理解JVM架构和Java在覆盖下如何真正工作，对每个想要高效使用Java生态的Java开发者，是一件很重要的学习。本篇博客系列将会为你在JVM内部和围绕Java生态技术，提供一个坚实的基础。
+背景 Designed in 1995 by James Gosling for Sun Microsystems, Java is a multi-paradigm (i.e. object-oriented class-based, structural, imperative, generic, reflective, concurrent) programming language which is loved by millions of developers.</description></item><item><title>Week1039_share</title><link>https://ifaa.top/posts/week1039_share/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1039_share/</guid><description>Share - 年终非正式总结 又是一年年终，年年做总结做规划，发现最大的结论是，规划目标总是完不成&amp;hellip;， 那就不看目标了，只去记录一下今年觉得还行的事。
+工作 年初谈去年绩效 自学并应用了Spark, Hive, Airflow 学了React ，尝试了Nest.js, Next.js, Express.js 生活 想明白了一些事 先说工作绩效。
+当我得知我的绩效并不好时候， 虽然我知道并非完全不合理，但是我还是觉得要为自己据理力争一回，于是约了领导谈话。主要表达就是相比去年承担了更多的工作与责任，付出了更多的精力，可是绩效却比去年差。领导的回答虽然实在，但是令人失望。他主要意思是人多不可能精确评估每个人的绩效，只能根据开会出勤面熟度来确定，所以不公平是在所难免。 对这个回答，我感谢他的诚实回答，但是对他对此事无丝毫作为感到失望。 最后只能告诫自己，职场这类事多了去，还是自己好好努力，争取跳出这个圈。
+然后是几个月后，领导在老板支持下，带出一部分业务独立创业，也邀请我过去。当时我虽然心里仍有芥蒂，但是想到能相对更自由做自己的工作，也是比较倾向去的，他看到我犹豫，开始说去了后年终奖肯定比现在多， 我瞬间觉得不那么想去了， 我是喜欢钱，但我更喜欢能自由开心的做事，不唯金钱论。最后拒绝了他。
+自学了Spark,Airflow
+主要工作内容是数据开发，数据仓库层维度建模，学习了Kimball 的维度建模理论，开始有意识的对已存在的业务数据做数据分层开发，之后发现，使用的Airflow调度非常好，因为它可以支持代码开发，这可以有更大灵活性组织任务依赖于调度。
+最开始使用Hive SQL来操作hadoop, 其实就是写sql 对ods数据进行DW建设，最后生成集市层数据，供BI、财务等使用，期间虽然任务多时间少，但是有机会就会去实现这一过程。之后做离线任务，总是绕不过去Spark, 学习了使用Spark, 并把之前的Hive SQL 任务全换成了Spark SQL ，显著提高了速度。 最开始使用的Scala 来调度Spark, 后来发现结合Airflow更合适的是用pySpark, 因为相比scala打jar包执行，pySpark源代码可见，也更简便。
+学了React, 尝试了Nest.js ,Next.js
+这里的时间重点是学了React. 为啥会考虑学前端， 因为作为后端程序员，独立开发产品的话，前端是避免不了的。 之前学过一段Vue，这次就尝试了React， 根据视频、文档学到了最新的Hook特性。 之后衍生的Next.js ， 和后端的Nest.js ，很像Springmvc 的框架。最终的结果是，还没学的足够好，还无法独立做前端项目。并且Typescript 还没有学。
+生活的琐事
+其实并没有想明白啥，不确定以后想法是否还会变。
+最主要的想法是，想要做事的方向比以前清晰了。即在有选择的前提下，选择自认为对社会更有意义的事，能带来福祉的事。比如，有医学计算机研究岗和现金贷岗，金额差距不大，优先选医学岗。并不是说挣钱不重要，而是当前的现实情况下，挣大钱的机会不存在于目前的按部就班上班的工作中，这样的话就去选择能带给人们更多福祉的工作。
+其实个人能力、眼界、辨识度有限，无法分辨出哪些工作更能带来社会福祉，而且个人谈这件事还有些大和空， 但是抱着尽一份力的想法去做事， 比如高息贷款，真的没有积极作用吗？ 给那些需要这钱周转的人一个选择，也是好的一件事。 判断标准一般认为，能否带来效率的提升降低生活成本，能否带来更多公平，能否带来更好的体验等等。
+承认自己的优秀和不优秀。
+曾一度自责委屈自己不是一流人才，包括现在是，觉得个人智力、情商、工作能力和见识，都是挺普通的，甚至有些还在平均线以下，一度自卑恐惧，要学会接纳自己的缺陷，不必自苛成为什么样的人，当下的生活更重要，找到想要的方向，静下心做下去就行。承认自己的各项是参差不齐的，尽管长板不够长， 短板够短，和自己和解。
+努力发挥个人价值。
+不断提高个人能力和见识，发挥个人价值。</description></item><item><title>Week1039_tip</title><link>https://ifaa.top/posts/week1039_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1039_tip/</guid><description>Tip - Airflow DAG多少的思考 在做ETL任务时候，使用Airflow作为数据任务调度框架，就遇到了很多任务下，如何组织DAG的问题。
+一个任务一个DAG 最开始做的方式就是一个任务一个DAG。比如要制作一个每日数量类统计，编写逻辑就是从ods取数，生成一个新表，存进去数据。那么一个DAG组织起来实现逻辑的SQL就够了，这时候就是一个任务一个DAG。
+但是这样做的问题还是有的，比如我要做DW层，要对ods进行汇总得到多个DW层数据，然后我要制作报表，用到了 dw1,dw2.. ， 由于需要明确的先后顺序，其他人做法依然是多个DAG，设置不同的调用时间来实现。这显然不够精确。
+多个任务集成进一个DAG 于是要充分发挥DAG的功能，DAG的设计就是任务可以有依赖关系，那么ETL过程就是很适合的场景。于是我就把多个DAG改造成一个DAG，因为他们有关联关系。后来我发现，其实只用一个DAG就够了，一个DAG启动，首先面对多个ods表的检查， 分裂成多组不同业务方向的操作，每组各自执行内部逻辑，无需存在多个DAG，任务之间的关系也清晰明了，所以我就把我的任务改造成了一个。但是这样也有弊端。
+弊端就是，当新增采集表或者新增任务，历史回溯比较困难，因为会因此使得已经跑过的其他任务也跟着重跑。这并不是很大的事，但是当任务很多时候，原本只是为了新增的任务重跑，造成所有任务跟着重跑，性能急剧下降，耗时越来越多，而且，不同的业务类型都在一个DAG，只会越来越臃肿不利于模块化维护，所以要继续改造。
+分类DAG 进行到分类DAG阶段。分类DAG是这样的一个想法， 对于一个业务类型的任务，放在一个DAG里，因为他们关联性最大。其他关联小的业务类型任务，新开DAG，这样他们之间互不影响，发挥足够的性能，也能使得任务关系清晰明了。
+然后DAG内部，进行分组管理。一组只做一类事情，这样设计的DAG，不会像第一种一个任务一个DAG造成的那么多重复代码， 也不会像只一个DAG的结构复杂，相当于代码模块化， 一个模块一个DAG，这样管理起来就舒服多了。而且内部也是根据功能划分不同的组，更是结构清晰。
+如下：</description></item><item><title>Week1040_Algorithm</title><link>https://ifaa.top/posts/week1040_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1040_algorithm/</guid><description>Algorithm - 169. 多数元素 多数元素 给定一个大小为 n 的数组 nums ，返回其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
+你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+示例 1：
+输入：nums = [3,2,3] 输出：3 示例 2：
+输入：nums = [2,2,1,1,1,2,2] 输出：2 分析 老规矩，先从想到的最笨的的方法解决。 只要把数组中每个元素放入map里， value作为次数，就能找出多数元素。
+代码如下：
+class Solution { public int majorityElement(int[] nums) { if (nums.length == 1) { return nums[0]; } Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(nums.length/2+1); for (int num : nums) { if (map.get(num) == null) { map.put(num, 1); } else { int cnt = map.</description></item><item><title>Week1040_Review</title><link>https://ifaa.top/posts/week1040_review/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1040_review/</guid><description>Review - Java类加载机制 1. Introduction to Class Loaders Class loaders are responsible for loading Java classes dynamically to the JVM (Java Virtual Machine) during runtime. They&amp;rsquo;re also part of the JRE (Java Runtime Environment). Therefore, the JVM doesn&amp;rsquo;t need to know about the underlying files or file systems in order to run Java programs thanks to class loaders.
+Furthermore, these Java classes aren&amp;rsquo;t loaded into memory all at once, but rather when they&amp;rsquo;re required by an application.</description></item><item><title>Week1040_Share</title><link>https://ifaa.top/posts/week1040_share/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1040_share/</guid><description>Share - 数据结构和算法开篇 主要重点 常用的数据结构和算法各有10个，只要逐一攻克，就掌握大部分情况了。
+10个数据结构：
+数组、链表、栈、队列、散列表、二叉树、堆、跳表、图、Trie数
+10个算法：
+递归、排序、二分查找、搜索、哈希算法、贪心算法、分治算法、回溯算法、动态规划、字符串匹配算法
+以上是基础，掌握后再解其他复杂的就会很快。
+学习时候注重思考四点：
+来历 自身特点 适合解决的问题 实际应用场景 注意分析算法好坏的指标：
+空间复杂度 （用内存多寡） 时间复杂度 （计算步骤和数据量的关系(线性、指数、对数、常量&amp;hellip;)） 参考 数据结构与算法之美-极客时间-王争</description></item><item><title>Week1040_Tip</title><link>https://ifaa.top/posts/week1040_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1040_tip/</guid><description>Tip - 窗口函数 Lead， Lag 近来接触了SQL中的 window function . 窗口函数主要作用在对结果集 跨越操作， 如上一条记录、行号、排序等。
+平时使用最多的是 row_numer, 作为行号来处理，
+随之的是 rank, dense_rank， 近来有一个需求是比较今天、昨天的差额，就用到了适合临近行的 Lead 和 Lag
+window function的结构：
+window_function ( expr ) OVER ( PARTITION BY ... ORDER BY ... frame_clause ) LEAD, LAG 首先字面意思理解， Lead代表领先的， LAG慢的，落后的， 都是一个相对概念， 相对的就是 current row.
+在使用时候，比较模糊的是 Lead领先 current row, 是向上领先还是向下领先？
+jack 23 rose 24 bob 34 jim 14 比如 current row 是 3 bob, 那么 lead（bob）， 是2 rose 还是 jim?</description></item><item><title>Week1041_algorithm</title><link>https://ifaa.top/posts/week1041_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1041_algorithm/</guid><description>ARTS - Algorithm - 杨辉三角 给定一个非负整数 *numRows，*生成「杨辉三角」的前 numRows 行。
+在「杨辉三角」中，每个数是它左上方和右上方的数的和。
+分析 杨辉三角属于简单类型的题。根据题目分析，我们总结几个杨辉三角的特点：
+每一层数据依赖相邻他的上一层数据， 第n层有n个数据 每一层两边外侧是1， 也就是说，每一层的起点和终点元素是1\ 根据以上特点推断代码的核心逻辑，进行第n层数据确定时候，需要知道n-1层的数据， 第n层第 i 个元素 是n-1层 第 i-1元素 和 第 i 个元素的和。
+代码 class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; generate(int numRows) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(numRows); List&amp;lt;Integer&amp;gt; one = new ArrayList&amp;lt;&amp;gt;(1); one.add(1); list.add(one); for (int i = 2; i &amp;lt;= numRows; i++) { // 上一层数据 List&amp;lt;Integer&amp;gt; lastLayer = list.get(i - 1 - 1); // 第n层有n个数 List&amp;lt;Integer&amp;gt; layer = new ArrayList&amp;lt;&amp;gt;(i); // 第1个是1， layer.</description></item><item><title>Week1041_tip</title><link>https://ifaa.top/posts/week1041_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:48 +0000</pubDate><guid>https://ifaa.top/posts/week1041_tip/</guid><description>ARTS - Tip spark建hive表insert 时候的一些问题
+使用pyspark 来创建hive表并insert时候，一直没遇到啥问题。最近在增加了几个字段，然后跑任务后，发现使用hive查数据dt过滤，新增的字段是NULL， 但是用sparksql查出来确实有值的。开发的回复是，都用hive sql来建表，sparksql建表有问题。至于是什么问题，暂时还不清楚，需要细查一下。</description></item><item><title>Week1037_review</title><link>https://ifaa.top/posts/week1037_review/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1037_review/</guid><description>Apache Kafka in Depth In the era of Big Data, lots and lots of data(volume) are being produced every second(velocity) from various sources like social media, blogs that I am writing currently, e-commerce, etc., which gets stored across different platforms in different schemas(varieties). In order to perform any ETL (Extract, Transform, Load) operation, a messaging/streaming system is needed which should be asynchronous and loosely coupled i.e. data from various sources/clients like hdfs, Cassandra, RDBMS, application log file, etc.</description></item><item><title>Week1037_share</title><link>https://ifaa.top/posts/week1037_share/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1037_share/</guid><description>ARTS - Share 养成写开发文档习惯 一个优秀程序员应该把80%时间用来写文档，20%的时间用于编码。
+为什么写文档？ 文档，就像盖楼房的设计图，没有图纸，你是不能开始搬砖的。
+写什么文档？ 要干什么？要干成什么样？ 领导有没有给你看需求分析文档？有没有拿着需求分析文档给你宣讲你要做什么？没有？不干活；
+测试的同事有没有给你看测试用例文档？有没有给你宣讲？没有？不干活；
+你自己明白领导的意图了吗？明白测试同事的意图了吗？
+大处着眼小处着手 想明白后，开始想自己要开发的模块里的各个功能模块之间的关系，可以画时序图；
+时序图画完了，看看是否有（可能）频繁变化的模块/需求，如果有，请务必使用一些设计模式，
+如果要用设计模式，请务必画UML类图，如果没有频繁变化的模块/需求，请一定不要用设计模式；
+最后，看看在一个功能模块中，有没有逻辑比较复杂的地方，如果有，请画流程图；
+模块和模块之间有没有需要明确的协议？如果有，请把协议写出来。
+主要是自己读 上面这一段话，就是你要写的文档，这个文档的读者主要是你，在你的模块出问题之前，别人通常不会读这个文档（不排除你的领导会要求看你这个文档）。
+如果你既不需要时序图又不需要类图又没什么协议需要明确，那么，你就可以不写这个文档。另外，如果这个文档写得好，你的代码是不需要任何注释的。</description></item><item><title>Week1038_algorithm</title><link>https://ifaa.top/posts/week1038_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1038_algorithm/</guid><description>Algorithm - 3. 无重复字符的最长子串 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+示例 1:
+输入: s = &amp;#34;abcabcbb&amp;#34; 输出: 3 解释: 因为无重复字符的最长子串是 &amp;#34;abc&amp;#34;，所以其长度为 3。 分析 一开始毫无头绪，就从能想到的最简单的方法来实现，不考虑空间、时间，只考虑能够解决问题。
+方法，穷举 最直接的思路，既然要找出无重复字符最长子串，那么就把所有子串找出来，排除重复的，就能找到无重复的最长子串。
+**如何获得子串？**String自带的substr(beginIndex, endIndex)方法。
+**如何查找所有子串？**从第一个字符开始，往后取1个、2个、3个&amp;hellip;.组成子串， 然后再第二个字符&amp;hellip;
+具体代码：
+public int lengthOfLongestSubstring(String s) { if (s == null || s.length() == 0) { return 0; } // 包含所有子串的容器 List&amp;lt;char[]&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); // 遍历所有字符 for (int i = 0; i &amp;lt; s.length(); i++) { char head = s.charAt(i); list.</description></item><item><title>Week1038_review</title><link>https://ifaa.top/posts/week1038_review/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1038_review/</guid><description>Review Stop the World Event All the Garbage Collections are “Stop the World” events because all application threads are stopped until the operation completes. Since Young generation keeps short-lived objects, Minor GC is very fast and the application doesn’t get affected by this. However, Major GC takes a long time because it checks all the live objects. Major GC should be minimized because it will make your application unresponsive for the garbage collection duration.</description></item><item><title>Week1038_share</title><link>https://ifaa.top/posts/week1038_share/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1038_share/</guid><description>关于项目计划与复盘的几个原则 做计划的SMART原则，复盘描述的STAR原则
+复盘、描述事情 STAR Situation 事情的背景是什么 Task 如何明确你的任务 Action 这种情况分析，采用了什么行动方式 Result 结果如何 简单理解：
+案例是在什么情况下发生的，发生后如何明确自己的任务，采取了哪些行动，结果是什么。
+更简化：背景、目标、行动、结果
+做计划SMART Specific 目标必须是具体的 Measurable 目标必须是可以衡量的 Attainable 目标必须是可以达到的 Relevant 目标之间具有相关性 Time-based 必须有明确截止期限 实际使用 面试提问 STAR原则： Q: 请讲一下你最近做的项目。
+A: 好的，我这个项目是做xxx的，主要是xx用户在进行xx的时候，解决他们xx的问题。我们项目组有n个人，m个开发&amp;hellip; ，工作方式是&amp;hellip;. (Situation 背景介绍)
+我们主要的目标是，提供xx的功能服务， 维护系统稳定性，解决用户快速增长带来的体验问题&amp;hellip; ， 我主要负责xxx (Task 目标任务)
+我们使用 xxx 开发语言来实现xxx功能， 引入xxx等工具xxx等部署方式来解决稳定性，使用 xxx来解决体验问题&amp;hellip; (Action 具体的行动)
+最终是我们用户日活xxx, 稳定性达 99.99% &amp;hellip; ， (Result 结果如何)
+Q: 请讲一下在XX开发中做过最有成就感的事是什么？
+A: 好的。
+我在开发xx功能中经常遇到的一个问题是xxx, 当时我们的用户增长很快，原来的实现方式比较低效、麻烦、易错， 常常 &amp;hellip; (Situation)
+因此我要解决 低效，易错的事 （Task), 为此， 我使用XXX来解决XX的问题， 改进了XX的设计，简化了流程， 开发了XX平台来代替xx.</description></item><item><title>Week1038_tip</title><link>https://ifaa.top/posts/week1038_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1038_tip/</guid><description>Tip - Aiflow注解生成Task的易错点 Situation 在使用Airflow配置任务时候，使用了Task group 和 task注解来实现任务配置，使用一组注解task用来检测数据是否完整，完整的话就继续走以后逻辑。
+Task 在这样的情况下，本应该检查完数据才进行下一步，结果没有实际检查，因此要查具体原因。
+Action 查看日志，实际执行检查会打出相应日志Success criteria met. Exiting.， 但我的任务日志并没有检查，
+任务代码架构如下:
+with DAG () as dag: with TaskGroup(...) as group: @task def check_xxx(): S3KeySensor(...) ... start &amp;gt;&amp;gt; group &amp;gt;&amp;gt; logical_task &amp;gt;&amp;gt; end 找更有经验的同事询问。 为何这样会导致S3Keysor没有执行？告知，可能是bug吧，没遇见过。
+找实现过类似功能的代码。 找了别人写的非注解方式实现的代码， 改造此功能后如下:
+with DAG () as dag: check_a = PythonOperator(...) check_b = PythonOperator(...) ... start &amp;gt;&amp;gt; [check_a, check_b] &amp;gt;&amp;gt; logical_task &amp;gt;&amp;gt; end 发现是可以正常执行的，能打出相应日志。
+对比实现。 对比两个实现版本， 我写的不同点是引入TaskGroup, 和注解 @task， TaskGroup不太可能出问题，因为我有其他这样写的任务没有报错，问题大概率出现在@task上。</description></item><item><title>Week1039_algorithm</title><link>https://ifaa.top/posts/week1039_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1039_algorithm/</guid><description>Algorithm - 217. 存在重复元素 给你一个整数数组 nums 。如果任一值在数组中出现 至少两次 ，返回 true ；如果数组中每个元素互不相同，返回 false 。
+分析 这个是简单类别的题目。要判断某个值在数组中至少出现两次，也就是只要判断数组中有重复的元素就行。还是老样子，从你想到最能解决问题的方案入手，不用考虑性能空间， 首先能想到，利用Map的key不重复特性来处理， 遍历数组，从Map中取数，取到就说明有重复的，没有的话就继续。
+代码如下：
+class Solution { public boolean containsDuplicate(int[] nums) { Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(nums.length); for (int num : nums) { Integer a = map.get(num); if (a == null) { map.put(num, 1); } else { return true; } } return false; } } 测试提交后，能通过：
+优化 然后第二步考虑优化的事， 我们是否能让代码执行更快，使用更少的空间？看题目， 是一堆int数， 并且只判断是否重复就行了， 我想到了位操作中的异或操作： 相同为0，不同为1的特点。那么异或操作能否在这里使用呢？再想了想，还是没法用的，因为异或适合找存在不重复的数字，这样所有元素异或下来会大于0.翻看题解，发现也没有用位操作的，所以这种题就用一般解法吧。
+看了HashMap ，其实我们不需要后边的Value, 只需要前面的Key 就够了，所以使用Set就行了：</description></item><item><title>Week1039_learn</title><link>https://ifaa.top/posts/week1039_learn/</link><pubDate>Fri, 31 Mar 2023 15:45:47 +0000</pubDate><guid>https://ifaa.top/posts/week1039_learn/</guid><description>Learn - React-Hook useState class写法 import React, { Component } from &amp;#39;react&amp;#39; export default class App extends Component { state = { count: 0 } setCount = ()=&amp;gt;{ this.setState(state=&amp;gt;({ count: ++state.count })) } render() { return ( &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;you click {this.state.count} times&amp;lt;/p&amp;gt; &amp;lt;button onClick={this.setCount}&amp;gt; Click me! &amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; ) } } hook写法 import React, { useState } from &amp;#39;react&amp;#39; export default function App() { const [count, setCount] = useState(0) return ( &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;you click {count} times&amp;lt;/p&amp;gt; &amp;lt;button onClick={()=&amp;gt; setCount(count+1)}&amp;gt; Click me &amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; ) }</description></item><item><title>Week1035_review</title><link>https://ifaa.top/posts/week1035_review/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1035_review/</guid><description>ARTS - Review 补2019.3.6 How To Learn Any New Programming Language Quickly 如何快速学习一门新的编程语言？
+essential adj. 必要，必不可少 fundamentals n. 基调， 基本原理 assumes 假设 concepts 概念 disheartening adj. 令人犯愁的 preconceived adj. 先入为主的 Anatomy n 剖析 strip out 剔除 aspect n. 方面，侧面，局面 equivalent An essential checklist of fundamentals 一个必不可少的原理清单
+This article assumes you already know at least one programming language; however, the concepts here will help you get started with programming.
+本篇文章假设你已经至少懂得一门编程语言；这些概念将帮你开始编程。
+When I was in school, a teacher told me something I share with new developers: The hardest programming language you’ll ever learn will be your second.</description></item><item><title>Week1035_share</title><link>https://ifaa.top/posts/week1035_share/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1035_share/</guid><description>ARTS - Share 补2019.3.6 本章的主题是创建和销毁对象：什么时候、如何创建对象；什么时候、如何避免创建对象；如何保证对象能够适时的销毁；对象被销毁之前如何管理各种清理工作。
+第1条：考虑用静态工厂方法代替构造函数 一个类，为了让客户获得它的一个实例，最通常的做法是提供一个公有构造函数。或者提供一个公有的 静态工厂方法（static factory method），就是一个简单的静态方法，返回类的一个实例。如boolan的 包装类 Boolean, valueOf方法：
+public static Boolean valueOf(boolean b) { return (b ? TRUE : FALSE); } 类可以为它的客户提供一些静态工厂方法，来代替构造函数，或者同时提供一些构造函数。一个好处是静态工厂方法具有名字，使得类更易用，客户代码更易读。静态工厂方法有自己的名字，没有构造函数只能有一个原型相同的构造函数，可以有不止一个静态工厂方法。如果一个类看起来需要多个构造函数，并且原型特征相同，那么应该考虑用静态工厂方法来代替其中一个或多个构造函数，并且慎重选择他们的名字以便明显表示它们的不同。
+静态工厂方法第二个好处是，与构造函数不同，每次调用时候不要求非得创建一个新对象。是的一些非可变类可以使用一个预先构造好的实例，或者把已经构造好的实例缓存起来，在把实例分发给客户，避免创建不必要的重复对象。
+静态工厂方法可以重复调用返回同一个对象，1. 使得一个类可以保证是一个singleton, 2、使非可变类可以保证不会有两个相等的实例存在，即当且仅当 a == b 时才有 a.equals(b) 为true. 如果一个类保证了这一点，客户可以用== 来代替 equals ，性能提升。String.intern 是一种有限的方式实现了这种优化。
+静态工厂方法第三个好处是，与构造函数不同，可以返回一个原返回类型的子类型的对象，这样我们选择返回对象类型时候就有了更大的灵活性。
+应用就是一个API可以返回一个对象，同时又不使改对象的类成为公有的。以这种方式把具体的实现类隐藏起来，可以得到一个非常简洁的API。
+静态工厂方法的主要缺点是，类如果不含公有的或者受保护的构造函数，就不能被子类化。
+第二个缺点是，它们与其他的静态方法没有任何区别。
+总的来说，静态工厂方法和公有的构造函数都有他们各自的用途，我们需要理解它们各自的长处。</description></item><item><title>Week1035_tip</title><link>https://ifaa.top/posts/week1035_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1035_tip/</guid><description>ARTS - Tip 补2019.3.6 MySQL的 ON DUPLICATE KEY UPDATE 背景 项目中经常使用到saveOrUpdate方式更新，即没有就插入，有就更新。发现MySQL支持这样的语法，13.2.6.2 INSERT &amp;hellip; ON DUPLICATE KEY UPDATE Syntax
+官方文档 If you specify an ON DUPLICATE KEY UPDATE clause and a row to be inserted would cause a duplicate value in a UNIQUE index or PRIMARY KEY, an UPDATE of the old row occurs. For example, if column a is declared as UNIQUE and contains the value 1, the following two statements have similar effect:</description></item><item><title>Week1036_algorithm</title><link>https://ifaa.top/posts/week1036_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1036_algorithm/</guid><description>ARTS - Algorithm 补2019.3.13 5. 最长回文子串 题目 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+示例 1：
+输入: &amp;ldquo;babad&amp;rdquo; 输出: &amp;ldquo;bab&amp;rdquo; 注意: &amp;ldquo;aba&amp;rdquo; 也是一个有效答案。 示例 2：
+输入: &amp;ldquo;cbbd&amp;rdquo; 输出: &amp;ldquo;bb&amp;rdquo;
+分析 这个回文子串，要分两步，1.分割，2.判断。判断的逻辑可以是，从两边往中间挤压，只要不相等，就不是，判断代码如下：
+private static boolean isPalindrome(String subString) { boolean isPalindrom = true; int length = subString.length(); for (int i = 0; i &amp;lt; length; i++) { char si = subString.charAt(i); char sj = subString.charAt(length - i - 1); if (si != sj) { return false; } } return isPalindrom; } 那么，分割可以是迭代从第1位开始，每次都比较到最后一位子串：</description></item><item><title>Week1036_review</title><link>https://ifaa.top/posts/week1036_review/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1036_review/</guid><description>ARTS - Review 补2019.3.13 Generating Unique Id in Distributed Environment in high Scale:
+大规模生成分布式系统的唯一ID
+Recently I was working on a project which requires unique id in a distributed environment which we used as a primary key to store in databases. In a single server, it is easy to generate unique id like *** Oracle *** uses *sequence(increment counter for next id )* in SQL auto increment primary key column in tables.</description></item><item><title>Week1036_share</title><link>https://ifaa.top/posts/week1036_share/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1036_share/</guid><description>ARTS - Share 补2019.3.13 第2条：使用私有构造函数强化singleton属性
+singleton是指这样的类，它只能实例化一次，singleton通常被用来代表那些本质上具有唯一性的系统组件。
+public class Elvis { public static final Elvis INSTANCE = new Elvis(); private Elvis() {} } 私有构造函数仅被调用一次，用来实例化公有的平台final 域Elvis.INSTANCE.
+第二种方法是提供了一个公有的静态工厂方法，而不是公有的静态final 域
+public class Elvis { private static final Elvis INSTANCE = new Elvis(); private Elvis() {} public static Elvis getInstance() { return INSTANCE; } } 所有对于静态方法 Elvis.getInstance() 的调用，都会返回同一个对象引用，所以不会有别的Elvis实例被创建。
+第一种方法的主要好处在于组内类的成员声明很清楚的表名了这个类是一个singleton,公有的静态域是final的，所以该域将总是包含相同的对象引用，第一中方法可能在性能上稍微领先，但是第二种方法中，一个优秀的JVM实现应该能够通过将静态工厂方法的调用内联化（inlining）， 来消除这种差别。
+第二种方法的主要好处在于，它提供了灵活性：在不改变API的前提下，允许我们改变想法，把该类做成singleton，或者不做成singleton, singleton静态工厂方法返回该类的唯一实例，但是，它也很容易被修改，比如说为每一个调用该方法的线程返回一个唯一的实例。
+为了使一个singleton类编程可序列话的，仅仅声明 implements Serializable 是不够的，为了维护singleton性，必须也要提供一个 readResolve 方法，否则的话，一个序列话的实例在每次反序列化时候，都会导致创建一个新的实例。
+private Object readResolve() throws ObjectsStreamException { return INSTANCE; }</description></item><item><title>Week1036_tip</title><link>https://ifaa.top/posts/week1036_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1036_tip/</guid><description>ARTS - Tip 补2019.3.13 MySQL 的CAST转换函数 最近在做一个需求需要连接查询， 如下
+SELECT a.column1, a.column2, b.column1 FROM table1 a LEFT JOIN table b on a.id = b.id WHERE ... 由于 a.id 和 b.id 类型不一致，所以需要转换下,那么，比如
+a.id = CAST(b.id AS CHAR(20)) 如果要走索引比较条件左边是不能带函数的
+-- 反例 SELECT * FROM table1 WHERE DATE_FORMAT(a.create_time, &amp;#39;%Y-%m-%d&amp;#39;) = &amp;#39;2020-10-21&amp;#39;; -- 正例 SELECT * FROM table1 WHERE a.create_time = STR_TO_DATE(&amp;#39;2020-10-21&amp;#39;, &amp;#39;%Y-%m-%d&amp;#39;); 如果要左边写函数，那么就要加函数索引。
+Name Desciption BINARY string转为二进制string CAST() Cast a value as a certain type CONVERT() Cast a value as a certain type CAST 函数可以改变数据类型</description></item><item><title>Week1037_algorithm</title><link>https://ifaa.top/posts/week1037_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1037_algorithm/</guid><description>ARTS - Algorithm 6. Z 字形变换 题目 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+比如输入字符串为 &amp;ldquo;LEETCODEISHIRING&amp;rdquo; 行数为 3 时，排列如下：
+L C I R E T O E S I I G E D H N 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：&amp;ldquo;LCIRETOESIIGEDHN&amp;rdquo;。
+请你实现这个将字符串进行指定行数变换的函数：
+string convert(string s, int numRows); 示例 1:
+输入: s = &amp;ldquo;LEETCODEISHIRING&amp;rdquo;, numRows = 3 输出: &amp;ldquo;LCIRETOESIIGEDHN&amp;quot;s 示例 2:
+输入: s = &amp;ldquo;LEETCODEISHIRING&amp;rdquo;, numRows = 4 输出: &amp;ldquo;LDREOEIIECIHNTSG&amp;rdquo; 解释:
+L D R E O E I I E C I H N T S G</description></item><item><title>Week1037_tip</title><link>https://ifaa.top/posts/week1037_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:46 +0000</pubDate><guid>https://ifaa.top/posts/week1037_tip/</guid><description>ARTS - Tip 补2019.3.20 一个关于MongoDB连接的问题 最近有一个需求，要连接mongo集群，但是总是报错，以下是问题及解决过程。
+项目背景 springboot项目，连接阿里云MongoDB数据库。
+问题描述 在启动项目时候报错如下：
+No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=xxx:3717, type=UNKNOWN, state=CONNECTING, excepti on={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, ServerDescription{address=xxx:3717, type=UNKNOWN, state=CONNECTING, excep tion={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}]}. Waiting for 30000 ms before timing out [2020-10-22 09:09:01.844][ERROR][unknown_8ea74c3c095b4c689a1b989f25fc6d9f][c.o.o.c.c.CRBDataQueryController]- userMobileList error 2348162338435 null 499611240792850432 org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=xxx:3717, type=UNKNOWN, state=CONNECTING, exception={com.</description></item><item><title>Week1033_review</title><link>https://ifaa.top/posts/week1033_review/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1033_review/</guid><description>ARTS - Review 补2019.2.20 MySQL数据类型(2) temporal adj. 时间的 guarantee n. 保证 fractional adj. 很小的 ，分数的 omit v. 删除，省略 assignment n. 分配 equivalent adj. 相等的 explicitly adv. 明确地 11.1.2 Date and Time Type Overview 日期时间类型概览
+A summary of the temporal data types follows. For additional information about properties and storage requirements of the temporal types, see Section 11.3, “Date and Time Types”, and Section 11.8, “Data Type Storage Requirements”. For descriptions of functions that operate on temporal values, see Section 12.</description></item><item><title>Week1033_share</title><link>https://ifaa.top/posts/week1033_share/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1033_share/</guid><description>ARTS - Share 补2019.2.20 关于APP后端的登陆状态 问题 最近做APP的后端，考虑如何做登陆的状态，要实现的目标是区分用户，并且不用频繁重新登登录，不暴露系统用户的实际ID。
+思路 有这样一个思路，考虑用户表增加一个token列，当token存在，就说明已经登陆，不存在说明未登录。token的控制可以分为客户主动登出，或者超时退出(后端定时清理)。这样就不用暴露userId到外部，使用token传输放在header里，每次只要验证有没有这个参数，参数是否存在库里(加缓存)，就能判断登陆状态。
+生成规则 不使用UUID，因为它无序，我们需要能够按照时间有序生成，这里参考了下twitter开源的ID生成策略项目snowflake，支持分布式唯一ID。
+结构 0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000
+第一位为未使用，接下来的41位为毫秒级时间(41位的长度可以使用69年)，然后是5位datacenterId和5位workerId(10位的长度最多支持部署1024个节点） ，最后12位是毫秒内的计数（12位的计数顺序号支持每个节点每毫秒产生4096个ID序号）
+一共加起来刚好64位，为一个Long型。(转换成字符串后长度最多19)
+snowflake生成的ID整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞（由datacenter和workerId作区分），并且效率较高。经测试snowflake每秒能够产生26万个ID。
+源码 public class SnowFlakeIdWorker { /** * 开始时间截(2015-01-01) */ private final long twepoch = 1420041600000L; /** * 机器ID所占位数 */ private final long workerIdBits = 5L; /** * 数据标识id所占位数 */ private final long datacenterIdBits = 5L; /** * 支持的最大机器ID，结果是31， */ private final long maxWorkerId = -1L ^ (-1L &amp;lt;&amp;lt; workerIdBits); /** * 支持的最大数据标识id，结果是31 */ private final long maxDatacenterId = -1L ^ (-1L &amp;lt;&amp;lt; datacenterIdBits); /** * 序列在id中占的位数 */ private final long sequenceBits = 12L; /** * 机器ID向左移12位 */ private final long workerIdShift = sequenceBits; /** * 数据标识id向左移17位(12+5) */ private final long datacenterIdShift = sequenceBits + workerIdBits; /** * 时间截向左移22位(5+5+12) */ private final long timestampLeftShift = sequenceBits + workerIdBits + datacenterIdBits; /** * 生成序列的掩码，这里为4095 (0b111111111111=0xfff=4095) */ private final long sequenceMask = -1L ^ (-1L &amp;lt;&amp;lt; sequenceBits); /** * 工作机器ID(0~31) */ private long workerId; /** * 数据中心ID(0~31) */ private long datacenterId; /** * 毫秒内序列(0~4095) */ private long sequence = 0L; /** * 上次生成ID的时间截 */ private long lastTimestamp = -1L; //==============================Constructors===================================== public SnowFlakeIdWorker(long workerId, long datacenterId) { if (workerId &amp;gt; maxWorkerId || workerId &amp;lt; 0) { throw new IllegalArgumentException(String.</description></item><item><title>Week1033_tip</title><link>https://ifaa.top/posts/week1033_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1033_tip/</guid><description>ARTS - Tip 补2019.2.20 MySQL 的GTID
+背景 在数据库备份与恢复中碰到了不能导入的情况，报错是GTID相关，查了资料，发现是MySQL在5.6时引入的。
+概念 GTID (Global Transaction Identifier) 即全局I事务ID，GTID实际是由UUID 和 TID 组成的。UUID是MySQL实例的唯一标识。TID代表了该实例上已经提交的事务数量，并且随着事务提交单调递增，所以GTID能保证每个MySQL实例事务的执行(不会重复执行同一个事务，并且会补全没有执行的事务)。具体的看官方文档：17.1.3 Replication with Global Transaction Identifiers
+GTID 意义 引入GTID的意义是什么?
+因为清楚了GTID的格式，所以通过UUID可以知道这个事务是在哪个实例上提交的。 通过GTID可以方便进行复制结构上的故障转移，新主设置。 假设一主两从服务器， Server1 主， Server2 从，Server3 从，Server1崩溃，我们要提升Server2、Server3其中之一为主，提升的前提是跟上了主，我们发下Server2跟上了主，Server3没有跟上，这时候就提升Server2为主，然后让Server3跟到和Server2一样的位置，跟上的操作其实就是把Server2已经执行或，但是Server2没执行过的事务再走一遍，这个过程就需要定位事务了，在GTID出现之前是比较难定位的，出现了实例 UUID + 事务数量TID组成的GTID之后，事情就容易了，很容易补全剩下的事务。
+总结 GTID， 主从结构只有一台Master和一台Slave，对于GTID来说就没有优势了，对于2台以上的结构优势明显，可以在数据不丢失的情况下切换新主。
+使用GTID要注意，构建主从复制之前，在一台将成为主的实例上进行一些操作(如数据清理等)，通过GTID复制，这些在主从成立之前的操作也会复制到从服务器上，因为复制失败。
+即：通过GTID复制都是从最先开始的事务日志开始，即使这些操作在复制之前执行。
+比如是server1上执行drop\delete清理工作，接着在server2上执行change操作，会使得server2进行server1的清理工作。
+文章引用：
+[MySQL5.6 新特性之GTID]</description></item><item><title>Week1034_algorithm</title><link>https://ifaa.top/posts/week1034_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1034_algorithm/</guid><description>ARTS - Algorithm 补2019.2.27 86. 分隔列表 题目 给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。
+你应当保留两个分区中每个节点的初始相对位置。
+示例:
+输入: head = 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;2, x = 3 输出: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5 分析 这里其实就是把链表分隔成两部分，左边的都小于 x, 右边的都大于或等于 x, 为了保持原来顺序，按照顺序遍历就行了，把小的拼到一个链表， 把大的拼到另一个链表，然后合并链表就行了。
+代码如下 public class PartitionTest { public static ListNode partition(ListNode head, int x) { ListNode node = head; ListNode low = new ListNode(0); ListNode high = new ListNode(0); ListNode l = low; ListNode h = high; while (node != null) { if (node.</description></item><item><title>Week1034_review</title><link>https://ifaa.top/posts/week1034_review/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1034_review/</guid><description>ARTS - Review 补2019.2.27 Developers — here is the best WHY to quit your 9–5 job 开发者 — 这是你退出朝九晚五工作的最佳选择
+prowess n. 非凡的技能， fret v. 苦恼 meagre adj. 微薄的 compensation n. 补偿 supervise v. 监督，管理 console v. 安慰 come across 偶然发现 unilaterally 单方面的 applauds 鼓掌 metal n. 金属 carpentry n. 木工 manufacturing n. 制造业 colonies n. 殖民地 boycotted v. 拒绝购买，抵制boycott过去式 harmoniums 和声 despite prep. 尽管，即使 clutter v.杂乱，. gargantuan adj. 巨大的 Archaic adj.</description></item><item><title>Week1034_share</title><link>https://ifaa.top/posts/week1034_share/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1034_share/</guid><description>ARTS - Share 补2019.2.27 Spring容器启动过程 根据这个图了解spring的启动过程:
+Web.xml
+-Start-contextInitialzed(ServletContextEvent event)
+​ ContextLoaderListener
+​ -1. initWebApplicationContext(event.getServletContext)
+​ ContextLoader
+​ -1.1 createWebApplicationContext(servletContext)
+​ -1.1.1 determineContextClass(sc) 获取web应用上下文类的class
+​ -1.1.1.1 BeanUtils.instantiateClass(contextClass)工具实例化bean
+​ -1.1.1.2 T
+​ 1.1.2 ClasscontextClass
+​ 1.2 WebApplicationContext context
+​ 1.3 configureAndRefreshWebApplicationContext(cwac, servletContext)
+​ 1.3.1 customizeContext(sc, wac) 查找所有配置的ApplicationContext初始化容器
+​ 1.3.2 void
+​ 1.3.3 -wac.refresh()
+​ 1.3.4 void
+​ 1.4 void
+web.xml Tomcat启动会首先找web.xml文件，spring容器的入口自然就是这里注册的ContextLoaderListener
+&amp;lt;listener&amp;gt; &amp;lt;listener-class&amp;gt;org.springframework.web.context.ContextLoaderListener&amp;lt;/listener-class&amp;gt; &amp;lt;/listener&amp;gt; ContextLoaderListener 进入这个类
+public class ContextLoaderListener extends ContextLoader implements ServletContextListener{ /** * 创建一个新的 ContextLoaderListener ，将会创建一个基于 contextClass 和 ContextConfigLocation context-params 的web应用上下文。看父类的ContextLoader来看默认配置值。 * * 在web.</description></item><item><title>Week1034_tip</title><link>https://ifaa.top/posts/week1034_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1034_tip/</guid><description>ARTS - Tip 补2019.2.27 Ajax跨域 背景 在对APP、服务端项目开发时候，由于APP使用了html5做页面，有一些ajax调用后台数据的需求，测试时候前后端部署一台机器上没问题，当两者分开部署时候，就产生了跨域问题。
+介绍： 什么是AJAX跨域问题 产生AJAX跨域问题的原因 解决AJAX跨域的思路和方法 什么是AJAX跨域 简单说就是前端调用后端服务接口时，如果服务接口不是同一个域，就会产生跨域问题。
+AJAX跨域场景 前后端分离、服务化的开发模式 AJAX跨域原因 浏览器限制： 浏览器安全校验限制 跨域(协议、域名、端口任何一个不一样都会认为是跨域) XHR请求 AJAX跨域问题解决思路 浏览器： 浏览器去掉跨域校验 XHR： 不使用XHR，使用JSONP，有很多弊端（JsonP向Server提交URL的长度限制在8000字符，超过了则被浏览器拒绝，因此不采用。），无法满足现在开发要求 跨域：被调用方法支持跨域调用(指定参数)；调用方法修改跨域（基于代理） 解决方法 后端要做的工作：
+接口允许允许跨域请求：
+header(&amp;#39;Access-Control-Allow-Origin:*&amp;#39;); //支持全域名访问，不安全，部署后需要限制为R.com header(&amp;#39;Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE&amp;#39;); //支持的http动作 header(&amp;#39;Access-Control-Allow-Headers:x-requested-with,content-type&amp;#39;); //响应头 请按照自己需求添加。 前端发起跨域请求：
+就是正常的$.ajax请求即可。
+OPTION问题 正式跨域请求前，浏览器会根据需要发起一个PreFlight OPTION请求，用来让服务器返回允许的方法（如GET,POST），被跨域访问的来源(Origin),还有是否需要认证信息（Credentials）。
+三种场景： 如果跨域的请求是Simple Request（简单请求 ），则不会触发“PreFlight”。
+Mozilla对于简单请求的要求是：
+以下三项必须都成立：
+只能是Get、Head、Post方法
+除了浏览器自己在Http头上加的信息（如Connection、User-Agent），开发者只能加这几个：Accept、Accept-Language、Content-Type、。。。。
+Content-Type只能取这几个值：
+application/x-www-form-urlencoded` multipart/form-data text/plain 其他会导致“PreFlight”的请求。条件基本上是简单请求的补集。
+如果是PreFlight request 并且是Redirect的, 浏览器直接拒绝</description></item><item><title>Week1035_algorithm</title><link>https://ifaa.top/posts/week1035_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:45 +0000</pubDate><guid>https://ifaa.top/posts/week1035_algorithm/</guid><description>ARTS - Algorithm 补2019.3.6 92. 反转链表 II 题目 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
+说明: 1 ≤ m ≤ n ≤ 链表长度。
+示例:
+输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 输出: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL
+分析 要求是反转从m到n的一段，一次扫描。我们需要找到几个临界点：
+反转起点前一个，pstart 反转起点，start 反转结束节点，end 反转结束节点后一个 aend 注意情况：
+起点相同，即m=1 m = n 代码 public class ReverseBetweenTest { public static ListNode reverseBetween(ListNode head, int m, int n) { if (m == n) { return head; } ListNode node = head; ListNode prev = null; for (int i = 1; i &amp;lt; m; i++) { prev = node; node = node.</description></item><item><title>Week1031_algorithm</title><link>https://ifaa.top/posts/week1031_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1031_algorithm/</guid><description>ARTS - Algorithm 补2019.2.6 [24. 两两交换链表中的节点] 题目 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
+你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换
+示例:
+给定 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 你应该返回 2-&amp;gt;1-&amp;gt;4-&amp;gt;3. 分析 这道题要两两交换，且是节点实际交换，那么就是操作指针了。交换节点操作指针时候的重点是不能丢了指向，就是 1、2交换不能丢失他们后继 3，而且，交换后也不能忘了3 的前驱是1，因此我们要保留四个节点：
+Prev -&amp;gt; node -&amp;gt; node.next -&amp;gt; node.next.next
+可以给开头一个假的节点，作为第一个前驱。所以操作步骤如下：
+建立假头部指向链表，这个假头部当做prev。 建立三个指针指向当前、当前的后继、当前的后继的后继 操作指向 前驱指向第二个节点 第一个节点指向第三个节点 第二个节点指向第一个节点 当前指针向前推进 代码 public static ListNode swapPairs(ListNode head) { ListNode prev = new ListNode(0); prev.next = head; head = prev; ListNode node = prev.next; while (node != null &amp;amp;&amp;amp; node.next != null) { // 保存三个 ListNode first = node; ListNode second = node.</description></item><item><title>Week1031_review</title><link>https://ifaa.top/posts/week1031_review/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1031_review/</guid><description>ARTS - Review 补 2019.2.6 The Best Questions to Ask at Your Performance Review Rebecca Fishbein
+在绩效评估中最好的问题
+disservice n. 损害，伤害 specific adj. 明确的，具体的 exactly adv. 精确地，准确地 quarterly adj.季度的 annual adj. 每年的 buckets n. 桶 assistant n. 助理 Negotiable adj. 可协商的 striving v. 努力 informed adj. 有学问的 v.了解，熟悉 engaged adj. 忙于，从事于 bonus n. 奖金 jittery adj. 紧张不安的 entails v. 牵涉，需要，带来 temperature n. 温度 impacting 影响 attaining 获得 rough adj. 粗略的 dental hygienist adj.</description></item><item><title>Week1031_share</title><link>https://ifaa.top/posts/week1031_share/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1031_share/</guid><description>ARTS - Share 补2019.2.6 JVM的守护线程和用户线程 线程池创建非daemon线程 最近在看线程池时候, 发现线程池创建线程特别设置了线程为非daemon，以下是DefaultThreadFactory 中的一段代码：
+public Thread newThread(Runnable r) { Thread t = new Thread(group, r, namePrefix + threadNumber.getAndIncrement(), 0); if (t.isDaemon()) t.setDaemon(false); if (t.getPriority() != Thread.NORM_PRIORITY) t.setPriority(Thread.NORM_PRIORITY); return t; } 于是就了解了下JVM的线程。
+守护线程和用户线程 Java线程分类为daemon 即守护线程，和非守护线程即用户线程，守护线程一般用来辅助用户线程，如GC线程就是守护线程，
+守护线程的生命周期：随着程序在JVM中运行，守护线程第一时间被启动，并且一直处于运行状态。
+当所有用户线程执行完毕，程序就会杀死守护线程，离开JVM，终止程序。
+也就是是说，当用户线程为0，那么JVM就会退出。
+守护线程的创建 其实线程 Thread类里有个 setDaemon方法，用来设置线程为守护线程：
+/** * Marks this thread as either a {@linkplain #isDaemon daemon} thread * or a user thread. The Java Virtual Machine exits when the only * threads running are all daemon threads.</description></item><item><title>Week1031_tip</title><link>https://ifaa.top/posts/week1031_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1031_tip/</guid><description>ARTS - Tip 补 2019.2.6 线程池的getTask()方法 线程池持有线程不退出的思路 学线程池，都知道它的好处就是减少了频繁创建、销毁线程的开销，从而提高效率的，那么到底是怎么实现这个机制的呢？
+我们自己设想下，线程的声明周期就是创建、就绪、运行、销毁。如果线程一直在运行状态并且可以接收其他任务，那么其实就相当于是避开了频繁创建、销毁的开销。那么，线程池也是这么个思路。
+先看代码 runWorker, 我们知道runWorker其实就是相当于线程的run方法， 同理addWorker 可以看做是创建线程。
+runWorker final void runWorker(Worker w) { Thread wt = Thread.currentThread(); Runnable task = w.firstTask; w.firstTask = null; w.unlock(); // allow interrupts boolean completedAbruptly = true; try { /** 注意这个while循环， task为空时候就调用了getTask()方法， * 这个getTask()方法其实就充当了获取待执行任务的功能 * 还有个重要点是看这个while循环里的最后，重置 task = null, * 这时候就相当于调用getTask()获取任务了,接下来我们看getTask() */ while (task != null || (task = getTask()) != null) { w.lock(); // If pool is stopping, ensure thread is interrupted; // if not, ensure thread is not interrupted.</description></item><item><title>Week1032_algorithm</title><link>https://ifaa.top/posts/week1032_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1032_algorithm/</guid><description>ARTS - Algorithm 补2019.2.13 25. k个一组翻转链表 题目 给出一个链表，每 k 个节点一组进行翻转，并返回翻转后的链表。
+k 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 k 的整数倍，那么将最后剩余节点保持原有顺序。
+示例 :
+给定这个链表：1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+当 k = 2 时，应当返回: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5
+当 k = 3 时，应当返回: 3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5
+说明 :
+你的算法只能使用常数的额外空间。 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。 分析 这道题和上一题24. 两两交换链表中的节点很是相似，不同的是上道题是交换两个节点，这道题是交换k个节点。我们根据上题的思路，也是要找出列表分段的头和尾，然后转换相邻两个节点的指向，一段遍历完成，把上一段的尾巴指向这一段的新头部，代码如下：
+代码 /** * 25. k个一组翻转链表 * https://leetcode-cn.com/problems/reverse-nodes-in-k-group/ * * @author jacklove * @date 2019/5/8 */ public class ReverseKGroup { public static ListNode reverseKGroup(ListNode head, int k) { ListNode node = head; ListNode fake = new ListNode(0); fake.</description></item><item><title>Week1032_review</title><link>https://ifaa.top/posts/week1032_review/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1032_review/</guid><description>ARTS - Review 补2019.2.13 MySQL数据类型总览 11.1.1 Numeric Type Overview unrelated adj. 无关联的. specify v. 具体说明 subtraction n. 减法 omit v. 忽略 synonyms n. 同义词 precision n. 精确，准确 A summary of the numeric data types follows. For additional information about properties and storage requirements of the numeric types, see Section 11.2, “Numeric Types”, and Section 11.8, “Data Type Storage Requirements”.
+主要的数字数据类型如下。更多关于数字类型的属性和存储信息，请看11.2章，和11.8章。
+M indicates the maximum display width for integer types. The maximum display width is 255.</description></item><item><title>Week1032_share</title><link>https://ifaa.top/posts/week1032_share/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1032_share/</guid><description>ARTS - Share 补2019.2.13 基础的重要性 现代计算机的存储结构 现代计算机大多采用冯诺依曼机构，主要分为核心计算中央处理器CPU，内存，作为临时存储数据的模块，硬盘，永久存储数据的地方，还有数据总线，负责之间数据传输通信。
+我们与计算机交互，其实就是把数据交给CPU处理，然后结果返回。中间涉及到数据存储、传输、读取，也就是输入输出，简称IO(input output)。实现这个过程的实体就是CPU、内存、硬盘。速度上CPU&amp;gt;内存&amp;raquo;硬盘。 我们的目标是用尽可能少的资源(计算资源、时间资源、空间存储资源)得到尽可能多的结果。
+由于目前经常是CPU处理性能强大，我们经常优化点就在磁盘(硬盘)IO，和内存存取计算这块，为了实现目标，落到实地就是尽可能的减少磁盘IO，尽可能减少内存开销，和尽可能少的计算。于是出现了各种数据结构，就是为了在不同场景下最大化的利用资源达到目的。数据结构和算法并非凭空产生，都是依托于场景存在，所以学习这类知识不能孤立的只是学习记忆，要尽可能的学习它的适用场景。
+数组与链表 数组和链表的产生是基于内存结构的。内存其实就是一块有编号的存储单元。可以想象成有编号的一组柜子。我们程序需要频繁的往这些箱子里放东西，取东西。为了更好的利用这些箱子，提高存取效率，就出现了数据结构和算法，数组和链表就是其中最基础的。
+想象一下，我要存十个东西到箱子里，我可以申请编号1-10 的箱子，把东西依次放入，并获得每个东西的箱子号码(内存地址)，下次我要取出3号箱子，就直接去3号拿，取出8号的就去8号箱拿。这就是数组结构。我的东西都是连续的，我拿出3，我若需要7就去7号箱子拿，不需要打开4,5,6去看看，但是如果我需要放一个新的东西，按照顺序只能放到3和4之间，于是我就需要把4-10的东西先往后平移一个，在把东西放到4号箱子。这就有点麻烦了，为了放一个，我需要移动4-10 7个箱子。
+这时候链表结构就出现了。它的特点就是可能不是非要连续的箱子，我要放十个东西，第一个放入了3号箱，三号箱里还放了第二个东西的箱子编号7，然后第二个东西放入7号箱子，然后7号箱子还放了接下来第三个东西地址，以此类推。这就是链表结构，他的特点就是不需要连续的箱子，只要有空箱子，我的东西就能放进去。目前我们知道我的东西放在 3 -&amp;gt; 7 -&amp;gt; 2 -&amp;gt; 5 -&amp;gt;13 -&amp;gt;9 箱子， 加入我有一个东西需要放在三和四之间，我只需要申请一个空箱子比如 20， 然后把第三个箱子2的下一个箱子指向20， 然后20的下一个箱子指向原来的5就行了，不用移动后面箱子的东西。这就是链表的好处，但是它的坏处就是，假如我只是查找，只能从头开始查，没有数组那种跳着查的方便。
+这时候我们已经看到了，数组方便查询，但不方便插入删除，链表方便插入删除，不方便查询。其实这两个结构已经告诉我们使用场景了：在查询多的场景用数组，在插入删除多的场景用链表。
+二叉树 数据并非只有数组和链表这样线性的关系，还可能是家谱一样树形关系。典型的是二叉树，每个节点最多有两个孩子节点。二叉树应用场景主要在查询操作和维持相对顺序。
+比如一个二叉树的左子树不为空，所有左子树节点均小于根节点的值，右子树不为空的话，所有右子树节点均大于根节点的值。这样的二叉树叫二叉查找树。不用刻意记名字，根据这样特性构建的数，非常方便查询，只要每次比较根节点，小的往左边找，大的往右边找。
+二叉树如果只有左子树或者右子树，那么就会退化成了链表结构。为了避免这种情况，或者树太深层级导致查询困难，就产生了各种类型的数，如红黑树、B树之类。
+MySQL的B+树 这里说一个典型的mysql索引B+树。我们知道磁盘数据库，要查询数据就要尽可能减少磁盘IO，这样才能加速。于是就有相应场景的B树。它允许每个节点有多于2个的元素，这样可以多存数据，降低数的深度，B+树是在B树的基础上，非叶子节点只有索引功能，数据放在叶子节点上，同时，所有叶子节点构成一个有序链表，这样在limit m, n时候，可以根据找到的一个直接遍历到后边。</description></item><item><title>Week1032_tip</title><link>https://ifaa.top/posts/week1032_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1032_tip/</guid><description>ARTS - Tip 补 2019.2.13 linux前后台切换 ctrl + z 和 bg 、fg 最近使用到了Linux命令的前后台切换功能。本来是命令是在前台执行，但是执行时间过长，就想要调到后台执行，于是就找了这一块的知识。
+Linux终端，执行命令后加 &amp;amp; 可以让程序在后台运行。注意的是，如果退出终端，程序也停止运行，要永久运行使用 nohup， 后面再讲。
+如果程序已经在前台运行，可以用 ctrl+z 调到后台，但是此时程序是暂停的，需要用bg %n 放到后台继续运行
+## 前台启动了一个Java程序 java -jar push-1.0.0-GA.jar ## 使用ctrl+z 放到后台，但是此时是挂起的，要想让他在后台运行，就要用 bg %n ^Z [1] + 5618 suspended java -jar push-1.0.0-GA.jar ## 后台运行 bg %1 对于所有运行的程序，可以用 jobs -l 查看
+## 查看所有运行中的程序 jobs -l [1] + 5618 running java -jar push-1.0.0-GA.jar 用 fg %n 把后台程序调到前台
+## 后台调到前台 fg %1 fg %1 [1] + 5618 running java -jar push-1.</description></item><item><title>Week1033_algorithm</title><link>https://ifaa.top/posts/week1033_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:44 +0000</pubDate><guid>https://ifaa.top/posts/week1033_algorithm/</guid><description>ARTS - Algorithm 补 2019.2.20 [61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/submissions/) 题目 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+示例 1:
+输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2 输出: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL 解释: 向右旋转 1 步: 5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL 向右旋转 2 步: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL 示例 2:
+输入: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL, k = 4 输出: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL 解释: 向右旋转 1 步: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL 向右旋转 2 步: 1-&amp;gt;2-&amp;gt;0-&amp;gt;NULL 向右旋转 3 步: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL 向右旋转 4 步: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL 分析 这道题实际是找到新头部，和新头部的前驱，把新头部的前驱的后继指向NULL，老尾部指向老头部。
+我们知道向前推动了k步，其实就是链表头部向前走了(len - k)步，k &amp;lt; len, 如果k &amp;gt; len, 那么就是 k = k % len。</description></item><item><title>Week1028_share</title><link>https://ifaa.top/posts/week1028_share/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1028_share/</guid><description>ARTS - Share 补2019.1.16 快速迭代与流程开发的一点思考 软件工程与互联网 我们很早接受了软件工程的思想，有一套非常标准的工作流程： 客户谈需求、形成用例、完成文档、开发、测试、上线部署等。如果有需求变更，就再走一遍流程，变更的需求大约在下一期上线。
+这样的工作流程或准则在业务变更不频繁，时间充裕的传统企业是比较适合的，因为比较好控制质量、成本等。但是在瞬息万变的互联网行业是不行的，因为互联网的特点就是新颖的事物层出不穷，快速响应变化。因此需求变更是常态。如果哪家互联网企业严格按照软件工程那一套，必然容易失去先机，不会成为一流。
+技术架构的多变 以业务导向为核心，需求的频繁变更不可避免，那么架构就要适应这个变化。然而现实很容易走极端，过度架构设计保证灵活性可能带来复杂性，如果变更的一点需求需要大量的时间开发、测试，然后上线，最后发现付出的成本远超产生的价值；不进行架构设计，又容易造成重复开发，疲于应付各种意外，造成项目越来越臃肿，直到改无可改，开始重构。那么，该如何思考架构设计？答案是，适度设计。
+不可避免的不够“优雅”的代码 面对复杂多变的需求，和时间紧任务重压力下的产品，可能不那么精雕细琢。但是至少在长久运行中长期保持稳定，那么当一个新人接手这块功能，在开始骂代码不够好之前，请先全面的了解系统，了解之前的场景，然后在最简单影响最小的地方开始着手重构，然后测试、运维上线，走完流程后，在进行下一个，相信做过几次重构后肯定会形成更为全面的认知。
+质量下降与管控 快速开发，有时不可避免有些问题想的不够周到，质量有下降，比软件工程这种标准流程下的产品质量有所下降，这也是快速的一种代价。因此这种更要注重测试，使用各种自动化的工具，在保证质量与快速迭代之间做平衡。
+总结 为了快速推出市场，敏捷不可避免，因此带来的副作用是不那么稳定或bug率提高了，但是依然是值得的，也必须这么做，在做技术决策中始终要综合考虑。</description></item><item><title>Week1029_algorithm</title><link>https://ifaa.top/posts/week1029_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1029_algorithm/</guid><description>ARTS - Algorithm 补 2019.1.23 19. 删除链表的倒数第N个节点 题目 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
+示例：
+给定一个链表: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, 和 n = 2. 当删除了倒数第二个节点后，链表变为 1-&amp;gt;2-&amp;gt;3-&amp;gt;5. 说明：
+给定的 n 保证是有效的。
+进阶：
+你能尝试使用一趟扫描实现吗？
+分析 如果没有一趟扫描实现的限制，那么通过两次扫描就能实现： 第一次算出总长度，第二次删除指定节点。但是要求一次扫描就完成，我们有没有更好的思路？
+我们根据条件知道 队尾和删除节点相距为 n, 我们可以使用两个指针，距离为n， 然后同步走，先走的指针到达队尾，那么后出发的指针就到了要删除的节点，代码如下：
+代码 public ListNode removeNthFromEnd(ListNode head, int n) { if (head == null || n &amp;lt;= 0) { return null; } ListNode first = head; ListNode second = head; for (int i = 0; i &amp;lt; n; i++) { second = second.</description></item><item><title>Week1029_review</title><link>https://ifaa.top/posts/week1029_review/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1029_review/</guid><description>ARTS - Review 补2019.1.23 1.5 MySQL8.0服务状态变量和可选性的增加、过时或删除 rotated v. 回转 activate vt. 激活 Options and Variables Introduced in MySQL 8.0 he following system variables, status variables, and options are new in MySQL 8.0, and have not been included in any previous release series. 以下系统变量，状态变量，和可选项是MySQL8.0新增的，在之前的的发布系列中是不包含的。
+Acl_cache_items_count: Number of cached privilege objects. Added in MySQL 8.0.0.Each object is the privilege combination of a user and its active roles. 缓存的权限对象数量。MySQL8.0.0添加。 每个对象都是连接一个用户和它的角色的权限。 Audit_log_current_size: Audit log file current size.</description></item><item><title>Week1029_share</title><link>https://ifaa.top/posts/week1029_share/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1029_share/</guid><description>ARTS - Share 补2019.1.23 再谈代码规范 为什么要有规范 代码是方便给人读的，机器码是方便给机器读的。
+探本溯源来看代码这个问题。为什么会出现不同的编程语言？为什么不直接使用机器码0，1或汇编来进行编程？为什么进化出了一大堆语言，比如适合做系统开发的C，面向对象的C++、Java， 浏览器方面的JavaScript ?我们多问几遍为什么，就离答案不远了，—— 为了方便我们人类工作。
+并非人人都是冯诺依曼 冯诺依曼是个天才，当我们在争论&amp;quot;PHP是最好的语言&amp;quot;时候，人家认为的最好的语言是汇编，因为汇编可以做到一切。我们软件、互联网行业并非人人都是开宗立派级的大师，还有很多水平一般的从业者，他们的目的并非是研究一门性能卓越的语言或开拓一个技术新领域，而是使用现有的技术手段完成任务。 相信大多数人都是这样，基于这个目的，我们需要的就是一个 人类逻辑习惯与计算机性能之间平衡最好的语言。于是就出现了各种编程语言，慢慢形成了各自的适应领域。
+合作编程 说了这么多，其实就是为了说明我们为了一个完成一个目的而编程，大多数人都是互相合作配合来完成这个任务，也就是合作编程。这时候我们的代码就需要可读性了。可读性是个很重要的指标，有人戏说，别人读你代码骂的次数和你代码质量成反比。这就一定程度反映了代码可读性问题。所以写出正确、可读、优雅的代码就是一个很重要的能力。巧合的是，简单优雅的代码往往性能表现也突出，所以，我们追求优雅的代码就成了一个正确的方向。注明的KISS(Keep It Sample Stupid)原则就是反映这一点。
+编程规范 所以规范就出来，目的就是为了保证可读性与性能，比如：
+命名规范。命名太重要的，好的名字见名知意，为什么需要写注释？因为名字不好。
+避免设计臃肿的代码。一个方法最好能一个屏幕读完，简单明了，多了说明你需要重构了。
+避免在for循环里操作数据库，最好提出来批处理。
+if/else ，如果else逻辑简短但if繁多，就把 else 内容提前面。比如在循环里这种应该直接把 else 提前面
+// 反例 for (xxx) { if (abc) { 1. ... 2. ... 3. ... ... } else { continue; } } // 正例 for (xxx) { if (!abc) { continue; } 1. ... 2. ... 3. ... ... } 变量名尽量不重复。避免在多次使用到的变量来回改值，这样不方便追踪。</description></item><item><title>Week1029_tip</title><link>https://ifaa.top/posts/week1029_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1029_tip/</guid><description>ARTS - Tip 补2019.1.23 线程池的execute 方法 源码 线程池提交两种任务，一种是无返回值的，就是execute, 另一种是有返回值的submit,下次讲。
+先来看源码：
+public void execute(Runnable command) { if (command == null) throw new NullPointerException(); /* * 三步处理: * 1. 如果比核心线程数小，会尝试打开一个新线程来执行任务。调用addWorker自动检查runState状态和workerCount 运行中的任务数，添加失败返回false. * 2. 如果一个任务可以入队成功，仍要二次校验是否添加成功(因为存在上次检查过后就消亡了)。 * 3. 如果任务不能入队，尝试添加一个新线程，如果失败，我们知道线程池关闭或队列饱和，拒绝任务。 */ // 获得线程池(包含状态 + 数量) int c = ctl.get(); if (workerCountOf(c) &amp;lt; corePoolSize) { if (addWorker(command, true)) return; c = ctl.get(); } if (isRunning(c) &amp;amp;&amp;amp; workQueue.offer(command)) { int recheck = ctl.get(); if (! isRunning(recheck) &amp;amp;&amp;amp; remove(command)) reject(command); else if (workerCountOf(recheck) == 0) addWorker(null, false); } else if (!</description></item><item><title>Week1030_algorithm</title><link>https://ifaa.top/posts/week1030_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1030_algorithm/</guid><description>ARTS - Algorithm 补2019.1.30 23. 合并K个排序链表 题目 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
+示例:
+输入: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] 输出: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6 分析 相当于合并多个有序数组，也可以先合并两个有序数组，再合并剩下的，于是代码如下：
+代码： public class MergeKLists { public static ListNode mergeKLists(ListNode[] lists) { int len = lists.length; if (len == 0) { return null; } ListNode res = lists[0]; for (int i = 1; i &amp;lt; len; i++) { res = mergeNode(res, lists[i]); } return res; } private static ListNode mergeNode(ListNode node1, ListNode node2) { ListNode fake = new ListNode(0); ListNode head = fake; while (node1 !</description></item><item><title>Week1030_review</title><link>https://ifaa.top/posts/week1030_review/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1030_review/</guid><description>ARTS - Reivew 补2019.1.30 As a Leader, Time Is Your Most Valuable Resource 来自 Medium, 作者 Dave Anderson As a Leader, Time Is Your Most Valuable Resource
+Inquire v.调查 查究 Occasionally adv. 偶尔 candidate n. 候选人 thrive v.兴旺发达，茁壮成长 variation n. 变种，变体 critical adj. 批评的，挑剔的，极重要的 packed adj. 异常拥挤的 infinite adj. 极大的，无限的 fire hose 消防水管 abate vt. 减少 throttle v. 使窒息，掐死， prioritizing v. 优先排序 guaranteed adj. 必然的 eventually adv. 最后，终于 dividends n. 红利，股息 Identify v.</description></item><item><title>Week1030_share</title><link>https://ifaa.top/posts/week1030_share/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1030_share/</guid><description>ARTS - Share 补2019.1.30 其实产业只有金融业与非金融业 存钱与放贷 我们假设这样一种情况：
+A给一笔钱到B，约定利率是年化3%， 也就是一万元，一年后能够取回一万零三百。
+B拿这笔钱借给C，约定年化利率是8%，也就是一万元一年以后还一万零八百。
+这个过程中，粗略计算(存在运营成本)，A赚了300元，B赚了800-300=500 元。
+我们继续这个模型：
+C拿到钱后以13%的年化利率给了D， 赚5%的息差。
+D拿到钱后以20%的年化利率给了E， 赚7%的息差。
+E拿到钱后以30%的年化利率给了F，赚10的息差。
+当然，如果还有人肯借的话，会继续下去，直到不肯借这么高的资金成本。
+我们知道，合法的利率基本超过25%，使用的人就不是主流人群了(很多人还信用卡习惯还最低还款额，其实这种年化真实利率接近20%)。
+在上面的模型中，很容易找到现实中对应的情况，A是储户，拿自有资金存到银行B，银行在加价贷出去给个人或公司C，CDE其实都可以看做二道货币贩子，直到F拿到钱，去做生意，比如办工厂，赚了50%的收益，减去资金成本30%，还有20%的利润空间。然后给员工工资奖金，员工拿着钱又存到银行。这一整套形成一个完美的闭环。
+闭环形成，由F向E支付本金和利息，E向上继续支付，直到A取钱。
+商品才是真正的货币 上面的模型中，我们发现，所有人都赚到了钱。但是也是存在一个很本质的情况：
+必须由办工厂的F使用这些钱落地赚到钱，才能维持这一级级的金融机构。
+如果办工厂的F违约，那么，以上各级假设没有抵押的情况下，都会全部违约，其实就是崩盘。那么为什么会出现这种情况？其实答案已经很明显了，因为货币的本质是财富的媒介。
+货币的产生是为了方便人们交易，货币本身并不是财富。当然各大金融机构的出现提供给人们更方便的交易方式，其实也是创造了一定程度的财富，但本质是为别人创造财富提供方便。所以，必须市场上有人在金融体系外创造了产品、提供了服务、达成了交易，财富才会产生，才会&amp;quot;夯实&amp;quot;经济的基础。也就是说商品才是真正的货币。
+产业的划分 现代国家喜欢划分自己的产业，大致上所谓第一产业就是基于自然产品的产业，如农林牧渔；第二产业就是对第一产业的加工，就是各种制造业、工业类；第三产业就是除一二产业外的非物质生产的产业，如各种服务业，电影娱乐文艺创作等本质也是服务业。
+这些各种产业本质都是创造财富的产业，金融可以切入进所有产业，就是因为它的货币媒介属性。所以，产业的划分其实就只有一条，金融媒介业，和其他。
+只要金融业 那么是否存在这种情况，我只要金融业，因为赚钱方便快捷，不用苦哈哈的办工厂、管工人、谈客户、进销存….
+现在的美国其实就很像这种了，全球第一的金融业，除了互联网和保持武力的军工业，基本没有其他可以拿得出手产业了，因为这些产业实体早就转移到成本更低廉的其他国家了，自己只需要金融控制就行了。与之相反的是中国。中国建立起了世界上最完整的产业链结构，所有的东西都能生产，所谓&amp;quot;世界工厂&amp;quot;，这种情况下，其实中国的资产更&amp;quot;务实&amp;quot;一些，美国的资产更&amp;quot;务虚&amp;quot;一些。这里不谈&amp;quot;航母&amp;quot;撑起来的美元霸权，单从金融与产业角度来看，中国的经济其实健康的多，只要不发生金融的过度投机(美国次贷危机就是过度投机引起)，那么基本不会发生经济危机。</description></item><item><title>Week1030_tip</title><link>https://ifaa.top/posts/week1030_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:43 +0000</pubDate><guid>https://ifaa.top/posts/week1030_tip/</guid><description>ARTS - Tip 补2019.1.30 线程池addWorker里的Worker探析 Worker是什么 我们在addWorker方法看到这样的一段代码：
+boolean workerStarted = false; boolean workerAdded = false; Worker w = null; try { w = new Worker(firstTask); final Thread t = w.thread; if (t != null) { ... if (workerAdded) { t.start(); workerStarted = true; } } } finally { if (! workerStarted) addWorkerFailed(w); } return workerStarted; 这里主要做的就是启动Worker，我们再来看看Worker是什么。
+private final class Worker extends AbstractQueuedSynchronizer implements Runnable { /** * This class will never be serialized, but we provide a * serialVersionUID to suppress a javac warning.</description></item><item><title>Week1026_share</title><link>https://ifaa.top/posts/week1026_share/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1026_share/</guid><description>ARTS - Share 补2019.1.2 提高系统性能方式的总结 问题提出 根据最近一列的优化系统性能，形成了一点思考，做下总结。
+所谓提高系统性能，就是把慢的地方，变成快的地方。哪个地方容易慢？磁盘、网络IO、计算密集操作，这些就对应着数据库优化，网络请求，和各类计算。那么，对应的解决方案就是减少磁盘操作，如优化数据库索引，换成内存操作，如使用缓存，如进行预处理。
+加缓存 因为内存操作远快于磁盘操作，所以对于有些查询类且不经常变化的数据例如用户信息类、历史统计表等放入缓存，下次直接读取缓存，提高的性能就相当于内存相对磁盘的性能。
+加缓存要注意的事项是，这些数据确实变动小，这样缓存命中率高，很少穿透。同时选择好缓存失效策略。
+另外注意事项是，缓存作为一种提高系统性能的工具，是系统辅助部分，并不能把核心数据只存进缓存，持久化操作还是必须要有的。
+优化MySQL 当数据量达到百万级别时，数据库的查询优化就变成了很重要的一件事，特别是在各种连接和分组函数共同使用情况。
+几个关键字是 慢查询日志、explain 、索引、processlist.
+平时打开慢查询日志，找出查询缓慢的SQL，使用执行计划explain, 判断索引情况，调整索引策略。 使用show processlist 查看当前正在执行的语句，当系统拥挤时候，可以看到是哪些语句正在堵塞，然后有计划的优化这些语句，或调整连接池大小等。
+预处理 预处理方式就是把一下因计算量大而影响响应时间且非实时性的功能，挪到空闲时间计算，用到直接取。
+例如系统要获得前一天人员工作效率情况，那么这些查询工作可以在第二天凌晨进行跑各种批量与聚合数据，然后在使用时候直接就能获取到结果，不必实时计算。
+梳理业务实现 面对这些系统问题，不能只使用程序员的技术手段，同时要根据业务情况，考虑是否自己实现方式出现了问题。比如要做个每日用户数统计，当天的不算，可以选择每天跑批计算存储当天的用户数， 也可以实时统计过滤掉当天的用户，明显第二种更方便简洁，所以有时候多想想自己真正需要的东西，和业务需求背后隐藏的真实需求，这样设计出的系统更能从人为角度避开性能问题。
+总结 总之，当系统出现响应慢时候，要首先去定位问题，不要上来就直接加缓存。当然时间紧急情况下当然可以，只是这是个治标不治本的方案。在时间够的情况下，我们要主动分析到底哪里是真正的瓶颈。比如本人最近遇到的一个报表查询问题， 数据量百万级别，首先定位问题是由于联合索引最左匹配原则没匹配好，导致了全表扫描，因此系统巨慢，最后建好索引，速度顿时飞起。但是偶尔还会报这个查询慢，明明已经在数据库测试查询很快了，查看show processlist ，有大量语句堆积，然后检查了连接池设置，发现最大设置为20个，明显对于几百人使用的系统，完全不够用，最后调大后，问题解决，最后由于查询数据并非经常变动， 加了缓存后，速度更是飞起。
+最后，根据二八原则， 当系统变的巨慢，大部分是数据库索引问题，再加缓存，基本解决8成的问题， 剩下的两成就需要经验与耐心，去寻找真正的瓶颈了。</description></item><item><title>Week1027_algorithm</title><link>https://ifaa.top/posts/week1027_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1027_algorithm/</guid><description>ARTS - Algorithm 补2019.1.9 122. 买卖股票的最佳时机 II 题目 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+示例 1:
+输入: [7,1,5,3,6,4] 输出: 7 解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。 随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。 示例 2:
+输入: [1,2,3,4,5] 输出: 4 解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。 注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。 因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。 示例 3:</description></item><item><title>Week1027_review</title><link>https://ifaa.top/posts/week1027_review/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1027_review/</guid><description>ARTS - Review 补2019.1.9 Java Class Format （二） determine 决定 denote 代表 lexicographically 按字典顺序 distinguished 卓著 indicates 表示 4.1. The ClassFile Structure A class file consists of a single ClassFile structure:
+ClassFile { u4 magic; u2 minor_version; u2 major_version; u2 constant_pool_count; cp_info constant_pool[constant_pool_count-1]; u2 access_flags; u2 this_class; u2 super_class; u2 interfaces_count; u2 interfaces[interfaces_count]; u2 fields_count; field_info fields[fields_count]; u2 methods_count; method_info methods[methods_count]; u2 attributes_count; attribute_info attributes[attributes_count]; } The items in the ClassFile structure are as follows:</description></item><item><title>Week1027_share</title><link>https://ifaa.top/posts/week1027_share/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1027_share/</guid><description>ARTS - Share 补2019.1.9 HashMap的key是否可以是null 简介 HashMap是一个经常要用到的键值对。我们知道它的大致原理就是对key进行hash计算，找到它在容器中的位置，在此过程重要的是hash计算，尽可能不同key不产生相同的hash值。那么 hashmap的key能否为null呢？
+key能不能是null 我们在map容器中添加元素时候使用 map.put(k, v). 我们查看put方法：
+public V put(K key, V value) { // 调用了putVal 方法， return putVal(hash(key), key, value, false, true); } // 在看hash(key)，是否要求不为空 static final int hash(Object key) { int h; return (key == null) ? 0 : (h = key.hashCode()) ^ (h &amp;gt;&amp;gt;&amp;gt; 16); } // hash(null) == 0 可见HashMap中， key可以是null，
+putVal方法 final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) { // 声明node 数组 Node&amp;lt;K,V&amp;gt;[] tab; Node&amp;lt;K,V&amp;gt; p; int n, i; // 把当前node数组指向 table, 如果为空就初始化一个 if ((tab = table) == null || (n = tab.</description></item><item><title>Week1027_tip</title><link>https://ifaa.top/posts/week1027_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1027_tip/</guid><description>ARTS - Tip 补2019.1.9 关于创建线程池 阿里巴巴规范 在阿里巴巴Java开发手册里有这么一条：
+【强制】线程池不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样 的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。 说明:Executors 返回的线程池对象的弊端如下:
+1)FixedThreadPool 和 SingleThreadPool: 允许的请求队列长度为 Integer.MAX_VALUE，可能会堆积大量的请求，从而导致 OOM。
+2)CachedThreadPool 和 ScheduledThreadPool: 允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。
+我们使用线程池一般就是这样(如下)，Java编程思想里面的也这么举例：
+ExecutorService exec = Executors.newFixedThreadPool(10); ... 这里说的弊端第一条是队列堆积大量请求导致OOM，我们就看看这两个源码：
+FixedThreadPool ,SingleThreadPool 首先是 FixedThreadPool:
+// 这里返回了ThreadPoolExecutor 对象 public static ExecutorService newFixedThreadPool(int nThreads) { return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue&amp;lt;Runnable&amp;gt;()); } public ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue&amp;lt;Runnable&amp;gt; workQueue) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.</description></item><item><title>Week1028_algorithm</title><link>https://ifaa.top/posts/week1028_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1028_algorithm/</guid><description>ARTS - Algorithm 补2019.1.16 160. 相交链表 题目 编写一个程序，找到两个单链表相交的起始节点。 如下面的两个链表：
+在节点 c1 开始相交。
+示例 1： 输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3 输出：Reference of the node with value = 8 输入解释：相交节点的值为 8 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。
+示例 2： 输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1 输出：Reference of the node with value = 2 输入解释：相交节点的值为 2 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [0,9,1,2,4]，链表 B 为 [3,2,4]。在 A 中，相交节点前有 3 个节点；在 B 中，相交节点前有 1 个节点。</description></item><item><title>Week1028_review</title><link>https://ifaa.top/posts/week1028_review/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1028_review/</guid><description>ARTS - Review 补2019.1.16 Java class File Format（3） inherited v. 继承 specification n. 规范 this_class
+The value of the this_class item must be a valid index into the constant_pool table. The constant_pool entry at that index must be a CONSTANT_Class_info structure (§4.4.1) representing the class or interface defined by this class file.
+this_class 这一项的值必须是constant_pool里验证过的值。constant_pool 实体索引必须是CONSTANT_Class_info 结构 代表定义在类文件的类或接口。
+super_class For a class, the value of the super_class item either must be zero or must be a valid index into the constant_pool table.</description></item><item><title>Week1028_tip</title><link>https://ifaa.top/posts/week1028_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:42 +0000</pubDate><guid>https://ifaa.top/posts/week1028_tip/</guid><description>ARTS - Tip 补 2019.1.16 线程池的状态 我们来看 ThreadPoolExecutor 的execute方法。
+线程池提交方法有两个， execute 和 submit, execute 提交的是无返回值的Runnable, submit提交的是有返回值 Callable.今天先看execute.
+/** * * 在将来某个时刻执行给定的任务，可能在一个新的线程里或池中存在的的线程里。 * 如果任务不能被提交执行，这个执行器已经被当前 rejectExecutionHandler 停止 * * * @param command 待执行的任务 * @throws RejectedExecutionException 如果任务不被接受执行，抛出这个异常 */ public void execute(Runnable command) { if (command == null) throw new NullPointerException(); /* * Proceed in 3 steps: * * 1. 如果运行线程少于corePoolSize, 会尝试启动一个新线程首先执行这个任务。 * 调用 addWork 原子检查 运行状态 和 工作线程数，避免返回false不能添加线程的情况 * * 2. 如果一个任务能被成功进入队列， 之后我们仍需二次验证我们是否应该添加一个线程 * (因为存在存在上次检查线程死亡的情况)或者在实体进入到这个方法时 池子关闭了。所以 * 我们重新状态检查 如果必要回滚入队实体如果停止了，或者没有的话启动一个新线程 * * 3.</description></item><item><title>Week1024_review</title><link>https://ifaa.top/posts/week1024_review/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1024_review/</guid><description>ARTS - Review 补12.17 1.4 What Is New in MySQL 8.0 summarizes v 总结 deprecated v 弃用 companion n 伴侣，伙伴 incorporates v 合并 associated adj. 相关 enhancements 增强 accompanying adj. 随同 latency 等待时间 restrictions 限制 This section summarizes what has been added to, deprecated in, and removed from MySQL 8.0. A companion section lists MySQL server options and variables that have been added, deprecated, or removed in MySQL 8.0. See Section 1.</description></item><item><title>Week1024_share</title><link>https://ifaa.top/posts/week1024_share/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1024_share/</guid><description>ARTS-Share 补12.17 对软件工程的思考 什么是工程 工程就是做成某事的一整套方案。为什么要提出软件工程，因为为了像普通工程一样，过程控制，结果控制，整体控制，达到一个好的结果，所以需要工程化软件生产实现过程。说到底，就是为了又快又好的完成产品。
+怎么做 又快又好的完成软件，就需要工程化的控制怎么快，怎么好的问题。
+怎么快？
+时间应该花在哪里？不同阶段时间应该花在哪里？资源应该投入多少，资源投入应该如何前后搭配？
+怎么好？
+不同工种搭配比例如何？如何来管控过程质量？如何在时间紧任务重的情况下，和质量高妥协？以后是否方便拓展？ 下次升级在本次基础上是能更快还是更慢？
+以上都是理论范畴。
+软件工程的套路 来到软件工程，我们提出了敏捷的思想，结对编程的思想，TDD，DDD 各种等，都是为了更好更快的完成产品。
+那么抛开以上这种思想，我们回归本源，到底需要什么？
+最好的情况是高水平的人组成的相互配合效率超高的团队，类似初创企业的十八罗汉、核心三人、五人组。
+当然现实是，事情是人做的，是人做有各种不确定性。我们无法保证招到的都是大牛，成本或许不允许，我们能做的就是在资源短缺的情况下，尽可能的平衡与妥协。于是我们需要还算过的去的开发人员，他们可能会出错，我们配置相应的测试人员，然后我们需要辅助工具，比如项目管理系统，bug追踪系统，这些都是为了让人更高效，项目质量更高，而不要陷入为了系统而系统。最后项目成功交付，完成。
+反复实践几次，团队磨合更好，经历几次硬仗，会变成很有战斗力的团队。
+先解决基础，再上台阶 团队有战斗力，当然这个也会存在一些问题，就需要在此基础上，去发现，去调整。比如引入TDD，DDD ，敏捷，是否会让整体效率再上个台阶？这时候就是打完基础后的优化过程，基础没打好，这些都是空中楼阁，更高阶的，只能说不知道，具体问题具体分析。反复实践总结，总会找到适合的路。</description></item><item><title>Week1025_algorithm</title><link>https://ifaa.top/posts/week1025_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1025_algorithm/</guid><description>ARTS - Algorithm 补12.24 205. 同构字符串 题目 给定两个字符串 s 和 t，判断它们是否是同构的。
+如果 s 中的字符可以被替换得到 t ，那么这两个字符串是同构的。
+所有出现的字符都必须用另一个字符替换，同时保留字符的顺序。两个字符不能映射到同一个字符上，但字符可以映射自己本身。
+示例 1:
+输入: s = &amp;ldquo;egg&amp;rdquo;, t = &amp;ldquo;add&amp;rdquo; 输出: true 示例 2:
+输入: s = &amp;ldquo;foo&amp;rdquo;, t = &amp;ldquo;bar&amp;rdquo; 输出: false 示例 3:
+输入: s = &amp;ldquo;paper&amp;rdquo;, t = &amp;ldquo;title&amp;rdquo; 输出: true 说明: 你可以假设 s 和 t 具有相同的长度。
+分析 找相同结构的字符串，那么，可以把字符串转换为数字，比如第一个1开始，如果和之前的字符有重复，就设置为相同的数字，如果不是，就把前一个加1.
+那么代码如下：
+public static boolean isIsomorphic(String s, String t) { if (s.length() != t.</description></item><item><title>Week1025_review</title><link>https://ifaa.top/posts/week1025_review/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1025_review/</guid><description>ARTS - Review 补12.24 1.4 What Is New in MySQL 8.0(下) assigning 分配
+enhancements 增强
+persistent adj 持久化
+specific 具体的
+subsequent 后来的
+encountering 遭遇
+corruption 腐败
+checkpoint 检查点
+Resource management.
+MySQL now supports creation and management of resource groups, and permits assigning threads running within the server to particular groups so that threads execute according to the resources available to the group. Group attributes enable control over its resources, to enable or restrict resource consumption by threads in the group.</description></item><item><title>Week1025_share</title><link>https://ifaa.top/posts/week1025_share/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1025_share/</guid><description>ARTS - Share - 补12.24日 MySQL的联合索引 最左匹配原则 索引的重要性就不再说了，反正使用数据库的都知道，我们来说说联合索引。说到联合索引，就要说它的最左匹配原则，由于B+Tree 的特点，索引从左往右建，加入一张表 table(col1, col2, col3), 建立联合索引 create index idx_table_col1_col2 on table(col1, col2);
+在查询时候 where col1 = xxx and col2 = xxx 和 where col1 ，都会用到这个联合索引，但是如果 where col2 = xxx ， 这种情况是用不到联合索引的。
+实际案例 本人在进行一个百万级表的查询时候，碰到了这个问题。
+在使用 where create_date = xxxx时候， 使用执行计划查看：
++----+-------------+-------+------------+--------+-----------------------------+---------+---------+-------------------+---------+----------+----------------------------------------------+ | id | select_type | table | partitions | type | possible_keys | key | key_len | ref | rows | filtered | Extra | +----+-------------+-------+------------+--------+-----------------------------+---------+---------+-------------------+---------+----------+----------------------------------------------+ | 1 | SIMPLE | d | &amp;lt;null&amp;gt; | ALL | idx_create_by | &amp;lt;null&amp;gt; | &amp;lt;null&amp;gt; | &amp;lt;null&amp;gt; | 2343409 | 1.</description></item><item><title>Week1025_tip</title><link>https://ifaa.top/posts/week1025_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1025_tip/</guid><description>ARTS - Tip 补12.24 MySQL报错 Packet for query is too large 问题出现 今日碰到了一个mysql报错如下：
+com.mysql.jdbc.PacketTooBigException: Packet for query is too large (4281662 &amp;gt; 4194304). You can change this value on the server by setting the max_allowed_packet&amp;#39; variable. 这句话说查询包太大了，这里有一个参数叫 max_allowed_packet，查询资料发现是MySQL设置的最大查询发送包大下，现在看来是超过了。查找相应的SQL语句，确实传送了大量的数据作为参数，然后就优化了SQL，避开这种使用方式。
+max_allowed_packet 这个参数是什么呢?
+查询MySQL文档，发现这个是系统变量，在MySQL版本&amp;lt;=8.0.2 时候默认是4194304，也就是4M，大于这个版本是默认64M.
+The maximum size of one packet or any generated/intermediate string, or any parameter sent by the mysql_stmt_send_long_data() C API function. The default is 64MB.
+The packet message buffer is initialized to net_buffer_length bytes, but can grow up to max_allowed_packet bytes when needed.</description></item><item><title>Week1026_algorithm</title><link>https://ifaa.top/posts/week1026_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1026_algorithm/</guid><description>ARTS - Algorithm 补2019.1.2 155. 最小栈 题目 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+push(x) &amp;ndash; 将元素 x 推入栈中。 pop() &amp;ndash; 删除栈顶的元素。 top() &amp;ndash; 获取栈顶元素。 getMin() &amp;ndash; 检索栈中的最小元素。 示例:
+MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; 返回 -3. minStack.pop(); minStack.top(); --&amp;gt; 返回 0. minStack.getMin(); --&amp;gt; 返回 -2. 分析 两个要求，一是设计一个栈的数据结构，第二是要求取得最小元素时间复杂度为常数。
+对于一，我们可以根据栈的先进后出的特点，使用数组来实现，维护一个移动指针，指向栈顶，也就是数组尾巴， 要考虑数组扩容问题。
+对于二，要常数时间获得最小元素，就要提前保存下这个最小元素，最初想法就是把最小的单独保存起来，遇到更小的元素就刷新最小的值，但是在做pop操作时候，无法获得倒数第二小的元素，于是就需要用数组维护起来。比如维护一个有序的队列，但是这个明显不需要保存那么多元素，只保存小的就行，这时候就有保存最小元素还是保存索引的问题，如果保存最小元素，可能会出现重复现象，保存索引就不存在，于是最后选定使用保存索引方式。 代码如下。
+代码 class MinStack { private int[] stack; private int[] mins; private int index; private int minIndex; private int capacity; /** initialize your data structure here.</description></item><item><title>Week1026_review</title><link>https://ifaa.top/posts/week1026_review/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1026_review/</guid><description>ARTS - Review 补2019.1.2 Java Class文件格式 本片来自于官网文档: Chapter 4. The class File Format
+definition n. 定义 external 外部的 representation 表现 literally 字面上的 colloquially 口语的，白话的 consists 包括 respectively 分别地，各自地 This chapter describes the class file format of the Java Virtual Machine. Each class file contains the definition of a single class or interface. Although a class or interface need not have an external representation literally contained in a file (for instance, because the class is generated by a class loader), we will colloquially refer to any valid representation of a class or interface as being in the class file format.</description></item><item><title>Week1026_tip</title><link>https://ifaa.top/posts/week1026_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:41 +0000</pubDate><guid>https://ifaa.top/posts/week1026_tip/</guid><description>ARTS - Tip 补 2019.1.2 多人查询系统加锁 问题 由于有几百人同时查询一个借口，造成数据库压力飙升，在优化完数据库索引、缓存之后，发现了多人查询返回的结果是一样的，然后在系统中做过滤，可以根据这一特点进行优化。
+思路 因为多人请求返回同样的数据，那么就可以让第一个人请求数据库，返回后放入缓存，其他人从缓存中拿，如果在请求中出现了另一个人查询，直接返回空。
+实现 刚开始使用了AtomicInteger 原子整形来实现，通过和初始化值做对比，如果没被修改过，就相当于获得了锁，把他改变值，然后去查询db, 存入缓存。
+后来发现，如果其他参数的用户请求数据，那么也会因此而被阻塞，所以就使用了集合，以参数为key, 存入集合，如果存在该key,那么相当于没有获得锁，当然集合要线程安全，使用了ConcurrentLinkedQueue来实现。
+总结 上线之后，性能提升明显。 优化系统不仅从技术层考虑： 优化索引、加缓存， 还要从系统业务角度入手，优化哪些不需要的流程，进一步提高系统性能。
+隐忧 虽然通过加锁方式提高了性能， 但是目前是单机应用，当用户量进一步提升，势必会改成多机分布式应用，到时候这种加锁方式就需要改造成分布式锁来实现了。</description></item><item><title>Week1022_review</title><link>https://ifaa.top/posts/week1022_review/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1022_review/</guid><description>ARTS - Review 补12.3 gallery n. 画廊、走廊， vast amount of 大量的 standalone utilities 独立应用程序 relational adj. 亲属的，有关系的 governing v. 统治，控制 enforces v.强制执行 inconsistent adj. 不一致的 orphan adj. 孤立的 embed 嵌入 commercial 商业的 dedicate 奉献 demanding 苛求的 consists 包括 pronounce 发音 1.3.1 What is MySQL?
+MySQL, the most popular Open Source SQL database management system, is developed, distributed, and supported by Oracle Corporation.
+The MySQL website (http://www.mysql.com/) provides the latest information about MySQL software.</description></item><item><title>Week1022_share</title><link>https://ifaa.top/posts/week1022_share/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1022_share/</guid><description>ARTS - Share 补12.3 学技术要结合使用场景 结合场景理解技术 常常有这样的想法，学习了一段新语言、新技术，然后由于工作中没有使用，就闲置了，然后再过一段时间就忘了，等于没学。了解了一个技术实现，但是没有和实际结合起来，造成记忆不深，说明并没有完全吃透，因为没有适用场景的结合，造成知识如同空中楼阁。我建议由需求、场景引出使用这类技术的必要性，这样更能掌握技术。
+比如MySQL的使用 Q: 发现MySQL查询很慢，会怎么做呢？
+A: 看条件字段有没有加索引，没有的话就建立索引。
+Q: 那么MySQL索引使用了什么数据结构？
+A: B+树。
+Q： B+树查询时间复杂度多少？
+A: 和树的高度有关，大概log(n).
+Q: 用hash存储索引，时间复杂度多少呢？
+A: hash 是 O(1)
+Q: 既然hash比B+树快，为什么MySQL还用B+树来存储索引呢？
+各种树 这时候，我们就要思考下，B+树的数据结构，MySQL为什么要使用B+树。
+说到树，它的基础知识就是前中后序遍历、二叉树、儿茶搜索树、平衡二叉树、红黑树、B树、B+树、、
+比如红黑树，他是一个二叉树，但是有几条规则：
+节点是红色或黑色。 根是黑色。 所有叶子都是黑色（叶子是NIL节点）。 每个红色节点必须有两个黑色的子节点。（从每个叶子到根的所有路径上不能有两个连续的红色节点。） 从任一节点到其每个叶子的所有简单路径都包含相同数目的黑色节点。 根据这些定义感觉一头雾水，那么要理解它，掌握背后的设计理念、原理和解决问题的方法，比技术本身更重要。
+先从二叉排序树说起。
+二叉排序树是左边比根节点小，右边比根节点大, 并且左右子树都是二叉排序树。
+但是有一些极端情况，插入序列是有序的，那么就会退化成链表。
+所以要用平衡树，插入的同时调整这棵树，让他的节点尽量均匀分布。
+红黑树就是平衡树的一种，它的复杂的定义和规则，都是为了保证数的平衡性。
+为什么要保证树的平衡？因为树的查找性能取决于树的高度，让树尽量平衡，就是为了降低树的高度。
+Java中TreeSet的底层就是红黑树。
+再来说说B树。
+B树是一种多路搜索树，他的每个节点可以拥有多余两个孩子节点。M树的B树最多拥有M个孩子节点。
+为什么要设计成多路的呢？ 为了进一步降低树的高度。但是也不能无限多路，因为无限多路就是有序数组。
+那么这样的结构用在哪里呢？文件系统。
+但是文件系统为什么不用红黑树或者有序数组呢？
+我们知道文件系统和数据库索引都是存在硬盘上的，如果数据量大的话，不能一次性加载到内存中。一棵树无法一次性加载到内存里的情况，就发现B树多路存储的威力了，每次加载B树的一个节点，然后一步步找。
+于是，在内存时候，红黑树比B树效率高，但是在磁盘操作中，B树就更优了。
+B+树是在B树的基础上改造，数据都集中在叶子节点，同时叶子节点之间还加了指针形成链表。
+为什么要这么设计？
+比如数据库一个select语句， 不止查一条，比如按照ID排序后取10条，这样的情况，如果是B树的话，需要做局部的中序遍历，可能要跨层访问，B+树都在叶子节点，不用跨层，同时又链表存在，找到首尾就可通过链表把数据取出来。
+回到之前 Q： 既然hash比B+树快，为什么MySQL还用B+树。
+A: 如果只选一个数据，hash更快，数据库经常查多条，由于B+树有序，索引结构有链表，那么整体会更优。数据库索引一般在磁盘上，数据量大的话没法一次装入内存，B+树可以分批加载。</description></item><item><title>Week1022_tip</title><link>https://ifaa.top/posts/week1022_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1022_tip/</guid><description>ARTS - Tip 补12.3 MySQL备份数据过滤与自动化 导数据 在工作中要同步生产数据到测试服务器的需求，以方便测试，于是经常要复制表.
+最开始我是这么做的：
+// 首先备份表 mysqldump -uusername -p dbname tablename &amp;gt; tablename.sql // 把表复制到其他服务器 scp tablename.sql user@ip:~/ // 登录user机器，导入数据 mysql -uusername -p dbname &amp;lt; tablename.sql 由于测试机测试和本机测试还是不一样，有时使用 sz tablename.sql 到本地，再测试，这种情况下如果网络不好，而且数据文件非常大，要很慢才能传送完毕，于是就想到，有些数据按天产生，只需要最近几天的数据，对于之前的没必要传送。于是查文档找到了方案.
+备份数据过滤 &amp;ndash;tables Override the &amp;ndash;databases or -B option. mysqldump regards all name arguments following the option as table names.
+&amp;ndash;where=&amp;lsquo;where_condition&amp;rsquo;, -w &amp;lsquo;where_condition&amp;rsquo;
+Dump only rows selected by the given WHERE condition. Quotes around the condition are mandatory if it contains spaces or other characters that are special to your command interpreter.</description></item><item><title>Week1023_algorithm</title><link>https://ifaa.top/posts/week1023_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1023_algorithm/</guid><description>ARTS - Algorithm 补12.10 143. 重排链表 题目 给定一个单链表 L：L0→L1→…→Ln-1→Ln ，
+将其重新排列后变为： L0→Ln→L1→Ln-1→L2→Ln-2→…
+你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+示例 1:
+给定链表 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 重新排列为 1-&amp;gt;4-&amp;gt;2-&amp;gt;3.
+示例 2:
+给定链表 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, 重新排列为 1-&amp;gt;5-&amp;gt;2-&amp;gt;4-&amp;gt;3.
+分析 还是先用最简单的方法实现。我们发现最后的排列结果其实就是取一个首，取一个尾，用栈这种数据结构很合适，于是就想到了如下代码：
+public void reorderList(ListNode head) { LinkedList&amp;lt;Integer&amp;gt; list = new LinkedList&amp;lt;&amp;gt;(); while (head != null) { list.add(head.val); head = head.next; } ListNode node = new ListNode(0); ListNode n = node; while (list.size() &amp;gt; 0) { int a = list.pollFirst(); n.next = new ListNode(a); Integer x = list.</description></item><item><title>Week1023_review</title><link>https://ifaa.top/posts/week1023_review/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1023_review/</guid><description>ARTS - Review 补12.10 1.3.2 MySQL重要特性 respects n. 敬意；考虑；关联 roadmap n. 路标 appropriate adj. 适合的 Nutshell n. 果壳，简言之，一言以蔽之 Internals 内部 Portability 可移植性 commercial adj. 商用的 Internals 内幕 Portability 可移植性 temporary 临时的 optimized 优化 retrieve v. 取回 restriction 限制 privilege 特权 flexible 灵活 Scalability n. 可扩展性 consist of 由&amp;hellip;组成 Connectivity 连通性 Localization 局部化，地方化 specified 规定 This section describes some of the important characteristics of the MySQL Database Software. In most respects, the roadmap applies to all versions of MySQL.</description></item><item><title>Week1023_share</title><link>https://ifaa.top/posts/week1023_share/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1023_share/</guid><description>ARTS - Share 补12.10 创意实践思考 有才华的程序员 程序员圈子有才华的人很多，达成自己目标理想的人也有很多。因为创造一个程序、产品是一个虚拟数字产品，原材料仅仅是一个可以上网的电脑，可以根据需要找到各种各样的辅助工具，不需要像实体产品一样需要其他那么多人配合，自己在家中就可以实现。于是有些程序员就实现了自己的创业放到了网上，然后引起了一些投资人的兴趣，然后创业，项目做大。
+互联网风投的起源就是一帮大佬资助有才华的程序员去把自己的想法变成产品，然后获取回报，不管市场好坏，行业冷暖，市场上是不缺钱的，缺的是好项目。所以，最怕的不是你缺钱，而是你缺创意，缺把创意落地的能力。
+把创意落地 大多数人无法做到全职创业，拿着自己的想法去找投资人。那么可以利用业余时间做出第一版，让他跑起来再说，然后根据别人反馈、自己使用等方式，进行优化升级，如果引来一些人愿意尝试，那么可以一起讨论，然后推动它进步，项目就是这样一步步起来的。
+所以，比较好的方式是，产生了想法，提出可行性方案，实现最小、最基本功能上线，然后推向市场，边接受检验边升级，然后打出名气。
+不要只停留在想法 很多人为什么碌碌无为？很多时候不是缺乏创意，而是缺乏把创意落地，缺乏长久的坚持。我们都知道对于创新创意并不是需要大量资源投入的，很多都是小步快跑，小成本试错的结果，然后找对了方向开始深入挖掘。怕的是朝三暮四，怕的是只有想法。
+去重复造轮子 工作中我们常常听到这样的建议，不要重复造轮子。因为和市场上已经久经考验、成熟的轮子相比，你自己造的可能安全性、稳定性、扩展性上不够好，而且还要花费时间，不如直接采用现成的，对于工作项目确实是对的，但是对于自己个人学习、进步、尝试是有害的，因为业界最佳实践已经说明它不够时髦了，它不是代表最新前沿技术了，我们的机会就是在优化、改进旧轮子、旧的方法轮上，然后提出了不同的思路，那么对原来的事物也是一种补充或颠覆，都是很有价值的，不要怕尝试，多尝试才会发现适合的路。</description></item><item><title>Week1023_tip</title><link>https://ifaa.top/posts/week1023_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1023_tip/</guid><description>ARTS - Tip 补12.10 一次MySQL时区问题引发的血案 事由 我们的系统是非洲人使用的，所以时区都改了，然后有一个功能是获取当前时间比较，但是页面显示不正常。
+分析 然后就在浏览器debug获取时间戳，然后通过js转成日期时间格式，发现仍然会自动转化为当前时区，就把本地时间改成了非洲一样的时区，通过比较发现获取的当前时间比非洲时间慢，说明获取当前时间取得的不对，然后看了这个时间获取方式，是mysql now() 函数产生的，于是去数据库服务器上去看时区，发现数据库时区和数据库服务器时区不一致！
+解决 修改MySQL时区和服务器一样，然后问题解决。
+注意用 set global time_zone ，然后MySQL 查询可以，用系统查询就不行，需要重启MySQL， 在my.cnf设置时区，然后重启，或者重启服务。</description></item><item><title>Week1024_algorithm</title><link>https://ifaa.top/posts/week1024_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1024_algorithm/</guid><description>ARTS - Algorithm 补12.17 206. 反转链表 题目 反转一个单链表。
+示例:
+输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
+输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL
+进阶: 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
+分析 翻转链表，就是让当前节点指向前面的节点，假设如下节点：
+A-&amp;gt;B-&amp;gt;C
+当前指针指向 B， 我们要把B指向A，也就是 B.next = A, 但是目前 B.next 是C，把当前指针curr向前推进时候，需要保存C，防止链表断裂。
+于是就有了如下思路：
+保存curr.next 将 curr.next 指向prev 将prev指向curr, curr指向 第1步保存的， 最后循环结束，记得将curr指向prev, 代码 public static ListNode reverse(ListNode head) { ListNode prev = null; ListNode curr = head; ListNode next = null; while (curr != null) { // 1.保存 curr.next, // 2.将curr.next 指向 prev // 3. curr 翻转到curr.</description></item><item><title>Week1024_tip</title><link>https://ifaa.top/posts/week1024_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:40 +0000</pubDate><guid>https://ifaa.top/posts/week1024_tip/</guid><description>ARTS-Tip 补12.17 Redis 的使用场景思考 问题引入 我们的现状是两个产品用一套代码，分开部署。
+这种就要求两边的功能需求是一致的，现实中也确实是，不过里面的数据是不一样的，正好有一个需求，是每天初始化一个数据到保存的版本，这个数据对两个产品是不同的，于是在代码里判断了环境，初始化不同的数据。考虑后来写入db, 这样就不用判断环境了。然后别人提议写入 redis, 这样也不用区分环境了，然后就写入db还是redis 的问题，进行了思考。
+Redis的定位是什么 缓存。
+缓存的作用是什么？提高系统性能，提高吞吐量。缓存是怎么做的呢？把需要缓存的数据加载到内存，这样使用的时候就不用去数据库查，减少了磁盘IO，大大提高了性能。
+高并发场景下临时数据库。
+在高并发场景下，数据是来不及写入数据库的。这时候就发挥了内存数据库的作用，直接处理用户请求，异步写入持久化。这样大大提高系统可用。
+分布式锁。
+在分布式系统里，常常需要异步执行，但是为了保证执行一次，就需要像多线程一样获得锁，Redis的单线程设计天然适合做这个。
+还有其他应用场景不再描述。
+该如何选择 看自己业务场景。
+如果是用来缓存数据。那么就不适合和db并驾齐驱。源数据应该存放在db里， 这样再做join查询时会很方便。而且，这时缓存只是一个辅助系统，把系统性能提高，就算没有缓存，系统也照样可用。很明显，本人面对的问题，需要放入db, 不适合把源数据存入缓存。</description></item><item><title>Week1020_review</title><link>https://ifaa.top/posts/week1020_review/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1020_review/</guid><description>ARTS - Review 补11.19 Chapter 4 Processes 1. passive adj. 被动的 a passive entity 被动的实体
+2. routine n 常规 routine parameters 常规参数
+3. individual adj. 个人的，个别的 individual process 个别的进程
+4. capable of 有&amp;hellip;能力 interacting 交流、合作 is not capable of interacting with another process 不能与另一个进程交互
+5. mechanisms 机制 kernel managed mechanisms. 内核管理机制
+6. monopolized v.独占的 one process monopolized most of the system&amp;rsquo;s physical memory 一个占用系统大部分物理内存的进程
+7. appropriate 适当的 which is the most appropriate process to run next 哪个进程是接下来最适合运行的那个</description></item><item><title>Week1020_share</title><link>https://ifaa.top/posts/week1020_share/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1020_share/</guid><description>ARTS - Share 补11.19 Linux 进程浅析 什么是进程 进程是在操作系统里开展工作。一个程序就是机器码命令和存储在硬盘可执行镜像上的数据的集合，就是一个被动实体；一个进程可以被看做一个运行中的计算机程序。
+它是一个动态实体，随着机器码指令被处理器执行不断变化着。和程序的命令与数据一样，进程也包含程序计数器和所有的CPU 的机器村 也有进程栈包含像常规参数这样的临时数据，返回地址和保存变量。
+Linux是多任务操作系统，进程之间互不影响，各自有各自的工作空间独立工作，除非安全问题和内核管理机制影响。
+Linux 进程 Linux进程用 task_struct 的数据结构表示，使用task vector 集合来保存 task_struct 的指针。task vector 的最大长度就是系统支持的最大进程数，默认是512个。
+Linux不仅支持普通类型的进程，还是支持实时进程。这些进程需要实时响应事件，所以被调度器区别对待。
+Linux的 task_struct 的属性被分成几个方法区：
+状态 运行态：进程要么是当前进程正在运行，要么是已经准备好等待获得CPU执行 等待： 进程等待获取某事件或资源。等待态的进程有两种类型： 可中断 和不可中断进程 停止： 进程停止。通常是接收到了一个停止信号。进程被 debug时也可以进入停止态。 僵尸态：暂停的进程，由于种种原因还存在于task vector中，就像死进程一样。 调度信息 调度器需要了解这些信息以便公正的作出决定下一个运行哪个进程。
+标识符 每个进程在系统里都有标识符。进程标识符不是task vector的索引，他就是一个简单数字。每个进程也有用户和组的标识符，这被用来控制进程操作系统里的文件和设备。
+进程间通信 Linux支持经典Unix IPC的信号、管道、信号量机制，也支持系统 V IPC的共享内存，信号量，消息队列机制。
+关联 在Linux中没有进程是完全独立其他进程的。每个系统中的进程初始化后都有一个父进程。新进程不是被创建的，是被复制的，或者干脆克隆之前的进程。每个 task_struct 代表的进程都指向它的父进程、兄弟进程和子进程。
+时间和定时器 内核持续追踪一个进程在其生命周期的创建时间和消费的CPU时间。
+文件系统 进程可以打开关闭他们需要的文件、task_struct包含的指向的打开的文件，还有指向两个VFS inodes的文件。
+虚拟内存 大多数进程有虚拟内存（内核线程和守护进程没有），Linux内核必须追踪虚拟内存是如何映射到系统物理内存上的。
+进程独特上下文 一个进程可以看做系统当前状态的总和。当一个进程运行时它使用处理器的寄存器，栈等等。这就是的进程的上下文，当一个进程暂停，所有关于CPU的独特上下文必须保存进task_struct，这样被调度器重新启动时候能在这个点上恢复。
+进程的标识符-进程号 系统启动的第一个进程是init, PID 是1，唯一一个由系统内核直接运行的进程。除了init之外每个进程都有父进程（PPID），使用pstree 看进程树：
+$ pstree init─┬─acpid ├─atd ├─cron ├─dbus-daemon ├─dhclient ├─7*[getty] ├─irqbalance ├─2*[java───89*[{java}]] ├─java───65*[{java}] ├─java───76*[{java}] ├─java───80*[{java}] ├─java───90*[{java}] ├─2*[java───98*[{java}]] ├─java───37*[{java}] ├─java───115*[{java}] ├─mysqld_safe───mysqld───53*[{mysqld}] ├─nginx───4*[nginx] ├─ntpd ├─polkitd───2*[{polkitd}] ├─redis-server───2*[{redis-server}] ├─6*[redis-server───3*[{redis-server}]] ├─rpc.</description></item><item><title>Week1020_tip</title><link>https://ifaa.top/posts/week1020_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1020_tip/</guid><description>ARTS - Tip 补11.19 Maven 构建的意外killed 问题场景 在linux环境构建java web项目时候，运行 mvn clean package 后，会意外killed，
+[INFO] Packaging webapp [INFO] Processing war project [INFO] Webapp assembled in [1156 msecs] [INFO] Building war: /home/jack/git/xxx/zzz/target/x.war [1] + 25650 killed mvn clean package 问题定位 加上-X 开启debug模式
+INFO] Copying xstream-1.4.7.jar to /home/jack/git/credit-c[1] 25909 killed mvn package -X 没有报错，还是被killed, 可能是被操作系统killed的，只好谷歌了。
+在这里找到了一点描述 Maven compilation dies with “Killed”
+说可能引起了OOM，所以系统把它kill 了，觉得这种可信度很大，于是就往调整内存那里处理。
+尝试解决 然后查到资料说可以在编译插件设置编译最大最小内存
+根据官网 Compile Using Memory Allocation Enhancements 于是设置如下：
+&amp;lt;!-- 编译插件 --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description></item><item><title>Week1021_algorithm</title><link>https://ifaa.top/posts/week1021_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1021_algorithm/</guid><description>ARTS - Algorithm 补11.26 141. 环形链表 题目 给定一个链表，判断链表中是否有环。
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+示例 1：
+输入：head = [3,2,0,-4], pos = 1 输出：true 解释：链表中有一个环，其尾部连接到第二个节点。 示例 2：
+输入：head = [1,2], pos = 0 输出：true 解释：链表中有一个环，其尾部连接到第一个节点。 示例 3：
+输入：head = [1], pos = -1 输出：false 解释：链表中没有环。 进阶：
+你能用 O(1)（即，常量）内存解决此问题吗？
+分析 这道题是要判断链表中有没有存在环。是否存在环，特点是有两个指针都指向同一个元素，就根据这个特点来判断，于是用最暴力的手段，把节点存到集合里，每取一个就去和集合中的比较，如果相同就代表存在环，于是代码如下：
+public static boolean hasCycle(ListNode head) { if (head == null || head.next == null) { return false; } List&amp;lt;ListNode&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); while (head !</description></item><item><title>Week1021_review</title><link>https://ifaa.top/posts/week1021_review/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1021_review/</guid><description>ARTS - Review 补12.3号 Linux进程那些事（2） briefly adv. 简单地 made up of 由&amp;hellip;组成 fundamentally adv. 根本上 Foreground 前景 interactive adj.互动的 spontaneously adv. 自然地 via prep. 通过 partially adv. 部分地 preempt vt. 先占，取代 relinquish 放弃 A process refers to a program in execution; it’s a running instance of a program. It is made up of the program instruction, data read from files, other programs or input from a system user.
+一个进程代表一个程序执行过程；是一个程序运行实例。它由程序命令，从文件读取的数据或其他程序或系统用户输入读取数据组成。
+There are fundamentally two types of processes in Linux:</description></item><item><title>Week1021_share</title><link>https://ifaa.top/posts/week1021_share/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1021_share/</guid><description>ARTS - Share 补11.26 一个.java 文本文件是如何运行起来的 整体 我们知道，通常的说法是 .java被编译器编译成.class文件，也就是字节码文件，然后虚拟机加载执行。这是粗略的说法，具体实现是有些复杂的，如
+编译器如何把.java 文件编译成.class字节码文件的？ 虚拟机是如何加载编译后的字节码文件的？ 为什么要用虚拟机来执行Java程序？ 1.编译Java Java编译使用javac命令，编译器输入java源码文件， 输出机器语言，具体过程如下：
+java源代码（符合语言规范）-&amp;gt; javac -&amp;gt; .class字节码文件 -&amp;gt; jvm -&amp;gt; 机器语言（不同平台不同种类）
+编译流程：
+词法分析器：将源码转换为Token流 将源代码划分成一个个Token(找出java语言中的if，else，for等关键字) 语法分析器：将Token流转化为语法树 将上述的一个个Token组成一句句话（或者说成一句句代码块），检查这一句句话是不是符合Java语言规范(如if后面跟的是不是布尔判断表达式) 语义分析器：将语法树转化为注解语法树 将复杂的语法转化成简单的语法（eg.注解、foreach转化为for循环、去掉永不会用到的代码块）并做一些检查，添加一些代码(默认构造器) 代码生成器：将注解语法树转化为字节码(即将一个数据结构转化成另一个数据结构) 2.虚拟机加载 完成构造字节码文件后，虚拟机加载.class文件 3.为什么要用虚拟机 跨平台 因为不同的操作系统接口不同。
+我们知道操作系统就是管理计算机硬件，提供操作接口。比如删除硬盘文件的接口，在window上可能叫deleteFile, 在linux可能叫removeFile, 那么我们写程序，不会去判断运行的操作系统，可能就是一句delete， 那么虚拟机就会根据不同的操作系统去选择对应的操作接口。
+这样，就等于我们编写一次，导出执行。也就是虚拟机的跨平台自适应，让我们的程序也跟着实现了跨平台。
+自动内存管理 虚拟机帮我们实现了内存管理。我们避免了申请、释放内存这个步骤，统一由虚拟机自行管理，这样我们只要专注于逻辑实现就行了，降低了代码难度，降低了低水平程序员的错误概率。
+优化代码执行 执行最快的是机器语言，也就是0，1操作，然后就是汇编，之后就是各种语言。虚拟机会分析代码执行的频繁度，把高密度使用的代码翻译成机器语言，提高效率。</description></item><item><title>Week1021_tip</title><link>https://ifaa.top/posts/week1021_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1021_tip/</guid><description>ARTS - Tip 补 11.26 关于字符串类型和数值类型排序的bug 最近遇到了一个排序需求，于是就直接使用了 Collections.sort 方法来实现，但是没有注意元素类型，就导致排序有问题。
+如下：
+List&amp;lt;String&amp;gt; list = Arrays.asList(&amp;#34;4.2, 3.3, 1, 17, 25&amp;#34;.split(&amp;#34;,&amp;#34;)); System.out.println(list); Collections.sort(list); System.out.println(list); // output [4.2, 3.3, 1, 17, 25] [ 1, 17, 25, 3.3, 4.2] 正确的做法是转成数字类型再排序
+Collections.sort(list, Comparator.comparingDouble(o -&amp;gt; Double.parseDouble(o))); // output [ 1, 3.3, 4.2, 17, 25] 这是个非常基础的问题，能在这么小的问题上犯错，也是无地自容了。</description></item><item><title>Week1022_algorithm</title><link>https://ifaa.top/posts/week1022_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:39 +0000</pubDate><guid>https://ifaa.top/posts/week1022_algorithm/</guid><description>ARTS - Algorithm 补12.3 142. 环形链表 II 题目 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+说明：不允许修改给定的链表。
+示例 1：
+输入：head = [3,2,0,-4], pos = 1 输出：tail connects to node index 1 解释：链表中有一个环，其尾部连接到第二个节点。 示例 2：
+输入：head = [1,2], pos = 0 输出：tail connects to node index 0 解释：链表中有一个环，其尾部连接到第一个节点 示例 3：
+输入：head = [1], pos = -1 输出：no cycle 解释：链表中没有环。 进阶：
+你是否可以不用额外空间解决此题？
+分析 这道题是141.环形链表的进阶版，141只要判断是否存在环，这个要求找出进环位置。
+首先考虑还是使用HashSet Key的唯一性来做判断，只要第一次存在重复的元素，就说明这个元素为进环位置，代码如下：
+public ListNode detectCycle2(ListNode head) { if (head == null || head.</description></item><item><title>Week1018_algorithm</title><link>https://ifaa.top/posts/week1018_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1018_algorithm/</guid><description>ARTS - Algorithm 补 11.5 88. 合并两个有序数组 题目 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+说明:
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n。 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。 示例:
+输入:
+nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3 输出: [1,2,2,3,5,6]
+分析 首先想出解决方案，再优化解决方案。
+这个问题可以先合并数组，再对数组排序，于是就有了如下代码：
+public static void merge(int[] nums1, int m, int[] nums2, int n) { for (int i = m, j = 0; i &amp;lt; m + n; i++, j++) { nums1[i] = nums2[j]; } for (int i = 0; i &amp;lt; m + n; i++) { for (int j = i + 1; j &amp;lt; m + n; j++) { if (nums1[i] &amp;gt; nums1[j]) { int tmp = nums1[i]; nums1[i] = nums1[j]; nums1[j] = tmp; } } } } 这种解法虽说能解决问题，但是肯定存在更好的解法，主要是没有利用上数组的有序特性。考虑另一种解法，遍历两个数组，从前往后，小的放前面，大的放后面，感觉也不太好，因为牵涉到数组整体后移的情况。</description></item><item><title>Week1018_review</title><link>https://ifaa.top/posts/week1018_review/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1018_review/</guid><description>ARTS - Review 补11.5 为什么游戏玩乐是21世纪通往成功的关键 After the death of Isaac Newton — a mythic figure even in his own lifetime — the poet Alexander Pope wrote the following epitaph for him:
+爱克萨、牛顿 &amp;ndash; 一个甚至在有生之年都是神话的人物 去世后，诗人 Alexander Pope 为他写下了以下墓志铭：
+自然和自然法则隐藏在黑夜里
+上帝说，让牛顿出生，之后一切明亮。
+当你读到这样的历史人物时，很难想象他们也是凡人。绝大多数我们在20世纪不会发明微积分或光学。我们当然也不会自出走走，就为自然研究奠定新的基础。
+但是他们也是凡人。虽然神化他们很迷人，但是想象一下他们曾经像人类的样子也同样有趣。
+我们知道牛顿既谦虚又自大。当面对自然法则时候，他谨慎对待自己的工作。当面对他的竞争对手，然而，他可能是卑鄙的，有报复性的，不完全是首先浮现在脑海中的完美主义形象。
+我们知道，尽管他名声大噪，但他的生活大多是孤独的，不太注重发展人际关系，甚至至死还是处男。这让你想知道，如果他更被那些非常正常的人类利益所吸引，这个时间将会有多么不一样。
+然而我认为，关于他的最能说明问题的，是他在临终前与一位朋友分享的一段关于他的生活的的反思：
+我不知道我在世人面前是什么样子，但是对我来说就好像仅仅是个在海边玩耍的小男孩，偶尔让自己沉浸在比平常更光滑的鹅卵石或更漂亮的贝壳中，而真理的大海在我面前却一无所知。
+我喜欢这个，因为它展示了他的童心，一个我们能在自己的反思中认出来的童心。但更多的是，我喜欢它，因为从这个人类形象中，我们可以为自己获取一些东西，一些让我认为在今天变得更相关的东西。
+玩乐游戏进化的目的 一方面，牛顿过着如此孤单的生活，这种想法带来了一点点悲伤，我无法立刻触动。但是，当我从内部看他自己的描述时，它消失了。
+游戏活动在所有被研究的人类文化中是很普遍的。我们可以用不同方式来定义它。当这个想法被提出时，我们每个人都会想象一些稍微不同的东西，但是在核心层面上，我们很明确在讨论大致相同的东西。
+这是我们做的一项活动，至少表面上是这样。这很有趣，而且我们并不觉得压力太大，因为我们把它和将来的奖励联系在一起，这似乎使得它更自由，更诚实。
+当然，科学家们对如何定义游戏以及游戏的进化目的存在很大的分歧，但不会被细节所困扰。我们简单的定义与任何事实都不太相脱离，而且就目的而言，人们似乎都同意游戏可以起到两种作用。训练我们的身体，社会，或认知。
+从这个意义上说，游戏是一种学习行为。更具体地说，它是一种低成本的方式来探索世界，以获得高价值的优势。更进一步，它是一种对现实真相的探索，我们希望随着我们的生活和年龄的增长而有效地出现。
+当你出生在一个特定的文化环境中，你还没有所有的工具去理解它。你必须弄清楚界限在哪里，接受什么规范，以及当你成为社会成员时需要掌握的不同技能。
+像牛顿一样，小时候，你四处走动捡起不同的鹅卵石和贝壳，研究它们，确定它们与周围世界和其他人的关系，然后基于此，你开始存储与你的经验一致的信息，以指导未来的经验。
+要注意的是关于游戏的关键点是，因为游戏并不完全是有目的的，所以边界是模糊的，这允许你重新定义它们，这样你就能看到一些新的东西，这些东西以一种你可能没有意识到的方式提供价值。
+混合勘探开发 这种乐趣最明显的一点是，在孩子身上比在成年人身上更常见。这很有道理：当你成年时，你已经完成了大部分工作来弄清你的周围环境。
+基于这种游戏关系，我们可以把生活大致分为两个存在境界：一个以探索为主导的时期，一个以剥削为主导的时期。你一生中的第一部分是探索、观察和理解，但一旦其中的一些已经沉没到令人满意的水平，你就开始利用你所奠定的基础上生长的果实。
+用牛顿的比喻，经过一段时间后，你已经拾起了所有你可能要玩的鹅卵石和贝壳，然后你离开海洋，继续把那些相同的石头和贝壳放在手里。
+对于从游戏中诞生的物理课程，这是有意义的。经过一段时间后，你已经学会了如何使用你的身体，并且你不需要在一生中用不同的方式来测试它。你知道如何跑步，你知道如何做你喜欢的运动，而且随着时间的推移，继续做这些事情是没有损失的，这是有意义的。
+然而，当我们在社会生活和认知方面追求同样的探索-开发模式时，存在一个问题。今天，社会和认知方面比以前复杂得多。我们的文化正在以某种速度发展，这意味着如果你不能跟上它的步伐，那么当你生活在现实中时，你就不再理解它的真相。
+在一个变化不太快的世界里，短暂的童年探索会给你提供所有你需要的信息，来处理你周围的各种规范和可能出现的决策模式。但是，在一个日益网络化的文化中，每隔几年产生的信息量就翻一番，勘探和开发阶段之间就不可能再有差别了。
+牛顿一生对真理的探索使他从一个小石子变成了一个小石子，但这并不意味着他把旧的抛在脑后，换上了新的。他对剥削给予了应有的关注，同时也顽皮地留意着周边隐藏的真相。
+在现代成人生活中，不为游戏腾出空间是一个战略劣势。勘探和开发不再是明显的。随着世界在我们周围迅速展开，它们不断地协同进化。
+一个更大的地形处理 今天，文化更加复杂，信息更加丰富，我们的集体环境覆盖了更大的现实地形。
+游戏是我们如何绘制这个地形。传统上，光是度过童年和青年时期的一些早期时光，不遵守常规，不被责任和例行公事所束缚，享受快乐就足够了。
+这种情况已经不再是这样了。我们的环境不再是静止的。它们是动态的，也就是说，如果你不跟上，你基本上就不会像周围的人一样生活在相同的社会和认知现实中。
+虽然过去的勘探与剥削是截然不同的阶段，但现在它们已经融合了。你再也不能逃避把生命最初的几十年用来玩耍，然后把最后几十年奉献给工作的烦恼了。游戏和工作必须占据相同的范围。</description></item><item><title>Week1018_share</title><link>https://ifaa.top/posts/week1018_share/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1018_share/</guid><description>ARTS - Share 补 11.5 日 对ARTS - Review 的思考与改进 目的 加入了ARTS 学习组有一段时间了，对耗子叔设置的ARTS每周任务很是赞同，也在努力坚持中。ARTS是每周要做的四个任务
+Algorithm 每周做一个算法题 Review 每周阅读一篇medium文章 Tip 每周学习总结一个技术技巧，最好是实际工作中遇到的 Share 每周分享一篇有观点有思考的技术文章 我觉得坚持这四项对成长很有好处。我对 Algorithm 和 Tip 很是赞同，对 Review 有点思考。
+Review 目的是阅读英文文章，提高英文能力，这样方便接触第一手英文技术资料，对自己有很大好处。另外，medium很多文章内容也是高质量，很值得看，这样在学习英文中也学到了作者的思想观点。我目前的做法是尽量翻译整理下来。
+但是，对我个人来说，做这个活还是比较吃力的，需要不断借助翻译工具解释单词，然后理解整句话的意思。整体下来，个人的阅读水平并没有多少提高，我在考虑有什么更好的办法。
+寻找办法 既然是为了提高英语，方面阅读英文资料，那么如何才能更好的提高呢？我觉得是要做好三个，
+认识字 读懂句子 试着翻译技术文档 参考上学时学英语的方法，一是词汇量，二是阅读做题量，现在工作中使用主要是为了能读懂英文文献，不那么注重口语，那么我依然可以把这种方法拾起来，所以我要尝试调整下我的Review策略。
+新的Review尝试 奔着技术文档去， 每周阅读至少一个英文技术文档的技术点，并标注出不懂的单词，再专门学习。。如果凑效的话就这么做，技术文档术语相通，这样将来阅读会越来越顺。后期如果效果好，可以推广到阅读medium上。下周ARTS开始尝试。</description></item><item><title>Week1018_tip</title><link>https://ifaa.top/posts/week1018_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1018_tip/</guid><description>ARTS - Tip 补 11.5 就说下我在工作中主动推动的事吧 生产和测试库分离 之前好长一段时间，我们测试环境连接数据库是直接连接生产数据库的，这样做有方便之处，便于直接查看生产数据，对于不涉及修改类的新功能更能直观看到效果，但也存在很大的风险，就是对于修改性的操作，很可能会影响到生产，尽管我们默认不去操作修改。但是也无法保证有时候的误操作，或者某些批处理任务的误启动。
+问组长为什么不分开，也没有特别的理由，只是强调这样做方便。我觉得是因为这么做习惯了，但是为了数据安全，还是要分开的。于是在就主动推动这件事，在他同意下，联系运维找到新的测试数据库，开始导一份生产备份到新测试库里，同时在构建工具里，增加了编译测试环境库的参数，这样以后修改可以发布测试库直接连测试库了，真正做到了分离，也避免了很多安全问题。
+文档不全 我们的环境有很多，各种系统的生产、测试部署环境、缓存环境、数据库环境，刚开始接触只有一张大而全的表格，又很多是业务无关的内容，因为连接只需要知道 ip，于是就着手做了业务类型和IP对应表，简洁方便，扫一眼就能清楚自己要连接的地址。
+还有数据库。这个很多数据库、字段解释都存在数据库里，只有一个不是最新版本的脚本文档有描述，无法清楚的知道每个数据库的表之间关系，和表字段的含义，于是就考虑着手做一个文档，专门存放数据库解释文档。这个不被领导重视，目前在自行归档中。
+发挥主观能动性 虽然很多工作都存在这样那样的问题，但是个人还要发挥主观能动性，去做一点自己能做的，哪怕有一点改变，也是很好的，对自己也很有成就感。</description></item><item><title>Week1019_algorithm</title><link>https://ifaa.top/posts/week1019_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1019_algorithm/</guid><description>ARTS - Algorithm 补 11.12 4.寻找两个有序数组的中位数 题目 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+nums1 = [1, 3] nums2 = [2]
+则中位数是 2.0
+示例 2:
+nums1 = [1, 2] nums2 = [3, 4]
+则中位数是 (2 + 3)/2 = 2.5
+分析 由于和 88. 合并两个有序数组 有相似之处，可以直接借鉴下解法。
+可以认为是合并有序数组，找中位数，那么可以倒着把两个数组放入新数组，不用全放，到中位数哪里就可以了，于是代码如下：
+class Solution { public double findMedianSortedArrays(int[] nums1, int[] nums2) { int m = nums1.</description></item><item><title>Week1019_review</title><link>https://ifaa.top/posts/week1019_review/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1019_review/</guid><description>ARTS - Review 补 11.12 MySQL8.0 参考手册 单词列表 Abstract 抽象的，还有摘要的意思 Cluster 群，簇， 集群 edition 版次 refer 提到，针对，送交，使求助于 representative 代表 Preface 序言 Forums 座谈会、论坛 revision 修订，校对 摘要 This is the MySQL™ Reference Manual.It documents MySQL 8.0 through 8.0.14. It may include documentation of features of MySQL versions that have not yet been released. For information about which versions have been released, see the MySQL 8.0 Release Notes.
+这是MySQL参考手册. 它是MySQL8.0 的8.0.14 版文档.它可能包含MySQL至今没发布的版本的特性文档。关于已经发布的MySQL版本信息，看MySQL8.0 发布通知。</description></item><item><title>Week1019_share</title><link>https://ifaa.top/posts/week1019_share/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1019_share/</guid><description>ARTS - Share 补11.12 又看了看左耳听风的《技术人员的发展之路》 链接 https://coolshell.cn/articles/17583.html
+20-30岁的积累之路 这个阶段是积累。一定要摒弃速成、急富的心态，踏实的实践中学习，学习中实践。
+最重要的素质是提升学习能力和解决问题的能力，形成领导力气质。怎么形成的？无非就是别人解决不了的你能解决了，在团队中处于被依赖的地位。这就要平时注重基础，注重实践，多解决难题，家中有粮，心中不慌。
+职场路径的选择 刚开始阶段要努力去顶尖公司。因为顶尖公司的氛围和技术环境能给刚出道你奠定以后发展深厚的基础。那里有更前沿的技术和更好的方法论和更有挑战性的业务场景，正是年轻人需要汲取的养分。然后深造完成，大公司的成熟模式可能不适合你了，你就需要换到创业公司了，去在更自由的环境里充分发挥自己的才干。
+带团队发展 技术成长到一定高度，需要学习技术之外的技能。你需要拥有带领产品业务团队发展的能力，需要在团队中推行自己喜欢的文化的能力，学会取舍，在时间紧任务重中做到平衡，带领团队征服一座座高山。
+追求一种自由的生活 工作自由。你不惧怕公司裁员，拥有随时可以跳槽并找到好工作的本钱。拥有技能自由，在你的领域基本没有你解决不了的问题，已经成为领域专家。物质自由，也就是财务自由，不再需要为生活奔波，选择自己跟喜欢的方式生活。
+感悟 知之为知之，不知为不知。
+业精于勤荒于嬉，行成于思毁于随。
+骐骥一跃不能十步，驽马十驾功在不舍。
+知行合一。</description></item><item><title>Week1019_tip</title><link>https://ifaa.top/posts/week1019_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1019_tip/</guid><description>ARTS - Tip 补11.12 ECharts 的使用简介 项目中使用了ECharts， 主要说下echarts的 dataset 和 dataZoom.
+dataset 在option里设置dataset就是设置数据源
+dataset: { // 这里指定了维度名的顺序，从而可以利用默认的维度到坐标轴的映射。 // 如果不指定 dimensions，也可以通过指定 series.encode 完成映射，参见后文。 dimensions: [&amp;#39;legendName&amp;#39;, &amp;#39;col2&amp;#39;, &amp;#39;col3&amp;#39;], source: result }, 这里result是数据数组，用来提供需要展示的数据，这样比以下直接分割写数据更紧凑些。
+legend: { data:[&amp;#39;销量&amp;#39;] }, xAxis: { data: [&amp;#34;衬衫&amp;#34;,&amp;#34;羊毛衫&amp;#34;,&amp;#34;雪纺衫&amp;#34;,&amp;#34;裤子&amp;#34;,&amp;#34;高跟鞋&amp;#34;,&amp;#34;袜子&amp;#34;] }, yAxis: {}, series: [{ name: &amp;#39;销量&amp;#39;, type: &amp;#39;bar&amp;#39;, data: [5, 20, 36, 10, 10, 20] }] dataZoom 这个是底下下拉栏。数据很多时候，需要左右拖动来调整显示，就用到了dataZoom.
+写法如下：
+dataZoom: [ { type: &amp;#39;slider&amp;#39;, show: true, xAxisIndex: [0], left: &amp;#39;9%&amp;#39;, bottom: -5, startValue: 0, endValue: 10 } ], 注意这里的startValue和endValue, 这个控制图表显示的起始阶段和容量，如果需要搜索某一个特定数据时候，找到该数据在列表中的坐标，直接设置startValue 就可以把该数据放在第一位，比再请求数据更方便高效些。</description></item><item><title>Week1020_algorithm</title><link>https://ifaa.top/posts/week1020_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:38 +0000</pubDate><guid>https://ifaa.top/posts/week1020_algorithm/</guid><description>ARTS - Alogirthm 补11.19 121. 买卖股票的最佳时机 题目 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。
+注意你不能在买入股票前卖出股票。
+示例 1:
+输入: [7,1,5,3,6,4] 输出: 5 解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。 注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。 示例 2:
+输入: [7,6,4,3,1] 输出: 0 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。 分析 先解决，再优化。笨方法，先跑起来再说。 类似冒泡排序，对每个元素进行比较，找出最大差额。代码如下：
+class Solution { public int maxProfit(int[] prices) { if (prices == null || prices.length &amp;lt; 2) { return 0; } int len = prices.</description></item><item><title>Week1015_share</title><link>https://ifaa.top/posts/week1015_share/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1015_share/</guid><description>ARTS - Share 关于日志那些事 日志有访问日志，行为日志……不同类型的日志有不同的格式，另外，还有日志的滚动归档，还有像systemd/syslog等这样的系统日志系统……
+什么是日志 计算机中，用来记录操作系统或其他软件运行事件，或不同用户操作行为的文件。日志是储存在文件里的动作。在最简单的例子中，信息被写入一个单个文件中。
+一个事务日志就是一个系统和系统用户之间交流记录的文件，或者一个数据采集方法，用于自动捕获具有该系统终端操作事务的人员的类型，内容或者时间。网页服务日志文件，但是任何日志文件都可以使用科学日志分析工具来进行分析。
+很多操作系统，软件框架和程序都包含一个日志系统。一个广泛使用的日志标准是 syslog. IETF RFC规范的 .
+syslog 规范 syslog 在计算机中是一个记录日志的规范，它根据软件类型和日志级别生成信息，使用一些助记代码。
+计算机系统设计者可能会使用syslog来管理系统和安全验证，也会进行通用信息，分析，排查问题。
+日志级别
+值 级别 关键字 描述 0 Emergency emerg 系统不可用 1 Alert alert 需要尽快恢复的状态，例如系统数据库错误 2 Critical crit 硬件错误 &amp;hellip; 日志类型 日志文件记录着当前程序执行的情况，或者管理员的活动。日志对进行一次错误排查是有帮助的。
+按日志产生的地方有三种类型的日志：
+访问日志， 这里记录当前请求执行结果的日志，每次实际请求都会记录。 行为日志， 这里记录当前管理人员行为的日志，会列出这个人员的所有请求操作。 内部并发管理日志，记录内部并发系统的参数值。 操作系统的日志
+sytemd 和 syslogd
+linux日志系统是系统 daemon或syslogd. 当系统运行级别为1时候daemon随系统启动。一旦启动，几乎系统的任何部分，包括应用、驱动、和其他守护程序都会产生日志。
+在现代Linux发行版syslogd被更新的syslog规范实现例如rsyslog、syslog-ng取代。 这三个不同点是，syslog工程是首个系统日志工程，1980年就建立了，它是syslog协议的基础。同时Syslog是非常简单的协议。开始只支持UDP传输，所以它不能保证可靠传输。
+下一个日志系统是 syslog-ng 在1998年诞生。它继承了基础syslog协议并增加了新特性例如：
+基于内容的过滤器 直接把日志存入数据库 TCP传输 TLS加密 下一个日志系统是RsysLog 在2004年。继承了syslog协议,增加了新特性比如：
+RELP协议支持 缓冲操作支持 日志归档 滚动策略， 设置最多归档文件数 控制触发策略 根据最大文件数触发 maxHistory策略， 使用maxHistory保留天数设置，超过时间的删除。 [1]What is the difference between syslog, rsyslog and syslog-ng?</description></item><item><title>Week1016_algorithm</title><link>https://ifaa.top/posts/week1016_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1016_algorithm/</guid><description>ARTS - Algorithm 补 10月22日 83. 删除排序链表中的重复元素 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+示例 1:
+输入: 1-&amp;gt;1-&amp;gt;2 输出: 1-&amp;gt;2 示例 2:
+输入: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 输出: 1-&amp;gt;2-&amp;gt;3
+分析 这个就是数据结构的链表结构，相当于对删除链表上的某一个元素，把这个待删除的元素的前驱的后继指向该元素的后继，就行了。
+代码1 我第一想到方法是笨方法，首先建立一个新链表，第一个元素是 head.val, 遍历链表，如果比head.val 大就把这个元素拼接到新链表上， 返回新链表的head。代码如下：
+if (head == null) { return null; } ListNode node = new ListNode(head.val); ListNode x = node; while (head.next != null) { head = head.next; if (head.val &amp;gt; x.val) { x.next = new ListNode(head.val); x = x.next; } } return node; 代码2 然后就意识到不用新建链表就可以，于是写出了简化版：</description></item><item><title>Week1016_review</title><link>https://ifaa.top/posts/week1016_review/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1016_review/</guid><description>Reivew SQL 存储过程和游标介绍 学习为一个关系型数据库写存储过程和游标。 如果你学习更多关于SQL特别是从数据科学的角度，你可以学习DataCamp的 &amp;ldquo;数据科学SQL介绍&amp;rdquo;课程。
+SQL对每个现代软件工程师都是必备技能。因为几乎全部软件都依赖几种数据集成的RDBMS（关系型数据库管理系统）。无论是网页应用，无论是API或者内部应用，都会用到关系型数据库。SQL就是查询关系型数据库的语言。
+作为一个数据科学家，了解SQL和它关联知识非常重要。为了能够查询一个数据库系统获得你想要的处理的特定问题返回，SQL是最低需求。
+在这个最新DataCamp视频中， David Robinson (DataCamp首席数据科学家)为我们展示他这么在一个数据科学问题中使用SQL。请检出它，他的工作流程非常有趣。
+在本篇指导中，你将会学到些存储过程和游标；SQL另一个重要面。你是否曾想要你的RDBMS 在某一个特定的时间发生时自动响应一个确定的动作？ 例如，我们说你创建了一个新的员工记录在你叫做Employees 的表中，你想要这个反射到另一个关联表 像 Departments 中。好了，你可以获得正确的教程。
+在这个教程中，你将会学到：
+存储过程在RDBMS里是什么 你怎么能写一个存储过程 存储过程的不同类型 什么是RDBMS的游标 怎么写不同类型的游标 不同类型的游标 听起来兴奋吧？让我们开始吧。
+在一个RDBMS里什么是一个存储过程？ 在继续存储过程和游标之前，你将会需要知道一点关于PL/SQL ，它是一个块结构语言能够让像你一样的开发者用过程声明来拥有SQL的力量。但是你不会以传统方式学习，会随着你的需要学习它。
+所以如果你拥有SQL查询并且你想要重复执行它。存储过程是其中的一个解决方案。存储过程通常在这个上下文中被调用，因为他们保持了存储并在特定操作或一系列动作时被触发。存储过程也被称为 Procs.
+现在你将会看到怎么写一个存储过程。
+书写存储过程： 书写存储过程通用的语法如下：
+CREATE PROCEDURE procedure_name AS sql_statement GO; 请注意这些语法介乎适用于所有的RDBMS不管是Oracle， 还是PostgreSQL 还是MySQL。
+创建存储过程之后，你要执行它。以下是语法。
+EXEC procedure_name; 让我们写一个简单的存储过程。考虑如下快照，是从一个RDBMS 以一个叫Customers 表里取得。
++------------+--------------+-------------+---------------+--------+------------+---------+ | CustomerID | CustomerName | ContactName | Address | City | PostalCode | Country | +------------+--------------+-------------+---------------+--------+------------+---------+ | 1 | Jack | Rose | Obere Str.</description></item><item><title>Week1016_share</title><link>https://ifaa.top/posts/week1016_share/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1016_share/</guid><description>ARTS - Share 关于SQL JOIN 的那些事 一张图 SQL中关联查询使用最多的是各种JOIN，这个图中简单明了的说明了各个JOIN 的含义：
+测试数据 准备了两张表 t_user 和 t_info, 数据如下：
+mysql&amp;gt; select * from t_user; +----+------+------+-------------+ | id | name | age | telephone | +----+------+------+-------------+ | 1 | jack | 20 | 18877771111 | | 2 | rose | 33 | 18977771111 | | 3 | tom | 21 | 13877761111 | | 4 | bob | 24 | 13356771111 | +----+------+------+-------------+ mysql&amp;gt; select * from t_info; +----+---------+-----------------+--------------+ | id | user_id | bank_no | company_name | +----+---------+-----------------+--------------+ | 1 | 1 | 110132011114578 | google | | 2 | 2 | 110119677118521 | facebook | | 3 | 3 | 110111842716547 | twitter | | 4 | 8 | 210111842716547 | baidu | | 5 | 9 | 410111842716547 | tencent | +----+---------+-----------------+--------------+ 1.</description></item><item><title>Week1016_tip</title><link>https://ifaa.top/posts/week1016_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1016_tip/</guid><description>ARTS - Tip 一个SQL JOIN问题 问题描述 工作中碰到了一个SQL JOIN 的bug。
+典型的内部系统， 牵涉到的用户表，用户角色表，用户角色关联表，分别是： sys_user, sys_role, sys_user_role
+需求是获得 角色类型为 xxx 的所有用户的id, 名字 和角色id.
+我写的SQL是如下
+SELECT u.id, u.name , ur.role_id FROM sys_user u LEFT JOIN sys_user_role ur on u.id = ur.user_id AND ur.role_id IN (SELECT id FROM sys_role r WHERE r.role_type = &amp;#39;xxx&amp;#39;) 问题分析 根据上面SQL，做的事情是
+查找所有的用户表， 关联上 用户角色表， 这个用户角色表数据只有角色ID 是 role_type = xxx 的数据。连接用的是LEFT JOIN，这样的话，左边的数据是 &amp;gt;= 右边的数据，左边会出现一些无用数据。
+出现使用LEFT JOIN 是对连接的范围理解的有误。 关于各种连接，下面一张图就能看明白：
+问题解决 把上面的SQL 改成 INNER JOIN 即可解决。这样就是等于把左边的范围缩小到和右边数据对等的数量上。</description></item><item><title>Week1017_algorithm</title><link>https://ifaa.top/posts/week1017_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1017_algorithm/</guid><description>ARTS - Algorithm 补 10月29日 82. 删除排序链表中的重复元素 II 题目 给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
+示例 1:
+输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 输出: 1-&amp;gt;2-&amp;gt;5 示例 2:
+输入: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 输出: 2-&amp;gt;3
+分析 此题和 [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove- duplicates-from-sorted-list/description/) 相似，属于在这道题的基础上增加了一个难度，不仅是重复的变成不重复的，还要把重复过的元素都删掉。
+初始的想法是，首先把遇到的和next相等的元素，把next 删掉，把当前的标记，第二次把标记过的删除，但是这样存在问题，
+标记的方式，如果设置当前元素的值为某一个数，如果元素中存在这个，就造成不准确； 如果存在连续重复的，标记了一个就无法删除掉全部的重复数据。 所以这种方法是不可行的， 还有一个方法，是双向循环链表结构，这样的话可以让前驱直接指向后继的后继，就一次删除了当前的和当前的后继， 但是存在连续重复的问题，需要把重复元素保存起来。
+代码如下：
+public static ListNode deleteDuplicates(ListNode head) { // 1. 记录重复值， 2.删除重复值， 3.从第二个开始 ListNode node = head; ListNode prev = new ListNode(head.val - 1); ListNode first = prev; int duplicate = prev.val; prev.next = node; while (node !</description></item><item><title>Week1017_review</title><link>https://ifaa.top/posts/week1017_review/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1017_review/</guid><description>ARTS - Review 补10.29 一个好的开发者说不 在我们的生活很早的时候，我们就学到 ‘不’这个词是消极的。但是在我们生活中学会说不以便专注于重要的事是非常积极的，尤其是当你做为一个程序员不得不和你的客户和队长日常讨论让你开发一个功能时候。
+作为一个软件开发者，我们面对不仅语法和逻辑挑战，还要客户交流。（crucial 关键的） 这是关键的因为有时，你的客户将会让你加一些需要花费大量时间开发但是对最终产品应用目标没有价值的功能。
+如果你面对和以上提到的类似的场景，你有两个选择。
+开发功能 说不 为什么你需要说不？那不是我的客户想要的吗？这不是他的软件吗？
+当然是的。但是这也要花费时间和金钱去完成的。
+你的客户投资资源在你确定不会增加产品价值的事情上，甚至知道这一点，但是你还要去做。
+所以，你多么该管理一下像这样的场景？我们将会说不，但是解释为什么。
+作为一个在Pernix的软件学徒，我们不得不在6周内开发应用。这些应用叫做 MVP (最低可用产品)。就像名字表达的那样，这类应用意味着做的最小但是对最终产品有巨大价值的功能。
+6周是非常短的一段时间，我们必须敏捷必须专注于什么是重要的事情上。有时客户想要一些将花费大量时间的功能但是并不会在周期结束时候增加实际价值。
+这就是我们必须识别什么是我们应用的目的，然后在这样的功能上努力。
+我之前做的一个项目中，一个客户让我们开发一个聊天机器人功能，如果我们同意开发将会占用整个6周。主要功能是开发一个用社交网络实现一个CRM系统。
+所以我们表上就要两个选项。开发聊天机器人或CRM。
+幸运的是，客户同意了我们意见，决定将来再实现聊天机器人，先努力开发CRM。
+如果我们同意开发聊天机器人，情况会变得非常困难。我们不能开发完成聊天机器人也不能完成CRM。
+最后，我们设法开发了CRM，客户对最终结果很满意。我们学到了要聚焦于开发两个主要功能又快又好的完成。
+这个方法可能听起来熟悉的如果你把 Scrum（敏捷工具） 作为你的开发方法论。在Scrum 你需要设置短阶段任务并完成它。如果你指出你的任务将会比你认为的花费更多时间或者意识到你在开发一个完全不同的功能，常常在脑中思考，什么是任务？目标是什么。
+简短来说，确定你的工程里什么是重要的，学会对那些需要花费大量时间开发但对最终产品不会增加价值的事说不。</description></item><item><title>Week1017_share</title><link>https://ifaa.top/posts/week1017_share/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1017_share/</guid><description>ARTS - Share Java项目的 接口-实现 写法真有必要吗 习惯的日常 由于经常做内部系统，所以只讨论在开发内部系统的范围。
+经典的MVC架构，经典的Spring、MyBatis 组合，开发内部系统已经是成熟的套路了，不需要思考：
+Controller 接收用户请求 Service 接口处理用户逻辑 Service 实现真正处理逻辑，用各种Dao来操作数据库。 MyBatis 生成各种xml，或者根据需要特别写SQL 然而，这个过程使用久了，觉得就应该是这么写的，但是为什么非要这么写呢？
+接口的本意和实际使用 软件工程，有很多思想确实很好，面向接口编程，接口和实现分离，开闭原则，高内聚，低耦合，我们使用接口，就是方便扩展、更换接口实现更方便，这样的话接口不需要变动，对客户端来说是无影响的。我承认在duboo这类框架里这么做是有必要的，但是对于开发内部系统， 我们面对最多的就是业务处理，Controller接收用户请求，然后在对应的Service里处理，如果我们因为业务变动或bug等，我们要么直接写一个方法，或者在原来方法上进行调整，当然如果使用了设计模式，有些确实需要接口，但是对于很多业务处理，不需要搞复杂的模式，既然接口在这里用处并不如期望的那样，那么为何不去掉，直接注入Service实现？
+在Controller里做逻辑处理 更有甚者，在Controller 里做各种逻辑处理，直接使用dao操作数据，理由是写Servcie层没必要。刚开始听到这种说法觉得挺震惊，后来想想确实，只是简单的逻辑，没有事务处理，不需要更多的扩展性，直接在Controller处理又有何不可呢？ 虽然Controller也可以事务处理，虽然没那么优雅，但是却是最简洁高效的。
+如果程序中有更多的复用，还是写Service比较好，另外和事务操作分开管理，更优雅，这里依然可以舍弃Service接口。
+更进一步思考 我们知道，json已经成为了事实上的前后端交互的数据标准，后台做的事是，就是接收json,转为bean, 存数据库，取数据就是把数据封装为bean,在转为json返回前台，既然要这么转，为何后台不直接使用json 来做数据处理，省去了来回转，岂不是更好？
+基于这样的思想，有人开发了一个框架，叫 Latke , 参考这篇文章看介绍 为什么又要造一个叫 Latke 的轮子.
+一句流行的话说，既要埋头搬砖，也要抬头看路，多思考下自己的业务场景和应对手段，也是很有益处的。</description></item><item><title>Week1017_tip</title><link>https://ifaa.top/posts/week1017_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:37 +0000</pubDate><guid>https://ifaa.top/posts/week1017_tip/</guid><description>ARTS - Tip 谈谈MySQL慢查询 什么是慢查询 MySQL的慢查询是MySQL提供的一种记录查询慢的SQL的工具。方便做系统优化。
+开启慢查询日志 默认情况下是关闭的，
+mysql&amp;gt; show variables like &amp;#39;slow_query%&amp;#39;; +---------------------+-------------------------------------+ | Variable_name | Value | +---------------------+-------------------------------------+ | slow_query_log | OFF | | slow_query_log_file | /usr/local/var/mysql/bogon-slow.log | +---------------------+-------------------------------------+ 2 rows in set (0.01 sec) ysql&amp;gt; show variables like &amp;#39;long_query_time&amp;#39;; +-----------------+-----------+ | Variable_name | Value | +-----------------+-----------+ | long_query_time | 10.000000 | +-----------------+-----------+ 1 row in set (0.00 sec) 设置方法
+全局变量设置
+#将 slow_query_log 全局变量设置为“ON”状态 mysql&amp;gt; set global slow_query_log=&amp;#39;ON&amp;#39;; #设置慢查询日志存放的位置 mysql&amp;gt; set global slow_query_log_file=&amp;#39;/usr/local/mysql/data/slow.</description></item><item><title>Week1013_review</title><link>https://ifaa.top/posts/week1013_review/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1013_review/</guid><description>ARTS - Review 让困难事情变得看起来简单的艺术 如果存在我们钦佩的一类人，就是那种能够做成没尝试过的事的人。
+你知道那个人。他甚至没有学习就进行期末考试的人。她是instagram的模特醒来头发就很完美。他们保持完美外形的共同点是通过”吃的正确“。
+这些陈述可能困扰我们。但是同时，我们忍不住钦佩或嫉妒哪些很容就得到的人。
+解释为什么我们会感觉如此是困难的。哲学家尼采注意到我们的虚荣和自恋促进了天才文化。”我如果我们认为天才是神奇的“， 他写道， ”我们就不会有动力去比较我们自己去发现自己缺乏的东西“。
+这就是为什么我们享受观看最高等级的天才秀和运动比赛。这是保卫这些顶级表演者的秘密。我们惊奇于他们是怎么做到别人做不到的事。
+真相是有点不同。但是首先，请看来自于15世纪的故事。
+表演 在中世纪时候侍臣的工作是困难的。他们必须得到统治者的支持和宠信才能够活下去。为了做到这些，他们不得不具备胳膊、田径技能，同时也要有音乐和舞蹈才能。
+很明显他们必须坚持不懈训练才能达到这么多领域的熟练度。但是在一个重视娱乐和吸引人的环境中，重要的是不要在侍臣们的表现中被发现刻意的努力。这增加了他们表现的价值，让他们保持被顾客喜爱。.
+意大利侍臣Baldassare Castiglione 认为这种品质&amp;mdash;表现出一种冷漠的能力&amp;ndash;是卓越侍臣的标志。 这个想法是让每个动作和陈述看起来毫不费力和没有思想。他称呼这种为 潇洒。
+Castiglione创造这个词几世纪后，我们仍然能看到这些，不仅在法庭和正式场合，而且在每个场合，这种欺骗依然有效。
+受过训练的观察者将 sprezzatura 视作投入工作的标志。个人已经达到如此的高度以至于他能隐藏自己的动作让困难的事看起来如此容易。
+但是对没训练过的眼睛来说，表演者才是的天才。他的行为是一种天才行为。他看到的告诉他自己，用尼采的话说，”这里没必要争论“。
+所有人都是看到相同的展示，但是每个人都用一个不同的方式解释。
+风光后的工作 演员和小丑Martin Short 被认为是最好的脱口秀嘉宾之一。他不仅有没理，还会随时讲故事。你认为那是天生的。
+但是以下是他告诉我们的他的准备：
+我对出场一次典型的脱口秀的准备，不夸张的说，在开始之前我会发送18页的讨论，我可能会和制片人通一个半小时电话来沟通想法。然后你在节目期间要平衡所有以至于呈现还算凑合的瞬间，不说太多，尝试和主持找到共同话题。
+结果就是，Short 称为”模范自己放松“。
+我亲眼目睹了这一点。你在法学院遇到最雄辩的最有魅力的人，你自然认为他们是天生会演讲受人拥护。但是我了解的却是一个艰难的故事。
+他们中的每个人都有数年的练习。他们参与辩论会，公共场合演讲，模拟联合国会议。所以，演说对他们来说比其他人看着容易。毕竟，这是他们唯一的方式在这个年轻的年龄就获取到很多赞许。
+然而，当你听到他们的经历后，你几乎不会认为这是靠天赋，还有很多很努力的工作。
+我们只是没有看到。
+隐藏的艺术 我不认为每个顶级的演员都会在做之前隐藏他们的努力。他们不会尝试搞阴谋或者故意让自己看的神秘。
+这些举止的一个原因是我们看到的和别人看到的是不一样的。你和我可能认为某人如果每周六次去健身房并且每一餐避免碳水化合物，那么他是痴迷于腹肌的。但是对那人来说，他接受了这是他应该付出的代价。
+他没有向我们解释这一点，因为这很困难，我们也没理解。
+另个一原因是人们没有意识到自己作为实践做了什么。我的一个同辈在高中期间被训练成为卓越的演说家，但是他们并不知道这些。这不是他们想到的东西。
+我学到的是天赋和技能之间的联系很弱。很难，&amp;ndash; 如果不是不可能的话，区分两者。
+所以下次你看到有人表现如此优雅让你觉得这是天赋，考虑他可能投入大量工作来做好。
+如果你也投入同样数量级的工作，你一样会做好。
+呼吁行动 如果你活的富有成效有目的性，抓起 生产力宣言 ，这里我提取了变得卓有成效的原则。完全免费。
+点击这里立即获取</description></item><item><title>Week1013_share</title><link>https://ifaa.top/posts/week1013_share/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1013_share/</guid><description>ARTS - Share 前端发展的逻辑 java servlet 输出html, jsp 抽离生成html, html 的跳转 和获取数据，json, java后台的router功能， 和获取数据功能， js 的自行route和获取数据，前后端分离
+技术发展方向 一项技术出现首先是为了解决某类问题，然后向着更好的解决这类问题方向发展，然后优化到极致，再然后就是这类问题被颠覆，这项技术也就走到了尽头。
+前端的出现 pc机的时代就是操作系统的时代，每台计算机都要安装操作系统，之后迎来了互联网时代，用的最多的就是浏览器，浏览器解析HTML语言来展示内容，所以浏览器向服务器发送请求，服务器会返回拼装好的带内容的HTML，然后用户就看到了网页内容。那么这个过程中，服务器需要做的是提取数据，封装成HTML，Java在这个过程中提供的技术是Servlet
+Servlet的不便 Servlet是向前端动态展示的一个处理类。用户在servlet里取得服务器数据，然后拼装成HTML交给Servlet，然后返回给前端。但是在拼装HTML的过程过于不方便，于是就提出了MVC的思想，使用了jsp作为模板。
+MVC分层 MVC就是展示、控制、数据模型分离的思想。这样做的好处就是各司其职，互不影响的专注于自己的事情，提高了开发效率。jsp用来生成视图， Controller 用来获取数据、处理转发，Java Bean来封装数据模型。这样基本成型了互联网的架构模式。再往后就是各种优化了，随着使用ajax请求处理数据和json数据格式的流行，于是就MVC继续向前。
+前后端分离的到来 我们分析服务端，发现服务端做了两件事，一是路由功能，二是提供数据和各种转换，路由的功能是是浏览器方执行的，放在浏览器端更合适，服务端只要提供好数据就可以了，这时候就出现前后端分离了，后端不再控制页面的路由，和展示，由js前端来处理，就好像是浏览器端的单页应用一样，被称为SPA.
+Vue和React 这里面的代表是Vue和React还有Angular。 他们将js和浏览器的结合发挥到极致，后端只需要提供数据，前端框架来控制数据交互、展示和逻辑控制，前端走到这个地步，基本算是优化到了极限。因为对后来来说删无可删，只留下了提供数据的功能。那么前端的方向将是解决除了数据等必须由服务器提供之外的所有问题。
+未来已来 前端的方向基本确定了，那么未来服务端的呢？请看下回分析。</description></item><item><title>Week1014_algorithm</title><link>https://ifaa.top/posts/week1014_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1014_algorithm/</guid><description>ARTS - Algorithm 70. 爬楼梯 题目 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+注意：给定 n 是一个正整数。
+示例 1： 输入： 2 输出： 2 解释： 有两种方法可以爬到楼顶。 1 阶 + 1 阶 2 阶 ####示例 2：
+#####输入： 3 #####输出： 3 #####解释： 有三种方法可以爬到楼顶。
+1 阶 + 1 阶 + 1 阶 1 阶 + 2 阶 2 阶 + 1 阶 分析 说实话这题确实没想到是斐波那契数列，感觉没有头绪，看了答案才明白这个，希望在下次碰到同类型的题多列举几次，去发现规律。
+比如
+n = 1 1. 1 + 1 n = 2 1.</description></item><item><title>Week1014_review</title><link>https://ifaa.top/posts/week1014_review/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1014_review/</guid><description>ARTS - Review 你应该避免使用的3个JavaScript性能错误 作者：Yotam Kadishay 全栈软件工程师
+来自：https://hackernoon.com/3-javascript-performance-mistakes-you-should-stop-doing-ebf84b9de951
+如果我告诉你你知道的一切都是谎言，如果你了解到这些年发布的一些我们热爱的ECMAScript的关键特性确实存在危险的性能陷阱，糖衣包裹在华丽的一行回调代码之上，那么事情会变得怎么样？
+这个故事开始于一些年前，回到ES5的天真年代&amp;hellip;
+我仍然生动的记得这一天，ES5发布了，伟大的新的数组方法被介绍给我们亲爱的JavaScript. 他们是forEach, reduce, map, filter &amp;ndash; 他们让我们觉得语言在成长，有更多功能，写代码变得更有趣平滑，更能方便的阅读和理解。
+同时，一个新的环境生长了&amp;mdash;Node.js， 它重新定义了全栈开发，给我们赋能从前端平滑过渡到后端。
+如今，Node.js 在V8上使用最新的ECMAScript， 正试图被视作服务端开发语言大联盟的一部分，因此，它需要证明在性能上是有价值的。是的，有太多的参数需要考虑，是的，不存在能在所有方便都表现优异的银弹语言。但是，是否正在使用的开箱即用的功能编写JavaScript，如上面提到的数组函数对你的应用性能是有帮助的，还是有害的？
+此外，客户端javascript声称去做一个不仅仅是视图的合理的解决方案，随着终端电脑用户增长的更强，网络更快，还要在我们的应用程序需要更快性能时候可以作为一个非常大的复合的一个依靠。
+为了测试这个问题，我尝试比较一些脚本，深入了解我得到的结果。我在Chrome浏览器 v10.11.0 的Node.js执行以下测试,都是在macOS系统。
+1. 数组循环 想到的第一个脚本是计算一个10K个项目的数组的和，这是一个有效的现实生活中的解决方案，我曾在尝试获取数据库中长表项目时候偶然发现，并使用总和来增强它，而不需要对数据库进行额外的查询。
+我比较了对随机 10K个项目进行for , for-of, while, forEach, 和 reduce 求和. 运行测试 10000次，返回了以下结果：
+For Loop, average loop time: ~10 microseconds For-Of, average loop time: ~110 microseconds ForEach, average loop time: ~77 microseconds While, average loop time: ~11 microseconds Reduce, average loop time: ~113 microseconds 当谷歌搜索怎么计算一个数组时候，reduce 是最先被提供的解决方案，但是却是最慢的。我的forEach没有特别好。甚至最新的for-of (ES6) 性能表现差劲。这说明，老的for 循环（和while） 提供了最好的性能 - 10倍不止。</description></item><item><title>Week1014_share</title><link>https://ifaa.top/posts/week1014_share/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1014_share/</guid><description>ARTS - Share 后端发展的逻辑 之前我们说了前端发展的逻辑, 今天我们探讨下后端发展的逻辑。
+根据前端的发展路径，后端Servlet引擎-&amp;gt;后端Jsp等模板引擎&amp;ndash;&amp;gt; 后端MVC &amp;ndash;&amp;gt; 前后端分离 &amp;ndash;&amp;gt; React Vue
+根据这个路径很容易看出，其实关于页面展示的部分慢慢脱离了服务端，最终形成前端框架和浏览器绑定，只从后端拿数据的局面， 看似服务端退化为只为前端提供数据的一部分了。
+我们从前端发展历程找出了一个规律，技术会一步步往最适合它的领域发展，直到极致。前端和浏览器深度结合，那么后端会围绕着更好的提供数据发展。
+如何更好的提高数据？我觉得是向更多功能、更快性能上发展。
+后端天然存储大量的数据，各种结构的数据，需要做到的是当前端需要，又快又好的取出数据。所以各类大量计算的、定时任务类非实时性，都放在后台异步完成。最近学到一个“边缘计算”的概念，就是数据越来越多越来越大，后端会越来越重，实时性可能不是十分好，就可能出现在数据源头的一侧，就近提供最近的服务。 这样能提高系统的性能和缩短反应时间。
+就像左耳听风描述的一样，未来可能是Java这种做业务处理，Go这种语言做各种中间层交互、调度类应用。</description></item><item><title>Week1014_tip</title><link>https://ifaa.top/posts/week1014_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1014_tip/</guid><description>ARTS - Tip Java和JavaScript 中的split 我们都知道split是字符串分割的函数，平时使用频率并不低，本人在使用时候碰到一个情况：
+事例 现在有一个字符串 “31+” ，需要获得前面的数字&amp;quot;31&amp;quot;，本人就想到了使用split(str)[0] 的方法，于是在javascript的写法就是：
+let s = &amp;#34;31+&amp;#34;; let result = s.split(&amp;#39;+&amp;#39;)[0]; console.log(result); // output 31 这样写是没问题的， 然后在Java中这么写，情况如下：
+String s = &amp;#34;31+&amp;#34;; String result = s.split(&amp;#34;+&amp;#34;)[0]; System.out.println(result); 原本以为会输出 “31”， 但是结果是编译错误：
+java.util.regex.PatternSyntaxException: Dangling meta character &amp;#39;+&amp;#39; near index 0 + ^ 分析 String 的split 方法接受的是一个正则表达式，&amp;quot;+&amp;quot; 正好是正则的一个关键词，所以如果使用需要转义， 改成 “\+” 就没问题了。
+但是，既然会有编译提示，本人为什么还是碰到了报错呢？因为我吧 “+” 写在了一个常量里，
+private static String s = &amp;#34;+&amp;#34;; @org.junit.Test public void test5() { String s = &amp;#34;31+&amp;#34;; System.</description></item><item><title>Week1015_algorithm</title><link>https://ifaa.top/posts/week1015_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1015_algorithm/</guid><description>ARTS - Algorithm 补10.15号 746. 使用最小花费爬楼梯 数组的每个索引做为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值 costi。
+每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。
+您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。
+示例 1:
+输入: cost = [10, 15, 20] 输出: 15 解释: 最低花费是从cost[1]开始，然后走两步即可到阶梯顶，一共花费15。 示例 2:
+输入: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1] 输出: 6 解释: 最低花费方式是从cost[0]开始，逐个经过那些1，跳过cost[3]，一共花费6
+分析 这道题和70. 爬楼梯 更进一步，是要选出最小花费的那条走法。
+我的思考是，首先选择走一步，还是走两步，每次选择时候就找出最小花费的那个，也是就有了如下代码：
+public static int minCostClimbingStairs(int[] cost) { int len = cost.length; if (len == 2) { return cost[0] &amp;lt;= cost[1] ?</description></item><item><title>Week1015_review</title><link>https://ifaa.top/posts/week1015_review/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1015_review/</guid><description>ARTS - Review mysql性能优化 数据库性能优化最重要的事是选择正确的方式。你应该决定你的应用需要关系型或非关系型数据库。甚至里面的一个类型，你都会有好几个选择。在关系型数据库里，你可以选择Oracle， MySQL, SQL Server,和PostgreSQL. 另一方面，非关系型数据库例如MongoDB, Cassandra和CouchDB. 你可能希望我建议用读写性能快的非关系型数据库。然而，通过一些改进和调整，你可以把关系型数据推到超过它已知的限制。所以，在本文中，我将会介绍给你一些技巧来让你的MySQL数据库更快。如果你想知道为什么特别是MySQL, 那么答案是简单的，因为它免费，开源在PHP社区很流行Oracle 并没有广泛使用因为它很昂贵。其他的选择并没有像MySQL这么受欢迎。
+MySQL服务配置 首先你应该知道根据你的操作系统配置文件是在哪里。在Linux系统，它在 “/etc/mysql/my.cnf”. 是时候拿上你的引擎对比InnoDB和MyISAM了。为了让选择更简单，你应该知道InnoDB成为默认引擎始于MySQL5.5 因为它支持“行级锁， 外键和事务” ，MyISAM不支持这里提到的任何在现实应用中很少使用的特性。
+选择正确的引擎后，是时候设置一些在my.cnf 文件里的配置变量。
+max_connection 变量: max_connection 变量代表你的应用允许的连接数量。默认是151个连接，然而你可以轻松增加这个数量如果你获得这样一个错误：“MySQL ERROR , Too many connections&amp;hellip;”
+max_connections = 170
+innodb_buffer_pool_size 变量： 为了加速，MySQL 将会缓存数据在你的服务器内存，这个变量告诉MySQL能用多少GB。这个变量在你的数据库里存储大的blobs时候非常有用。你可以设置为你服务器80%，90%内存大小。所以你的服务器内存是16GB， 你可以设置它为14GB.
+innodb_buffer_pool_size = 14GB
+innodb_io_capacity 变量： 这个变量告诉MySQL它可以用多少操作系统IO，它受制于你的硬盘。例如，一个单个7200 RPM 驱动限制200 I/O 一个企业级SSD硬盘是 50000 I/O. 你可以通过你操作系统的命令行轻松发现IO值和设置变量为可用IO的90% ， 这样mysql将会使用太多的IO操作。
+innodb_io_capccity=21000
+query_cache_limit 和 query_cache_size 变量 MySQL的缓存也在内存里，然而我们不能把它当做一个缓存系统，每次你的应用写入一个数据库表，MySQL将会重置查询缓存为全部表。所以，如果你的应用有一个高比例负载，MySQL 缓存将会完全无用，在那种情况下，最好把这两个参数设置为0来节省管理MySQL缓存的开销，另外你可以用一些像Redis这样的管理缓存。
+query_cache_limit = 0 query_cache_size = 0 慢查询日志 慢查询日志将会展示哪个个查询花费比设置更长的时间，不需要猜测哪个查询慢。首先，你需要启用慢查询日志在你的配置文件。在Linux上，打开/etc/mysql/my.cnf 或者同样的在你系统里加入： </description></item><item><title>Week1015_tip</title><link>https://ifaa.top/posts/week1015_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:36 +0000</pubDate><guid>https://ifaa.top/posts/week1015_tip/</guid><description>ARTS - Tip MySQL 大分页问题 问题 我们知道在进行MySQL分页时候最常用 limit offset, size, 但是当数据量很大，达到千万级别，直接分页会很慢，所以需要进行优化。
+验证 我们进行测试：
+mysql&amp;gt; select count(*) from table ; +----------+ | count(*) | +----------+ | 16079918 | +----------+ 1 row in set (2.38 sec) 表里有一千六百万挑数据， 我们分别进行 千、十万、百万、千万 级别进行 测试
+mysql&amp;gt; select id, user_name, mobile from table limit 1000, 10; --- 10 rows in set (0.00 sec) mysql&amp;gt; select id, user_name, mobile from table limit 100000, 10; --- 10 rows in set (0.</description></item><item><title>Week1011_review</title><link>https://ifaa.top/posts/week1011_review/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1011_review/</guid><description>ARTS - Review 用python和beautifulSoup来抓取网站 因特网上的信息多到任何一个人穷尽一生都无法全部吸收的地步。你需要的不是操作这些信息，而是一个额外的方法来存储，组织、分析它。
+你需要网页爬虫。
+网页爬虫自动提取数据并且用一个你能轻松理解的格式展现。在本教程中，我们将聚焦它在金融市场的应用，但是网页爬虫可以用在很多场景下。
+如果你是一个狂热的投资者，每天都接触很多价格会非常痛苦，尤其当你需要的信息需要通过好几个网页来查找。我们通过建立一个网页爬虫来自动从网上获取股票指数来让数据抽取变得简单。
+起步 我们准备用Python作为我们的爬虫语言，附带使用一些简单强大的库， BeautifulSoup.
+对于Mac 用户，Python已经在OS X 系统预装过了。打开终端 输入 python --version.你会看到你的python版本是 2.7.x 对于Windows用户，请安装python通过 Python 下一步就是用 pip 获取 BeautifulSoup 库，pip是一个Python的包管理工具.
+在终端输入：
+easy_install pip pip install BeautifulSoup4 注意 如果在命令行执行失败，尝试加 sudo在每行前面
+基础 在我们调到代码之前，先理解下HTML的基础和一些爬虫规则。
+HTML 标签 如果你早已理解HTML标签，感到无压力请跳过这段。
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt; First Scraping &amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt; Hello World &amp;lt;/p&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/html&amp;gt; 这是基础的HTML网页句式。每个&amp;lt;tag&amp;gt;提供一个网页里的块。
+&amp;lt;!DOCTYPE html&amp;gt;: HTML文档必须以类型声明开始。 HTML文档包含在&amp;lt;html&amp;gt;和&amp;lt;/html&amp;gt;之间。 HTML的 meta 和 script 声明在&amp;lt;head&amp;gt;和&amp;lt;/head&amp;gt;之间 HTML文档显示的内容在&amp;lt;body&amp;gt;和 &amp;lt;/body&amp;gt;之间。 标题用 &amp;lt;h1&amp;gt;到&amp;lt;h6&amp;gt;标签定义。 段落用&amp;lt;p&amp;gt;标签定义。 其他有用的标签包括 &amp;lt;a&amp;gt; 用来做超链接， &amp;lt;table&amp;gt; 列表，&amp;lt;tr&amp;gt;列表行 &amp;lt;td&amp;gt;列表列。</description></item><item><title>Week1011_share</title><link>https://ifaa.top/posts/week1011_share/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1011_share/</guid><description>ARTS - Share 关于 ThreadPoolExecutor 方式创建线程 我们知道在使用多线程时候，使用线程池技术能够减少系统在创建、销毁线程时的开销，提高性能. 一般用Executors的四个方法：
+newCachedThreadPool newFixedThreadPool newScheduledThreadPool newSingleThreadExecutor Executors 方式 在创建固定数量的线程池时候是：
+1. newFixedThreadPool() ExecutorService exec = Executors.newFixedThreadPool() 我们查看源码就是：
+public static ExecutorService newFixedThreadPool(int nThreads) { return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue&amp;lt;Runnable&amp;gt;()); } 返回创建了ThreadPoolExecutor
+public ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue&amp;lt;Runnable&amp;gt; workQueue) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(), defaultHandler); } /** * Creates a new {@code ThreadPoolExecutor} with the given initial * parameters.</description></item><item><title>Week1012_algorithm</title><link>https://ifaa.top/posts/week1012_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1012_algorithm/</guid><description>ARTS - Algorithm 67. 二进制求和 题目 给定两个二进制字符串，返回他们的和（用二进制表示）。
+输入为非空字符串且只包含数字 1 和 0。
+示例 1:
+输入: a = &amp;ldquo;11&amp;rdquo;, b = &amp;ldquo;1&amp;rdquo; 输出: &amp;ldquo;100&amp;rdquo; 示例 2:
+输入: a = &amp;ldquo;1010&amp;rdquo;, b = &amp;ldquo;1011&amp;rdquo; 输出: &amp;ldquo;10101&amp;rdquo;
+分析 很容易想到，倒序遍历，取得两个数字相加，取得和后放入栈结构，最后取出，注意进位和最最高位进位问题
+代码如下：
+public static String addBinary(String a, String b) { if (a == null || a.length() == 0) { return b; } if (b == null || b.length() == 0) { return a; } int i = a.</description></item><item><title>Week1012_review</title><link>https://ifaa.top/posts/week1012_review/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1012_review/</guid><description>ARTS - Review 为什么当你觉得你像开发人员一样苦苦挣扎时候觉得学到的最多 我的开发技能突飞猛进的时候就是我在挣扎着学一些新东西并没有放弃的时候。这对我来说并不总是容易。我遇到了一些帮助我突破个人障碍的一些想法。
+可能也适用你。
+当你面对难的软件工程问题时候太容易陷入沮丧了。我时常会产生一种想放弃的感觉。在这种情境下我察觉到我的理性意识开始提出为什么我应该花费时间在熟悉的事情上或者抱怨问题超出我的能力的原因。
+我知道我并不孤单。
+我在Reddit看到人们讨论他们在他们的课程上遇到的一些挑战我也曾和很多专业工程师进行探讨他们遇到的让他们对自己掌握复杂概念的能力产生怀疑的情景，这些情景他们同事看起来“轻易掌握”。
+虽然并不容易，能够持续面对这些挑战是非常有价值的。
+经过一些年我开发了一些精神上的方法帮我度过那些艰难时刻。
+这些就是一些帮到我的要点。
+1. 一个人通过辛勤工作和努力能成为一个更好的开发者 天赋或辛勤工作成就一个伟大开发者？
+你是怎么考虑的？一些人生来就是伟大开发者或者人们只要通过努力就一定能成为伟大开发者？
+我相信得到这些问题的确切答案是不可能的。所以我开始选择相信，一个人通过自己努力成为一个好的开发者。
+这是一个更有用的观念。它意味着如果我与学某些东西做斗争，如果我努力就会掌握。
+它也意味着我不得不接受事情并不会经常容易或有趣。 努力工作是必须的。
+2. 当你第一次尝试做某些事情，可能会困难，你不该期望瞬间转好 作为程序员，我有时候感到沮丧因为我跑进了我不懂的一些事但是我感觉我又应该理解它。
+当我加入一家用git并有很多git专家的公司的时候。当我最终面对现实我的sql技能不好的时候。
+在每个这些实例中，我都感到我应该掌握这些技能。毕竟，我不是一个拥有多年经验的高级全栈工程师吗？
+现实情况是，尽管我是一个拥有很多经验的工程师，没有很多经验能改变我的现状 &amp;mdash; 我也是第一次了解到这些技能的细节， 并且最初我对它们一个都不在行。
+尽管有时新事物简单，有时却并不简单。我发现了一个有用的观点当我第一次做某事时我不会期待我擅长它。
+它就像这样&amp;hellip;
+“我之前从没用过Java 编程， &amp;ndash; 我不期望我擅长它。这是我上这门课的原因。”
+“我之前从没提交代码到git仓库里，我不期望我知道怎么做。这是我向同事求助的原因。”
+这类想法拆除了我脑海中我不够好或我将走向失败的声音。我非常可能失败我至今可能做的都不够好。我不期望变好&amp;ndash; 这是我尝试的原因&amp;ndash;变得更好。
+3. 在代码上工作并不总是有趣，尽管一项工作不有趣，但它让然被完成 有时我陷入软件开发工作并不有趣。
+有时我Spark集群中一小片数据处理代码造成节点随机失败，或一些本应该工作良好的库并没工作不管我这怎么做。
+这些瞬间是不有趣的，有时我真诚希望做些其他事而不是花费时间尝试找出问题。
+问题是，我意识到编码并不是总是期望应该有趣有时我不得不卷起袖子干工作。
+尽管这些情况是困难的 ，我发现它们通常有一线希望 &amp;ndash; 事实证明我们在困难中学到的是最多的。
+4. 当你面对超级挑战你学到最多&amp;ndash;有时这样的失败是正常的 当我尝试做对我来说很难的事，我发现那是我真的学到东西的瞬间。
+对来来说有数十个例子都能举出。
+我第一次拿起一本编程书 &amp;mdash; 我一直在努力知道我突然学会了编程。
+我尝试架构大型应用时候。我一直努力直到我学会架构框架和设计模式&amp;mdash;在那时我们抛出几个月时间在之前的代码上，开始用几个短周一周期用新的设计模式重构我们的 APP。
+在我真正啃下来真正掌握SQL的时候。在那之后我拥有了在我们计算机数据科学组工作的技能。
+我尝试用web-app技术搭建我们公司的数据处理基础设施时候。我持续努力知道我学会数据湖， ETL 传输，分布式计算解决方案。
+清单持续中。
+每个这些经历都有痛苦的时候。我走入死胡同丢掉很多代码。我尝试了很多，失败了很多。
+但是那些压力教会我新的技能让我成为更好的开发者。如果没有那些压力我就不会学会很多。
+这些天我选择相信当我感到压力，挑战和一些紧张，这是一件好事。我正在努力，所以我正在学习。
+和&amp;hellip;
+我学到欢迎这些紧张的感觉。这并不舒服但是我认为学习它是值得的。
+思想是一个强大的工具 你可以选择你相信的你的信念能带给你磨砺通过挑战你必将面对自己成为一个更好的程序员的道路。
+我希望这些思想框架(有些是你自己的)能帮你通过通过你的挑战。</description></item><item><title>Week1012_share</title><link>https://ifaa.top/posts/week1012_share/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1012_share/</guid><description>ARTS - Share 由传统销货进货流程想到的 现状 一家代理商公司，为经销商提供各种商品货物，这种货物类目繁多，价格还时长变动，经销商来购货，大量的时间花在了解货物品相和价格上，同时代理商公司需要提供对接销售人员介绍，然后代理商对购货单进行结账开始发货。
+设想 如果存在这样一个小程序，代理商把商品类目、价格、库存维护在系统里，购货单位可以自行挑选商品并下单结算，然后经销商直接发货，省去了中间对接的过程，对于争议部分可以再另行沟通，这样的话就节省了中间对接的时间和结算时间，还提高了准确性，整个过程变得简洁迅速还正确率高，历史订单清楚记录交易过程，那么对于整体来说是提高了效率，所以盈利应该是提高的。
+分析 这就是一个商城系统，这也就是技术带来的效率提升和优势所在。
+这基本解决了购货方和订货方的很大的不方便之处。对于购货方来说不需要等到销售方业务员来介绍产品和价格，自己浏览一目了然，对于销货方来说自己减少了营业员的投入，产品展示清晰结算方便，整个过程运行效率大大提升，只需要提供货物沟通等问题，节省了大量资源。
+优化 然后可以继续优化这个系统，对于销货方第一可以优化库存，根据后台管理可以清晰的知道库存情况，然后以此来备货销货，还可以根据客户的历史进货情况，可以掌握客户的销售情况和卡准时间精准供应，这就产生了进销存系统和BI系统。对于购货方来说，可以查看自己的历史购货情况，自己这类产品的销售统计，也可以有针对的调整自己进货策略。
+思考 这整个过程就是用互联网来改造传统经营的例子。企业上马互联网，可以提高企业效率、降低运营成本，然后根据精准分析统计，调正最优策略。这样的一个整体结构互联网扮演的是一个改造者，能根据互联网的优势：传播快、准确度高、互动互联性高， 来提高自己的生产力，在经济活动中建立更好的优势，总体造福人们。</description></item><item><title>Week1012_tip</title><link>https://ifaa.top/posts/week1012_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1012_tip/</guid><description>ARTS - Tip 关于linux tomcat启动war工程的一个log4j报错 背景 在进行linux centos6.5部署war工程时候，报了一个错导致启动不起来，但是在开发时候在idea里完全没问题。
+问题现象 启动时候catalina.out报错，如下：
+09-Oct-2018 15:04:39.725 INFO [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access. java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.</description></item><item><title>Week1013_algorithm</title><link>https://ifaa.top/posts/week1013_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1013_algorithm/</guid><description>ARTS - Algorithm 69. x 的平方根 题目 实现 int sqrt(int x) 函数。
+计算并返回 x 的平方根，其中 x 是非负整数。
+由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+示例 1:
+输入: 4 输出: 2 示例 2:
+输入: 8 输出: 2 说明: 8 的平方根是 2.82842&amp;hellip;, 由于返回类型是整数，小数部分将被舍去。
+分析 这个是求开方的结果，很容易想到按顺序i找，如果存在 i 就去找 i*i &amp;lt;= x &amp;amp;&amp;amp; （i+1）*(i+1)&amp;gt;x的情况，这个i就是要的结果，于是代码就如下了；
+public int mySqrt(int x) { if (x &amp;lt;= 0) { return 0; } for (int i = 0; i &amp;lt; x; i++) { boolean flag = i*i &amp;lt;= x &amp;amp;&amp;amp; (i + 1) * (i + 1) &amp;gt; x; if (flag) { return i; } } return 0; } 然后提交后就失败了，因为存在 int 越界的情况，如果 i*i 大于 int最大值，那么就得不到正确的答案了，于是就把 int转为long型来处理：</description></item><item><title>Week1013_tip</title><link>https://ifaa.top/posts/week1013_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:35 +0000</pubDate><guid>https://ifaa.top/posts/week1013_tip/</guid><description>ARTS - Tip MyBatis 的 if test=&amp;ldquo;param == &amp;lsquo;1&amp;rsquo;&amp;rdquo; 的问题 在项目开发中，发现了mybatis的一个问题，如下：
+&amp;lt;if test=&amp;#34;first == 1&amp;#34;&amp;gt; limit 1 &amp;lt;/if&amp;gt; &amp;lt;if test=&amp;#34;second == &amp;#39;2&amp;#39;&amp;#34;&amp;gt; limit 2 &amp;lt;/if&amp;gt; 如果第一个没问题，第二个 ==&amp;lsquo;2&amp;rsquo; 就不会执行，不管参数是integer,int,还是String, 第二个都不会执行，程序也不会报错，查了资料，mybatis 使用了ognl表达式，&amp;lsquo;2&amp;rsquo;会被解析成char， 在Java中char 和String 相比较就会不等。
+改进方法： 1. 增加toString &amp;lt;if test=&amp;#34;second == &amp;#39;2&amp;#39;.toString()&amp;#34;&amp;gt; limit 2 &amp;lt;/if&amp;gt; 2. 双引号 &amp;lt;if test=&amp;#39;second == &amp;#34;2&amp;#34;&amp;#39;&amp;gt; limit 2 &amp;lt;/if&amp;gt;</description></item><item><title>Week1009_review</title><link>https://ifaa.top/posts/week1009_review/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1009_review/</guid><description>ARTS - Review 为什么Java小伙对Node.js和JavaScript如此兴奋？（下）
+这是个循环。但不是用循环的写法，它不使用普通的循环结构。此外，错误和结果不会落入普通写法的循环里，但是会落入这种回调函数中。在ES2015/2016 特性加入Node.js之前，这是我们能做的极致了。
+在Node.js 10.x 中等价于：
+const fs = require(&amp;#39;fs&amp;#39;).promises; async function cat(filenmz) { for (var filenm of filenmz) { let data = await fs.readFile(filenm, &amp;#39;utf8&amp;#39;)l await new Promise((resolve, reject) =&amp;gt; { process.stdout.write(data, &amp;#39;utf8&amp;#39;, (err) =&amp;gt; { if (err) reject(err); else resolve(); }); }); } } cat(process.argv.slice(2)).catch(err =&amp;gt; { console.error(err.stack); }); 这个重写之前的例子，使用了async/await 方法。和异步结构相同，但是是用普通循环结构写的。错误和结果用自然方式报告。很容易读，容易编写，容易了解程序员的意图。
+唯一的缺点是 process.stdout.write 不提供 承诺接口 所以不能在没有包装承诺时候不能清晰的使用异步方法。
+回调大坑问题并没有通过复杂书写解决。相反，语言范式的改变既解决了问题，也解决了临时方案造成的过度冗长。用 async 方法我们代码变得更优美。
+虽然开始是针对Node.js 的一个点，但是优秀的解决方案将他转回为Node.js和JavaScript的一个点。
+通过明确定义的类型和接口来确定清晰性 我在作为Java布道者时候的一个观点是严格类型检查能书写大的应用程序。那时的标准是开发整体系统（没有微服务，没有Docker等）。因为Java 有严格类型检查，Java编译器通过编译过程帮你避免很多bug。相比下，JavaScript 松散类型。结论很明显，程序员不知道自己得到什么样的对象，所以怎么知道该怎么做。</description></item><item><title>Week1009_share</title><link>https://ifaa.top/posts/week1009_share/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1009_share/</guid><description>ARTS - Share 关于ES6箭头函数的this 源于忽然兴起尝试微信小程序开发，在一个文本预上加了一个点击事件，尝试获取微信收货地址， 首先是在模板文件文本域加点击事件：
+&amp;lt;view class=&amp;#34;usermotto&amp;#34; bindtap=&amp;#39;clickMe&amp;#39;&amp;gt; &amp;lt;text class=&amp;#34;user-motto&amp;#34;&amp;gt;{{motto}}&amp;lt;/text&amp;gt; &amp;lt;/view&amp;gt; 然后在index.js里实现 clickMe 方法：
+clickMe: function () { wx.chooseAddress({ success: function(res) { this.setData({ motto: res.detailInfo }) } }) }, 发现控制台报错：
+thirdScriptError Cannot read property &amp;#39;setData&amp;#39; of null;at pages/index/index clickMe function;at api openAddress success callback function TypeError: Cannot read property &amp;#39;setData&amp;#39; of null at success (http://127.0.0.1:28587/appservice/pages/index/index.js:17:13) 、 根据报错说明，```&amp;lsquo;setData&amp;rsquo; of null````， 调用 setData方法是null? this 是null？ 为了验证，就打出this
+clickMe: function () { console.log(1, this) wx.</description></item><item><title>Week1009_tip</title><link>https://ifaa.top/posts/week1009_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1009_tip/</guid><description>ARTS - Tip 关于MyBatis 报错的一个反思 今天开发一个功能，和别的系统功能重复，就直接复制了别的系统的Mapper，写好业务逻辑后测试，发现系统报异常：
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named &amp;#39;id&amp;#39; in &amp;#39;class java.lang.String&amp;#39; 意思是，String类里没有 名字为 id 的属性的get 方法。我有点奇怪，我调用Mapper的是一个 insert 方法，传的是业务对象，为什么会报String的id问题？有点奇怪，于是就进行了谷歌、百度大法，几乎所有的帖子都是如下：
+传入的参数是String， parameterType=&amp;ldquo;String&amp;rdquo;，解决方法是：
+解决方法一:把#{xxx}修改为 #{_parameter} 即可
+解决方法二:可以在方法中提前定义:@Param(value=&amp;ldquo;xxx&amp;rdquo;) String xxx
+虽然报错和我的一样，但是明显不是我这样的问题情形。于是又检查了一遍代码，发现了问题所在：
+INSERT INTO sys_log( id, type, title, create_by, create_date ) VALUES ( #{id}, #{type}, #{title}, #{createBy.id}, #{createDate} ) 居然是 #{createBy.id} 。 检查了下原来代码并没有CreateBy 对象且有属性是id, 所以觉得是原系统本来就有误。 处理就很简单了，删了id即可，代码正常运行。
+教训 参考别的系统可以，最好不要直接复制。 就算复制也需要批判的使用，毕竟不是久经考验的公共库 不要偷懒，多自己实现</description></item><item><title>Week1010_algorithm</title><link>https://ifaa.top/posts/week1010_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1010_algorithm/</guid><description>ARTS - Algorithm 35. 搜索插入位置
+给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+你可以假设数组中无重复元素。
+示例 1:
+输入: [1,3,5,6], 5 输出: 2 示例 2:
+输入: [1,3,5,6], 2 输出: 1
+分析 这个题很容易想到遍历数组，找出最后一个比target小的元素，返回这个位置。代码如下：
+class Solution { public int searchInsert(int[] nums, int target) { if (nums == null) return 0; for (int i = 0; i &amp;lt; nums.length; i++) { if (nums[i] &amp;gt;= target) { return i; } } return nums.length; } } 改进 参考了答案后，知道查找这个位置时间复杂度是O(n), 我们可以优化查找过程，使用二分查找实现：
+public static int searchInsert2(int[] nums, int target) { if (nums == null || nums.</description></item><item><title>Week1010_review</title><link>https://ifaa.top/posts/week1010_review/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1010_review/</guid><description>ARTS - Review How to Make Money Online: 38 Remote Jobs in 2018 通过你笔记本来工作每年都变得更容易。
+如果你还没想过通过线上赚钱，你或许是： A. 90岁了，你的孙辈刚刚给你第一台电脑， 或者 B. 坦诚说，我不知道你在做啥。
+2017年，每在线30秒仅仅电子商务就产生1.2百万美元。
+但是如果你在读这篇文章我不需要告诉你所有的统计信息。你早就知道大学不会教你，你只想要了解怎么通过线上赚钱。
+我们都看到无数的情节、噱头、文章和建议，关于你能做什么赚钱 &amp;mdash; 但是我不会把所有这些工作都列在这。没有调查访谈，或者视频观看&amp;ndash;仅仅是合法的且你能通过电脑完成的一些工作。
+这有38个工作你可以通过电脑在线完成 38. 网络市场（MLM） 我必须这么做吗？是的，网上有很多用多级营销计划(MLM)的方法赚钱。事情是这样的， 视图卖给朋友和家人，然后他们卖给他们的朋友和家人，这似乎是个骗人的计划。然而，由于一些事业可以变得非常大，因此有机会挣到一些现金的。
+37. 医疗记账 医疗记账是沟通与解释第三方支付团体与对病人提供服务的团体的存在。虽然不是最性感的自由职业 &amp;ndash; 处理账单支付。不要求拥有医疗记账的专业教育，但是必须接受特定医学编码的培训。
+36. 客户经理 最近世界上每个有实力的公司都需要客户经理作为用户和公司的沟通媒介。虽然这个职位可能需要你重返朝九晚五，但至少如果你为一家公司远程工作你有喜欢选择任何你想要的地方来朝九晚五。
+35. 创作电子书 虽然电子书可能不会创造更多的收入 &amp;ndash; 和实体书的门槛是相当的低。 为了在网上用电子书赚钱，你只需要在某一个特定领域用不专业知识并且高输出到某个网站就行了。如果某个电子书成为超级畅销，你可以在这个话题上加一些其他产品和服务。
+34. 税务员/会计师 自然的，当你想到会计师你就会想到坐在格子里，办公桌旁，口袋计算器，朝九晚五，等等。当今会计的形象已经转变了。如果你又固定关系的客户，你可以用你的会计技能远程工作。
+33. 买卖域名 1990年代买卖域名，是网上挣钱排行前十的工作。但是今天变得困难了。很多大的关键域名已经被买进了而且不少数量的结尾为（.com, .co, .us &amp;hellip;）的域名补充进来，有了更多选择。
+32. 虚拟助手 从 Tim Ferris 的四小时工作周 开始虚拟助手职位一直在增长。内容是，雇佣一个人一个月去处理你的所有的日常普通任务，调度，研究，邮件，通讯，数据录入 等。如果你遇到一个好的客户你可以在线赚到不错的钱。但是，做好准备应付你的老板的突发安排。
+31. 翻译 翻译可能在工作场所比你意识到的更重要。法律文件，药物文档，在线班级等。如果你能高水平的说超过一门语言， 那么当个翻译是个简单的方法在网上赚钱。
+30. 品牌大使 通常品牌大使在一个城市或大学，但是有些品牌开始允许品牌大使聚焦在网络上。不管怎样，如果你善于使用社交媒体并真正与某个品牌建立联系，这对你来说是个不错的选择。
+29. 博客 臭名昭著的博客职位。当RSS订阅兴起 自然写博客就进入了网上挣钱列表。然而，很多全职博主仍然年收入少于$19k.</description></item><item><title>Week1010_share</title><link>https://ifaa.top/posts/week1010_share/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1010_share/</guid><description>ARTS - Share 关于reduce 函数 举例 我们知道reduce() 方法是对数组中的每个元素(从左到右)应用一个函数，将其减少为单个值。 例子：
+const array1 = [1, 2, 4, 6]; const reducer = (acc, curr) =&amp;gt; acc + curr; console.log(array1.reduce(reducer)) // output 13 reduce ####语法：
+arr.reduce(callback[, initialValue])
+####参数： callback: 执行数组中每个值的函数，包含四个参数
+accumulator 累加器累加回调的返回值; 它是上一次调用回调时返回的累积值，或initialValue（如下所示）。
+currentValue 数组中正在处理的元素。
+currentIndex可选 数组中正在处理的当前元素的索引。 如果提供了initialValue，则索引号为0，否则为索引为1。
+array可选 调用reduce()的数组
+initialValue可选 用作第一个调用 callback的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。
+####返回值 函数累计处理的结果
+注意：如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。
+对象的 reduce 假如我们有这样一个对象：
+const data = [{x:22}, {x:33}] 要对它的属性求和，那么写法如下：
+data.reduce((pre, cur) =&amp;gt; pre.</description></item><item><title>Week1010_tip</title><link>https://ifaa.top/posts/week1010_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1010_tip/</guid><description>ARTS - Tip 关于 js 接收前端有序map 变无序的问题 在实际开发中，本人遇到了一个后台排序map，传给前端变无序的问题。于是开始测试这个问题。
+继续使用之前的一个例子 week6 share: Java8的分组与排序实践
+造数据 建一个 课程类Course, 分组获得map,再排序，写一个控制类方法：
+@RequestMapping(&amp;#34;/map&amp;#34;) @ResponseBody public Map&amp;lt;Integer, List&amp;lt;Course&amp;gt;&amp;gt; listMap() { Course eng = new Course(1001, &amp;#34;eng&amp;#34;, 80); Course chi = new Course(1001, &amp;#34;chi&amp;#34;, 75); Course chi2 = new Course(1002, &amp;#34;chi&amp;#34;, 77); Course eng3 = new Course(1003, &amp;#34;eng&amp;#34;, 105); Course chi3 = new Course(1003, &amp;#34;chi&amp;#34;, 110); List&amp;lt;Course&amp;gt; courseList = Lists.newArrayList(eng, chi, chi2, eng3, chi3); Map&amp;lt;Integer, List&amp;lt;Course&amp;gt;&amp;gt; map = courseList.</description></item><item><title>Week1011_algorithm</title><link>https://ifaa.top/posts/week1011_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1011_algorithm/</guid><description>ARTS - Algorithm 66. 加一 描述 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
+最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。
+你可以假设除了整数 0 之外，这个整数不会以零开头。
+示例 1:
+输入: [1,2,3] 输出: [1,2,4] 解释: 输入数组表示数字 123。
+示例 2:
+输入: [4,3,2,1] 输出: [4,3,2,2] 解释: 输入数组表示数字 4321。
+分析 这其实就是考虑数字加1，高位进位的问题，代码如下：
+public int[] plusOne(int[] digits) { // 需要加1 int plus = 1; for (int i = digits.length - 1; i &amp;gt;= 0; i--) { int tmp = digits[i] + plus; if (tmp &amp;gt;= 10) { digits[i] = tmp % 10; plus = 1; } else { digits[i] = tmp; plus = 0; } } if (plus == 1) { // 需要处理 digits[0] = digits[0] % 10; int[] arr = new int[digits.</description></item><item><title>Week1011_tip</title><link>https://ifaa.top/posts/week1011_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:34 +0000</pubDate><guid>https://ifaa.top/posts/week1011_tip/</guid><description>ARTS - Tip 关于Moment.js 一个好用的处理日期时间的插件: moment.js, 中文地址： http://momentjs.cn/
+在项目中引用，主要使用了两个功能，时间格式话和时区转换。
+当前时间 var now = moment(); // 和 moment(new Date()) 是等价的 解析字符串 var date = moment(&amp;#34;09-30-2018&amp;#34;, &amp;#34;MM-DD-YYYY&amp;#34;); 输入 例子 描述 YYYY 2018 4位年 YY 18 2位年 M MM 12 月份 D DD 1..31 日期 时区 这里要用到moment-timezone.js
+moment.tz(new Date(), &amp;#39;America/Los_Angeles&amp;#39;).format(&amp;#39;YYYY-MM-DD HH:mm:ss&amp;#39;) 显示的是美国洛杉矶时间</description></item><item><title>Week1007_algorithm</title><link>https://ifaa.top/posts/week1007_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1007_algorithm/</guid><description>ARTS - Algorithm 26. 删除排序数组中的重复项 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+示例 1: 给定数组 nums = [1,1,2],
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
+你不需要考虑数组中超出新长度后面的元素。
+示例 2: 给定 nums = [0,0,1,1,1,2,2,3,3,4],
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+分析 考虑用两个指示器， i,j ， 分别初始化为 0, 1， 如果 i,j 相等，就把 j 之后的元素都往前挪一位，最后一位 设置为数组第一位元素 -1 ，实现如下：
+public int removeDuplicates(int[] nums) { int i = 0, j = 1; int len = nums.</description></item><item><title>Week1007_review</title><link>https://ifaa.top/posts/week1007_review/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1007_review/</guid><description>ARTS - Review 聚光灯效应：为什么没有人记得你做过什么 想象一下你走进一个房间。
+你穿着印着恐怖小丑的的T恤。因为是整块印刷的，所以没有人会忽视。颜色不搭配，明显使人尴尬。
+预期会有两种反映。
+你不禁注意到你的同龄人在向你的方向扫视。角落里也有人窃窃私语。你通过时候一切人还在小声议论。好像每个人都注意到你的社交失礼。
+几分钟后，你肯定不会从失礼中恢复过来，没有人会忘记这一刻。
+所有眼睛都在看我 那时一个及其难忘的场景。 我们大多数人从小到现在都经历过尴尬的瞬间。我们问愚蠢的问题做愚蠢的事，之后我们会意识到错误。事后我们无法忘记这些。十四岁被石头绊倒的场景一直停留在记忆里。
+但是研究人员发现，我们很难评估我们的过失被其他人注意到的数量。在上面我们让学生穿着尴尬T恤的场景中，实际注意到他们失礼的人数是他们预估的一半。这种现象被称为聚光灯效应，人们估计注视到他的人比实际的要少。这是一个恰当的名称。我们认为我们在聚光灯下， 吸引所有的目光，实际上没人关心。
+如果你不确信有人记得你高中时候读错了单词，试着回忆下你同学犯得类似的错误，你会发现这比记住你自己的错误困难的多。
+聚光灯的影响 不难理解为什么聚光灯效应会出现在我们生活中。
+首先，我们对自己外表行为的评价与别人的是有偏差的。我们是自我世界的中心，就夸大了我们的重要性。对我们周边人来说，我们做了什么他们是无视的。这就让人很容易陷入自我聚光灯下。
+这也是有道理的，因为没人会昼夜跟踪我们，所以看不到我们的所有事情。但我们习惯从自我角度看实物，我们陷入同别人的准确的看法斗争里。
+第二，心里学家称之为透明度幻觉，这是他们提供的一个例子：
+特别的，紧急事件的目击者通常以漠不关心的方式行事，掩盖他的担忧，以免看起来像是危言耸听。 然而这些人愿意从其他人平静中得出结论，好像真的没有紧急情况。为什么每个人看待别人表面的平静，不像看待自己表面的平静一样 &amp;mdash; 把自己真正关心的问题伪装成一个幌子呢？我们发现，部分原因是人们产生了一种透明的错觉。
+换句话说，我们错误的认为我们完全表达出了我们看到的。我们认为其他人也能和我们感同身受。但是除了脸红和紧张的手发抖，没人知道我们怕社交失误后钻进一个洞里。
+你需要知道的 像许多其他的心理现象，聚光灯效应不是缺陷导致的，因为它是过时的生物路线。
+当我们的祖先生活在部落中时，他们需要确保得到他人的认可。如果犯了错，会导致驱逐出部落，就意味着死亡。想想一下在周围人注视下生活，肯定会保持敏感。
+今天情况有些不同。一方面，我们有网络和社交媒体放大每一个行为和事件，无论是积极还是消极的。另一方面，我们不再需要在严苛的团体中花费时间社交。如果犯了一个简单的错误，我们不再害怕死亡。
+这意味着什么？
+第一，你可能需要更能努力工作，因为没人监控你的贡献和影响。噪音足够多就很难识别出信号。不要指望每个人都能听到你。
+更重要的是，不必痴迷于别人对我们的看法。事实上每个人都顾虑自己。所以说出自己的想法，承担一些风险，做一个斗士。
+无论人们是否关注，你都会做的更好。</description></item><item><title>Week1007_share</title><link>https://ifaa.top/posts/week1007_share/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1007_share/</guid><description>ARTS - Share 说说一次sql优化过程 很容易在网上找到sql优化要点，在这里记录一次本人经历的一个优化过程。
+在工作中需要统计一个信息形成报表，最开始的sql 是这样的：
+SELECT SUM(a + b - c) amount, CASE WHEN day &amp;gt;= 2 AND day &amp;lt;= 8 THEN &amp;#39;m1_1&amp;#39; WHEN day &amp;gt;= 9 AND day &amp;lt;= 20 THEN &amp;#39;m1_2&amp;#39; WHEN day &amp;gt;= 21 THEN &amp;#39;m1_3&amp;#39; ELSE &amp;#39;m1_0&amp;#39; END &amp;#39;day_type&amp;#39;, create_date FROM table a GROUP BY day_type, create_date HAVING create_date &amp;gt;= ? and create_date&amp;lt;= ? and day_type != &amp;#39;m1_0&amp;#39; 这个sql在我们库里执行了10秒，于是就需要优化。
+首先这是个单表查询的分组函数，在进行全表扫描分组后，再对结果进行了过滤。很明显这个过程不对，应该对过滤后的结果再进行分组，这样大大减少了无用数据的查询。
+修改后是这样的：
+SELECT SUM(a + b - c) amount, CASE WHEN day &amp;gt;= 2 AND day &amp;lt;= 8 THEN &amp;#39;m1_1&amp;#39; WHEN day &amp;gt;= 9 AND day &amp;lt;= 20 THEN &amp;#39;m1_2&amp;#39; WHEN day &amp;gt;= 21 THEN &amp;#39;m1_3&amp;#39; ELSE &amp;#39;m1_0&amp;#39; END &amp;#39;day_type&amp;#39;, create_date FROM table a WHERE create_date &amp;gt;= ?</description></item><item><title>Week1007_tip</title><link>https://ifaa.top/posts/week1007_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1007_tip/</guid><description>ARTS - Tip 在启动项目时候，由于本地安装了mysql8, 所以有报错：
+Caused by: java.sql.SQLException: Unknown system variable &amp;#39;tx_isolation&amp;#39; 看数据库版本：
+Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 124 Server version: 8.0.11 Homebrew 看是否有tx_isolotion
+mysql&amp;gt; show variables like &amp;#39;tx_isolation&amp;#39;; Empty set (0.00 sec) 因为在mysql8里把这个变量改成了 &amp;rsquo;transaction_isolation'
+mysql&amp;gt; show variables like &amp;#39;transaction_isolation&amp;#39;; +-----------------------+-----------------+ | Variable_name | Value | +-----------------------+-----------------+ | transaction_isolation | REPEATABLE-READ | +-----------------------+-----------------+ 1 row in set (0.01 sec) 我们再看下mysql7的变量</description></item><item><title>Week1008_algorithm</title><link>https://ifaa.top/posts/week1008_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1008_algorithm/</guid><description>ARTS - Algorithm 27. 移除元素 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。
+示例 1:
+给定 nums = [3,2,2,3], val = 3,
+函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
+你不需要考虑数组中超出新长度后面的元素。 示例 2:
+给定 nums = [0,1,2,2,3,0,4,2], val = 2,
+函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。
+注意这五个元素可为任意顺序。
+你不需要考虑数组中超出新长度后面的元素。
+分析 本题和 26. 删除排序数组中的重复项
+是类似的，只需要稍微修改就可以了， 指示器从0 开始，遍历从0开始，把不相等的挪到指示器位置，然后指示器加一。代码如下：
+public int removeElement(int[] nums, int val) { if (nums == null || nums.</description></item><item><title>Week1008_review</title><link>https://ifaa.top/posts/week1008_review/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1008_review/</guid><description>ARTS - Review 为什么Java小伙对Node.js和JavaScript 如此兴奋？ &amp;ndash; David Herron , 软件工程师和作家，热衷于Node.js 以及清洁能源技术。Node.js WEB 开发网站的作者。https://sourcerer.io/robogeek
+在Sun Microsystems 公司JavaSE 组工作超十年的人不应该牺牲Java字节码，并将抽象接口实例化进行到底吗？对这个前JavaSE组成员，在2011年学习Node.js平台就像呼吸了新空气。在被Sun公司在2009年一月份被解雇(仅仅被甲骨文收购前)后，我学习并迷上了Node.js
+有多着迷？从2010年，我写了大量的Node.js编程的文章。即，Node.js Web开发四个版本，再加上Node.js编程的其他书籍和众多博客教程帖子。用大量的时间阐述Node.js和JavaScript语言的先进性。
+在Sun microsystems 工作时，我信任Java里的一切。我在JavaONE 大会提出了会话，共同开发了 java.awt.Robot 类，运行了Mustang Regressions 竞赛（Java 1.6 发行版的Bug追踪竞赛），帮助启动了“Java发行许可证”，这是linux发行版 预先的Jdk的方案，之后在发行正式openjdk扮演了个小角色。一路上我在 java.net(现在已废弃) 博客上，一周写两篇文章，坚持了6年讨论Java生态。 一个很大的主题就是捍卫Java语言和预言Java要死的言论斗争。
+和Java字节码共同生活会是怎样？我在这里的解释就是，怎么作为Java倡导者直到死去，就怎么作为Node.js/JavaScript 倡导者直到死去。
+这并不是说我完全脱离Java。过去3年我写了一堆重要的 Java/Spring/Hibernate代码。当我全情投入工作&amp;ndash; 我在 Solar Industry 做精神满足的事情像写kiloWatt-hours的数据库查询 &amp;ndash; Java编码失去了热情。
+两年的 Spring 编码教会了一个清晰的道理，复杂的书写不会产生简单，只会产生复杂。
+Java 充满公式化的代码，掩盖了程序员的意图。 Spring 和 SpringBoot 教会了， 复杂产生更多的复杂 JavaEE 是一个 设计委员会设计的工程，覆盖了企业应用开发的一切，因此很复杂 Spring的编程体验是很好的，直到有一天一个难以理解的没听过的异常在子系统里爆出来，定位问题就需要3天以上 框架允许编码器编写0代码的开销是多少？ 当IDE 像Eclipse越来越强大，就是Java复杂的一个征兆。 Node.js 就是一个轻量级事件驱动框架的结晶。 JavaScript社区就像乐于移除模板，让程序员可以表达自己的意图。 回调地狱的解决方案，就是异步/等待 函数，就是移除样板的例子，让程序更能展示意图。 用Node.js 编码就是乐趣。 JavaScript 缺乏Java的严格类型检查。这是双刃剑，代码更易于编写，但需要更多测试确保正确。 npm /yarn 包管理系统 用着很有趣， 对应Java是Maven Java和Node.</description></item><item><title>Week1008_share</title><link>https://ifaa.top/posts/week1008_share/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1008_share/</guid><description>ARTS - Share 说说 super-csv 官网地址是 http://super-csv.github.io/
+有些系统需要csv格式的文件，所以就发现了这样一个框架.其实直接使用逗号分隔，数据换行也是可以的，框架带来了一定的便利性。
+我们先看Writer, 一般是Jdbc 数据库读数据转化成JavaBean ，然后生成csv文件。
+先定义一个客户bean
+public @Data @AllArgsConstructor @NoArgsConstructor class CustomerBean { private String no; private String name; private Date birthDate; private Boolean deleteFlag; private Integer age; private String email; } 然后使用 CsvBeanWriter 来写文件：
+private static void writeWithCsvBeanWriter() throws IOException { CustomerBean jack = new CustomerBean(&amp;#34;1&amp;#34;, &amp;#34;jack&amp;#34;, new Date(), true, 20, null); CustomerBean bob = new CustomerBean(&amp;#34;2&amp;#34;, &amp;#34;bob&amp;#34;, new Date(), false, 12, &amp;#34;123@gmail.</description></item><item><title>Week1008_tip</title><link>https://ifaa.top/posts/week1008_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1008_tip/</guid><description>ARTS - Tip 数字的格式化 工作中有个需求，要把货币数字，改成逢千逗号分隔的格式，于是就总结下实现方式。
+1. DecimalFormat BigDecimal b1 = BigDecimal.valueOf(100543000.12672); DecimalFormat df = new DecimalFormat(&amp;#34;###,##0&amp;#34;); // 100,543,000 DecimalFormat df2 = new DecimalFormat(&amp;#34;###,##0.&amp;#34;); // 100,543,000. DecimalFormat df3 = new DecimalFormat(&amp;#34;###,##0.0&amp;#34;); //100,543,000.1 DecimalFormat df4 = new DecimalFormat(&amp;#34;###,##0.00&amp;#34;); // 100,543,000.13 DecimalFormat df5 = new DecimalFormat(&amp;#34;###,##0.000&amp;#34;); //100,543,000.127 DecimalFormat df6 = new DecimalFormat(&amp;#34;###,##0.0000&amp;#34;); //100,543,000.1267 由此可知，在小数规定位数后，会做四舍五入操作。
+2. NumberFormat NumberFormat f1 = NumberFormat.getCurrencyInstance(); // 货币格式化 System.out.println(f1.format(b1)); //￥100,543,000.13 NumberFormat f2 = NumberFormat.getNumberInstance(); System.out.println(f2.format(b1)); //100,543,000.127 System.out.println(f2.format(1123)); //1,123 System.out.println(f2.format(1123.1)); //1,123.</description></item><item><title>Week1009_algorithm</title><link>https://ifaa.top/posts/week1009_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:33 +0000</pubDate><guid>https://ifaa.top/posts/week1009_algorithm/</guid><description>ARTS - Algorithm 28. 实现strStr()
+实现 strStr() 函数。
+给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。
+思路 本人用Java 实现， 直接使用 indexOf 函数就可实现，但是这道题考察的就是indexOf实现，所以写了一下实现过程. 我的思路是
+遍历haystack, 如果碰到和 needle 第一位的字符相等，就进入子循环，遍历needle字符串，看剩下的haystack 是否和needle相等。代码如下：
+public int strStr(String haystack, String needle) { if (haystack == null || needle == null) { return -1; } if (needle.length() == 0) { return 0; } int len1 = haystack.length(); int len2 = needle.length(); for (int i = 0; i &amp;lt; len1; i++) { if (haystack.</description></item><item><title>Week1005_algorithm</title><link>https://ifaa.top/posts/week1005_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1005_algorithm/</guid><description>ARTS - Algorithm 20. 有效的括号
+给定一个只包括 &amp;lsquo;(&amp;rsquo;，&amp;rsquo;)&amp;rsquo;，&amp;rsquo;{&amp;rsquo;，&amp;rsquo;}&amp;rsquo;，&amp;rsquo;[&amp;rsquo;，&amp;rsquo;]&amp;rsquo; 的字符串，判断字符串是否有效。
+有效字符串需满足：
+左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串。
+思考 如果是程序代码中，很容易想到， 该字符是成对出现，排成一行后，就是偶数个， 对称的，可以用这个特性来比较。但是还有一种情况，是这样的： &amp;ldquo;()[]{}&amp;rdquo; ，这样的组合也是正确的，这时候就要有不同的判断逻辑，可以将事情分为这两类，参考答案后发现作者巧妙的使用栈这个数据结构，左边的负号入栈，右边的符号就出栈对比，完美的解决这个问题。以下是代码：
+public boolean isValid(String s) { if (s == null || s.length() == 0) { return true; } Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); char[] chars = s.toCharArray(); for (char ch : chars) { if (ch == &amp;#39;(&amp;#39; || ch == &amp;#39;[&amp;#39; || ch == &amp;#39;{&amp;#39;) { stack.push(ch); } else if (ch == &amp;#39;)&amp;#39; || ch == &amp;#39;]&amp;#39; || ch == &amp;#39;}&amp;#39;) { if (stack.</description></item><item><title>Week1005_review</title><link>https://ifaa.top/posts/week1005_review/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1005_review/</guid><description>ARTS - Review 软件的特点就是没有代码 早期的数码计算机不是十分有用。当然，他们比取代的穿孔打点机强大的多，但是对于编程来说是非常难的。需要用汇编语言写指令，非常耗时且困难。
+当John Backus 在1950年代初开发了FORTRAN 语言后事情发生改变，该语言使用类似英语的逻辑控制命令，编译成低级机器语言来执行，使得编程更简单来取代了汇编语言。
+如今，像 Quick Base , Mendix , Zudy 这样的公司正在尝试类似的动作，视图将代码转化成可视化界面。非常类似从汇编到FORTRAN 的转换，底层代码依然不变，但使得表示更简单。这些低级代码、无代码平台开始扰乱软件如何为企业提供动力。
+可视化界面是无代码平台力量的关键 云中断与应用程序编程接口经济 传统上，技术有利于大企业。开发系统需要很多附带投资如硬件，昂贵的设计软件咨询费。一旦被立项，也通常很难去修改或更新升级，所以系统将会运行数年，甚至几十年，没有显著的升级。
+“态度是，‘我们创建它， 你们应该喜欢它’” , Quick Base 公司的战略与产品高级副总裁 Jay Jamison 说。所以遗留系统盛行，入门只是学会了用它工作，并在清单和电子表格中自行处理，效率不高，但基本有效。
+云端破坏了许多遗留系统，使强大的系统可以对联网的人都可用。而不是必须先支付，甚至最小的启动可以访问不逊于大公司的技术。或许一样重要，这系统可以通过程序api 接入其他系统。
+云计算 和 api 很大程度上为小型敏捷公司提供了优势。如果没有遗留系统阻碍他们，他们可以比更大的竞争对手更快的部署云技术，为客户提供更好的服务。但是，无代码平台正在帮助大公司像初创公司的速度和敏捷性进行移动。
+克服遗留系统 作为设施管理行业的高级行政人员，Bruce Squibb 熟知遗留系统的局限性。在设施管理中，每个项目本质上是独一无二的，系统需要适应不同类型的建模、客户需求、维护进度等。
+例如， Squibb的公司 Able Services, 最近签了一份合同，管理一个大型大学的几个校区的家政服务。为了很有效的启动业务，你需要管理很多松散的终端，同时也要把经理、一线员工、客户放在一个页面上，这个是一个很大的工作。
+早些年，大多数这样的业务都是用电子表格处理，然后汇总到中心办公室，在一个主报表里更新。然而 Squibb的团队设计了一款使用 QuickBase 产品设计的一个应用使得他们的工作很大部分的自动化完成，使得团队操作更快，更透明，也更少的出错。
+或许更重要的是，因为 Quick Base 是一个无代码平台，应用可以根据需要轻松自定义或增强功能。例如，如果客户机构更新设备规则或者买新的设备，可以更改应用程序，以便在短短几小时内适应这些变化。
+翻转模型 非常真实的意识，无码平台翻转了传统的IT模型。而不是开发者驱动应用将会怎样，一线管理者成为了过程中积极的一部分。很多业务建立在电子表格或清单剪切板的人或公司，现在确实可以基于云计算来开展。
+“一个很大的优势对无码或少码平台来说，是让你虚拟的操作元素而不是真的去写代码。这同时加快了开发和提高了质量。” Marshal Worster ， Mendix 公司高级架构解决方案主管如是说。
+可视化是无码平台的关键力量。因为如此易于使用，一线管理者和其他非技术人员可以自行做前端和基本功能，如建立自己的视图，设计和功能。而不是解释给开发者需要什么，可以直接展示给他们。
+当今世界，每台桌子每个口袋都有电脑 根本上，无码平台搞好了敏捷在十年前的承诺。然而 ，与其让软件集成到剩下的公司里， 不如让剩下的公司集成进软件开发里。
+创建一个敏捷企业 我们从早期计算机走了很长一段路，那时计算机是隐藏在后室的巨大机器，只能由精通神秘语言的神职人员来操作。今天，计算机走向千家万户。
+无码平台帮助匹配分布式功能和分布式控制。无码对任何人说基本都是敏捷的， Quick Base 公司的Jay Jamison 告诉我，当敏捷软件使得开发人员向业务决策靠近时，无码平台使得一线管理人员在开发过程中也提供了价值，并且越来越多的建立自己的东西。</description></item><item><title>Week1005_share</title><link>https://ifaa.top/posts/week1005_share/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1005_share/</guid><description>ARTS - Share 怎样写简历 - 左耳听风阅读 原文链接
+作者有丰富的面试和被面试经验，提到的一些注意点也很有价值。
+我们知道真正的好简历是要用自己的经历去写的，比如，有人的简历就是一句话： 我发明了 Unix.
+这当然是极少数牛人的简历，对于绝大多数并非超级牛人来说，还是要好好写内容。
+1. 用好模板 比如，首先要找一个专业点的模板， 微软的Office模板。简历最好pdf 而不是 word. 这里是方便打开避免格式错误吧。 然后内容整体上就是要突出重点了，内容不要太多，多了就无法突出重点了。
+2. 个人简介与信息 这里简介主要突出自己擅长的方面，比如很长时间的行业背景，XX平台的负责人或主力。擅长XX技术等。
+作为技术人员，最好要有自己的个人网站，网站的内容要有一定深度，反映了自己的技术观。当然github若不是洁白一片，也可以罗列上去。
+对于个人技能，要从小到大展开，技术栈 、 技术领域 、业务领域、经验和软技能 等。
+3. 技术知识准备 一般来说，简历写了什么面试就会问什么，对于知识掌握程度要诚实写，精通是精通、熟悉是熟悉、了解是了解。正规的面试都会抓住知识点一直问到底，考察你的掌握程度。
+对于算法题，要平时多积累，在leetcode 上刷题，提前准备一些经典算法，详细了解并掌握。
+工作项目上，要突出重点，主要写那些你做了重大贡献的。
+4. 思考 功夫花在平时，实力才是王牌。</description></item><item><title>Week1005_tip</title><link>https://ifaa.top/posts/week1005_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1005_tip/</guid><description>ARTS - Tip JavaScript Date对象与时区 GMT 和 UTC 我们先来解释下两个概念： GMT 时间就是格林尼治时间，
+格林尼治平时（英语：Greenwich Mean Time，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的经线。
+自1924年2月5日开始，格林尼治天文台负责每隔一小时向全世界发放调时信息。
+格林尼治平时的正午是指当平太阳横穿格林尼治子午线时（也就是在格林尼治上空最高点时）的时间。由于地球每天的自转是有些不规则的，而且正在缓慢减速，因此格林尼治平时基于天文观测本身的缺陷，已经被原子钟报时的协调世界时（UTC）所取代。
+以下是UTC时间：
+协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。中华民国采用CNS 7648的《资料元及交换格式–资讯交换–日期及时间的表示法》（与ISO 8601类似）称之为世界协调时间。中华人民共和国采用ISO 8601:2000的国家标准GB/T 7408-2005《数据元和交换格式 信息交换 日期和时间表示法》中亦称之为协调世界时。
+我们要获取时间：
+var now = new Date(); now; // Wed Jun 24 2015 19:49:22 GMT+0800 (CST) now.getFullYear(); // 2015, 年份 now.getMonth(); // 5, 月份，注意月份范围是0~11，5表示六月 now.getDate(); // 24, 表示24号 now.getDay(); // 3, 表示星期三 now.getHours(); // 19, 24小时制 now.getMinutes(); // 49, 分钟 now.getSeconds(); // 22, 秒 now.</description></item><item><title>Week1006_algorithm</title><link>https://ifaa.top/posts/week1006_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1006_algorithm/</guid><description>ARTS - Algorithm 21. 合并两个有序链表
+将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例：
+输入：1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 输出：1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
+分析 两个ListNode ， 根据l1 、 l2 的val，小的给拼的ListNode.
+public ListNode mergeTwoLists(ListNode l1, ListNode l2) { ListNode head = null, tail = null; while (l1 != null &amp;amp;&amp;amp; l2 != null) { ListNode node = null; if (l1.val &amp;lt; l2.val) { node = l1; l1 = l1.next; } else { node = l2; l2 = l2.next; } if (head == null) { head = tail = node; } else { tail.</description></item><item><title>Week1006_review</title><link>https://ifaa.top/posts/week1006_review/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1006_review/</guid><description>ARTS - Review 计算机程序设计艺术
+一些在书架上的书看着如此美丽，不仅仅是因为装帧美，而且书脊上表达了关于主人的话。Donald Knuth 的四精装卷的“计算机程序设计艺术” - 四个很贴切的深紫色， 传达了一个明确的信息：站一边，地球人，你站在一个真正的程序员面前。一个计算机科学的严谨实践者。
+比尔盖茨曾经说过，如果你认为你是一个非常好的程序员，请阅读《计算机程序设计艺术》，如果你能读懂书里的一切，你可以直接给我发简历了。
+对我来说，订购这一套书册感觉就像是一项重要的专业成就。在这些书到达前，我在书架上腾出了一个特别的空间，就像在仓库里为一个崭新大型机器腾空间一样。
+它们的权威太大了以至于不能动摇。所以我从不读它们，这不是本系列的书评，不好意思。
+这也不是提前走出影院的影评家的一种厌恶的评论。Knuth的书是史诗级的，他真正的掌握了计算机科学的基本原理，数学的原理， 以及两个学科的交叉点。如此多的荣耀。
+只是我不值得TAOCP （计算机程序设计艺术缩写）的深度。
+我读过卷一的序言三四遍, 我也曾试图想象完成整个系列是什么感觉。我将会离开互联网几个月，独自到Wyoming 山顶的一个小屋里，那里有一堆纸，几盒铅笔， TAOCP ,基本数学书，还有90天的 Adderall (一种治疗多动症的药物)供应。
+我将会在山上长时间徒步旅行，深入思考算法原理。没有笔记本，没有WIFI，没有电 &amp;ndash; 这些令人分心的东西。日落后，我会在烛光下阅读或解决问题集，我的思绪放飞在一个由谐波数、二项式系数、和非线性数据结构组成的宇宙中。
+但是这些永远没有发生。所以当我昨天再次阅读序言时候，我觉得我应该停下来反思我的旅程。 这就是Knuth对电脑的热爱，整个系列都致力于一个： 20世界50年代流行的IBM 650 大型机。 它是第一台大规模生产的电脑，用现在美元计算花费几十万。这是Knuth咬紧牙关的机器。
+在1950年代对计算机的热爱就是对应用数学的热爱。早起的IBM650有基本的数学操作和控制结构，它基于十进制而不是二进制。
+没有显示器，没有命令行. 人就是操作系统， 一个控制台让操作员启动停止程序。
+你说想要你写一个程序去生成斐波那契数列. FORTRAN 语言还不存在 - 它在 650发布四年后诞生。 所以，这些早年你必须写机器级别的操作代码，之后手动运行程序在打孔机上打出有程序的纸片。
+有一些方法优化你的程序。你需要设计一个更快的算法或者发布对问题合适的数据结构。
+你可能也要优化你的程序加载运行过程 - 更细粒度的操控机器。 磁鼓存储器是先打硬盘存储区的先驱，是650硬盘的主要存储器，非常慢。所以你作为程序员的目标就是最大限度的减少12500转筒机的旋转潜伏期，所以让你的代码和数据在执行阶段更快的抵达cpu。你希望在主机的cpu 和这些存储器之间实现完美同步。
+计算机科学就在这个地方，是数学和机械工程的粗糙交叉。可以被一个非常聪明的人完全理解。这并不总是现实。Knuth 和那个时代的程序员必须比IBM 650 更聪明。他们了解每一个真空管和控制开关。 现在我们不自爱比我们电脑更聪明了。
+序言的第一段，Knuth 称程序设计是一种审美体验，很想写诗和绘画。我认为这种美感仍在吸引有抱负的程序员。20世纪50年代以来，沿着指数曲线发展很长一段路之后，这种美感依然完好无损，令人欣慰。虽然我们不在设计出软件再将他送入热闹的计算器， 编程之美仍然在每一个抽象层。
+我想知道在8Kb 内存范围手工组装约束下以及打孔机器工作下如何影响编写软件的执行特性。我想象在Knuth的时代写代码是一种兴奋和冒险的行为.很小的错误就很痛苦。
+从那时起，数十年的抽象化就像一对床垫一样堆叠起来，我们大多数人只是在上面翻滚。
+今天的软件的短反馈回路和延展性是有代价的。虽然软件开发今天可以更能把玩，但如果不加思考的随意闹，也会产生很多问题。伟大的软件仍然需要大量的思考，而且我们很容易失去严谨性。
+IBM 650 的约束生硬且迅速，今天的电脑约束更软常常自我约束。移动电话的微小屏幕预示着经济型软件和接口设计的革新浪潮。</description></item><item><title>Week1006_share</title><link>https://ifaa.top/posts/week1006_share/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1006_share/</guid><description>ARTS - Share Java8的分组与排序实践 假设有一个课程类，Course， 里面包含学生ID userId， 学科名称name, 和成绩grade:
+public class Course { private Integer userId; private String name; private Integer grade; // setters and getters } 初始化一些数据
+Course eng = new Course(1, &amp;#34;eng&amp;#34;, 80); Course chi = new Course(1, &amp;#34;chi&amp;#34;, 75); Course chi2 = new Course(2, &amp;#34;chi&amp;#34;, 77); Course eng3 = new Course(3, &amp;#34;eng&amp;#34;, 105); Course chi3 = new Course(3, &amp;#34;chi&amp;#34;, 110); List&amp;lt;Course&amp;gt; courseList = Lists.newArrayList(eng, chi, chi2, eng3, chi3); 1.</description></item><item><title>Week1006_tip</title><link>https://ifaa.top/posts/week1006_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:32 +0000</pubDate><guid>https://ifaa.top/posts/week1006_tip/</guid><description>ARTS - Tip spring boot多数据源问题 我们知道，在使用多个数据源时候，需要注册到spring boot 里，然后使用时候一般是两种
+查询非默认数据源数据时候，加上数据库名前缀 在service 方法里指定数据源，一般是@DataSource(&amp;ldquo;xxx&amp;rdquo;) 在网上很多例子上都是本地环境下两个数据库，但是在开发中需要访问的数据库分布在不同的服务器上，在使用 前缀 + 表 的查询方式不再生效了，就使用了第 2 种方法才生效，注意这点。</description></item><item><title>Week1002_share</title><link>https://ifaa.top/posts/week1002_share/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1002_share/</guid><description>Java 内存区域及对象 计算机存储单位 从小到大 Bit byte KB MB GB TB
+计算机存储元件
+寄存器 CPU读写数据存储元件 内核空间与用户空间 字长 CPU一次能并行处理二进制的位数 堆栈 堆用来存储对象，栈用来执行程序
+运行时数据区域
+线程独有的内存区域 a. Program counter register 程序计数器 当前线程执行的字节码行号指示器 b. Java Stack 虚拟机栈 生命周期和线程相同。每个方法执行时候都会创建一个栈帧，用于存储局部变量表，操作数栈，动态链接、方法出口等信息，每个方法从调用到执行的过程，就对应着一个栈帧在虚拟机中入栈到出栈的过程。栈的大小通常与虚拟机实现有关，通常在256K-756K之间。 c. Native Method stack 本地方法栈 和虚拟机栈作用一样，方法栈为虚拟机使用的本地方法服务。
+线程间共享的内存区域 a. heap ,堆 存放对象实例。细分为新生代和老年代。 b. Method Area 方法区 存储虚拟机加载的类信息，常亮、静态变量、即时编译器编译后的代码等数据。 c. Runtime Constant Pool 运行时常量池 类的方法、字段、接口库等描述信息 + 编译期产生的各种字面量和符号引用
+直接内存
+对象创建 语言层面，new, 虚拟机层面
+虚拟机遇到new指令，首先去检查这个指令的参数能否在常亮池中定位到一个类的符号引用，并且检查这个符号引用代表的类是否已经被加载、解析和初始化。如果没有就进行类的初始化过程。
+类加载检查通过后，为新生对象分配内存，过程中，
+a. 若内存规整，指针碰撞法分配内存。 意思是所有已用内存在一边，空闲在另一边，中间放着一个指针作为分界点的指示器，分配内存就仅仅是把指针向空闲那边挪动一段与对象大小相等的距离罢了。如果垃圾收集器选择的是Serial、ParNew这种基于压缩算法的，虚拟机采用这种分配方式 b. 如果内存不规整，虚拟机使用空闲列表法来分配内存。意思是虚拟机维护了一个列表，记录上哪些内存块是可用的，再分配的时候从列表中找到一块足够大的空间划分给对象实例，并更新列表上的内容。如果垃圾收集器选择的是CMS这种基于标记-清除算法的，虚拟机采用这种分配方式。 另外一个问题及时保证new对象时候的线程安全性。因为可能出现虚拟机正在给对象A分配内存，指针还没有来得及修改，对象B又同时使用了原来的指针来分配内存的情况。虚拟机采用了CAS配上失败重试的方式保证更新更新操作的原子性和TLAB两种方式来解决这个问题。
+内存分配结束，虚拟机将分配到的内存空间都初始化为零值（不包括对象头）。这一步保证了对象的实例字段在Java代码中可以不用赋初始值就可以直接使用，程序能访问到这些字段的数据类型所对应的零值。
+对对象进行必要的设置，例如这个对象是哪个类的实例、如何才能找到类的元数据信息、对象的哈希码、对象的GC分代年龄等信息，这些信息存放在对象的对象头中。
+执行init方法，把对象按照程序员的意愿进行初始化，这样一个真正可用的对象才算完全产生出来。</description></item><item><title>Week1003_algorthm</title><link>https://ifaa.top/posts/week1003_algorthm/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1003_algorthm/</guid><description>ARTS - Algorthm 9. 回文数 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+分析： 负数比如 -121， 从左到右是 -121, 从右到左是 121-， 所以不是回文数。 这道题算法和7.反转整数 类似，反转整数是取得每一位倒置输出，而这个是取得每一位倒置后和原值进行比较。
+代码如下：
+public boolean isPalindrome(int x) { if (x &amp;lt; 0) { return false; } int y = 0; int z = x; while(x != 0) { y = x % 10 + y * 10; x /= 10; } return z == y; }</description></item><item><title>Week1003_review</title><link>https://ifaa.top/posts/week1003_review/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1003_review/</guid><description>ARTS - Review 编写好代码的高级技巧 来自medium: Advanced Techniques and Ideas for Better Coding Skills
+好的开发者是用他们的代码质量来定义的。在软件工程里，书写好的代码意味着节省了可能投资在测试、更新、扩展或者修复bug的钱。本文里， 我将会给你展示一些真实生活中的例子来帮助你整理你已有的代码来重构它使得更健壮，更模块化。这些技术不仅能帮你重构老代码，也能为你将来的编码中提供好的思路。
+什么是重构，为什么我们要重构？ 重构指的是帮你写整洁代码的技术和步骤。这对其他可能会阅读、扩展、重用你的代码的人很重要，使得他不用大范围的修改。
+接下来内容是重构已存在代码使它更好的几个例子。
+不要用没进行单元测试的代码重构生产代码 我的第一个建议是，不要用没进行足够单元测试的代码去重构已存在的代码。我想原因是很明显的：你将会遇到一些难以修复的坏的功能，因为你无法找到哪个是坏的。所以，如果需要重构，首先测试。确保你重构的部分被测试覆盖到。检查php代码覆盖率分析。
+从最需要重构的地方开始 看下面图片，这是我在github 上发现的一个关于酒店管理系统的真实的工程。这是一个真正开源的工程，所以闭源的代码可能会更差。 你看到，三级被标红了。最深点应该是第一个if条件里面的 if/else 语句内容。通常最深点集中在一个简单逻辑上，这让重构变得简单。
+让你的方法分成几个小方法或配置 文件/数据库 表 来让方法变短 在这个例子中，我们开一个提出来一个私有方法： 下一个最深点是获取post数据和加载视图那里。看看重构之后的add方法。更干净可读、方便测试。 在if语句中使用 很多编程语言支持一个条件时候不用加{}， 一些开发者就因为简单就这么用了，但是它可能造成可读性差，很容易因为一个空行造成问题。看以下例子：
+不要用魔法数字魔法字符串 接下来的例子里，你注意到房间数超过250后，返回一个错误信息。这个例子中250就是一个魔法数字。如果不是你写的，你就很难理解它代表的什么。
+重构这个方法，我们要指出这个250代表的是最大房间数。所以我们用变量来代替这个硬编码，这样对其他人就很容易理解了。
+如果不需要，就不要用 else 语句 在这个 availablerooms() 方法中，你发现我们很容易摆脱else 代码块，逻辑依然一样。
+使用有意义的方法、变量和测试名字 下面的例子，发现两个方法叫 index() 和 room_m(), 对我来说我不知道它们代表啥。如果它们名字描述的是业务，我们就更好理解。
+最大化的利用你编程语言的特性 很多开发者不最大化利用他们语言的特性。很多特性是让你花很少精力使得你的代码更健壮。 看以下例子如何使用更少代码实现相同的结果仅仅利用了类型提示。
+我用几个写出更好代码的技巧来结束本篇文章：
+使用新的 数组而不是Array()方法 使用 === 代替 == 除非不需要检查数据类型很重要 给公共方法简短有意义的命名，给私有方法长的名字因为他们有固定范围 使用通用的命名，如实现接口的方法add() 对单个类方法使用描述性命名如 addUser() 或 addDocument() 删除类中无用的方法 用is/has 前缀命名返回布尔类型的方法，例如 isAdmin($user) hasPermission($user) 在类方法和属性上始终使用访问修饰符 小心接口污染: 仅使用用户公开的方法 组织类方法，公共方法在上 始终对类使用单一职责原则 感言 阅读并遵循《阿里巴巴开发手册》， 里面更详细，指导新代码开发， 并结合 Alibaba Coding Guidelines 工具扫描老代码并进行重构。</description></item><item><title>Week1003_share</title><link>https://ifaa.top/posts/week1003_share/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1003_share/</guid><description>ARTS - Share 编码坏习惯 工作中主要写业务实现代码，使用SpringMVC 框架，也阅读过很多同事的代码，下面总结几条不好的习惯：
+1. 控制类里写业务逻辑而不是在服务类 我们springmvc 分层架构，一般就是Controller 处理业务请求， 注入Service, 具体的逻辑处理调用service, 然后返回给前台结构，但是不少同学违背这一原则， 把大量的业务逻辑写在控制类方法里，service 模块仅当做 dao 层来使用了，这样明显是有问题的，一个最大的问题就是可能导致无法进行事务管理， 因为一般习惯事务是在service 里进行控制。
+2. 过多的if/else 嵌套 过多的if /else 嵌套会造成代码可读性很差，当因为请假临时需要别人管理你代码时候，会造成很大的困扰，笔者曾开玩笑引用某段子说，别人阅读你代码时骂脏话的频率和你代码质量成反比。机器语言是让机器可读性好的， 编程语言是让人类可读性好的，所以我们尽量写简洁易读的代码，尽量把大方法拆成几个小方法，对一类功能代码块提出来，做到代码简洁。
+3. 格式化太少 对，尽管IDE 已经非常智能，但依然随时可见没有对齐的代码、无用的包引用，这些虽说不是大问题，但是依然影响程序的美观优雅，字如其人，码如其人，请多注意代码形象。
+4. 随意发挥，不与其他人统一 虽然程序设计中需要个人发挥，但是也要遵从团队习惯，比如代码命名、组织方式，功能实现的惯用模式，前后端交互的接口设计等。 除非你能找出更简洁有效，且团队通过的方式，不要随意更改、调整团队惯用的实现方式和习惯。
+5. 心态开放，乐于沟通，乐于改正不足之处 很多程序员的心态就是，我负责的模块别人不能改动，不然出来问题你来负责。 诚然这样造成了自己模块的方便维护， 但是对项目整体来说是有一些坏处的，我们开发中除了自己的模块，不可避免遇到公用模块， 或者自己的模块开放给别人重用，这或多或少都有需要调整的地方，如果一刀切不许动，那么很可能每个人都对同一个功能开发自己的实现，这回造成重复率增加，不利于维护。我们需要做的是开放沟通，就事论事探讨更好的实现，然后团队配合更好的完成项目。</description></item><item><title>Week1003_tip</title><link>https://ifaa.top/posts/week1003_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1003_tip/</guid><description>ARTS - Tip 关于TKMybatis 的一个小技巧 本人在开发一个实体类时候，对这个实体类进行有参构造，但是没有加无参构造，于是在使用tk mapper的查询方法时候， 就一直报错没有 xxx 构造函数，由于 tk 是不用写xml mapper的，问题可能出在对象关系映射那块，猜测tk是想自己根据数据库类型，来转成Java类型的，不需要自己指定参数类型，于是解决办法是再加个无参构造函数就解决了。</description></item><item><title>Week1004_algorithm</title><link>https://ifaa.top/posts/week1004_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1004_algorithm/</guid><description>ARTS - Algorithm 14. 最长公共前缀
+编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 &amp;ldquo;&amp;quot;。
+示例 1:
+输入: [&amp;ldquo;flower&amp;rdquo;,&amp;ldquo;flow&amp;rdquo;,&amp;ldquo;flight&amp;rdquo;] 输出: &amp;ldquo;fl&amp;rdquo; 示例 2:
+输入: [&amp;ldquo;dog&amp;rdquo;,&amp;ldquo;racecar&amp;rdquo;,&amp;ldquo;car&amp;rdquo;] 输出: &amp;quot;&amp;rdquo; 解释: 输入不存在公共前缀。 说明:
+所有输入只包含小写字母 a-z 。
+分析 定义一个指针， 从第一个开始，遍历所有字符串是否相等，遇到不相等的就停止，取得指针经过的一段字符串。
+public String longestCommonPrefix(String[] strs) { if (strs.length == 0) { return &amp;#34;&amp;#34;; } if (strs.length == 1) { return strs[0]; } int point = -1; loop: for (int i = 0; i &amp;lt; strs[0].length(); i++) { boolean flag = true; for (int j = 0; j &amp;lt; strs.</description></item><item><title>Week1004_review</title><link>https://ifaa.top/posts/week1004_review/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1004_review/</guid><description>ARTS - Review Kotlin 可触摸式自定义动画视图 如果你想绘画自己的视图，并且有一些动画，kotlin可以帮你。
+多点触控动画增长圆圆 (类似下雨) 下面就是我将会展示的怎么做这样一个视图。
+它包含：
+多点触控能力。 每个点击将会画一个园。 圆圈将会增长，颜色淡入，直到消失 制作自定义视图 1. 实现视图 首先你需要实现 View 类, 它是android 基本UI组件
+class RainDropView @JvmOverloads constructor( context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes: Int = 0) : View(context, attrs, defStyleAttr, defStyleRes) Kotlin 好的部分是，你可以用默认构造器把所有构造器合并成一个。
+了解跟多xml属性设置，参考我的另一个博客 kotlin自定义组件
+2. 定义 onMeasure 定义自己的视图的宽高，下面提供一个相对基础的模型。
+override fun onMeasure( widthMeasureSpec: Int, heightMeasureSpec: Int) { super.onMeasure(widthMeasureSpec, heightMeasureSpec) val desiredWidth = suggestedMinimumWidth + paddingLeft + paddingRight val desiredHeight = suggestedMinimumHeight + paddingTop + paddingBottom setMeasuredDimension( resolveSize(desiredWidth, widthMeasureSpec), resolveSize(desiredHeight, heightMeasureSpec)) } 了解更多请参考自定义视图：onMeasure</description></item><item><title>Week1004_share</title><link>https://ifaa.top/posts/week1004_share/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1004_share/</guid><description>ARTS - Share 关于紧急内部项目想到的 键人最近在赶一个内部项目，接手后看到代码组织的情况，忍不住罗列下不合理之处：
+对每一个角色建立了相对应的页面，内容相同 菜单、控制类基于变量而划分 数据库表没有说明文档，脚本有报错地方 没有格式化 逐个分析： 首先想到的大背景是， 内部项目、几个人用、时间紧、要求不高。
+于是出现了1， 几个角色就建立几个页面，哪怕除了管理员外这个几个角色的页面完全相同，仅仅是数据不同。这样造成的结果是，如果后期页面有调整（就是键人在经历的）， 那么需要对每个页面进行重复修改。整体来看并没有节省时间。解决方法，用同一个页面，根据不同角色展示不同权限的数据，页面必要时候引入shiro 划分操作权限。
+对于2，基于变量建立不同的菜单，业务需求是，不同的角色处理不同时期的数据，所以就有了不同的菜单，1-10天的，11-20天的， 大于20天的，这样设计菜单没问题，但是这次需要修改时间范围，改成了1-15，15-30， 大于30的，菜单改没什么，关键是控制类里都是针对之前不同天数的菜单，分为几个方法处理，硬编码了天数！ 于是控制类也需要修改。 解决方法： 传天数变量到后台，一个方法就能处理。
+对于3. 这个就是工作习惯问题了，如果没有数据库说明文档，表再没有注释，别人只能靠猜了，只能一遍遍去问相关人员了，大大降低了效率。 解决方法：写文档。
+对于4. 代码阅读费劲。 解决方法： 格式话。
+想说的 我们在开发项目中，觉得省劲，但是有些必要的过程是不能省略的，前人在编程中总结了很多优秀的经验来指导工程开发，我们直接照着做就行，最后总体来说是比较省时间效率高的。我们在做项目时一定要避免觉得一次性使用就不够认真，这对以后维护的同事来说是个巨大痛苦。我们的工作展现的是我们的靠谱度，如何更快的进步，获得更大的成就？做到靠谱</description></item><item><title>Week1004_tip</title><link>https://ifaa.top/posts/week1004_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:31 +0000</pubDate><guid>https://ifaa.top/posts/week1004_tip/</guid><description>ARTS - Tip 1. ES6 中 let 和 var 最近写js, IDE 提示推荐使用 let 或const 代替 var 声明变量，于是就了解了下ES6的 let和 var的区别。
+关键词：
+let : 变量只能声明一次 var : 变量可以多次声明 var a = 5; var a = 3; let b = 2; let b = 4; console.console.log(a); console.console.log(b); 然后就报错了 Uncaught SyntaxError: Identifier &amp;lsquo;b&amp;rsquo; has already been declared at :1:1
+于是，在方法里调用方法，var也会有不一样的：
+// var for(var i=0;i&amp;lt;5;i++){ setTimeout(function(){ console.log(&amp;#34;var：&amp;#34; + i); }) } // let for(let i=0;i&amp;lt;5;i++){ setTimeout(function(){ console.</description></item><item><title>Week1001_AP_computer</title><link>https://ifaa.top/posts/week1001_ap_computer/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1001_ap_computer/</guid><description>ARTS 2. Review Expansion of AP computer science courses draws more girls and minorities ‘There’s more work to do’
+扩大AP计算机科学[1]课程吸引更多女孩和少数民族，还有更多工作要做。
+Adapted from a story by The Washington Post&amp;rsquo;s Nick Anderson.
+改编自华盛顿邮报 Nick Anderson 的故事。
+For more than 30 years, high schools have offered Advanced Placement classes in computer science. But about 10 years ago, educators began to worry about participation. Overall numbers were low.
+超过三十年时间，高中都开设了计算机科学的高级教程，但是大约10年前，教育工作者开始担心这些课程可能总体上是偏低的。
+About 20,000 students took the computer science tests in 2007, fewer than the totals for AP French or studio art.</description></item><item><title>Week1001_java_timezone</title><link>https://ifaa.top/posts/week1001_java_timezone/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1001_java_timezone/</guid><description>ARTS Tip 场景与需求 项目使用国内一家公司的接口服务，该接口服务根据北京时间调用次数收费的，我们项目部署在国外服务器上，需求是统计接口每天调用量。
+分析 我们要统计接口调用量，要把时区切换到北京时区。
+实现方式 使用java8 java.time包 实现最方便。
+代码：
+@Test public void test1() { ZoneId shanghaiZone = ZoneId.of(ZoneId.SHORT_IDS.get(&amp;#34;CTT&amp;#34;)); System.out.println(LocalDateTime.now(shanghaiZone)); ZoneId zoneId = ZoneId.systemDefault(); System.out.println(zoneId); LocalDateTime now = LocalDateTime.now(zoneId); System.out.println(now); } 打印结果：
+2018-07-14T15:53:24.818 Asia/Shanghai 2018-07-14T15:53:24.822 备注 ZoneId 的SHORT_IDS 是该类缓存的时区代码，源码如下：
+public static final Map&amp;lt;String, String&amp;gt; SHORT_IDS; static { Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;&amp;gt;(64); map.put(&amp;#34;ACT&amp;#34;, &amp;#34;Australia/Darwin&amp;#34;); map.put(&amp;#34;AET&amp;#34;, &amp;#34;Australia/Sydney&amp;#34;); map.put(&amp;#34;AGT&amp;#34;, &amp;#34;America/Argentina/Buenos_Aires&amp;#34;); map.put(&amp;#34;ART&amp;#34;, &amp;#34;Africa/Cairo&amp;#34;); map.put(&amp;#34;AST&amp;#34;, &amp;#34;America/Anchorage&amp;#34;); map.put(&amp;#34;BET&amp;#34;, &amp;#34;America/Sao_Paulo&amp;#34;); map.put(&amp;#34;BST&amp;#34;, &amp;#34;Asia/Dhaka&amp;#34;); map.put(&amp;#34;CAT&amp;#34;, &amp;#34;Africa/Harare&amp;#34;); map.</description></item><item><title>Week1001_SingleNumber</title><link>https://ifaa.top/posts/week1001_singlenumber/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1001_singlenumber/</guid><description>ARTS Algorithm 136. 只出现一次的数字
+题目： 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+class Solution { public int singleNumber(int[] nums) { int index = 0; for (int i = 0; i &amp;lt; nums.length; i++) { index = index ^ nums[i]; } return index; } } ###分析： 此题目主要考察位运算， 其中 异或 ^ 操作符与相同的数字异或为0， 0与任何数异或是它本身的特性。 如果没有考虑到这一点，实现方法就是嵌套遍历出所有重复的，然后找出不重复的那个，这种方式很差。代码如下，
+private static int singleNumber(int[] a) { List&amp;lt;Integer&amp;gt; list = Lists.newArrayListWithCapacity(a.length); int x = 0; for (int i = 0; i &amp;lt; a.</description></item><item><title>Week1001_think</title><link>https://ifaa.top/posts/week1001_think/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1001_think/</guid><description>ARTS Share 关于提高自己技术能力的几点思考 回想自己进步快的时候，一个是读书时理解了书中逻辑，然后代入到工作能够解决问题， 一个是解决了一个个个新问题的时候总结出经验的时候。现在想想这两种方式确实是符合认知逻辑的，了解到知识，结合实际使用场景，举一反三，带来提升， 这是理论指导实践， 第二种，先碰到了问题，事先没有解决经验，去摸索尝试，最后解决了问题，能力边界又扩张了一些，这是个实践总结理论。如何更好的提高能力？ 那就是重复这个过程。
+实际中就是，对于理论指导实践，多看书，多看技术文章，多了解前人经验，扩大自己的认知范围，极限就是自己碰到的问题都能在自己知识库里找到解决方案。 对于实践总结理论，出现这种情况说明自己知识库里还没有收录该问题，那就在实践中用各种方法来处理，最终解决后总结经验，存入知识库。反复循环，能力肯定飞跃。
+但是这里面还有一个问题，就是知识库与自己所面对的现实问题的匹配问题， 有可能知识库的知识是错的，也有可能现实问题没有抓住核心矛盾，没有看清它的本质。这就需要提高自己的逻辑能力、思辨能力、抽象能力、总结能力了。提高逻辑能力、思辨能力才能在获取知识时更好的研究出它的规律，提高知识库的质量；提高抽象能力、总结能力，才能对现实中遇到的问题透过现象看本质，迅速找出解决思路与应对策略，提炼出核心逻辑存入知识库，以后遇到相同问题就不再手足无措。
+那么如何提高这些比较唯心的能力呢？思维训练。 逻辑能力讲究的推导能力、举一反三能力。多看行业案例，先看场景与开始条件，然后根据自己的想法写下可能的因素和产生的结果，最后根据实际的结果偏差，来校正自己思维的出入。 思辨能力讲究的质疑能力。质疑并不是无脑反驳，而是有科学依据的大胆假设、小心求证。假设一个可能情况，然后针对这个可能找出支持自己论点的论据，最后求得实事求是的结果。 抽象能力讲究的是发散与明悟。这就需要我们涉猎广泛，提高艺术修养。这种方式去提高自己的“感知”能力，也就是直觉。 总结能力讲究的眼光，找出无序中的有序，有序中的权重，这个也需要多进行实际中的训练。
+还没有见过世界，谈何拥有世界观？去经历，去思考感悟，去实践，勤于总结。</description></item><item><title>Week1002_algorithm</title><link>https://ifaa.top/posts/week1002_algorithm/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1002_algorithm/</guid><description>Algorithm leecode 7. 翻转整数 给定一个 32 位有符号整数，将整数中的数字进行反转。
+分析 这道题把数字翻转，思路是使用模运算和直接除以10运算获得每一位数字，然后要考虑越界问题，比较笨的方式是转为字符数组，然后倒序排列后转为int，本人不才，使用了第二种。代码如下:
+public int reverse(int x) { if (x == Integer.MIN_VALUE) { return 0; } boolean positive = x &amp;lt; 0; if (positive) { x = -x; } String n = String.valueOf(x); char[] chars = n.toCharArray(); StringBuilder sb = new StringBuilder(); for (int len = chars.length, i = len - 1; i &amp;gt;= 0; i--) { sb.append(chars[i]); } String result = sb.toString(); try { if (positive) { return -Integer.</description></item><item><title>Week1002_review</title><link>https://ifaa.top/posts/week1002_review/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1002_review/</guid><description>ARTS - Review 我们的数据就是我们自己 怎样阻止高科技公司垄断我们的个人信息 来自 medium: Our Data, Ourselves
+Concentrated in a few hands, big data is a threat to democracy. Social media companies and political data-mining firms such as Cambridge Analytica have built their businesses by manipulating public life using personal data. Their work has helped heighten ethnic tensions, revive nationalism, intensify political conflict, and even produce new political crises in countries around the world — all while weakening public trust in journalism, voting systems, and electoral outcomes.</description></item><item><title>Week1002_tip</title><link>https://ifaa.top/posts/week1002_tip/</link><pubDate>Fri, 31 Mar 2023 15:45:30 +0000</pubDate><guid>https://ifaa.top/posts/week1002_tip/</guid><description>ARTS - Tip ssh 登录配置 在登录远程服务器时候，很多是用ssh-key来验证的，每次要输入ip地址会比教麻烦，于是就产生了配置
+在 ~/.ssh/ 目录创建config文件，配置如下：
+Host www HostName 182.159.15.88 Port 50 User root IdentityFile ~/.ssh/id_rsa_2048 # git指定私钥 Host api HostName api.domain.com User git Port 22 IdentityFile ~/.ssh/git_id_rsa 这样登陆时候直接 ssh www 就可以了， 还有在不操作一段时间后会自动断开，需要再设置一个：
+Host * ServerAliveInterval 60 #表示没60秒去给服务端发起一次请求消息</description></item></channel></rss>
