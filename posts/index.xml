@@ -59,7 +59,67 @@ Collection常用方法 // 返回集合中元素个数 int size(); //Returns true
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// hashcode
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// (e.getKey()==null   ? 0 : e.getKey().hashCode()) ^ (e.getValue()==null ? 0 : e.getValue().hashCode())
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span><span style="color:#f92672">();</span>
-</span></span></code></pre></div>]]></content></item><item><title>关于Java面试要求的思考</title><link>/posts/inbox/interview_230409/</link><pubDate>Sun, 09 Apr 2023 01:51:26 +0000</pubDate><guid>/posts/inbox/interview_230409/</guid><description>关于Java面试要求的思考 公司发布的jd, 有相对明确的要求，可以自我匹配做下参考，有针对性的准备。如下是一个高级Java的招聘任职要求：
+</span></span></code></pre></div><h3 id="常用的集合">常用的集合</h3>
+<p>日常开发最常用最基础的集合：</p>
+<ul>
+<li>ArrayList、LinkedList</li>
+<li>HashMap、ConcurrentHashMap</li>
+</ul>
+<p>首先看ArrayList</p>
+<h4 id="arraylist">ArrayList</h4>
+<p>首先看声明</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArrayList</span><span style="color:#f92672">&lt;</span>E<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> AbstractList<span style="color:#f92672">&lt;</span>E<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">implements</span> List<span style="color:#f92672">&lt;</span>E<span style="color:#f92672">&gt;,</span> RandomAccess<span style="color:#f92672">,</span> Cloneable<span style="color:#f92672">,</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">io</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Serializable</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{}</span>
+</span></span></code></pre></div><p>ArrayList继承了AbstractList ,实现了 List等接口。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// 默认初始容量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> DEFAULT_CAPACITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 共享的空数组实例
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Object<span style="color:#f92672">[]</span> EMPTY_ELEMENTDATA <span style="color:#f92672">=</span> <span style="color:#f92672">{};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 默认容量的空数组实例。我们用这个区分 EMPTY_ELEMENTDATA, 是为了弄清楚首个元素添加时膨胀多少
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Object<span style="color:#f92672">[]</span> DEFAULTCAPACITY_EMPTY_ELEMENTDATA <span style="color:#f92672">=</span> <span style="color:#f92672">{};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 数组缓存存入的元素。这个数组的长度就是它的容量。任何等于DEFAULTCAPACITY_EMPTY_ELEMENTDATA的空数组添加首个元素时会被扩展为默认长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">transient</span> Object<span style="color:#f92672">[]</span> elementData<span style="color:#f92672">;</span> <span style="color:#75715e">// non-private to simplify nested class access
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 包含几个元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> size<span style="color:#f92672">;</span>
+</span></span></code></pre></div><p>以上几个初始定义，就是ArrayList 经常用的东西， 长度保存在size 里， 元素保存在 Object[] elementData。 我们这里知道ArrayList 是由数组实现的。</p>
+<p>继续看构造方法。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ArrayList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">elementData</span> <span style="color:#f92672">=</span> DEFAULTCAPACITY_EMPTY_ELEMENTDATA<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>当你用 new ArrayList() 时候， ArrayList 内部发生的就是把 elementData 初始化为 DEFAULTCAPACITY_EMPTY_ELEMENTDATA; 也就是把空对象数组实例给它，此时它的容量也初始为10。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ArrayList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> initialCapacity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>initialCapacity <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">elementData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object<span style="color:#f92672">[</span>initialCapacity<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>initialCapacity <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">elementData</span> <span style="color:#f92672">=</span> EMPTY_ELEMENTDATA<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Illegal Capacity: &#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                                               initialCapacity<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>使用如  new ArrayList(50) 时候， 实际调用的这个构造方法。传入的int型初始化容量要&gt;=0， 否则就是报不合法容量异常。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ArrayList</span><span style="color:#f92672">(</span>Collection<span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">extends</span> E<span style="color:#f92672">&gt;</span> c<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Object<span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">toArray</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">((</span>size <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> ArrayList<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                elementData <span style="color:#f92672">=</span> a<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                elementData <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">copyOf</span><span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> size<span style="color:#f92672">,</span> Object<span style="color:#f92672">[].</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// replace with empty array.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            elementData <span style="color:#f92672">=</span> EMPTY_ELEMENTDATA<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>使用如 new ArrayList(otherList); 时候， 先把传入的集合转成了数组，size 被复制为传入集合的长度，如果是空集合，就用EMPTY_ELEMENTDATA来初始化，这是就相当于 new ArrayList();    如果非空集合，那么比较传入对象信息，如何是ArrayList 就直接把它元素复制给 elementData. 否则就是复制元素给elementData.</p>
+]]></content></item><item><title>关于Java面试要求的思考</title><link>/posts/inbox/interview_230409/</link><pubDate>Sun, 09 Apr 2023 01:51:26 +0000</pubDate><guid>/posts/inbox/interview_230409/</guid><description>关于Java面试要求的思考 公司发布的jd, 有相对明确的要求，可以自我匹配做下参考，有针对性的准备。如下是一个高级Java的招聘任职要求：
 任职要求 1、全日制统招本科及以上学历，计算机相关专业，5年以上Java开发经验； 2、基础扎实，精通Java并发编程、JVM，理解网络通信、多线程等基础框架，对各种开源开发框架如Spring boot、mybatis等有深入的应用和优化经验，掌握它的原理和机制； 3、熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化； 4、熟悉常用设计模式及开发实践，熟悉面向对象和数据结构； 5、良好的沟通能力、团队合作精神；认真负责、具有高度责任感；良好的抗压能力，优秀的学习能力； 6、有信贷、信用卡、互联网金融、贷中管理或催收系统研发经验优先； 7、高阶需要丰富的管理、规划能力； 8、英语好优先。
 拆解分析 要求很常见，主要分为：学历，技术应用，经验经历，其他特定的要求等。对于学历和专业经历几乎不可选，都是固定的东西，有准备空间的是技术相关。我们也主要看技术这块。
 基础扎实。
