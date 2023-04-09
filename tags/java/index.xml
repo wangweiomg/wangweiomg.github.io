@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Hello Friend</title><link>/tags/java/</link><description>Recent content in Java on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 09 Apr 2023 01:51:26 +0000</lastBuildDate><atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>关于Java面试要求的思考</title><link>/posts/inbox/interview_230409/</link><pubDate>Sun, 09 Apr 2023 01:51:26 +0000</pubDate><guid>/posts/inbox/interview_230409/</guid><description>关于Java面试要求的思考 公司发布的jd, 有相对明确的要求，可以自我匹配做下参考，有针对性的准备。如下是一个高级Java的招聘任职要求：
+任职要求 1、全日制统招本科及以上学历，计算机相关专业，5年以上Java开发经验； 2、基础扎实，精通Java并发编程、JVM，理解网络通信、多线程等基础框架，对各种开源开发框架如Spring boot、mybatis等有深入的应用和优化经验，掌握它的原理和机制； 3、熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化； 4、熟悉常用设计模式及开发实践，熟悉面向对象和数据结构； 5、良好的沟通能力、团队合作精神；认真负责、具有高度责任感；良好的抗压能力，优秀的学习能力； 6、有信贷、信用卡、互联网金融、贷中管理或催收系统研发经验优先； 7、高阶需要丰富的管理、规划能力； 8、英语好优先。
+拆解分析 要求很常见，主要分为：学历，技术应用，经验经历，其他特定的要求等。对于学历和专业经历几乎不可选，都是固定的东西，有准备空间的是技术相关。我们也主要看技术这块。
+基础扎实。
+Java 基础 精通Java并发编程
+多线程 JVM
+Java内存模型 垃圾回收 类加载机制 理解网络通信、多线程等基础框架
+Java IO 对各种开源开发框架如Spring boot, mybatis,等有深入的应用和优化经验，掌握它的原理和机制
+springboot 基本概念，AOP, IOC, 代理， 循环依赖 事务传播 MyBatis 批量操作、动态SQL， 熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化；
+分布式系统架构 消息队列的作用 ES使用场景和原理 Redis的使用场景和原理 MySQL 原理与SQL优化 熟悉常用的设计模式及开发实践，熟悉面向对象和数据结构；
+23种设计模式，常用的几个，以及在实际项目、或spring中的应用 面向对象与数据结构 总结 以上每个环节都是需要时间和经历去学习与练习，对于有经验的对照着查漏补缺。</description></item></channel></rss>

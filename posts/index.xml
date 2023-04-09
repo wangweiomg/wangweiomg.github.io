@@ -1,4 +1,85 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Hello Friend</title><link>/posts/</link><description>Recent content in Posts on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Wed, 05 Apr 2023 23:21:54 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>职业和学历思考</title><link>/posts/inbox/career_think_230405/</link><pubDate>Wed, 05 Apr 2023 23:21:54 +0800</pubDate><guid>/posts/inbox/career_think_230405/</guid><description>职业和学历的思考 看了这么一个推，90后靠卖口罩和炒币赚到近亿身家 感觉很有意思，就复制了下来：
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Hello Friend</title><link>/posts/</link><description>Recent content in Posts on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 09 Apr 2023 01:51:26 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>关于Java面试要求的思考</title><link>/posts/inbox/interview_230409/</link><pubDate>Sun, 09 Apr 2023 01:51:26 +0000</pubDate><guid>/posts/inbox/interview_230409/</guid><description>关于Java面试要求的思考 公司发布的jd, 有相对明确的要求，可以自我匹配做下参考，有针对性的准备。如下是一个高级Java的招聘任职要求：
+任职要求 1、全日制统招本科及以上学历，计算机相关专业，5年以上Java开发经验； 2、基础扎实，精通Java并发编程、JVM，理解网络通信、多线程等基础框架，对各种开源开发框架如Spring boot、mybatis等有深入的应用和优化经验，掌握它的原理和机制； 3、熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化； 4、熟悉常用设计模式及开发实践，熟悉面向对象和数据结构； 5、良好的沟通能力、团队合作精神；认真负责、具有高度责任感；良好的抗压能力，优秀的学习能力； 6、有信贷、信用卡、互联网金融、贷中管理或催收系统研发经验优先； 7、高阶需要丰富的管理、规划能力； 8、英语好优先。
+拆解分析 要求很常见，主要分为：学历，技术应用，经验经历，其他特定的要求等。对于学历和专业经历几乎不可选，都是固定的东西，有准备空间的是技术相关。我们也主要看技术这块。
+基础扎实。
+Java 基础 精通Java并发编程
+多线程 JVM
+Java内存模型 垃圾回收 类加载机制 理解网络通信、多线程等基础框架
+Java IO 对各种开源开发框架如Spring boot, mybatis,等有深入的应用和优化经验，掌握它的原理和机制
+springboot 基本概念，AOP, IOC, 代理， 循环依赖 事务传播 MyBatis 批量操作、动态SQL， 熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化；
+分布式系统架构 消息队列的作用 ES使用场景和原理 Redis的使用场景和原理 MySQL 原理与SQL优化 熟悉常用的设计模式及开发实践，熟悉面向对象和数据结构；
+23种设计模式，常用的几个，以及在实际项目、或spring中的应用 面向对象与数据结构 总结 以上每个环节都是需要时间和经历去学习与练习，对于有经验的对照着查漏补缺。</description><content type="html"><![CDATA[<h2 id="关于java面试要求的思考">关于Java面试要求的思考</h2>
+<p>公司发布的jd, 有相对明确的要求，可以自我匹配做下参考，有针对性的准备。如下是一个高级Java的招聘任职要求：</p>
+<blockquote>
+<p>任职要求
+1、全日制统招本科及以上学历，计算机相关专业，5年以上Java开发经验；
+2、基础扎实，精通Java并发编程、JVM，理解网络通信、多线程等基础框架，对各种开源开发框架如Spring boot、mybatis等有深入的应用和优化经验，掌握它的原理和机制；
+3、熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化；
+4、熟悉常用设计模式及开发实践，熟悉面向对象和数据结构；
+5、良好的沟通能力、团队合作精神；认真负责、具有高度责任感；良好的抗压能力，优秀的学习能力；
+6、有信贷、信用卡、互联网金融、贷中管理或催收系统研发经验优先；
+7、高阶需要丰富的管理、规划能力；
+8、英语好优先。</p>
+</blockquote>
+<h3 id="拆解分析">拆解分析</h3>
+<p>要求很常见，主要分为：学历，技术应用，经验经历，其他特定的要求等。对于学历和专业经历几乎不可选，都是固定的东西，有准备空间的是技术相关。我们也主要看技术这块。</p>
+<ul>
+<li>
+<p>基础扎实。</p>
+<ul>
+<li>Java 基础</li>
+</ul>
+</li>
+<li>
+<p>精通Java并发编程</p>
+<ul>
+<li>多线程</li>
+</ul>
+</li>
+<li>
+<p>JVM</p>
+<ul>
+<li>Java内存模型</li>
+<li>垃圾回收</li>
+<li>类加载机制</li>
+</ul>
+</li>
+<li>
+<p>理解网络通信、多线程等基础框架</p>
+<ul>
+<li>Java IO</li>
+</ul>
+</li>
+<li>
+<p>对各种开源开发框架如Spring boot, mybatis,等有深入的应用和优化经验，掌握它的原理和机制</p>
+<ul>
+<li>springboot 基本概念，AOP, IOC, 代理，</li>
+<li>循环依赖</li>
+<li>事务传播</li>
+<li>MyBatis 批量操作、动态SQL，</li>
+</ul>
+</li>
+<li>
+<p>熟悉大型分布式系统的设计与开发，熟练掌握如消息队列、ES、redis、Mysql等中间件，熟悉其原理和优化；</p>
+<ul>
+<li>分布式系统架构</li>
+<li>消息队列的作用</li>
+<li>ES使用场景和原理</li>
+<li>Redis的使用场景和原理</li>
+<li>MySQL 原理与SQL优化</li>
+</ul>
+</li>
+<li>
+<p>熟悉常用的设计模式及开发实践，熟悉面向对象和数据结构；</p>
+<ul>
+<li>23种设计模式，常用的几个，以及在实际项目、或spring中的应用</li>
+<li>面向对象与数据结构</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结">总结</h3>
+<p>以上每个环节都是需要时间和经历去学习与练习，对于有经验的对照着查漏补缺。</p>
+]]></content></item><item><title>职业和学历思考</title><link>/posts/inbox/career_think_230405/</link><pubDate>Wed, 05 Apr 2023 23:21:54 +0800</pubDate><guid>/posts/inbox/career_think_230405/</guid><description>职业和学历的思考 看了这么一个推，90后靠卖口罩和炒币赚到近亿身家 感觉很有意思，就复制了下来：
 看了一个90后靠卖口罩和炒币赚到近亿身家的纪录片，半个多小时的片长，都是记录他如何在疫情刚开始的时候筹备车间、买原材料、盯生产的事情。
 片子最后，摄制组一位清华毕业的小哥问主角有没有什么是在他赚这么多钱后，想得到却始终没有得到的，别人有你却很羡慕的？
 **主角反问，那是什么？可以举个例子？ 小哥说，比如清华本科文凭。 主角说，没有。看得出来，他压根不在乎。
