@@ -1,4 +1,122 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Hello Friend</title><link>/posts/</link><description>Recent content in Posts on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 09 Apr 2023 02:51:02 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Java基础之集合-ArrayList</title><link>/posts/inbox/java_base_230409/</link><pubDate>Sun, 09 Apr 2023 02:51:02 +0000</pubDate><guid>/posts/inbox/java_base_230409/</guid><description>Java基础之集合总览 - ArrayList Java集合是经常使用到的，集合类主要由Collection 和 Map 这两个接口派生。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Hello Friend</title><link>/posts/</link><description>Recent content in Posts on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 10 Apr 2023 08:24:53 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Java集合基础之HashMap</title><link>/posts/inbox/javabase_hashmap_230410/</link><pubDate>Mon, 10 Apr 2023 08:24:53 +0000</pubDate><guid>/posts/inbox/javabase_hashmap_230410/</guid><description>Java集合基础之HashMap HashMap在日常中也是使用频繁，了解它的源码很有必要。
+构造方法与默认属性 public class HashMap&amp;lt;K,V&amp;gt; extends AbstractMap&amp;lt;K,V&amp;gt; implements Map&amp;lt;K,V&amp;gt;, Cloneable, Serializable {} static final int DEFAULT_INITIAL_CAPACITY = 1 &amp;lt;&amp;lt; 4; // aka 16 默认容量的16， ArrayList是10。
+static final int MAXIMUM_CAPACITY = 1 &amp;lt;&amp;lt; 30; 最大容量是 1&amp;laquo;30
+static final float DEFAULT_LOAD_FACTOR = 0.75f; 默认负载因子是 0.75.
+static final int TREEIFY_THRESHOLD = 8; 当&amp;gt;=8时候转化为红黑树
+static final int UNTREEIFY_THRESHOLD = 6; static final int MIN_TREEIFY_CAPACITY = 64; 核心内部类Node
+static class Node&amp;lt;K,V&amp;gt; implements Map.Entry&amp;lt;K,V&amp;gt; { final int hash; final K key; V value; Node&amp;lt;K,V&amp;gt; next; Node(int hash, K key, V value, Node&amp;lt;K,V&amp;gt; next) { this.</description><content type="html"><![CDATA[<h2 id="java集合基础之hashmap">Java集合基础之HashMap</h2>
+<p>HashMap在日常中也是使用频繁，了解它的源码很有必要。</p>
+<h3 id="构造方法与默认属性">构造方法与默认属性</h3>
+<pre tabindex="0"><code>public class HashMap&lt;K,V&gt; extends AbstractMap&lt;K,V&gt;
+    implements Map&lt;K,V&gt;, Cloneable, Serializable {}
+</code></pre><pre tabindex="0"><code>static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4; // aka 16
+</code></pre><p>默认容量的16， ArrayList是10。</p>
+<pre tabindex="0"><code>static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;
+</code></pre><p>最大容量是 1&laquo;30</p>
+<pre tabindex="0"><code>static final float DEFAULT_LOAD_FACTOR = 0.75f;
+</code></pre><p>默认负载因子是 0.75.</p>
+<pre tabindex="0"><code>static final int TREEIFY_THRESHOLD = 8;
+</code></pre><p>当&gt;=8时候转化为红黑树</p>
+<pre tabindex="0"><code>static final int UNTREEIFY_THRESHOLD = 6;
+</code></pre><pre tabindex="0"><code>static final int MIN_TREEIFY_CAPACITY = 64;
+</code></pre><p>核心内部类Node</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">implements</span> Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> hash<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> K key<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        V value<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> next<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Node<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> hash<span style="color:#f92672">,</span> K key<span style="color:#f92672">,</span> V value<span style="color:#f92672">,</span> Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> next<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> hash<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> key<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> next<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> K <span style="color:#a6e22e">getKey</span><span style="color:#f92672">()</span>        <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> key<span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> V <span style="color:#a6e22e">getValue</span><span style="color:#f92672">()</span>      <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> value<span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> key <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">+</span> value<span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">(</span>key<span style="color:#f92672">)</span> <span style="color:#f92672">^</span> Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> V <span style="color:#a6e22e">setValue</span><span style="color:#f92672">(</span>V newValue<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            V oldValue <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            value <span style="color:#f92672">=</span> newValue<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> oldValue<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o <span style="color:#f92672">==</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o <span style="color:#66d9ef">instanceof</span> Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;?,?&gt;</span> e <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;?,?&gt;)</span>o<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">())</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>                    Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">()))</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Map.Entry 类型的 Entry, K , V 键值对，用于存信息。重写hashCode 和 equals方法。 equals 主要逻辑是， 如果比较的是自身 (o == this), 直接返回true.  否则就要 key , value 都要相等。</p>
+<pre tabindex="0"><code>transient Node&lt;K,V&gt;[] table;
+</code></pre><p>Node类型数组，存hash表。</p>
+<pre tabindex="0"><code>transient Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet;
+</code></pre><p>entrySet</p>
+<p>先来看无参数构造：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">loadFactor</span> <span style="color:#f92672">=</span> DEFAULT_LOAD_FACTOR<span style="color:#f92672">;</span> <span style="color:#75715e">// all other fields defaulted
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>所有属性都是默认。(默认长度2&laquo;4 是16， 负载因子、列表转数等)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> initialCapacity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">(</span>initialCapacity<span style="color:#f92672">,</span> DEFAULT_LOAD_FACTOR<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> initialCapacity<span style="color:#f92672">,</span> <span style="color:#66d9ef">float</span> loadFactor<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>initialCapacity <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Illegal initial capacity: &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                                               initialCapacity<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>initialCapacity <span style="color:#f92672">&gt;</span> MAXIMUM_CAPACITY<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            initialCapacity <span style="color:#f92672">=</span> MAXIMUM_CAPACITY<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>loadFactor <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> Float<span style="color:#f92672">.</span><span style="color:#a6e22e">isNaN</span><span style="color:#f92672">(</span>loadFactor<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Illegal load factor: &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                                               loadFactor<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">loadFactor</span> <span style="color:#f92672">=</span> loadFactor<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">threshold</span> <span style="color:#f92672">=</span> tableSizeFor<span style="color:#f92672">(</span>initialCapacity<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>传入初始化容量 initialCapacity ,  首先不能小于0， 不能大于最大容量，这里最大容量是：</p>
+<pre tabindex="0"><code>static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;
+</code></pre><p>不同于 ArrayList的  2^31 - 1 - 8  。</p>
+<p>看最后的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">threshold</span> <span style="color:#f92672">=</span> tableSizeFor<span style="color:#f92672">(</span>initialCapacity<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * Returns a power of two size for the given target capacity.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * 返回给定目标容量的两个大小的幂
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">tableSizeFor</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> cap<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> cap <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">|=</span> n <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">|=</span> n <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">|=</span> n <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">|=</span> n <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">|=</span> n <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">16</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;=</span> MAXIMUM_CAPACITY<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> MAXIMUM_CAPACITY <span style="color:#f92672">:</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>这个threshold</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * The next size value at which to resize (capacity * load factor).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @serial
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// (The javadoc description is true upon serialization.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Additionally, if the table array has not been allocated, this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// field holds the initial array capacity, or zero signifying
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// DEFAULT_INITIAL_CAPACITY.)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> threshold<span style="color:#f92672">;</span>
+</span></span></code></pre></div><h3 id="常用方法">常用方法</h3>
+]]></content></item><item><title>Java基础之集合-ArrayList</title><link>/posts/inbox/java_base_230409/</link><pubDate>Sun, 09 Apr 2023 02:51:02 +0000</pubDate><guid>/posts/inbox/java_base_230409/</guid><description>Java基础之集合总览 - ArrayList Java集合是经常使用到的，集合类主要由Collection 和 Map 这两个接口派生。
 Collection 派生出 Set，List, Queue。 Map派生HashMap, TreeMap， ConcurrentHashMap
 Collection常用方法 // 返回集合中元素个数 int size(); //Returns true if this collection contains no elements. boolean isEmpty(); // 判断集合中是否存在元素o , (o==null ? e==null : o.equals(e)). boolean contains(Object o); // 添加元素 boolean add(E e); // 删除元素 boolean remove(Object o); // 清空元素 void clear(); Map常用方法 // 返回 k-v 数量 int size(); // Returns &amp;lt;tt&amp;gt;true&amp;lt;/tt&amp;gt; if this map contains no key-value mappings.</description><content type="html"><![CDATA[<h2 id="java基础之集合总览---arraylist">Java基础之集合总览 - ArrayList</h2>
 <p>Java集合是经常使用到的，集合类主要由Collection 和 Map 这两个接口派生。</p>
