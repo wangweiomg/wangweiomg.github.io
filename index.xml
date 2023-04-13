@@ -1269,13 +1269,8 @@ Host * ServerAliveInterval 60 #表示没60秒去给服务端发起一次请求�
 博客系统如何组织分类
 分类
 系列
-标签</description></item><item><title>First</title><link>/posts/inbox/first/</link><pubDate>Thu, 30 Mar 2023 14:12:06 +0000</pubDate><guid>/posts/inbox/first/</guid><description>hello world !</description></item><item><title>关于本栏</title><link>/about/</link><pubDate>Thu, 30 Mar 2023 14:11:36 +0000</pubDate><guid>/about/</guid><description>我是谁 一个普通程序员。
-从事后端开发工作, 常用编程语言是 Java, SQL, Python, 也正在尝试更多前端技术，目前在学JavaScript 和 node, React, Vue , 也准备尝试后端的 Go, Rust, Ruby on Rails &amp;hellip;
-做了几个没什么用户量的工具类小程序, 还会维护下去。
-平时稍微宅，轻微社恐，但有机会也喜欢旅游, 去过欧洲和韩国，计划未来两年去日本、东南亚、澳洲走一波。
-希望的生活自己表达有限，引用名人的来充门面:
+标签</description></item><item><title>First</title><link>/posts/inbox/first/</link><pubDate>Thu, 30 Mar 2023 14:12:06 +0000</pubDate><guid>/posts/inbox/first/</guid><description>hello world !</description></item><item><title>关于本栏</title><link>/about/</link><pubDate>Thu, 30 Mar 2023 14:11:36 +0000</pubDate><guid>/about/</guid><description>我是谁 一名程序员。
+从事后端开发工作, 常用编程语言是 Java, SQL, Python
+做了几个工具类小程序, 还会维护下去。
 莫春者，春服既成，冠者五六人，童子六七人，浴乎沂，风乎舞雩，咏而归。
-本博主要内容 记录生活，所思所想闲话 记录学习，技术的应用 生活文章水平大概如下:
-今天天气晴朗， 适合出去爬山。 为何没去爬山呢，因为我在加班&amp;hellip;
-技术文章水平大概如下:
-def sum(a: Int, b: Int) -&amp;gt; Int: return a + b System.out.println(&amp;#34;Hello World!&amp;#34;); 本博不会有 很深的技术，因为我不会 很正确的观点，因为做不到 其他很完美的东西 本博使用技术 hugo theme: hello-friend-ng 联系我 email: findstockgod AT gmailDOTcom</description></item></channel></rss>
+本博主要内容 记录生活，所思所想闲话 记录学习，技术的应用 使用技术 hugo theme: hello-friend-ng 联系我 email: findstockgod AT gmailDOTcom</description></item></channel></rss>
