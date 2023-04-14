@@ -1,4 +1,365 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Hello Friend</title><link>/posts/</link><description>Recent content in Posts on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Wed, 12 Apr 2023 03:37:21 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Java面试中常问的问题</title><link>/posts/tech/java_interview_questions_230412/</link><pubDate>Wed, 12 Apr 2023 03:37:21 +0000</pubDate><guid>/posts/tech/java_interview_questions_230412/</guid><description>Java面试中常问的问题 springboot是如何实现自动装配的？ 扫描 meta_info redis 为什么快？ 分布式锁为何要结合 lua脚本来实现？redis分布式锁会有什么问题 redis 如果系统错误释放锁 和 业务执行超时释放锁，会如何？ redis 常用数据结构 kafka消息队列为何要引入组？解决了什么问题 broker, group 来说 分布式事务如何保证一致性。 mysql ABC 索引，实际查询只用到了AB， 没用到C，是什么情况? B是范围查询 Java HashMap 两次put 相同key与相同hashcode的区别。 服务发现是怎么做的</description><content type="html"><![CDATA[<h2 id="java面试中常问的问题">Java面试中常问的问题</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Hello Friend</title><link>/posts/</link><description>Recent content in Posts on Hello Friend</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Fri, 14 Apr 2023 04:21:08 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>JVM 常见面试题</title><link>/posts/tech/java_jvm_interview_230414/</link><pubDate>Fri, 14 Apr 2023 04:21:08 +0000</pubDate><guid>/posts/tech/java_jvm_interview_230414/</guid><description>JVM 常见面试题 我让GPT生成了几个JVM常见面试题：
+以下是一些常见的 JVM（Java 虚拟机）面试题：
+什么是 JVM？ JVM 的组成部分是什么？ 请解释 Java 内存模型（JMM）。 什么是类加载器（Classloader）？请解释其工作原理。 请列举 JVM 中的类加载器类型。 什么是 Just-In-Time（JIT）编译器？它的作用是什么？ 请解释 Java 堆内存和栈内存的区别。 什么是垃圾回收（Garbage Collection）？请简要描述其工作原理。 请列举并简要介绍 Java 中的垃圾回收器。 什么是分代垃圾回收策略？请解释年轻代（Young Generation）和老年代（Old Generation）的概念。 请解释 Java 中的强引用、软引用、弱引用和虚引用。 什么是 Java 堆溢出（Heap Overflow）和栈溢出（Stack Overflow）？如何处理这些问题？ 什么是逃逸分析？它在 JVM 性能优化中有什么作用？ 如何监控和调优 JVM 的性能？ 请列举 JVM 调优的一些常用参数。 请解释 Java 中的死锁、饥饿和活锁。 什么是线程安全？如何在 Java 中确保线程安全？ 请解释 Java 中的同步和异步编程。 什么是 volatile 关键字？它的作用是什么？ 请解释 Java 中的并发编程和多线程编程。 1. 什么是 JVM？ JVM 是 Java Virtual Machine 的缩写，也就是Java虚拟机。它是一个运行Java程序的跨平台容器。它的主要功能特点是：</description><content type="html"><![CDATA[<h2 id="jvm-常见面试题">JVM 常见面试题</h2>
+<p>我让GPT生成了几个JVM常见面试题：</p>
+<blockquote>
+<p>以下是一些常见的 JVM（Java 虚拟机）面试题：</p>
+<ol>
+<li>什么是 JVM？</li>
+<li>JVM 的组成部分是什么？</li>
+<li>请解释 Java 内存模型（JMM）。</li>
+<li>什么是类加载器（Classloader）？请解释其工作原理。</li>
+<li>请列举 JVM 中的类加载器类型。</li>
+<li>什么是 Just-In-Time（JIT）编译器？它的作用是什么？</li>
+<li>请解释 Java 堆内存和栈内存的区别。</li>
+<li>什么是垃圾回收（Garbage Collection）？请简要描述其工作原理。</li>
+<li>请列举并简要介绍 Java 中的垃圾回收器。</li>
+<li>什么是分代垃圾回收策略？请解释年轻代（Young Generation）和老年代（Old Generation）的概念。</li>
+<li>请解释 Java 中的强引用、软引用、弱引用和虚引用。</li>
+<li>什么是 Java 堆溢出（Heap Overflow）和栈溢出（Stack Overflow）？如何处理这些问题？</li>
+<li>什么是逃逸分析？它在 JVM 性能优化中有什么作用？</li>
+<li>如何监控和调优 JVM 的性能？</li>
+<li>请列举 JVM 调优的一些常用参数。</li>
+<li>请解释 Java 中的死锁、饥饿和活锁。</li>
+<li>什么是线程安全？如何在 Java 中确保线程安全？</li>
+<li>请解释 Java 中的同步和异步编程。</li>
+<li>什么是 volatile 关键字？它的作用是什么？</li>
+<li>请解释 Java 中的并发编程和多线程编程。</li>
+</ol>
+</blockquote>
+<h3 id="1-什么是-jvm">1. 什么是 JVM？</h3>
+<p>JVM 是 Java Virtual Machine 的缩写，也就是Java虚拟机。它是一个运行Java程序的跨平台容器。它的主要功能特点是：</p>
+<ol>
+<li>加载、执行Java字节码</li>
+<li>内存管理</li>
+<li>热点代码优化</li>
+<li>跨平台</li>
+</ol>
+<p>等。</p>
+<blockquote>
+<p>GPT 回答：</p>
+<p>Q: 什么是 JVM？</p>
+<p>A:  JVM（Java虚拟机）是一个抽象的计算机，它为运行 Java 字节码提供了运行时环境。JVM 可以使 Java 程序具有平台无关性，这意味着 Java 代码可以在任何支持 JVM 的操作系统上运行，而不需要为特定平台重新编译。Java 代码首先被编译成平台无关的字节码（.class 文件），然后在运行时由 JVM 解释执行或通过即时编译器（JIT）编译成本地机器代码。</p>
+<p>JVM 的主要功能包括：</p>
+<ol>
+<li>加载：将字节码加载到内存中，这涉及到类加载器（Classloader）和类的链接。</li>
+<li>执行：解释或编译字节码，执行程序逻辑。</li>
+<li>内存管理：负责内存分配和垃圾回收，管理 Java 堆、方法区、栈内存等。</li>
+<li>提供运行时环境：支持 Java 程序的运行，包括线程管理、异常处理、同步机制等。</li>
+</ol>
+<p>JVM 的核心组件包括：</p>
+<ol>
+<li>类加载器（Classloader）：负责加载字节码到内存中。</li>
+<li>执行引擎（Execution Engine）：解释执行字节码或通过即时编译器（JIT）编译成本地机器代码。</li>
+<li>垃圾回收器（Garbage Collector）：自动管理内存，回收不再使用的对象。</li>
+<li>Java 内存模型（Java Memory Model）：包括 Java 堆、方法区、栈内存、程序计数器等。</li>
+</ol>
+<p>总之，JVM 是 Java 程序运行时环境的核心，它使 Java 代码具有平台无关性，并提供内存管理、类加载和执行等功能。</p>
+</blockquote>
+<h3 id="2-jvm-的组成部分是什么">2. JVM 的组成部分是什么？</h3>
+<p>根据以上回答，我们知道 JVM核心组件包括：</p>
+<ol>
+<li>类加载器 (ClassLoader): 负责加载字节码到内存中。</li>
+<li>执行引擎 (Execution Engine): 解释执行字节码或通过即时编译器(JIT)编译成本地机器代码</li>
+<li>垃圾回收器(Garbage Collector): 自动管理内存，回收不再使用的对象。</li>
+<li>Java 内存模型(Java Memeory Model): 包括Java堆、方法区、栈内存、程序计数器等。</li>
+</ol>
+<p>问下GPT ：</p>
+<blockquote>
+<p>Q: JVM 的组成部分是什么？</p>
+<p>A: JVM（Java虚拟机）的主要组成部分包括以下几个方面：</p>
+<ol>
+<li>类加载器（Classloader）：负责将字节码（.class 文件）加载到内存中。类加载器主要有三种：引导类加载器（Bootstrap ClassLoader）、扩展类加载器（Extension ClassLoader）和应用类加载器（Application ClassLoader）。</li>
+<li>运行时数据区（Runtime Data Area）：这是 JVM 内存管理的关键部分，包括以下几个区域：
+<ul>
+<li>Java堆（Heap）：存储对象实例和数组，堆内存是所有线程共享的。</li>
+<li>方法区（Method Area）：存储类结构信息，如类的名称、方法、字段等。方法区也是线程共享的。</li>
+<li>JVM栈（JVM Stack）：存储局部变量、操作数栈、方法调用帧等。每个线程都有自己的 JVM 栈。</li>
+<li>程序计数器（Program Counter Register）：存储当前线程正在执行的字节码指令的地址。每个线程都有自己的程序计数器。</li>
+<li>本地方法栈（Native Method Stack）：存储本地方法（例如 JNI 调用的方法）的调用帧。每个线程都有自己的本地方法栈。</li>
+</ul>
+</li>
+<li>执行引擎（Execution Engine）：负责解释执行字节码或通过即时编译器（JIT，Just-In-Time Compiler）将字节码编译成本地机器代码来提高程序运行效率。执行引擎还包括一个垃圾回收器（Garbage Collector），负责自动回收不再使用的对象，以避免内存泄漏。</li>
+<li>本地方法接口（Java Native Interface，JNI）：JNI 是一个框架，允许 Java 代码与本地方法（通常是用 C 或 C++ 编写的）进行交互。通过 JNI，Java 代码可以调用本地方法，而本地方法也可以调用 Java 代码。</li>
+<li>本地方法库（Native Method Libraries）：这些库包含了与平台相关的本地方法实现，这些方法可以通过 JNI 框架被 Java 代码调用。</li>
+</ol>
+<p>JVM 的这些组成部分共同协作，为 Java 程序提供了一个抽象的、跨平台的运行时环境。</p>
+</blockquote>
+<h3 id="3-请解释-java-内存模型jmm">3. 请解释 Java 内存模型（JMM)</h3>
+<p>Java 内存模型就是JVM在运行时如何在内存中存储使用数据、管理内存。</p>
+<blockquote>
+<p>Q: 请解释 Java 内存模型</p>
+<p>A:  Java 内存模型（Java Memory Model，JMM）是一个抽象的概念，用于描述 Java 程序在运行时如何在内存中存储数据、如何管理内存以及线程之间如何进行数据共享。JMM 主要关注以下几个方面：</p>
+<ol>
+<li>内存分区：Java 内存模型将 JVM 的内存划分为不同的区域，以满足不同类型数据的存储需求。主要的内存区域包括：
+<ul>
+<li>Java 堆（Heap）：用于存储对象实例和数组。堆内存是所有线程共享的，由垃圾回收器自动管理。</li>
+<li>方法区（Method Area）：用于存储类信息（类名、方法、字段等）、常量池、静态变量等。方法区也是线程共享的。</li>
+<li>JVM 栈（JVM Stack）：用于存储局部变量、操作数栈、方法调用帧等。每个线程都有自己的 JVM 栈，栈内存不是线程共享的。</li>
+<li>程序计数器（Program Counter Register）：存储当前线程正在执行的字节码指令的地址。每个线程都有自己的程序计数器。</li>
+<li>本地方法栈（Native Method Stack）：用于存储本地方法（如 JNI 调用的方法）的调用帧。每个线程都有自己的本地方法栈。</li>
+</ul>
+</li>
+<li>线程之间的内存可见性：JMM 定义了一套规则，确保一个线程对共享变量的修改对其他线程是可见的。这涉及到内存屏障、缓存一致性和处理器优化等底层概念。</li>
+<li>原子性、有序性和一致性：JMM 定义了原子操作、指令重排序和内存屏障等概念，以确保 Java 程序在多线程环境下能够正确地执行。</li>
+<li>happens-before 关系：JMM 定义了一套 happens-before 规则，用于描述 Java 程序中的先行发生关系。这些规则有助于开发人员理解并发程序中的内存可见性和顺序一致性问题。</li>
+</ol>
+<p>总之，Java 内存模型是一个抽象的概念，用于描述 Java 程序在运行时如何在内存中存储数据、如何管理内存以及线程之间如何进行数据共享。了解 Java 内存模型有助于编写正确的并发程序，并避免内存相关的问题。</p>
+</blockquote>
+<p>这里有一个问题，方法区会存类的信息，静态变量， 那么静态方法会存在哪里？</p>
+<p>答案是，方法区。 静态方法相当于类的一部分，属于类的信息。</p>
+<h3 id="4-什么是类加载器classloader请解释其工作原理">4. 什么是类加载器（Classloader）？请解释其工作原理。</h3>
+<p>类加载器 Classloader 是JVM用来处理class文件的工具。主要工作就是把class 文件加载到内存并和JVM交互，用完卸载。</p>
+<blockquote>
+<p>Q: 什么是类加载器（Classloader）？请解释其工作原理。</p>
+<p>A: 类加载器（Classloader）是 Java 虚拟机（JVM）的一个组成部分，负责将编译后的字节码（.class 文件）加载到内存中。类加载器在运行时将字节码加载到 JVM 中，创建 Class 对象，然后这些 Class 对象可以被实例化为具体的对象。</p>
+<p>类加载器的工作原理可以分为以下几个阶段：</p>
+<ol>
+<li>加载（Loading）：类加载器从文件系统、网络资源或其他来源读取字节码（.class 文件），将其加载到内存中，并创建一个对应的 Class 对象。Java 中有三种主要的类加载器：引导类加载器（Bootstrap ClassLoader）、扩展类加载器（Extension ClassLoader）和应用类加载器（Application ClassLoader）。</li>
+<li>链接（Linking）：链接过程将加载到内存中的字节码与 JVM 进行整合。链接过程包括以下三个子阶段：
+<ul>
+<li>验证（Verification）：确保加载的字节码是一个有效的、格式正确的 Java 类，没有安全问题。</li>
+<li>准备（Preparation）：为类中的静态变量分配内存，并为其设置默认值。</li>
+<li>解析（Resolution）：将常量池中的符号引用替换为直接引用，这涉及到解析类、接口、字段和方法等引用。</li>
+</ul>
+</li>
+<li>初始化（Initialization）：执行类的静态初始化代码，包括静态变量的初始化和静态代码块的执行。这一过程保证了类在实例化之前已经完成了初始化。</li>
+<li>使用（Using）：在完成加载、链接和初始化后，类就可以被实例化并在程序中使用了。</li>
+<li>卸载（Unloading）：当类不再被使用时，类加载器可以将其从内存中卸载，以释放资源。</li>
+</ol>
+<p>类加载器具有双亲委派模型（Parent Delegation Model）的特性，即当加载一个类时，类加载器会首先委托其父类加载器加载，如果父类加载器无法找到类，才会尝试自己加载。这种模型可以确保核心 Java 类库的一致性，避免类的重复加载。</p>
+<p>总之，类加载器负责将字节码加载到内存中，使其在 JVM 中可用。类加载器的工作原理包括加载、链接、初始化、使用和卸载这几个阶段。</p>
+</blockquote>
+<h3 id="5-请列举-jvm-中的类加载器类型">5. 请列举 JVM 中的类加载器类型</h3>
+<p>类加载有三种类型：</p>
+<ol>
+<li>BootstrapClassLoader: 负责加载jdk的相关class文件</li>
+<li>ExtensionClassLoader：负责加载jdk ext包下的class文件</li>
+<li>ApplicationClassLoader: 负责加载应用程序的class文件</li>
+</ol>
+<blockquote>
+<p>Q: 请列举 JVM 中的类加载器类型</p>
+<p>A: 在 JVM 中，类加载器主要分为以下几种类型：</p>
+<ol>
+<li>引导类加载器（Bootstrap ClassLoader）：这是 Java 类加载器层次结构中的最顶层类加载器。它负责加载 Java 核心类库（如 java.lang, java.util 等），这些类库位于 JDK 安装目录下的 <code>jre/lib</code> 目录中。引导类加载器是用 C++ 语言实现的，因此在 Java 中无法获取它的引用。</li>
+<li>扩展类加载器（Extension ClassLoader）：扩展类加载器是引导类加载器的子类加载器，负责加载 Java 的扩展类库，如 <code>javax</code> 等。这些类库位于 JDK 安装目录下的 <code>jre/lib/ext</code> 目录中。扩展类加载器在 Java 中以 <code>java.net.URLClassLoader</code> 类的实例形式存在。</li>
+<li>应用类加载器（Application ClassLoader）：应用类加载器是扩展类加载器的子类加载器，也是 Java 应用程序的默认类加载器。它负责加载应用程序的类路径（classpath）上的类。应用类加载器也是以 <code>java.net.URLClassLoader</code> 类的实例形式存在。</li>
+</ol>
+<p>除了这三种内置的类加载器外，Java 还支持自定义类加载器。开发人员可以通过继承 <code>java.lang.ClassLoader</code> 类并重写 <code>loadClass</code> 方法或其他相关方法来创建自己的类加载器。自定义类加载器可以用于实现热部署、隔离不同模块的类加载等高级功能。</p>
+<p>总之，在 JVM 中，类加载器主要包括引导类加载器、扩展类加载器、应用类加载器以及自定义类加载器。</p>
+</blockquote>
+<h3 id="6-什么是-just-in-timejit编译器它的作用是什么">6. 什么是 Just-In-Time（JIT）编译器？它的作用是什么？</h3>
+<p>JIT编译器就是运行时解释器和优化器。我们知道Java源代码 .java 文件会编译成 .class 字节码文件，这些字节码文件被JVM的JIT解释执行，如果只是解释执行就相当于解释性语言了，如python.  JIT可以优化代码，把频繁执行的翻译成本地机器代码，直接调用执行。如果所有的class都编译成本地机器代码，那么这时候引入了AOT （Ahead Of Time） 的概念。</p>
+<blockquote>
+<p>Q: 什么是 Just-In-Time（JIT）编译器？它的作用是什么？</p>
+<p>A: Just-In-Time（JIT）编译器是 Java 虚拟机（JVM）的一个组成部分，用于在运行时将字节码（Java 中的中间代码形式）动态地编译成本地机器代码。JIT 编译器的主要目标是提高 Java 程序的执行性能。</p>
+<p>Java 程序在运行前需要经过两个阶段的编译过程。首先，Java 源代码被编译成字节码文件（.class 文件），然后这些字节码在 JVM 中被解释执行。解释执行字节码的过程相对较慢，因为每条字节码指令都需要在运行时转换为相应的机器指令。JIT 编译器的出现正是为了解决这个性能瓶颈。</p>
+<p>JIT 编译器的作用如下：</p>
+<ol>
+<li>提高性能：JIT 编译器将频繁执行的字节码（热点代码）编译成本地机器代码，使其能够直接在硬件上执行，从而大大提高程序的运行速度。</li>
+<li>优化代码：JIT 编译器在将字节码编译为本地代码时，可以应用各种优化技术，例如内联、循环展开、死代码消除等。这些优化进一步提高了生成的本地代码的执行效率。</li>
+<li>动态适应：由于 JIT 编译器是在运行时执行的，因此它可以根据实际运行情况（如执行频率、调用关系等）对代码进行优化。这种动态适应性使 JIT 编译器能够生成针对特定应用程序的高效本地代码。</li>
+</ol>
+<p>总之，Just-In-Time（JIT）编译器是 JVM 的一个组成部分，用于在运行时将字节码动态地编译成本地机器代码。JIT 编译器通过提高性能、优化代码和动态适应来提高 Java 程序的执行效率。</p>
+</blockquote>
+<p>补充学习：AOT Ahead Of Time, 运行之前就把class文件全编译成本地机器码行吗， 为何Java没这样做，我们来学习下：</p>
+<blockquote>
+<p>Q: JIT和AOT的比较</p>
+<p>A:  JIT（Just-In-Time）编译和 AOT（Ahead-Of-Time）编译都是将字节码编译成本地机器代码的技术，但它们在编译时机和策略方面有所不同。下面是 JIT 和 AOT 编译的比较：</p>
+<ol>
+<li>编译时机：
+<ul>
+<li>JIT 编译：JIT 编译器在程序运行时对字节码进行动态编译。当程序运行时，JIT 编译器会监控哪些代码片段被频繁执行（热点代码），然后将这些代码编译成本地机器代码。JIT 编译器还可以根据程序的运行情况进行优化。</li>
+<li>AOT 编译：AOT 编译器在程序运行之前将字节码静态地编译成本地机器代码。这意味着在程序开始执行之前，所有的字节码都已经被转换为本地代码。因此，AOT 编译器无法根据程序的实际运行情况进行优化。</li>
+</ul>
+</li>
+<li>优化策略：
+<ul>
+<li>JIT 编译：由于 JIT 编译器在运行时工作，它可以根据程序的实际运行情况进行优化。这使得 JIT 编译器能够应用动态优化技术，例如内联缓存、动态反馈等。</li>
+<li>AOT 编译：AOT 编译器在程序运行之前完成编译，因此它无法利用运行时信息来进行优化。AOT 编译器主要依赖静态分析和启发式方法来进行优化。</li>
+</ul>
+</li>
+<li>启动时间和运行时性能：
+<ul>
+<li>JIT 编译：JIT 编译可能会导致程序的启动时间较长，因为在运行时需要对字节码进行编译。然而，由于 JIT 编译器可以针对程序的实际运行情况进行优化，所以它通常能够实现较高的运行时性能。</li>
+<li>AOT 编译：AOT 编译可以减少程序的启动时间，因为在运行时不需要对字节码进行编译。然而，由于 AOT 编译器无法利用运行时信息来进行优化，所以它可能无法实现与 JIT 编译器相同的运行时性能。</li>
+</ul>
+</li>
+<li>适用场景：
+<ul>
+<li>JIT 编译：适用于长时间运行的、对性能要求较高的应用程序，如服务器端应用、大型企业级应用等。</li>
+<li>AOT 编译：适用于对启动时间有严格要求的应用程序，如桌面应用、移动应用等。</li>
+</ul>
+</li>
+</ol>
+<p>总之，JIT 和 AOT 编译在编译时机、优化策略、启动时间和运行时性能等方面有所不同，它们各自具有优劣。在选择使用 JIT 还是 AOT 编译时，需要根据具体应用场景进行权衡。</p>
+<p>对于需要长时间运行、对性能要求较高的应用程序，如服务器端应用、大型企业级应用等，JIT 编译器通常是更好的选择，因为它可以针对程序的实际运行情况进行优化，从而实现更高的运行时性能。</p>
+<p>而对于对启动时间有严格要求的应用程序，如桌面应用、移动应用等，AOT 编译器通常是更好的选择，因为它可以在程序开始运行之前将字节码编译成本地机器代码，从而减少程序的启动时间。</p>
+<p>需要注意的是，JIT 和 AOT 编译并不是互相排斥的关系，它们也可以一起使用。例如，Android 应用可以使用 AOT 编译器将 Java 代码编译成本地代码，同时使用 JIT 编译器对本地代码进行优化。这种混合使用的方式可以充分利用 JIT 和 AOT 编译器各自的优点，从而实现更好的性能和启动时间。</p>
+</blockquote>
+<h3 id="7-请解释-java-堆内存和栈内存的区别">7. 请解释 Java 堆内存和栈内存的区别。</h3>
+<p>Java堆内存是Java GC管理的一块内存，主要存放运行时的方法之类，所有线程共享。栈内存是每个线程独有的，主要存放临时变量等。</p>
+<blockquote>
+<p>Q: 请解释 Java 堆内存和栈内存的区别</p>
+<p>A: Java 内存分为堆内存和栈内存两部分，它们在存储和管理对象时有着不同的作用和特点。</p>
+<ol>
+<li>堆内存（Heap Memory）：
+堆内存用于存储 Java 中的对象实例，每个对象实例都分配在堆内存中。堆内存是一个共享的内存区域，被所有线程所共享。堆内存的大小可以通过启动参数 <code>-Xms</code> 和 <code>-Xmx</code> 进行设置。堆内存主要用于存储 Java 中的动态分配对象，例如数组和对象实例。在 Java 中，所有的类实例都是在堆上分配的。由于堆内存的共享性，它容易发生竞争和碎片问题，因此需要进行垃圾回收来维护堆内存的使用。</li>
+<li>栈内存（Stack Memory）：
+栈内存用于存储 Java 中的局部变量和方法调用的状态。每个线程都拥有自己的栈内存，用于存储线程私有的数据。栈内存的大小由操作系统或 JVM 决定，并且在运行时是固定的。栈内存主要用于存储基本类型的变量和对象的引用类型变量。在 Java 中，所有的基本类型和对象引用变量都是在栈上分配的。当方法被调用时，栈帧被压入栈内存，方法执行完毕后，栈帧被弹出，栈内存的空间就被释放了。</li>
+</ol>
+<p>总体来说，堆内存和栈内存在内存分配和释放、空间大小和生命周期等方面有所不同。堆内存用于存储动态分配的对象实例，大小可调整，生命周期长；栈内存用于存储局部变量和方法调用的状态，大小固定，生命周期短。在实际开发中，合理地使用堆内存和栈内存，可以提高程序的性能和稳定性。</p>
+</blockquote>
+]]></content></item><item><title>跟着GPT学习JVM的垃圾收集器</title><link>/posts/tech/java_jvm_gc_230414/</link><pubDate>Fri, 14 Apr 2023 03:50:01 +0000</pubDate><guid>/posts/tech/java_jvm_gc_230414/</guid><description>跟着GPT学习JVM的垃圾收集器 有了GPT之后，学习热情也也高了许多，像是身边有了一个全知且没脾气的博士一样，啥问题都可以丢给他。和搜索引擎相比，GPT以问答方式直接回复，更便捷。但是也有一些错误存在，追求更精准还是要用搜索引擎。
+今天来学习JDK和JVM收集器
+JDK8 - JDK17 的垃圾收集器 首先问了不同JDK版本之间默认垃圾收集器的区别：
+Q: Java8 - Java17 各个版本对应的默认GC是哪个?
+A: 各个 Java 版本的默认垃圾收集器（GC）如下：
+各个 Java 版本的默认垃圾收集器（GC）如下：
+Java 8： 默认的垃圾收集器是 Parallel GC。它在年轻代（Young Generation）使用 Parallel Scavenge，而在老年代（Old Generation）使用 Parallel Old GC。 Java 9： 在 Java 9 中，默认的垃圾收集器仍然是 Parallel GC。 Java 10： Java 10 也继续使用 Parallel GC 作为默认垃圾收集器。 Java 11： 默认的垃圾收集器仍然是 Parallel GC。然而，从 Java 11 开始，ZGC 可作为实验性垃圾收集器使用。 Java 12： Java 12 同样使用 Parallel GC 作为默认垃圾收集器。此版本引入了实验性的 Shenandoah GC，但不是默认选项。 Java 13： 默认的垃圾收集器在 Java 13 中保持不变，仍然是 Parallel GC。 Java 14： Java 14 同样使用 Parallel GC 作为默认垃圾收集器。此外，这个版本中 ZGC 从实验性垃圾收集器升级为生产就绪状态。 Java 15： Java 15 保持使用 Parallel GC 作为默认垃圾收集器。 Java 16： Java 16 中默认的垃圾收集器依然是 Parallel GC。同时，G1 GC 和 ZGC 作为可选的生产就绪垃圾收集器。 Java 17： 在 Java 17（长期支持版本，LTS）中，默认垃圾收集器仍然是 Parallel GC。G1 GC、ZGC 和 Shenandoah GC 作为可选的生产就绪垃圾收集器。 请注意，虽然默认的垃圾收集器在各个版本中保持不变，但根据您的应用程序需求，您可以选择其他垃圾收集器，如 G1 GC、ZGC 或 Shenandoah GC。要更改垃圾收集器，只需在启动 Java 应用程序时设置适当的 JVM 参数。</description><content type="html"><![CDATA[<h2 id="跟着gpt学习jvm的垃圾收集器">跟着GPT学习JVM的垃圾收集器</h2>
+<p>有了GPT之后，学习热情也也高了许多，像是身边有了一个全知且没脾气的博士一样，啥问题都可以丢给他。和搜索引擎相比，GPT以问答方式直接回复，更便捷。但是也有一些错误存在，追求更精准还是要用搜索引擎。</p>
+<p>今天来学习JDK和JVM收集器</p>
+<h3 id="jdk8---jdk17-的垃圾收集器">JDK8 - JDK17 的垃圾收集器</h3>
+<p>首先问了不同JDK版本之间默认垃圾收集器的区别：</p>
+<blockquote>
+<p>Q: Java8 - Java17 各个版本对应的默认GC是哪个?</p>
+</blockquote>
+<blockquote>
+<p>A: 各个 Java 版本的默认垃圾收集器（GC）如下：</p>
+<p>各个 Java 版本的默认垃圾收集器（GC）如下：</p>
+<ol>
+<li>Java 8：
+默认的垃圾收集器是 Parallel GC。它在年轻代（Young Generation）使用 Parallel Scavenge，而在老年代（Old Generation）使用 Parallel Old GC。</li>
+<li>Java 9：
+在 Java 9 中，默认的垃圾收集器仍然是 Parallel GC。</li>
+<li>Java 10：
+Java 10 也继续使用 Parallel GC 作为默认垃圾收集器。</li>
+<li>Java 11：
+默认的垃圾收集器仍然是 Parallel GC。然而，从 Java 11 开始，ZGC 可作为实验性垃圾收集器使用。</li>
+<li>Java 12：
+Java 12 同样使用 Parallel GC 作为默认垃圾收集器。此版本引入了实验性的 Shenandoah GC，但不是默认选项。</li>
+<li>Java 13：
+默认的垃圾收集器在 Java 13 中保持不变，仍然是 Parallel GC。</li>
+<li>Java 14：
+Java 14 同样使用 Parallel GC 作为默认垃圾收集器。此外，这个版本中 ZGC 从实验性垃圾收集器升级为生产就绪状态。</li>
+<li>Java 15：
+Java 15 保持使用 Parallel GC 作为默认垃圾收集器。</li>
+<li>Java 16：
+Java 16 中默认的垃圾收集器依然是 Parallel GC。同时，G1 GC 和 ZGC 作为可选的生产就绪垃圾收集器。</li>
+<li>Java 17：
+在 Java 17（长期支持版本，LTS）中，默认垃圾收集器仍然是 Parallel GC。G1 GC、ZGC 和 Shenandoah GC 作为可选的生产就绪垃圾收集器。</li>
+</ol>
+<p>请注意，虽然默认的垃圾收集器在各个版本中保持不变，但根据您的应用程序需求，您可以选择其他垃圾收集器，如 G1 GC、ZGC 或 Shenandoah GC。要更改垃圾收集器，只需在启动 Java 应用程序时设置适当的 JVM 参数。</p>
+</blockquote>
+<p>在这里我们知道了Java一直使用了Parallel GC 作为默认垃圾收集器，同时也在不断引入新的GC来满足不同需求。Java17 就有四种，我们可以继续问。</p>
+<h3 id="java17的垃圾收集器">Java17的垃圾收集器</h3>
+<blockquote>
+<p>Q: 讲讲Java17 中垃圾回收器的区别和适用场景</p>
+</blockquote>
+<blockquote>
+<p>A: Java 17 提供了多种垃圾回收器（GC），每个垃圾回收器都有自己的特点和适用场景。以下是 Java 17 中可用的主要垃圾回收器及其区别和适用场景</p>
+<p>Java 17 提供了多种垃圾回收器（GC），每个垃圾回收器都有自己的特点和适用场景。以下是 Java 17 中可用的主要垃圾回收器及其区别和适用场景：</p>
+<ol>
+<li>Parallel GC：
+Parallel GC 是 Java 中的默认垃圾回收器。它在年轻代（Young Generation）使用 Parallel Scavenge，而在老年代（Old Generation）使用 Parallel Old GC。这个垃圾回收器适用于对吞吐量（应用程序的执行速度与 GC 暂停时间之间的关系）要求较高的场景，因为它可以利用多核处理器并行执行垃圾收集任务。然而，Parallel GC 会导致较长的暂停时间，可能影响应用程序的响应能力。</li>
+</ol>
+<p>适用场景：对吞吐量要求高，可以容忍较长的 GC 暂停时间的场景。</p>
+<ol start="2">
+<li>G1 GC (Garbage-First)：
+G1 GC 是一种面向低延迟的垃圾回收器，通过将堆划分为许多固定大小的区域来工作。G1 GC 主要针对具有大堆内存和高并发的应用程序。它试图在维持高吞吐量的同时，降低暂停时间并提供更为可预测的暂停时间。G1 GC 适用于需要更快响应时间的应用程序。</li>
+</ol>
+<p>适用场景：需要低延迟，较快的响应时间，同时具有大堆内存和高并发的应用程序。</p>
+<ol start="3">
+<li>ZGC (Z Garbage Collector)：
+ZGC 是一种低延迟垃圾回收器，主要目标是实现极低的暂停时间（通常在 10 毫秒以内）和可预测的暂停时间，同时保持高吞吐量。它可以处理非常大的堆内存（最高支持 16TB），并在并发执行时减少暂停时间。ZGC 适用于具有大内存和高并发的环境，且需要极低的暂停时间。</li>
+</ol>
+<p>适用场景：要求极低延迟，可预测的暂停时间，适用于具有大内存和高并发的应用程序。</p>
+<ol start="4">
+<li>Shenandoah GC：
+Shenandoah GC 是另一种低延迟垃圾回收器，类似于 ZGC，它的目标是实现低暂停时间和高吞吐量。Shenandoah GC 通过并发执行大部分垃圾收集任务来减少暂停时间。它适用于需要快速响应时间和低暂停时间的应用程序。    适用场景：需要快速响应时间和低暂停时间的应用程序，尤其是具有大堆内存和高并发的场景。</li>
+</ol>
+<p>在选择合适的垃圾回收器时，需要根据应用程序的需求和特点进行权衡。以下是一些建议：</p>
+<ul>
+<li>如果对吞吐量的要求较高，并且可以容忍较长的暂停时间，那么可以使用默认的 Parallel GC。</li>
+<li>如果需要更低的暂停时间，同时要保持较高的吞吐量，可以考虑使用 G1 GC。这对于具有大堆内存和高并发的应用程序特别有益。</li>
+<li>如果应用程序的内存需求非常大（最高可达 16TB），并且需要极低的延迟和可预测的暂停时间，可以使用 ZGC。</li>
+<li>如果需要快速响应时间和低暂停时间，可以考虑使用 Shenandoah GC。它尤其适用于具有大堆内存和高并发的场景。</li>
+</ul>
+<p>要更改垃圾回收器，只需在启动 Java 应用程序时设置适当的 JVM 参数。在实际应用中，建议对不同的垃圾回收器进行测试和基准测试，以找到最适合您应用程序需求的垃圾回收器。</p>
+</blockquote>
+<h3 id="不同的内存模型">不同的内存模型</h3>
+<p>我们一般听最多的就是垃圾分代回收的内存模型，也就是经典的</p>
+<pre tabindex="0"><code>Eden --&gt; S1/S2 -&gt; Old -&gt; Perm
+</code></pre><blockquote>
+<p>Q:  讲一下Java17中不同垃圾收集器对应的内存模型</p>
+<p>A:</p>
+<p>在 Java 17 中，不同的垃圾收集器（GC）使用不同的内存模型来管理 Java 堆内存。以下是 Java 17 中可用的主要垃圾回收器及其对应的内存模型：</p>
+<ol>
+<li>Parallel GC：
+Parallel GC 使用传统的分代内存模型，将堆内存划分为年轻代（Young Generation）和老年代（Old Generation）。年轻代进一步划分为 Eden 区、Survivor 0 区和 Survivor 1 区。Parallel GC 在年轻代使用 Parallel Scavenge 收集器，而在老年代使用 Parallel Old 收集器。此模型适用于对吞吐量有较高要求的场景。</li>
+<li>G1 GC (Garbage-First)：
+G1 GC 使用基于区域的内存模型，将堆内存划分为许多固定大小的区域（Region）。每个区域可以是 Eden 区、Survivor 区或 Old 区。G1 GC 通过跟踪各区域的存活对象并优先清理垃圾最多的区域，从而在维持高吞吐量的同时降低暂停时间并提供更为可预测的暂停时间。</li>
+<li>ZGC (Z Garbage Collector)：
+ZGC 使用一个称为 Load Barrier 的技术来管理堆内存。这种内存模型没有明确的年轻代和老年代划分。ZGC 使用一个称为 Colored Pointers 的技术，通过在指针中添加额外的元数据来跟踪对象的状态。ZGC 的内存管理目标是实现极低的暂停时间（通常在 10 毫秒以内）和可预测的暂停时间，同时保持高吞吐量。</li>
+<li>Shenandoah GC：
+Shenandoah GC 的内存模型类似于 ZGC，没有明确的年轻代和老年代划分。Shenandoah GC 使用一个称为 Brooks Pointers 的技术，为每个对象分配一个额外的指针字段来进行内存管理。Shenandoah 的目标是在并发执行时减少暂停时间，并在维持高吞吐量的同时提供快速响应时间和低暂停时间。</li>
+</ol>
+<p>这些垃圾回收器在内存管理和垃圾收集策略方面有所不同，但它们的共同目标是在高并发环境中提高 Java 应用程序的性能。在选择合适的垃圾回收器时，需要根据应用程序的需求和特点进行权衡。</p>
+</blockquote>
+<h3 id="默认的parallel-gc内存模型">默认的Parallel GC内存模型</h3>
+<p>我们还是来复习下讲最多的分代模型：</p>
+<blockquote>
+<p>Q: 详细讲下Parallel GC 的内存模型和垃圾回收策略</p>
+<p>A:  Parallel GC（并行垃圾回收器）是 Java 中的默认垃圾回收器。它使用传统的分代内存模型，将堆内存划分为年轻代（Young Generation）和老年代（Old Generation）。以下是 Parallel GC 的内存模型和垃圾回收策略的详细介绍：</p>
+<ol>
+<li>内存模型：
+Parallel GC 使用分代内存模型，将堆内存划分为两个主要部分：年轻代和老年代。</li>
+</ol>
+<p>年轻代进一步划分为三个区域：Eden 区、Survivor 0 区（S0）和 Survivor 1 区（S1）。新创建的对象首先分配在 Eden 区。当 Eden 区满时，发生一次名为 Minor GC 的垃圾回收。存活的对象会从 Eden 区转移到一个 Survivor 区（例如 S0），而 Eden 区的剩余空间被清空。随后的垃圾回收过程中，存活对象会在两个 Survivor 区之间移动。当对象在 Survivor 区中经历了足够多的 Minor GC 后，它们会被晋升到老年代。</p>
+<p>老年代用于存储长时间存活的对象。当老年代空间不足时，发生一次名为 Full GC 或 Major GC 的垃圾回收。这种回收涉及整个堆内存，包括年轻代和老年代。</p>
+<ol start="2">
+<li>垃圾回收策略：
+Parallel GC 使用不同的策略来处理年轻代和老年代的垃圾回收。</li>
+</ol>
+<ul>
+<li>年轻代：Parallel GC 在年轻代使用名为 Parallel Scavenge 的垃圾回收器。Parallel Scavenge 是一个并行的、复制式的收集器。它使用多个线程并行执行垃圾回收任务，以提高吞吐量。在 Minor GC 期间，存活对象从 Eden 区复制到 Survivor 区，然后在 Survivor 区之间复制。最终，这些对象会被晋升到老年代。</li>
+<li>老年代：Parallel GC 在老年代使用名为 Parallel Old 的垃圾回收器。Parallel Old 是一个并行的、标记-整理（Mark-Compact）式的收集器。在 Full GC 期间，Parallel Old 使用多个线程来并行标记存活对象，然后整理老年代空间，将存活对象压缩到堆的一端。这种方法可以减少内存碎片，但可能导致较长的暂停时间。</li>
+</ul>
+<p>Parallel GC 的主要优点是其高吞吐量，因为它可以充分利用多核处理器并行执行垃圾收集任务。然而，Parallel GC 的缺点是它可能导致较长的暂停时间，这对于对响应时间有严格要求的应用程序可能不太适合。这是因为在执行 Full GC 时，所有的应用线程都会暂停，直到垃圾回收任务完成。此外，在某些情况下，Parallel GC 可能会导致较高的内存碎片。</p>
+<p>如果你的应用程序需要较高的吞吐量，并且可以容忍较长的暂停时间，那么 Parallel GC 可能是一个合适的选择。然而，如果应用程序对响应时间有较高要求，那么可以考虑使用其他垃圾回收器，如 G1 GC、ZGC 或 Shenandoah GC。这些垃圾回收器旨在在维持高吞吐量的同时，降低暂停时间并提供更可预测的暂停时间。</p>
+<p>总之，Parallel GC 使用传统的分代内存模型，通过并行执行垃圾收集任务来提高吞吐量。然而，它可能导致较长的暂停时间和内存碎片。根据应用程序的需求和特点，可以选择更适合的垃圾回收器来优化性能。</p>
+</blockquote>
+<h3 id="知道以上这些还不够">知道以上这些还不够</h3>
+<p>我们了解了JVM的Java内存模型和垃圾回收策略，但只知道这些是远远不够的，比如就让GPT生成一些常用的面试题，对照下自己能回答出几个：</p>
+<blockquote>
+<p>Q: 常见的JVM面试题</p>
+<p>A:  以下是一些常见的 JVM（Java 虚拟机）面试题：</p>
+<ol>
+<li>什么是 JVM？</li>
+<li>JVM 的组成部分是什么？</li>
+<li>请解释 Java 内存模型（JMM）。</li>
+<li>什么是类加载器（Classloader）？请解释其工作原理。</li>
+<li>请列举 JVM 中的类加载器类型。</li>
+<li>什么是 Just-In-Time（JIT）编译器？它的作用是什么？</li>
+<li>请解释 Java 堆内存和栈内存的区别。</li>
+<li>什么是垃圾回收（Garbage Collection）？请简要描述其工作原理。</li>
+<li>请列举并简要介绍 Java 中的垃圾回收器。</li>
+<li>什么是分代垃圾回收策略？请解释年轻代（Young Generation）和老年代（Old Generation）的概念。</li>
+<li>请解释 Java 中的强引用、软引用、弱引用和虚引用。</li>
+<li>什么是 Java 堆溢出（Heap Overflow）和栈溢出（Stack Overflow）？如何处理这些问题？</li>
+<li>什么是逃逸分析？它在 JVM 性能优化中有什么作用？</li>
+<li>如何监控和调优 JVM 的性能？</li>
+<li>请列举 JVM 调优的一些常用参数。</li>
+<li>请解释 Java 中的死锁、饥饿和活锁。</li>
+<li>什么是线程安全？如何在 Java 中确保线程安全？</li>
+<li>请解释 Java 中的同步和异步编程。</li>
+<li>什么是 volatile 关键字？它的作用是什么？</li>
+<li>请解释 Java 中的并发编程和多线程编程。</li>
+</ol>
+<p>这些问题覆盖了 JVM 的基本概念、内存模型、垃圾回收、性能调优和并发编程等方面。为了充分准备这些问题，建议您深入学习相关主题，并尝试使用实际项目经验来回答这些问题。这将有助于您在面试过程中展示您的专业知识和实践经验。</p>
+</blockquote>
+<p>以上20个问题对照下自己能回答出多少?  下篇会根据问题来学习。</p>
+]]></content></item><item><title>Java面试中常问的问题</title><link>/posts/tech/java_interview_questions_230412/</link><pubDate>Wed, 12 Apr 2023 03:37:21 +0000</pubDate><guid>/posts/tech/java_interview_questions_230412/</guid><description>Java面试中常问的问题 springboot是如何实现自动装配的？ 扫描 meta_info redis 为什么快？ 分布式锁为何要结合 lua脚本来实现？redis分布式锁会有什么问题 redis 如果系统错误释放锁 和 业务执行超时释放锁，会如何？ redis 常用数据结构 kafka消息队列为何要引入组？解决了什么问题 broker, group 来说 分布式事务如何保证一致性。 mysql ABC 索引，实际查询只用到了AB， 没用到C，是什么情况? B是范围查询 Java HashMap 两次put 相同key与相同hashcode的区别。 服务发现是怎么做的</description><content type="html"><![CDATA[<h2 id="java面试中常问的问题">Java面试中常问的问题</h2>
 <ul>
 <li>springboot是如何实现自动装配的？ 扫描 meta_info</li>
 <li>redis 为什么快？ 分布式锁为何要结合 lua脚本来实现？redis分布式锁会有什么问题</li>
