@@ -228,7 +228,7 @@ static class Node&amp;lt;K,V&amp;gt; implements Map.Entry&amp;lt;K,V&amp;gt; { f
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// DEFAULT_INITIAL_CAPACITY.)
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> threshold<span style="color:#f92672">;</span>
 </span></span></code></pre></div><h3 id="常用方法">常用方法</h3>
-]]></content></item><item><title>Java基础之集合-ArrayList</title><link>/posts/tech/java_base_230409/</link><pubDate>Sun, 09 Apr 2023 02:51:02 +0000</pubDate><guid>/posts/tech/java_base_230409/</guid><description>Java基础之集合总览 - ArrayList Java集合是经常使用到的，集合类主要由Collection 和 Map 这两个接口派生。
+]]></content></item><item><title>Java基础之集合-ArrayList</title><link>/posts/tech/javabase_list_230409/</link><pubDate>Sun, 09 Apr 2023 02:51:02 +0000</pubDate><guid>/posts/tech/javabase_list_230409/</guid><description>Java基础之集合总览 - ArrayList Java集合是经常使用到的，集合类主要由Collection 和 Map 这两个接口派生。
 Collection 派生出 Set，List, Queue。 Map派生HashMap, TreeMap， ConcurrentHashMap
 Collection常用方法 // 返回集合中元素个数 int size(); //Returns true if this collection contains no elements. boolean isEmpty(); // 判断集合中是否存在元素o , (o==null ? e==null : o.equals(e)). boolean contains(Object o); // 添加元素 boolean add(E e); // 删除元素 boolean remove(Object o); // 清空元素 void clear(); Map常用方法 // 返回 k-v 数量 int size(); // Returns &amp;lt;tt&amp;gt;true&amp;lt;/tt&amp;gt; if this map contains no key-value mappings.</description><content type="html"><![CDATA[<h2 id="java基础之集合总览---arraylist">Java基础之集合总览 - ArrayList</h2>
 <p>Java集合是经常使用到的，集合类主要由Collection 和 Map 这两个接口派生。</p>
